@@ -5,7 +5,7 @@ import zmq
 import numpy as np
 from multiprocessing import Process, Value,Array
 from time import sleep,time
-from TrialHandler2 import TrialHandler2
+#from TrialHandler2 import TrialHandler2
 
 
 class Pupil(object):
@@ -47,7 +47,7 @@ class Pupil(object):
 			socket.setsockopt(zmq.SUBSCRIBE, 'Gaze')
 
 			msg = socket.recv()
-			print msg
+			print(msg)
 
 		p=Process(target=test_pupil_aux)
 		p.start()
@@ -150,7 +150,7 @@ class Pupil(object):
 	    
 			if v > self.v_tr.value:
 				n_sacc+=1
-				print "saccade: ",n_sacc,v
+				print("saccade: ",n_sacc,v)
 				self.fixated.value=0
 				vel.append(v)
 
