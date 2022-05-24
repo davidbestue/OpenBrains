@@ -53,11 +53,18 @@ for i in range(len(RAWrace)):
     plt.plot(RAWrace[i], IATrace[i], marker='.', markersize=15, color='darkred' )
 
 
-plt.xlim([-0.5,0.5])
-plt.xticks([-0.5, -0.25, 0, 0.25, 0.5], ['-0.5', '', '0', '', '0.5'], fontsize=10)
+#plt.xlim([-0.5,0.5])
+#plt.xticks([-0.5, -0.25, 0, 0.25, 0.5], ['-0.5', '', '0', '', '0.5'], fontsize=10)
+plt.xlim([-1.5,1.5])
+plt.xticks([-1.5, -0.75, 0, 0.75, 1.5], ['-1.5', '', '0', '', '1.5'], fontsize=10)
+
+#plt.plot([-0.5, 0.5], [0,0], 'k--', linewidth=1)
+plt.plot([-1.5, 1.5], [0,0], 'k--', linewidth=1)
+
+
 plt.ylim([-2,2])
 plt.yticks([-2,-1, 0, 1,2], ['-2','', '0', '','2'], fontsize=10)
-plt.plot([-0.5, 0.5], [0,0], 'k--', linewidth=1)
+
 plt.plot( [0,0], [-2,2], 'k--', linewidth=1)
 plt.xlabel('raw score', fontsize=15)
 plt.ylabel('IAT score', fontsize=15)
@@ -67,11 +74,17 @@ plt.plot(np.mean(RAWrace), np.mean(IATrace), marker='.', markersize=20, color='k
 
 stats = stats.ttest_1samp(IATrace, 0)
 
-plt.text( 0.1, -1.5, 'RACE t-statistic = ' + str(np.round(stats[0], 3)), fontsize=10 )
-plt.text( 0.1, -1.8, 'pvalue = ' + str(np.round(stats[1], 3)), fontsize=10 )
+# plt.text( 0.1, -1.5, 'RACE t-statistic = ' + str(np.round(stats[0], 3)), fontsize=10 )
+# plt.text( 0.1, -1.8, 'pvalue = ' + str(np.round(stats[1], 3)), fontsize=10 )
+plt.text( 0.4, -1.5, 'RACE t-statistic = ' + str(np.round(stats[0], 3)), fontsize=10 )
+plt.text( 0.4, -1.8, 'pvalue = ' + str(np.round(stats[1], 3)), fontsize=10 )
 
-plt.text( 0.3, 1.7, 'white racism' , fontsize=10 )
-plt.text( -0.45, -1.7, 'black racism' , fontsize=10 )
+
+# plt.text( 0.3, 1.7, 'white racism' , fontsize=10 )
+# plt.text( -0.45, -1.7, 'black racism' , fontsize=10 )
+plt.text( 0.8, 1.7, 'white racism' , fontsize=10 )
+plt.text( -1.45, -1.7, 'black racism' , fontsize=10 )
+
 
 
 plt.show(block=False)
