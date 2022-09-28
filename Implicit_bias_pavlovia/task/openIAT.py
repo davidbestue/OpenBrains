@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on septiembre 28, 2022, at 19:59
+    on septiembre 28, 2022, at 20:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -182,10 +182,10 @@ x, y = [None, None]
 touch_resp.mouseClock = core.Clock()
 button_left = visual.Rect(
     win=win, name='button_left',units='height', 
-    width=(0.4, 0.2)[0], height=(0.4, 0.2)[1],
+    width=(0.4, 0.4)[0], height=(0.4, 0.4)[1],
     ori=0, pos=(-0.4, -0.3),
-    lineWidth=1, lineColor='darkgreen', lineColorSpace='rgb',
-    fillColor='lightgreen', fillColorSpace='rgb',
+    lineWidth=1, lineColor='orange', lineColorSpace='rgb',
+    fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-6.0, interpolate=True)
 trial_label_left = visual.TextStim(win=win, name='trial_label_left',
     text='default text',
@@ -196,10 +196,10 @@ trial_label_left = visual.TextStim(win=win, name='trial_label_left',
     depth=-7.0);
 button_right = visual.Rect(
     win=win, name='button_right',units='height', 
-    width=(0.4, 0.2)[0], height=(0.4, 0.2)[1],
+    width=(0.4, 0.4)[0], height=(0.4, 0.4)[1],
     ori=0, pos=(0.4, -0.3),
-    lineWidth=1, lineColor='darkgreen', lineColorSpace='rgb',
-    fillColor='lightgreen', fillColorSpace='rgb',
+    lineWidth=1, lineColor='orange', lineColorSpace='rgb',
+    fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-8.0, interpolate=True)
 trial_label_right = visual.TextStim(win=win, name='trial_label_right',
     text='default text',

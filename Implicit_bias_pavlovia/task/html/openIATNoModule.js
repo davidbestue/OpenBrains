@@ -246,10 +246,10 @@ function experimentInit() {
   touch_resp.mouseClock = new util.Clock();
   button_left = new visual.Rect ({
     win: psychoJS.window, name: 'button_left', units : 'height', 
-    width: [0.4, 0.2][0], height: [0.4, 0.2][1],
+    width: [0.4, 0.4][0], height: [0.4, 0.4][1],
     ori: 0, pos: [(- 0.4), (- 0.3)],
-    lineWidth: 1, lineColor: new util.Color('darkgreen'),
-    fillColor: new util.Color('lightgreen'),
+    lineWidth: 1, lineColor: new util.Color('orange'),
+    fillColor: new util.Color('orange'),
     opacity: 1, depth: -6, interpolate: true,
   });
   
@@ -266,10 +266,10 @@ function experimentInit() {
   
   button_right = new visual.Rect ({
     win: psychoJS.window, name: 'button_right', units : 'height', 
-    width: [0.4, 0.2][0], height: [0.4, 0.2][1],
+    width: [0.4, 0.4][0], height: [0.4, 0.4][1],
     ori: 0, pos: [0.4, (- 0.3)],
-    lineWidth: 1, lineColor: new util.Color('darkgreen'),
-    fillColor: new util.Color('lightgreen'),
+    lineWidth: 1, lineColor: new util.Color('orange'),
+    fillColor: new util.Color('orange'),
     opacity: 1, depth: -8, interpolate: true,
   });
   
