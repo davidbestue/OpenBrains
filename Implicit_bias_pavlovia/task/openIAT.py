@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on septiembre 28, 2022, at 19:47
+    on septiembre 28, 2022, at 19:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.2.3'
 expName = 'IAT-1.4'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'order': ['random', 1, 2], 'session': '001', 'gender': ['hombre', 'mujer', 'otro']}
+expInfo = {'participant': '', 'order': ['random', 1, 2], 'session': '001', 'gender': ['male', 'female', 'other']}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
