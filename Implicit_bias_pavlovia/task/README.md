@@ -1,7 +1,7 @@
 Open IAT
 ==================
 
-This is a version of the Implicit Association Test made in PsychoPy that can
+This is a version in Spanish of the Implicit Association Test made in PsychoPy that can
 run online or on a local PsychoPy installation.
 
 It provides the classic black/white versus positive/negative version of the IAT
