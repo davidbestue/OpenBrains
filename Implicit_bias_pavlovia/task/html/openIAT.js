@@ -134,8 +134,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'instr_done_button', units : 'height', 
     width: [0.4, 0.1][0], height: [0.4, 0.1][1],
     ori: 0, pos: [0, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color('darkgreen'),
-    fillColor: new util.Color('lightgreen'),
+    lineWidth: 1, lineColor: new util.Color('orange'),
+    fillColor: new util.Color('orange'),
     opacity: 1, depth: -3, interpolate: true,
   });
   
@@ -146,7 +146,7 @@ function experimentInit() {
     font: 'Arial',
     units : 'height', 
     pos: [0, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('darkgreen'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
   
@@ -169,10 +169,10 @@ function experimentInit() {
   
   button_L = new visual.Rect ({
     win: psychoJS.window, name: 'button_L', units : 'height', 
-    width: [0.4, 0.2][0], height: [0.4, 0.2][1],
+    width: [0.4, 0.3][0], height: [0.4, 0.3][1],
     ori: 0, pos: [(- 0.4), (- 0.3)],
-    lineWidth: 1, lineColor: new util.Color('darkgreen'),
-    fillColor: new util.Color('lightgreen'),
+    lineWidth: 1, lineColor: new util.Color('orange'),
+    fillColor: new util.Color('orange'),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -183,16 +183,16 @@ function experimentInit() {
     font: 'Arial',
     units : 'height', 
     pos: [(- 0.4), (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('darkgreen'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
   
   button_R = new visual.Rect ({
     win: psychoJS.window, name: 'button_R', units : 'height', 
-    width: [0.4, 0.2][0], height: [0.4, 0.2][1],
+    width: [0.4, 0.3][0], height: [0.4, 0.3][1],
     ori: 0, pos: [0.4, (- 0.3)],
-    lineWidth: 1, lineColor: new util.Color('darkgreen'),
-    fillColor: new util.Color('lightgreen'),
+    lineWidth: 1, lineColor: new util.Color('orange'),
+    fillColor: new util.Color('orange'),
     opacity: 1, depth: -3, interpolate: true,
   });
   
@@ -203,7 +203,7 @@ function experimentInit() {
     font: 'Arial',
     units : 'height', 
     pos: [0.4, (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('darkgreen'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
   
@@ -254,7 +254,7 @@ function experimentInit() {
   touch_resp.mouseClock = new util.Clock();
   button_left = new visual.Rect ({
     win: psychoJS.window, name: 'button_left', units : 'height', 
-    width: [0.4, 0.4][0], height: [0.4, 0.4][1],
+    width: [0.4, 0.3][0], height: [0.4, 0.3][1],
     ori: 0, pos: [(- 0.4), (- 0.3)],
     lineWidth: 1, lineColor: new util.Color('orange'),
     fillColor: new util.Color('orange'),
@@ -268,13 +268,13 @@ function experimentInit() {
     font: 'Arial',
     units : 'height', 
     pos: [(- 0.4), (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('darkgreen'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -7.0 
   });
   
   button_right = new visual.Rect ({
     win: psychoJS.window, name: 'button_right', units : 'height', 
-    width: [0.4, 0.4][0], height: [0.4, 0.4][1],
+    width: [0.4, 0.3][0], height: [0.4, 0.3][1],
     ori: 0, pos: [0.4, (- 0.3)],
     lineWidth: 1, lineColor: new util.Color('orange'),
     fillColor: new util.Color('orange'),
@@ -288,7 +288,7 @@ function experimentInit() {
     font: 'Arial',
     units : 'height', 
     pos: [0.4, (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('darkgreen'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -9.0 
   });
   

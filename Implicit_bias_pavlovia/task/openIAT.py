@@ -1,8 +1,8 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on septiembre 28, 2022, at 20:15
+    on septiembre 29, 2022, at 18:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -96,14 +96,14 @@ instr_done_button = visual.Rect(
     win=win, name='instr_done_button',units='height', 
     width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
     ori=0, pos=(0, -0.4),
-    lineWidth=1, lineColor='darkgreen', lineColorSpace='rgb',
-    fillColor='lightgreen', fillColorSpace='rgb',
+    lineWidth=1, lineColor='orange', lineColorSpace='rgb',
+    fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-3.0, interpolate=True)
 instr_done_label = visual.TextStim(win=win, name='instr_done_label',
     text='Siguiente...',
     font='Arial',
     units='height', pos=(0, -0.4), height=0.05, wrapWidth=None, ori=0, 
-    color='darkgreen', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
 instr_done_touch = event.Mouse(win=win)
@@ -121,30 +121,30 @@ main_ready_msg = visual.TextStim(win=win, name='main_ready_msg',
     depth=0.0);
 button_L = visual.Rect(
     win=win, name='button_L',units='height', 
-    width=(0.4, 0.2)[0], height=(0.4, 0.2)[1],
+    width=(0.4, 0.3)[0], height=(0.4, 0.3)[1],
     ori=0, pos=(-0.4, -0.3),
-    lineWidth=1, lineColor='darkgreen', lineColorSpace='rgb',
-    fillColor='lightgreen', fillColorSpace='rgb',
+    lineWidth=1, lineColor='orange', lineColorSpace='rgb',
+    fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 ready_label_L = visual.TextStim(win=win, name='ready_label_L',
     text='default text',
     font='Arial',
     units='height', pos=[-0.4, -0.3], height=0.05, wrapWidth=None, ori=0, 
-    color='darkgreen', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 button_R = visual.Rect(
     win=win, name='button_R',units='height', 
-    width=(0.4, 0.2)[0], height=(0.4, 0.2)[1],
+    width=(0.4, 0.3)[0], height=(0.4, 0.3)[1],
     ori=0, pos=(0.4, -0.3),
-    lineWidth=1, lineColor='darkgreen', lineColorSpace='rgb',
-    fillColor='lightgreen', fillColorSpace='rgb',
+    lineWidth=1, lineColor='orange', lineColorSpace='rgb',
+    fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-3.0, interpolate=True)
 ready_label_R = visual.TextStim(win=win, name='ready_label_R',
     text='default text',
     font='Arial',
     units='height', pos=[0.4, -0.3], height=0.05, wrapWidth=None, ori=0, 
-    color='darkgreen', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
 ready_done_mouse = event.Mouse(win=win)
@@ -182,7 +182,7 @@ x, y = [None, None]
 touch_resp.mouseClock = core.Clock()
 button_left = visual.Rect(
     win=win, name='button_left',units='height', 
-    width=(0.4, 0.4)[0], height=(0.4, 0.4)[1],
+    width=(0.4, 0.3)[0], height=(0.4, 0.3)[1],
     ori=0, pos=(-0.4, -0.3),
     lineWidth=1, lineColor='orange', lineColorSpace='rgb',
     fillColor='orange', fillColorSpace='rgb',
@@ -191,12 +191,12 @@ trial_label_left = visual.TextStim(win=win, name='trial_label_left',
     text='default text',
     font='Arial',
     units='height', pos=[-0.4, -0.3], height=0.05, wrapWidth=None, ori=0, 
-    color='darkgreen', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-7.0);
 button_right = visual.Rect(
     win=win, name='button_right',units='height', 
-    width=(0.4, 0.4)[0], height=(0.4, 0.4)[1],
+    width=(0.4, 0.3)[0], height=(0.4, 0.3)[1],
     ori=0, pos=(0.4, -0.3),
     lineWidth=1, lineColor='orange', lineColorSpace='rgb',
     fillColor='orange', fillColorSpace='rgb',
@@ -205,7 +205,7 @@ trial_label_right = visual.TextStim(win=win, name='trial_label_right',
     text='default text',
     font='Arial',
     units='height', pos=[0.4, -0.3], height=0.05, wrapWidth=None, ori=0, 
-    color='darkgreen', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-9.0);
 

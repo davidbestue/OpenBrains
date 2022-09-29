@@ -173,7 +173,7 @@
         <Param name="pos" updates="constant" val="(-0.4, -0.3)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.4, 0.4)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.4, 0.3)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.5" valType="code"/>
@@ -183,7 +183,7 @@
         <Param name="units" updates="None" val="height" valType="str"/>
       </PolygonComponent>
       <TextComponent name="trial_label_left">
-        <Param name="color" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -222,7 +222,7 @@
         <Param name="pos" updates="constant" val="(0.4, -0.3)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.4, 0.4)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.4, 0.3)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.5" valType="code"/>
@@ -232,7 +232,7 @@
         <Param name="units" updates="None" val="height" valType="str"/>
       </PolygonComponent>
       <TextComponent name="trial_label_right">
-        <Param name="color" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -325,10 +325,10 @@
       <PolygonComponent name="button_L">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="lightgreen" valType="str"/>
+        <Param name="fillColor" updates="constant" val="orange" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="lineColor" updates="constant" val="orange" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
@@ -338,7 +338,7 @@
         <Param name="pos" updates="constant" val="(-0.4, -0.3)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.4, 0.2)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.4, 0.3)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -348,7 +348,7 @@
         <Param name="units" updates="None" val="height" valType="str"/>
       </PolygonComponent>
       <TextComponent name="ready_label_L">
-        <Param name="color" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -374,10 +374,10 @@
       <PolygonComponent name="button_R">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="lightgreen" valType="str"/>
+        <Param name="fillColor" updates="constant" val="orange" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="lineColor" updates="constant" val="orange" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
@@ -387,7 +387,7 @@
         <Param name="pos" updates="constant" val="(0.4, -0.3)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.4, 0.2)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.4, 0.3)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -397,7 +397,7 @@
         <Param name="units" updates="None" val="height" valType="str"/>
       </PolygonComponent>
       <TextComponent name="ready_label_R">
-        <Param name="color" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -655,10 +655,10 @@
       <PolygonComponent name="instr_done_button">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="lightgreen" valType="str"/>
+        <Param name="fillColor" updates="constant" val="orange" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="lineColor" updates="constant" val="orange" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
@@ -678,7 +678,7 @@
         <Param name="units" updates="None" val="height" valType="str"/>
       </PolygonComponent>
       <TextComponent name="instr_done_label">
-        <Param name="color" updates="constant" val="darkgreen" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
