@@ -302,7 +302,7 @@ function experimentInit() {
   thanks_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'thanks_text',
-    text: 'Fin\n \nMuchas gracias por participar :)',
+    text: 'Fin\n \nMuchas gracias por participar:)',
     font: 'Arial',
     units : 'height', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,

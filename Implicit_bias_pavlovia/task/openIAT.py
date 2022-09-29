@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on septiembre 29, 2022, at 18:30
+    on septiembre 29, 2022, at 19:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -222,7 +222,7 @@ feedback_msg = visual.TextStim(win=win, name='feedback_msg',
 # Initialize components for Routine "end_thanks"
 end_thanksClock = core.Clock()
 thanks_text = visual.TextStim(win=win, name='thanks_text',
-    text='Fin\n \nMuchas gracias por participar :)',
+    text='Fin\n \nMuchas gracias por participar:)',
     font='Arial',
     units='height', pos=[0, 0], height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
