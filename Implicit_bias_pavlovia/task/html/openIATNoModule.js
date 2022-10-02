@@ -77,6 +77,7 @@ var instruct_done;
 var instr_done_button;
 var instr_done_label;
 var instr_done_touch;
+var logo_OB;
 var readyClock;
 var main_ready_msg;
 var button_L;
@@ -85,6 +86,7 @@ var button_R;
 var ready_label_R;
 var ready_done_mouse;
 var ready_done;
+var logo_OB_ready;
 var trialClock;
 var fixation;
 var image_stim;
@@ -95,10 +97,13 @@ var button_left;
 var trial_label_left;
 var button_right;
 var trial_label_right;
+var logo_OB_trial;
 var feedbackClock;
 var feedback_msg;
+var logo_OB_feedback;
 var end_thanksClock;
 var thanks_text;
+var logo_OB_end;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -134,7 +139,7 @@ function experimentInit() {
   instr_done_label = new visual.TextStim({
     win: psychoJS.window,
     name: 'instr_done_label',
-    text: 'Siguiente...',
+    text: 'Siguiente',
     font: 'Arial',
     units : 'height', 
     pos: [0, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -146,6 +151,15 @@ function experimentInit() {
     win: psychoJS.window,
   });
   instr_done_touch.mouseClock = new util.Clock();
+  logo_OB = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'logo_OB', units : undefined, 
+    image : 'logo_OB.png', mask : undefined,
+    ori : 0, pos : [0.7, 0.35], size : [0.15, 0.13],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -6.0 
+  });
   // Initialize components for Routine "ready"
   readyClock = new util.Clock();
   main_ready_msg = new visual.TextStim({
@@ -205,6 +219,15 @@ function experimentInit() {
   ready_done_mouse.mouseClock = new util.Clock();
   ready_done = new core.Keyboard({psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  logo_OB_ready = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'logo_OB_ready', units : undefined, 
+    image : 'logo_OB.png', mask : undefined,
+    ori : 0, pos : [0.7, 0.35], size : [0.15, 0.13],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -7.0 
+  });
   // Initialize components for Routine "trial"
   trialClock = new util.Clock();
   fixation = new visual.TextStim({
@@ -284,6 +307,15 @@ function experimentInit() {
     depth: -9.0 
   });
   
+  logo_OB_trial = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'logo_OB_trial', units : undefined, 
+    image : 'logo_OB.png', mask : undefined,
+    ori : 0, pos : [0.7, 0.35], size : [0.15, 0.13],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -10.0 
+  });
   // Initialize components for Routine "feedback"
   feedbackClock = new util.Clock();
   feedback_msg = new visual.TextStim({
@@ -297,12 +329,21 @@ function experimentInit() {
     depth: -1.0 
   });
   
+  logo_OB_feedback = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'logo_OB_feedback', units : undefined, 
+    image : 'logo_OB.png', mask : undefined,
+    ori : 0, pos : [0.7, 0.35], size : [0.15, 0.13],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   // Initialize components for Routine "end_thanks"
   end_thanksClock = new util.Clock();
   thanks_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'thanks_text',
-    text: 'Fin\n \nMuchas gracias por participar:)',
+    text: 'Fin\n \n¡Muchas gracias por participar! :)',
     font: 'Arial',
     units : 'height', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -310,6 +351,15 @@ function experimentInit() {
     depth: 0.0 
   });
   
+  logo_OB_end = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'logo_OB_end', units : undefined, 
+    image : 'logo_OB.png', mask : undefined,
+    ori : 0, pos : [0.7, 0.35], size : [0.15, 0.13],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -457,6 +507,7 @@ function instructionsRoutineBegin() {
   instructionsComponents.push(instr_done_button);
   instructionsComponents.push(instr_done_label);
   instructionsComponents.push(instr_done_touch);
+  instructionsComponents.push(logo_OB);
   
   instructionsComponents.forEach( function(thisComponent) {
     if ('status' in thisComponent)
@@ -556,6 +607,15 @@ function instructionsRoutineEachFrame() {
       }
     }
   }
+  
+  // *logo_OB* updates
+  if (t >= 0.0 && logo_OB.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    logo_OB.tStart = t;  // (not accounting for frame time here)
+    logo_OB.frameNStart = frameN;  // exact frame index
+    logo_OB.setAutoDraw(true);
+  }
+
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
@@ -627,6 +687,7 @@ function readyRoutineBegin() {
   readyComponents.push(ready_label_R);
   readyComponents.push(ready_done_mouse);
   readyComponents.push(ready_done);
+  readyComponents.push(logo_OB_ready);
   
   readyComponents.forEach( function(thisComponent) {
     if ('status' in thisComponent)
@@ -743,6 +804,15 @@ function readyRoutineEachFrame() {
     }
   }
   
+  
+  // *logo_OB_ready* updates
+  if (t >= 0.0 && logo_OB_ready.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    logo_OB_ready.tStart = t;  // (not accounting for frame time here)
+    logo_OB_ready.frameNStart = frameN;  // exact frame index
+    logo_OB_ready.setAutoDraw(true);
+  }
+
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
@@ -816,6 +886,7 @@ function trialRoutineBegin() {
   trialComponents.push(trial_label_left);
   trialComponents.push(button_right);
   trialComponents.push(trial_label_right);
+  trialComponents.push(logo_OB_trial);
   
   trialComponents.forEach( function(thisComponent) {
     if ('status' in thisComponent)
@@ -969,6 +1040,15 @@ function trialRoutineEachFrame() {
     trial_label_right.setAutoDraw(true);
   }
 
+  
+  // *logo_OB_trial* updates
+  if (t >= 0.0 && logo_OB_trial.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    logo_OB_trial.tStart = t;  // (not accounting for frame time here)
+    logo_OB_trial.frameNStart = frameN;  // exact frame index
+    logo_OB_trial.setAutoDraw(true);
+  }
+
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
@@ -1070,6 +1150,7 @@ function feedbackRoutineBegin() {
   // keep track of which components have finished
   feedbackComponents = [];
   feedbackComponents.push(feedback_msg);
+  feedbackComponents.push(logo_OB_feedback);
   
   feedbackComponents.forEach( function(thisComponent) {
     if ('status' in thisComponent)
@@ -1099,6 +1180,19 @@ function feedbackRoutineEachFrame() {
   frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
   if (feedback_msg.status === PsychoJS.Status.STARTED && t >= frameRemains) {
     feedback_msg.setAutoDraw(false);
+  }
+  
+  // *logo_OB_feedback* updates
+  if (t >= 0.0 && logo_OB_feedback.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    logo_OB_feedback.tStart = t;  // (not accounting for frame time here)
+    logo_OB_feedback.frameNStart = frameN;  // exact frame index
+    logo_OB_feedback.setAutoDraw(true);
+  }
+
+  frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+  if (logo_OB_feedback.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    logo_OB_feedback.setAutoDraw(false);
   }
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -1145,6 +1239,7 @@ function end_thanksRoutineBegin() {
   // keep track of which components have finished
   end_thanksComponents = [];
   end_thanksComponents.push(thanks_text);
+  end_thanksComponents.push(logo_OB_end);
   
   end_thanksComponents.forEach( function(thisComponent) {
     if ('status' in thisComponent)
@@ -1169,6 +1264,15 @@ function end_thanksRoutineEachFrame() {
     thanks_text.tStart = t;  // (not accounting for frame time here)
     thanks_text.frameNStart = frameN;  // exact frame index
     thanks_text.setAutoDraw(true);
+  }
+
+  
+  // *logo_OB_end* updates
+  if (t >= 0.0 && logo_OB_end.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    logo_OB_end.tStart = t;  // (not accounting for frame time here)
+    logo_OB_end.frameNStart = frameN;  // exact frame index
+    logo_OB_end.setAutoDraw(true);
   }
 
   // check for quit (typically the Esc key)

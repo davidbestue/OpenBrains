@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on septiembre 29, 2022, at 19:13
+    on octubre 03, 2022, at 00:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -100,7 +100,7 @@ instr_done_button = visual.Rect(
     fillColor='orange', fillColorSpace='rgb',
     opacity=1, depth=-3.0, interpolate=True)
 instr_done_label = visual.TextStim(win=win, name='instr_done_label',
-    text='Siguiente...',
+    text='Siguiente',
     font='Arial',
     units='height', pos=(0, -0.4), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -109,6 +109,14 @@ instr_done_label = visual.TextStim(win=win, name='instr_done_label',
 instr_done_touch = event.Mouse(win=win)
 x, y = [None, None]
 instr_done_touch.mouseClock = core.Clock()
+logo_OB = visual.ImageStim(
+    win=win,
+    name='logo_OB', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.7, 0.35), size=(0.15, 0.13),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
 
 # Initialize components for Routine "ready"
 readyClock = core.Clock()
@@ -151,6 +159,14 @@ ready_done_mouse = event.Mouse(win=win)
 x, y = [None, None]
 ready_done_mouse.mouseClock = core.Clock()
 ready_done = keyboard.Keyboard()
+logo_OB_ready = visual.ImageStim(
+    win=win,
+    name='logo_OB_ready', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.7, 0.35), size=(0.15, 0.13),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
 
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
@@ -208,6 +224,14 @@ trial_label_right = visual.TextStim(win=win, name='trial_label_right',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-9.0);
+logo_OB_trial = visual.ImageStim(
+    win=win,
+    name='logo_OB_trial', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.7, 0.35), size=(0.15, 0.13),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-10.0)
 
 # Initialize components for Routine "feedback"
 feedbackClock = core.Clock()
@@ -218,16 +242,32 @@ feedback_msg = visual.TextStim(win=win, name='feedback_msg',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+logo_OB_feedback = visual.ImageStim(
+    win=win,
+    name='logo_OB_feedback', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.7, 0.35), size=(0.15, 0.13),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "end_thanks"
 end_thanksClock = core.Clock()
 thanks_text = visual.TextStim(win=win, name='thanks_text',
-    text='Fin\n \nMuchas gracias por participar:)',
+    text='Fin\n \n¡Muchas gracias por participar! :)',
     font='Arial',
     units='height', pos=[0, 0], height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
+logo_OB_end = visual.ImageStim(
+    win=win,
+    name='logo_OB_end', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.7, 0.35), size=(0.15, 0.13),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -261,7 +301,7 @@ for thisInstruct_page in instruct_pages:
     instr_done_touch.clicked_name = []
     gotValidClick = False  # until a click is received
     # keep track of which components have finished
-    instructionsComponents = [instructs_text, instruct_done, instr_done_button, instr_done_label, instr_done_touch]
+    instructionsComponents = [instructs_text, instruct_done, instr_done_button, instr_done_label, instr_done_touch, logo_OB]
     for thisComponent in instructionsComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -357,6 +397,15 @@ for thisInstruct_page in instruct_pages:
                     if gotValidClick:  # abort routine on response
                         continueRoutine = False
         
+        # *logo_OB* updates
+        if logo_OB.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            logo_OB.frameNStart = frameN  # exact frame index
+            logo_OB.tStart = t  # local t and not account for scr refresh
+            logo_OB.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(logo_OB, 'tStartRefresh')  # time at next scr refresh
+            logo_OB.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -401,6 +450,8 @@ for thisInstruct_page in instruct_pages:
         instruct_pages.addData('instr_done_touch.clicked_name', instr_done_touch.clicked_name[0])
     instruct_pages.addData('instr_done_touch.started', instr_done_touch.tStart)
     instruct_pages.addData('instr_done_touch.stopped', instr_done_touch.tStop)
+    instruct_pages.addData('logo_OB.started', logo_OB.tStartRefresh)
+    instruct_pages.addData('logo_OB.stopped', logo_OB.tStopRefresh)
     # the Routine "instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1 repeats of 'instruct_pages'
@@ -435,7 +486,7 @@ for thisBlock in blocks:
     ready_done.keys = []
     ready_done.rt = []
     # keep track of which components have finished
-    readyComponents = [main_ready_msg, button_L, ready_label_L, button_R, ready_label_R, ready_done_mouse, ready_done]
+    readyComponents = [main_ready_msg, button_L, ready_label_L, button_R, ready_label_R, ready_done_mouse, ready_done, logo_OB_ready]
     for thisComponent in readyComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -549,6 +600,15 @@ for thisBlock in blocks:
                 # a response ends the routine
                 continueRoutine = False
         
+        # *logo_OB_ready* updates
+        if logo_OB_ready.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            logo_OB_ready.frameNStart = frameN  # exact frame index
+            logo_OB_ready.tStart = t  # local t and not account for scr refresh
+            logo_OB_ready.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(logo_OB_ready, 'tStartRefresh')  # time at next scr refresh
+            logo_OB_ready.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -575,6 +635,8 @@ for thisBlock in blocks:
     blocks.addData('button_R.started', button_R.tStartRefresh)
     blocks.addData('button_R.stopped', button_R.tStopRefresh)
     # store data for blocks (TrialHandler)
+    blocks.addData('logo_OB_ready.started', logo_OB_ready.tStartRefresh)
+    blocks.addData('logo_OB_ready.stopped', logo_OB_ready.tStopRefresh)
     # the Routine "ready" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -615,7 +677,7 @@ for thisBlock in blocks:
         trial_label_left.setText(label_left)
         trial_label_right.setText(label_right)
         # keep track of which components have finished
-        trialComponents = [fixation, image_stim, text_stim, key_resp, touch_resp, button_left, trial_label_left, button_right, trial_label_right]
+        trialComponents = [fixation, image_stim, text_stim, key_resp, touch_resp, button_left, trial_label_left, button_right, trial_label_right, logo_OB_trial]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -772,6 +834,15 @@ for thisBlock in blocks:
                 win.timeOnFlip(trial_label_right, 'tStartRefresh')  # time at next scr refresh
                 trial_label_right.setAutoDraw(True)
             
+            # *logo_OB_trial* updates
+            if logo_OB_trial.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                logo_OB_trial.frameNStart = frameN  # exact frame index
+                logo_OB_trial.tStart = t  # local t and not account for scr refresh
+                logo_OB_trial.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(logo_OB_trial, 'tStartRefresh')  # time at next scr refresh
+                logo_OB_trial.setAutoDraw(True)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -842,6 +913,8 @@ for thisBlock in blocks:
         trials.addData('button_left.stopped', button_left.tStopRefresh)
         trials.addData('button_right.started', button_right.tStartRefresh)
         trials.addData('button_right.stopped', button_right.tStopRefresh)
+        trials.addData('logo_OB_trial.started', logo_OB_trial.tStartRefresh)
+        trials.addData('logo_OB_trial.stopped', logo_OB_trial.tStopRefresh)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -855,7 +928,7 @@ for thisBlock in blocks:
             msg="+"
         feedback_msg.setText(msg)
         # keep track of which components have finished
-        feedbackComponents = [feedback_msg]
+        feedbackComponents = [feedback_msg, logo_OB_feedback]
         for thisComponent in feedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -896,6 +969,23 @@ for thisBlock in blocks:
                     win.timeOnFlip(feedback_msg, 'tStopRefresh')  # time at next scr refresh
                     feedback_msg.setAutoDraw(False)
             
+            # *logo_OB_feedback* updates
+            if logo_OB_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                logo_OB_feedback.frameNStart = frameN  # exact frame index
+                logo_OB_feedback.tStart = t  # local t and not account for scr refresh
+                logo_OB_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(logo_OB_feedback, 'tStartRefresh')  # time at next scr refresh
+                logo_OB_feedback.setAutoDraw(True)
+            if logo_OB_feedback.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > logo_OB_feedback.tStartRefresh + 1-frameTolerance:
+                    # keep track of stop time/frame for later
+                    logo_OB_feedback.tStop = t  # not accounting for scr refresh
+                    logo_OB_feedback.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(logo_OB_feedback, 'tStopRefresh')  # time at next scr refresh
+                    logo_OB_feedback.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -917,6 +1007,8 @@ for thisBlock in blocks:
         for thisComponent in feedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        trials.addData('logo_OB_feedback.started', logo_OB_feedback.tStartRefresh)
+        trials.addData('logo_OB_feedback.stopped', logo_OB_feedback.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'trials'
@@ -927,7 +1019,7 @@ for thisBlock in blocks:
 # ------Prepare to start Routine "end_thanks"-------
 # update component parameters for each repeat
 # keep track of which components have finished
-end_thanksComponents = [thanks_text]
+end_thanksComponents = [thanks_text, logo_OB_end]
 for thisComponent in end_thanksComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -960,6 +1052,15 @@ while continueRoutine:
         win.timeOnFlip(thanks_text, 'tStartRefresh')  # time at next scr refresh
         thanks_text.setAutoDraw(True)
     
+    # *logo_OB_end* updates
+    if logo_OB_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        logo_OB_end.frameNStart = frameN  # exact frame index
+        logo_OB_end.tStart = t  # local t and not account for scr refresh
+        logo_OB_end.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(logo_OB_end, 'tStartRefresh')  # time at next scr refresh
+        logo_OB_end.setAutoDraw(True)
+    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -983,6 +1084,8 @@ for thisComponent in end_thanksComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('thanks_text.started', thanks_text.tStartRefresh)
 thisExp.addData('thanks_text.stopped', thanks_text.tStopRefresh)
+thisExp.addData('logo_OB_end.started', logo_OB_end.tStartRefresh)
+thisExp.addData('logo_OB_end.stopped', logo_OB_end.tStopRefresh)
 # the Routine "end_thanks" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
