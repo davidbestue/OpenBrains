@@ -9,7 +9,7 @@ import seaborn as sns
 
     
 # # GET THE DATA
-iat_race=pd.read_csv('summary_imerys.csv')
+iat_race=pd.read_csv('summary_file.csv')
 
 dat={} #store for summary stats. We use a dict because can be dynamically allocated
 basis=np.zeros(2) # IAT race, RAW race,order variable

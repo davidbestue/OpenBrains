@@ -20,6 +20,8 @@ import csv
 
 ## -----------DEFINE FUNCTIONS
 
+name_folder =  'juncar_1' ##'implicit_bias_imerys'
+
 
 def adjustedmean(RTs,corrs,penalty):
     n=len(corrs) #trials
@@ -54,7 +56,7 @@ fast_prop_limit=0.1 # threshold proportion of "too fast" responses which defines
 
 #where we expect the data files to be
 #search_string=os.path.join('..','implicit_bias_imerys','*.csv') 
-search_string=os.path.join(os.getcwd(),'implicit_bias_imerys','*.csv') 
+search_string=os.path.join(os.getcwd(),name_folder,'*.csv') 
 #we use os.path.join because the slashes go different ways on different operating systems
 #ie path = '../IAT-1.1/data' #linux
 #   path = '..\IAT-1.1\data' #windows
@@ -141,7 +143,7 @@ for filename in files:
 
 df_summary=pd.DataFrame(summary)
 df_summary.columns = ['file', 'IAT score', 'raw uncorrected', 'congruent mean RT','congruent RT sd', 'congruent error prop','incongruent mean RT','incongruent RT sd', 'incongruent error prop', 'congruent adjmean RT', 'incongruent adjmean RT' ]           
-df_summary.to_csv('summary_imerys.csv')  
+df_summary.to_csv('summary_file.csv')  
 
 
 
