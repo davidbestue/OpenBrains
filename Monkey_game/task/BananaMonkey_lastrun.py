@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on octubre 12, 2022, at 20:13
+    on octubre 12, 2022, at 20:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -91,11 +91,14 @@ image = visual.ImageStim(
 spin = 0
 TitleW = 0
 TitleH = 0
+monkey_sound = sound.Sound('monkeys_sound.wav', secs=-1, stereo=True, hamming=True,
+    name='monkey_sound')
+monkey_sound.setVolume(1)
 
 # Initialize components for Routine "Instructions"
 InstructionsClock = core.Clock()
 Bienvenida = visual.TextStim(win=win, name='Bienvenida',
-    text='Bienvenido a nuestro experimento!\n\n    Pulsa start para empezar',
+    text='Bienvenido a nuestro juego!\n¡Mueve el mouse para comerte las bananas!\n\n      Pulsa start para empezar',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -190,11 +193,18 @@ feedback_text = visual.TextStim(win=win, name='feedback_text',
 level_up_sound = sound.Sound('level_up.wav', secs=-1, stereo=True, hamming=True,
     name='level_up_sound')
 level_up_sound.setVolume(1)
+velo = visual.TextStim(win=win, name='velo',
+    text='default text',
+    font='Arial',
+    pos=(-0.1, -0.2), height=0.12, wrapWidth=None, ori=0, 
+    color='red', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # Initialize components for Routine "repeat_"
 repeat_Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='¿quieres continuar?\n\n      sí: pulsa S\n\n      no: pulsa N',
+    text='¿quieres continuar?\n\n        sí: pulsa S\n\n        no: pulsa N',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -208,7 +218,7 @@ EndClock = core.Clock()
 Adios = visual.TextStim(win=win, name='Adios',
     text='¡Muchas gracias por participar!',
     font='Arial',
-    pos=(-0.1, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(-0.05, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -220,8 +230,10 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 # ------Prepare to start Routine "title"-------
 routineTimer.add(3.000000)
 # update component parameters for each repeat
+monkey_sound.setSound('monkeys_sound.wav', secs=3, hamming=True)
+monkey_sound.setVolume(1, log=False)
 # keep track of which components have finished
-titleComponents = [image]
+titleComponents = [image, monkey_sound]
 for thisComponent in titleComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -281,6 +293,21 @@ while continueRoutine and routineTimer.getTime() > 0:
         TitleH = TitleH+ 0.02 
     else: 
         TitleH = 0.6  
+    # start/stop monkey_sound
+    if monkey_sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        monkey_sound.frameNStart = frameN  # exact frame index
+        monkey_sound.tStart = t  # local t and not account for scr refresh
+        monkey_sound.tStartRefresh = tThisFlipGlobal  # on global time
+        monkey_sound.play(when=win)  # sync with win flip
+    if monkey_sound.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > monkey_sound.tStartRefresh + 3-frameTolerance:
+            # keep track of stop time/frame for later
+            monkey_sound.tStop = t  # not accounting for scr refresh
+            monkey_sound.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(monkey_sound, 'tStopRefresh')  # time at next scr refresh
+            monkey_sound.stop()
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -305,6 +332,9 @@ for thisComponent in titleComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('image.started', image.tStartRefresh)
 thisExp.addData('image.stopped', image.tStopRefresh)
+monkey_sound.stop()  # ensure sound has stopped at end of routine
+thisExp.addData('monkey_sound.started', monkey_sound.tStartRefresh)
+thisExp.addData('monkey_sound.stopped', monkey_sound.tStopRefresh)
 
 # ------Prepare to start Routine "Instructions"-------
 # update component parameters for each repeat
@@ -433,7 +463,7 @@ for thisRepeat in repeat:
             exec('{} = thisRepeat[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=10, method='random', 
+    trials = data.TrialHandler(nReps=20, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -699,16 +729,16 @@ for thisRepeat in repeat:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 10 repeats of 'trials'
+    # completed 20 repeats of 'trials'
     
     
     # ------Prepare to start Routine "feedback_2"-------
-    routineTimer.add(5.000000)
+    routineTimer.add(3.000000)
     # update component parameters for each repeat
-    level_up_sound.setSound('level_up.wav', secs=4, hamming=True)
+    level_up_sound.setSound('level_up.wav', secs=3, hamming=True)
     level_up_sound.setVolume(1, log=False)
     # keep track of which components have finished
-    feedback_2Components = [feedback_text, level_up_sound]
+    feedback_2Components = [feedback_text, level_up_sound, velo]
     for thisComponent in feedback_2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -742,22 +772,19 @@ for thisRepeat in repeat:
             feedback_text.setAutoDraw(True)
         if feedback_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > feedback_text.tStartRefresh + 5-frameTolerance:
+            if tThisFlipGlobal > feedback_text.tStartRefresh + 3-frameTolerance:
                 # keep track of stop time/frame for later
                 feedback_text.tStop = t  # not accounting for scr refresh
                 feedback_text.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(feedback_text, 'tStopRefresh')  # time at next scr refresh
                 feedback_text.setAutoDraw(False)
         if feedback_text.status == STARTED:  # only update if drawing
-            feedback_text.setText('         ¡Sigue así!' + '\n'
-
-
-'velocidad = ' + str(SPEED_SHOW) + 'Km/h' + '\n'
+            feedback_text.setText('         ¡Sigue así!' + '\n' + '\n'
 
 
 , log=False)
         # start/stop level_up_sound
-        if level_up_sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if level_up_sound.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             level_up_sound.frameNStart = frameN  # exact frame index
             level_up_sound.tStart = t  # local t and not account for scr refresh
@@ -765,12 +792,34 @@ for thisRepeat in repeat:
             level_up_sound.play(when=win)  # sync with win flip
         if level_up_sound.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > level_up_sound.tStartRefresh + 4-frameTolerance:
+            if tThisFlipGlobal > level_up_sound.tStartRefresh + 3-frameTolerance:
                 # keep track of stop time/frame for later
                 level_up_sound.tStop = t  # not accounting for scr refresh
                 level_up_sound.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(level_up_sound, 'tStopRefresh')  # time at next scr refresh
                 level_up_sound.stop()
+        
+        # *velo* updates
+        if velo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            velo.frameNStart = frameN  # exact frame index
+            velo.tStart = t  # local t and not account for scr refresh
+            velo.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(velo, 'tStartRefresh')  # time at next scr refresh
+            velo.setAutoDraw(True)
+        if velo.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > velo.tStartRefresh + 3-frameTolerance:
+                # keep track of stop time/frame for later
+                velo.tStop = t  # not accounting for scr refresh
+                velo.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(velo, 'tStopRefresh')  # time at next scr refresh
+                velo.setAutoDraw(False)
+        if velo.status == STARTED:  # only update if drawing
+            velo.setText('velocidad = ' + str(SPEED_SHOW) + 'Km/h' + '\n'
+
+
+, log=False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -798,6 +847,8 @@ for thisRepeat in repeat:
     level_up_sound.stop()  # ensure sound has stopped at end of routine
     repeat.addData('level_up_sound.started', level_up_sound.tStartRefresh)
     repeat.addData('level_up_sound.stopped', level_up_sound.tStopRefresh)
+    repeat.addData('velo.started', velo.tStartRefresh)
+    repeat.addData('velo.stopped', velo.tStopRefresh)
     
     # ------Prepare to start Routine "repeat_"-------
     # update component parameters for each repeat
@@ -1012,6 +1063,17 @@ import numpy as np
 print(np.mean(speeds_)) ##mean speed -->the larger the better
 print(len(trials_done)) ##number of trials
 print(np.sum(trials_done))  ##number corrects
+import numpy as np
+
+mean_speed = np.mean(speeds_) ##mean speed -->the larger the better
+max_speed = np.max(speeds_)
+number_trials_done = len(trials_done) ##number of trials
+number_trials_correct = np.sum(trials_done)  ##number corrects
+
+thisExp.addData('mean_speed', mean_speed)
+thisExp.addData('max_speed', max_speed)
+thisExp.addData('number_trials', number_trials_done)
+thisExp.addData('number_trials_correct', number_trials_correct)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

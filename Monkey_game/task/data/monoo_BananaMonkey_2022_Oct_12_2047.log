@@ -1,0 +1,2374 @@
+5.7064 	WARNING 	User requested fullscreen with size [1366  768], but screen is actually [1920, 1080]. Using actual size
+7.3890 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([-1., -1., -1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CC743B77F0>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001CC74488A20>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.3891 	EXP 	window1: recordFrameIntervals = False
+7.5549 	EXP 	window1: recordFrameIntervals = True
+7.7388 	EXP 	window1: recordFrameIntervals = False
+8.7235 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='imagenes/Title.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+9.2792 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+9.2801 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+9.2801 	EXP 	Set Sound monkey_sound volume=1.000
+9.4900 	EXP 	Created Bienvenida = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Bienvenida', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+9.4943 	EXP 	Created Banana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='banana.png', interpolate=True, mask=None, maskParams=None, name='Banana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.4 ]), texRes=128, units='norm', win=Window(...))
+9.5001 	EXP 	Created SplatBanana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='bansplat.png', interpolate=True, mask=None, maskParams=None, name='SplatBanana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.3, 0.4]), texRes=128, units='norm', win=Window(...))
+9.5001 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+9.5279 	EXP 	Set Munch sound=A
+9.5280 	EXP 	Set Sound Munch volume=1.000
+9.5280 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+9.5289 	EXP 	Set Splat sound=splat.wav
+9.5289 	EXP 	Set Sound Splat volume=1.000
+9.5349 	EXP 	Created MonkeyMouth = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image='monkey.png', interpolate=True, mask=None, maskParams=None, name='MonkeyMouth', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+9.5403 	EXP 	Created MonkeyHappy = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, image='monkeymunch.png', interpolate=True, mask=None, maskParams=None, name='MonkeyHappy', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+9.5452 	EXP 	Created MonkeySad = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, image='monkeyno.png', interpolate=True, mask=None, maskParams=None, name='MonkeySad', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+9.5545 	EXP 	Created feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.5545 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+9.5555 	EXP 	Set level_up_sound sound=level_up.wav
+9.5555 	EXP 	Set Sound level_up_sound volume=1.000
+9.5802 	EXP 	Created velo = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='red', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.12, italic=False, languageStyle='LTR', name='velo', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([255.,   0.,   0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.6290 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+9.6456 	EXP 	Created Adios = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Adios', opacity=1.0, ori=0, pos=array([-0.05,  0.  ]), rgb=array([255., 255., 255.]), text='¡Muchas gracias por participar!', units='norm', win=Window(...), wrapWidth=1)
+9.6464 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+9.6466 	EXP 	Sound monkey_sound started
+9.7296 	EXP 	image: autoDraw = True
+12.6447 	EXP 	Sound monkey_sound stopped
+12.6608 	EXP 	Sound monkey_sound stopped
+12.6769 	EXP 	image: autoDraw = False
+12.6769 	EXP 	Bienvenida: autoDraw = True
+17.6818 	EXP 	Bienvenida: autoDraw = False
+19.2380 	EXP 	Created sequence: random, trialTypes=1, nReps=10, seed=None
+19.2382 	EXP 	New trial (rep=0, index=0): None
+19.2385 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+19.2387 	EXP 	New trial (rep=0, index=0): None
+19.2394 	EXP 	Set Munch sound=munch.wav
+19.2400 	EXP 	Set Splat sound=splat.wav
+19.2403 	DATA 	Keypress: space
+19.2513 	EXP 	Bienvenida: autoDraw = False
+19.2513 	EXP 	Banana: autoDraw = True
+19.2513 	EXP 	SplatBanana: autoDraw = True
+19.2513 	EXP 	MonkeyMouth: autoDraw = True
+19.2513 	EXP 	MonkeyHappy: autoDraw = True
+19.2513 	EXP 	MonkeySad: autoDraw = True
+21.0032 	EXP 	Sound Munch started
+21.9222 	EXP 	Sound Munch stopped
+21.9222 	EXP 	Sound Splat stopped
+21.9225 	EXP 	New trial (rep=1, index=0): None
+21.9231 	EXP 	Set Munch sound=munch.wav
+21.9237 	EXP 	Set Splat sound=splat.wav
+21.9365 	EXP 	Banana: autoDraw = False
+21.9365 	EXP 	SplatBanana: autoDraw = False
+21.9365 	EXP 	MonkeyMouth: autoDraw = False
+21.9365 	EXP 	MonkeyHappy: autoDraw = False
+21.9365 	EXP 	MonkeySad: autoDraw = False
+21.9365 	EXP 	Banana: autoDraw = True
+21.9365 	EXP 	SplatBanana: autoDraw = True
+21.9365 	EXP 	MonkeyMouth: autoDraw = True
+21.9365 	EXP 	MonkeyHappy: autoDraw = True
+21.9365 	EXP 	MonkeySad: autoDraw = True
+23.5241 	EXP 	Sound Munch started
+24.3253 	EXP 	Sound Munch stopped
+24.3253 	EXP 	Sound Splat stopped
+24.3256 	EXP 	New trial (rep=2, index=0): None
+24.3263 	EXP 	Set Munch sound=munch.wav
+24.3269 	EXP 	Set Splat sound=splat.wav
+24.3400 	EXP 	Banana: autoDraw = False
+24.3400 	EXP 	SplatBanana: autoDraw = False
+24.3400 	EXP 	MonkeyMouth: autoDraw = False
+24.3400 	EXP 	MonkeyHappy: autoDraw = False
+24.3400 	EXP 	MonkeySad: autoDraw = False
+24.3400 	EXP 	Banana: autoDraw = True
+24.3400 	EXP 	SplatBanana: autoDraw = True
+24.3400 	EXP 	MonkeyMouth: autoDraw = True
+24.3400 	EXP 	MonkeyHappy: autoDraw = True
+24.3400 	EXP 	MonkeySad: autoDraw = True
+25.7747 	EXP 	Sound Munch started
+26.5105 	EXP 	Sound Munch stopped
+26.5105 	EXP 	Sound Splat stopped
+26.5108 	EXP 	New trial (rep=3, index=0): None
+26.5118 	EXP 	Set Munch sound=munch.wav
+26.5124 	EXP 	Set Splat sound=splat.wav
+26.5249 	EXP 	Banana: autoDraw = False
+26.5249 	EXP 	SplatBanana: autoDraw = False
+26.5249 	EXP 	MonkeyMouth: autoDraw = False
+26.5249 	EXP 	MonkeyHappy: autoDraw = False
+26.5249 	EXP 	MonkeySad: autoDraw = False
+26.5249 	EXP 	Banana: autoDraw = True
+26.5249 	EXP 	SplatBanana: autoDraw = True
+26.5249 	EXP 	MonkeyMouth: autoDraw = True
+26.5249 	EXP 	MonkeyHappy: autoDraw = True
+26.5249 	EXP 	MonkeySad: autoDraw = True
+27.8266 	EXP 	Sound Munch started
+28.4955 	EXP 	Sound Munch stopped
+28.4955 	EXP 	Sound Splat stopped
+28.4958 	EXP 	New trial (rep=4, index=0): None
+28.4965 	EXP 	Set Munch sound=munch.wav
+28.4970 	EXP 	Set Splat sound=splat.wav
+28.5102 	EXP 	Banana: autoDraw = False
+28.5102 	EXP 	SplatBanana: autoDraw = False
+28.5102 	EXP 	MonkeyMouth: autoDraw = False
+28.5102 	EXP 	MonkeyHappy: autoDraw = False
+28.5102 	EXP 	MonkeySad: autoDraw = False
+28.5102 	EXP 	Banana: autoDraw = True
+28.5102 	EXP 	SplatBanana: autoDraw = True
+28.5102 	EXP 	MonkeyMouth: autoDraw = True
+28.5102 	EXP 	MonkeyHappy: autoDraw = True
+28.5102 	EXP 	MonkeySad: autoDraw = True
+29.7118 	EXP 	Sound Munch started
+30.3312 	EXP 	Sound Munch stopped
+30.3313 	EXP 	Sound Splat stopped
+30.3315 	EXP 	New trial (rep=5, index=0): None
+30.3324 	EXP 	Set Munch sound=munch.wav
+30.3330 	EXP 	Set Splat sound=splat.wav
+30.3451 	EXP 	Banana: autoDraw = False
+30.3451 	EXP 	SplatBanana: autoDraw = False
+30.3451 	EXP 	MonkeyMouth: autoDraw = False
+30.3451 	EXP 	MonkeyHappy: autoDraw = False
+30.3451 	EXP 	MonkeySad: autoDraw = False
+30.3451 	EXP 	Banana: autoDraw = True
+30.3451 	EXP 	SplatBanana: autoDraw = True
+30.3451 	EXP 	MonkeyMouth: autoDraw = True
+30.3451 	EXP 	MonkeyHappy: autoDraw = True
+30.3451 	EXP 	MonkeySad: autoDraw = True
+31.4633 	EXP 	Sound Munch started
+32.0330 	EXP 	Sound Munch stopped
+32.0330 	EXP 	Sound Splat stopped
+32.0334 	EXP 	New trial (rep=6, index=0): None
+32.0342 	EXP 	Set Munch sound=munch.wav
+32.0347 	EXP 	Set Splat sound=splat.wav
+32.0473 	EXP 	Banana: autoDraw = False
+32.0473 	EXP 	SplatBanana: autoDraw = False
+32.0473 	EXP 	MonkeyMouth: autoDraw = False
+32.0473 	EXP 	MonkeyHappy: autoDraw = False
+32.0473 	EXP 	MonkeySad: autoDraw = False
+32.0473 	EXP 	Banana: autoDraw = True
+32.0473 	EXP 	SplatBanana: autoDraw = True
+32.0473 	EXP 	MonkeyMouth: autoDraw = True
+32.0473 	EXP 	MonkeyHappy: autoDraw = True
+32.0473 	EXP 	MonkeySad: autoDraw = True
+33.0985 	EXP 	Sound Munch started
+33.6177 	EXP 	Sound Munch stopped
+33.6178 	EXP 	Sound Splat stopped
+33.6184 	EXP 	New trial (rep=7, index=0): None
+33.6198 	EXP 	Set Munch sound=munch.wav
+33.6211 	EXP 	Set Splat sound=splat.wav
+33.6318 	EXP 	Banana: autoDraw = False
+33.6318 	EXP 	SplatBanana: autoDraw = False
+33.6318 	EXP 	MonkeyMouth: autoDraw = False
+33.6318 	EXP 	MonkeyHappy: autoDraw = False
+33.6318 	EXP 	MonkeySad: autoDraw = False
+33.6318 	EXP 	Banana: autoDraw = True
+33.6318 	EXP 	SplatBanana: autoDraw = True
+33.6318 	EXP 	MonkeyMouth: autoDraw = True
+33.6318 	EXP 	MonkeyHappy: autoDraw = True
+33.6318 	EXP 	MonkeySad: autoDraw = True
+34.6166 	EXP 	Sound Munch started
+35.1029 	EXP 	Sound Munch stopped
+35.1029 	EXP 	Sound Splat stopped
+35.1033 	EXP 	New trial (rep=8, index=0): None
+35.1042 	EXP 	Set Munch sound=munch.wav
+35.1049 	EXP 	Set Splat sound=splat.wav
+35.1168 	EXP 	Banana: autoDraw = False
+35.1168 	EXP 	SplatBanana: autoDraw = False
+35.1168 	EXP 	MonkeyMouth: autoDraw = False
+35.1168 	EXP 	MonkeyHappy: autoDraw = False
+35.1168 	EXP 	MonkeySad: autoDraw = False
+35.1168 	EXP 	Banana: autoDraw = True
+35.1168 	EXP 	SplatBanana: autoDraw = True
+35.1168 	EXP 	MonkeyMouth: autoDraw = True
+35.1168 	EXP 	MonkeyHappy: autoDraw = True
+35.1168 	EXP 	MonkeySad: autoDraw = True
+36.0351 	EXP 	Sound Munch started
+36.5040 	EXP 	Sound Munch stopped
+36.5040 	EXP 	Sound Splat stopped
+36.5042 	EXP 	New trial (rep=9, index=0): None
+36.5050 	EXP 	Set Munch sound=munch.wav
+36.5056 	EXP 	Set Splat sound=splat.wav
+36.5182 	EXP 	Banana: autoDraw = False
+36.5182 	EXP 	SplatBanana: autoDraw = False
+36.5182 	EXP 	MonkeyMouth: autoDraw = False
+36.5182 	EXP 	MonkeyHappy: autoDraw = False
+36.5182 	EXP 	MonkeySad: autoDraw = False
+36.5182 	EXP 	Banana: autoDraw = True
+36.5182 	EXP 	SplatBanana: autoDraw = True
+36.5182 	EXP 	MonkeyMouth: autoDraw = True
+36.5182 	EXP 	MonkeyHappy: autoDraw = True
+36.5182 	EXP 	MonkeySad: autoDraw = True
+37.4037 	EXP 	Sound Munch started
+37.8217 	EXP 	Sound Munch stopped
+37.8218 	EXP 	Sound Splat stopped
+37.8221 	EXP 	New trial (rep=10, index=0): None
+37.8230 	EXP 	Set Munch sound=munch.wav
+37.8235 	EXP 	Set Splat sound=splat.wav
+37.8361 	EXP 	Banana: autoDraw = False
+37.8361 	EXP 	SplatBanana: autoDraw = False
+37.8361 	EXP 	MonkeyMouth: autoDraw = False
+37.8361 	EXP 	MonkeyHappy: autoDraw = False
+37.8361 	EXP 	MonkeySad: autoDraw = False
+37.8361 	EXP 	Banana: autoDraw = True
+37.8361 	EXP 	SplatBanana: autoDraw = True
+37.8361 	EXP 	MonkeyMouth: autoDraw = True
+37.8361 	EXP 	MonkeyHappy: autoDraw = True
+37.8361 	EXP 	MonkeySad: autoDraw = True
+38.6707 	EXP 	Sound Munch started
+39.0730 	EXP 	Sound Munch stopped
+39.0731 	EXP 	Sound Splat stopped
+39.0735 	EXP 	New trial (rep=11, index=0): None
+39.0741 	EXP 	Set Munch sound=munch.wav
+39.0745 	EXP 	Set Splat sound=splat.wav
+39.0876 	EXP 	Banana: autoDraw = False
+39.0876 	EXP 	SplatBanana: autoDraw = False
+39.0876 	EXP 	MonkeyMouth: autoDraw = False
+39.0876 	EXP 	MonkeyHappy: autoDraw = False
+39.0876 	EXP 	MonkeySad: autoDraw = False
+39.0876 	EXP 	Banana: autoDraw = True
+39.0876 	EXP 	SplatBanana: autoDraw = True
+39.0876 	EXP 	MonkeyMouth: autoDraw = True
+39.0876 	EXP 	MonkeyHappy: autoDraw = True
+39.0876 	EXP 	MonkeySad: autoDraw = True
+39.8884 	EXP 	Sound Munch started
+40.2735 	EXP 	Sound Munch stopped
+40.2735 	EXP 	Sound Splat stopped
+40.2740 	EXP 	New trial (rep=12, index=0): None
+40.2750 	EXP 	Set Munch sound=munch.wav
+40.2760 	EXP 	Set Splat sound=splat.wav
+40.2886 	EXP 	Banana: autoDraw = False
+40.2886 	EXP 	SplatBanana: autoDraw = False
+40.2886 	EXP 	MonkeyMouth: autoDraw = False
+40.2886 	EXP 	MonkeyHappy: autoDraw = False
+40.2886 	EXP 	MonkeySad: autoDraw = False
+40.2886 	EXP 	Banana: autoDraw = True
+40.2886 	EXP 	SplatBanana: autoDraw = True
+40.2886 	EXP 	MonkeyMouth: autoDraw = True
+40.2886 	EXP 	MonkeyHappy: autoDraw = True
+40.2886 	EXP 	MonkeySad: autoDraw = True
+41.0397 	EXP 	Sound Munch started
+41.4085 	EXP 	Sound Munch stopped
+41.4085 	EXP 	Sound Splat stopped
+41.4088 	EXP 	New trial (rep=13, index=0): None
+41.4095 	EXP 	Set Munch sound=munch.wav
+41.4100 	EXP 	Set Splat sound=splat.wav
+41.4231 	EXP 	Banana: autoDraw = False
+41.4231 	EXP 	SplatBanana: autoDraw = False
+41.4231 	EXP 	MonkeyMouth: autoDraw = False
+41.4231 	EXP 	MonkeyHappy: autoDraw = False
+41.4231 	EXP 	MonkeySad: autoDraw = False
+41.4231 	EXP 	Banana: autoDraw = True
+41.4231 	EXP 	SplatBanana: autoDraw = True
+41.4231 	EXP 	MonkeyMouth: autoDraw = True
+41.4231 	EXP 	MonkeyHappy: autoDraw = True
+41.4231 	EXP 	MonkeySad: autoDraw = True
+42.1574 	EXP 	Sound Munch started
+42.5101 	EXP 	Sound Munch stopped
+42.5101 	EXP 	Sound Splat stopped
+42.5106 	EXP 	New trial (rep=14, index=0): None
+42.5129 	EXP 	Set Munch sound=munch.wav
+42.5140 	EXP 	Set Splat sound=splat.wav
+42.5244 	EXP 	Banana: autoDraw = False
+42.5244 	EXP 	SplatBanana: autoDraw = False
+42.5244 	EXP 	MonkeyMouth: autoDraw = False
+42.5244 	EXP 	MonkeyHappy: autoDraw = False
+42.5244 	EXP 	MonkeySad: autoDraw = False
+42.5244 	EXP 	Banana: autoDraw = True
+42.5244 	EXP 	SplatBanana: autoDraw = True
+42.5244 	EXP 	MonkeyMouth: autoDraw = True
+42.5244 	EXP 	MonkeyHappy: autoDraw = True
+42.5244 	EXP 	MonkeySad: autoDraw = True
+43.2254 	EXP 	Sound Munch started
+43.5605 	EXP 	Sound Munch stopped
+43.5605 	EXP 	Sound Splat stopped
+43.5609 	EXP 	New trial (rep=15, index=0): None
+43.5621 	EXP 	Set Munch sound=munch.wav
+43.5628 	EXP 	Set Splat sound=splat.wav
+43.5760 	EXP 	Banana: autoDraw = False
+43.5760 	EXP 	SplatBanana: autoDraw = False
+43.5760 	EXP 	MonkeyMouth: autoDraw = False
+43.5760 	EXP 	MonkeyHappy: autoDraw = False
+43.5760 	EXP 	MonkeySad: autoDraw = False
+43.5760 	EXP 	Banana: autoDraw = True
+43.5760 	EXP 	SplatBanana: autoDraw = True
+43.5760 	EXP 	MonkeyMouth: autoDraw = True
+43.5760 	EXP 	MonkeyHappy: autoDraw = True
+43.5760 	EXP 	MonkeySad: autoDraw = True
+44.2428 	EXP 	Sound Munch started
+44.5784 	EXP 	Sound Munch stopped
+44.5784 	EXP 	Sound Splat stopped
+44.5787 	EXP 	New trial (rep=16, index=0): None
+44.5796 	EXP 	Set Munch sound=munch.wav
+44.5802 	EXP 	Set Splat sound=splat.wav
+44.5930 	EXP 	Banana: autoDraw = False
+44.5930 	EXP 	SplatBanana: autoDraw = False
+44.5930 	EXP 	MonkeyMouth: autoDraw = False
+44.5930 	EXP 	MonkeyHappy: autoDraw = False
+44.5930 	EXP 	MonkeySad: autoDraw = False
+44.5930 	EXP 	Banana: autoDraw = True
+44.5930 	EXP 	SplatBanana: autoDraw = True
+44.5930 	EXP 	MonkeyMouth: autoDraw = True
+44.5930 	EXP 	MonkeyHappy: autoDraw = True
+44.5930 	EXP 	MonkeySad: autoDraw = True
+45.2438 	EXP 	Sound Munch started
+45.5966 	EXP 	Sound Munch stopped
+45.5966 	EXP 	Sound Splat stopped
+45.5972 	EXP 	New trial (rep=17, index=0): None
+45.5983 	EXP 	Set Munch sound=munch.wav
+45.5991 	EXP 	Set Splat sound=splat.wav
+45.6102 	EXP 	Banana: autoDraw = False
+45.6102 	EXP 	SplatBanana: autoDraw = False
+45.6102 	EXP 	MonkeyMouth: autoDraw = False
+45.6102 	EXP 	MonkeyHappy: autoDraw = False
+45.6102 	EXP 	MonkeySad: autoDraw = False
+45.6102 	EXP 	Banana: autoDraw = True
+45.6102 	EXP 	SplatBanana: autoDraw = True
+45.6102 	EXP 	MonkeyMouth: autoDraw = True
+45.6102 	EXP 	MonkeyHappy: autoDraw = True
+45.6102 	EXP 	MonkeySad: autoDraw = True
+46.2282 	EXP 	Sound Munch started
+46.6135 	EXP 	Sound Munch stopped
+46.6135 	EXP 	Sound Splat stopped
+46.6138 	EXP 	New trial (rep=18, index=0): None
+46.6161 	EXP 	Set Munch sound=munch.wav
+46.6172 	EXP 	Set Splat sound=splat.wav
+46.6284 	EXP 	Banana: autoDraw = False
+46.6284 	EXP 	SplatBanana: autoDraw = False
+46.6284 	EXP 	MonkeyMouth: autoDraw = False
+46.6284 	EXP 	MonkeyHappy: autoDraw = False
+46.6284 	EXP 	MonkeySad: autoDraw = False
+46.6284 	EXP 	Banana: autoDraw = True
+46.6284 	EXP 	SplatBanana: autoDraw = True
+46.6284 	EXP 	MonkeyMouth: autoDraw = True
+46.6284 	EXP 	MonkeyHappy: autoDraw = True
+46.6284 	EXP 	MonkeySad: autoDraw = True
+47.2294 	EXP 	Sound Munch started
+47.6320 	EXP 	Sound Munch stopped
+47.6320 	EXP 	Sound Splat stopped
+47.6325 	EXP 	New trial (rep=19, index=0): None
+47.6336 	EXP 	Set Munch sound=munch.wav
+47.6345 	EXP 	Set Splat sound=splat.wav
+47.6459 	EXP 	Banana: autoDraw = False
+47.6459 	EXP 	SplatBanana: autoDraw = False
+47.6459 	EXP 	MonkeyMouth: autoDraw = False
+47.6459 	EXP 	MonkeyHappy: autoDraw = False
+47.6459 	EXP 	MonkeySad: autoDraw = False
+47.6459 	EXP 	Banana: autoDraw = True
+47.6459 	EXP 	SplatBanana: autoDraw = True
+47.6459 	EXP 	MonkeyMouth: autoDraw = True
+47.6459 	EXP 	MonkeyHappy: autoDraw = True
+47.6459 	EXP 	MonkeySad: autoDraw = True
+48.2301 	EXP 	Sound Munch started
+48.6492 	EXP 	Sound Munch stopped
+48.6493 	EXP 	Sound Splat stopped
+48.6507 	EXP 	Set level_up_sound sound=level_up.wav
+48.6577 	EXP 	Sound level_up_sound started
+48.6826 	EXP 	Banana: autoDraw = False
+48.6826 	EXP 	SplatBanana: autoDraw = False
+48.6826 	EXP 	MonkeyMouth: autoDraw = False
+48.6826 	EXP 	MonkeyHappy: autoDraw = False
+48.6826 	EXP 	MonkeySad: autoDraw = False
+48.6826 	EXP 	feedback_text: autoDraw = True
+48.6826 	EXP 	velo: autoDraw = True
+51.6517 	EXP 	Sound level_up_sound stopped
+51.6663 	EXP 	feedback_text: autoDraw = False
+51.6663 	EXP 	velo: autoDraw = False
+51.6663 	EXP 	text: autoDraw = True
+53.8084 	EXP 	New trial (rep=1, index=0): None
+53.8087 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+53.8089 	EXP 	New trial (rep=0, index=0): None
+53.8096 	EXP 	Set Munch sound=munch.wav
+53.8102 	EXP 	Set Splat sound=splat.wav
+53.8112 	DATA 	Keypress: s
+53.8190 	EXP 	text: autoDraw = False
+53.8190 	EXP 	Banana: autoDraw = True
+53.8190 	EXP 	SplatBanana: autoDraw = True
+53.8190 	EXP 	MonkeyMouth: autoDraw = True
+53.8190 	EXP 	MonkeyHappy: autoDraw = True
+53.8190 	EXP 	MonkeySad: autoDraw = True
+54.3861 	EXP 	Sound Munch started
+54.8222 	EXP 	Sound Munch stopped
+54.8222 	EXP 	Sound Splat stopped
+54.8226 	EXP 	New trial (rep=1, index=0): None
+54.8233 	EXP 	Set Munch sound=munch.wav
+54.8238 	EXP 	Set Splat sound=splat.wav
+54.8363 	EXP 	Banana: autoDraw = False
+54.8363 	EXP 	SplatBanana: autoDraw = False
+54.8363 	EXP 	MonkeyMouth: autoDraw = False
+54.8363 	EXP 	MonkeyHappy: autoDraw = False
+54.8363 	EXP 	MonkeySad: autoDraw = False
+54.8363 	EXP 	Banana: autoDraw = True
+54.8363 	EXP 	SplatBanana: autoDraw = True
+54.8363 	EXP 	MonkeyMouth: autoDraw = True
+54.8363 	EXP 	MonkeyHappy: autoDraw = True
+54.8363 	EXP 	MonkeySad: autoDraw = True
+55.3874 	EXP 	Sound Munch started
+55.8399 	EXP 	Sound Munch stopped
+55.8399 	EXP 	Sound Splat stopped
+55.8402 	EXP 	New trial (rep=2, index=0): None
+55.8410 	EXP 	Set Munch sound=munch.wav
+55.8416 	EXP 	Set Splat sound=splat.wav
+55.8543 	EXP 	Banana: autoDraw = False
+55.8543 	EXP 	SplatBanana: autoDraw = False
+55.8543 	EXP 	MonkeyMouth: autoDraw = False
+55.8543 	EXP 	MonkeyHappy: autoDraw = False
+55.8543 	EXP 	MonkeySad: autoDraw = False
+55.8543 	EXP 	Banana: autoDraw = True
+55.8543 	EXP 	SplatBanana: autoDraw = True
+55.8543 	EXP 	MonkeyMouth: autoDraw = True
+55.8543 	EXP 	MonkeyHappy: autoDraw = True
+55.8543 	EXP 	MonkeySad: autoDraw = True
+56.3889 	EXP 	Sound Splat started
+56.8584 	EXP 	Sound Munch stopped
+56.8585 	EXP 	Sound Splat stopped
+56.8590 	EXP 	New trial (rep=3, index=0): None
+56.8602 	EXP 	Set Munch sound=munch.wav
+56.8612 	EXP 	Set Splat sound=splat.wav
+56.8715 	EXP 	Banana: autoDraw = False
+56.8715 	EXP 	SplatBanana: autoDraw = False
+56.8715 	EXP 	MonkeyMouth: autoDraw = False
+56.8715 	EXP 	MonkeyHappy: autoDraw = False
+56.8715 	EXP 	MonkeySad: autoDraw = False
+56.8715 	EXP 	Banana: autoDraw = True
+56.8715 	EXP 	SplatBanana: autoDraw = True
+56.8715 	EXP 	MonkeyMouth: autoDraw = True
+56.8715 	EXP 	MonkeyHappy: autoDraw = True
+56.8715 	EXP 	MonkeySad: autoDraw = True
+57.4742 	EXP 	Sound Munch started
+57.8783 	EXP 	Sound Munch stopped
+57.8783 	EXP 	Sound Splat stopped
+57.8786 	EXP 	New trial (rep=4, index=0): None
+57.8793 	EXP 	Set Munch sound=munch.wav
+57.8798 	EXP 	Set Splat sound=splat.wav
+57.8898 	EXP 	Banana: autoDraw = False
+57.8898 	EXP 	SplatBanana: autoDraw = False
+57.8898 	EXP 	MonkeyMouth: autoDraw = False
+57.8898 	EXP 	MonkeyHappy: autoDraw = False
+57.8898 	EXP 	MonkeySad: autoDraw = False
+57.8898 	EXP 	Banana: autoDraw = True
+57.8898 	EXP 	SplatBanana: autoDraw = True
+57.8898 	EXP 	MonkeyMouth: autoDraw = True
+57.8898 	EXP 	MonkeyHappy: autoDraw = True
+57.8898 	EXP 	MonkeySad: autoDraw = True
+58.4740 	EXP 	Sound Munch started
+58.8921 	EXP 	Sound Munch stopped
+58.8921 	EXP 	Sound Splat stopped
+58.8923 	EXP 	New trial (rep=5, index=0): None
+58.8930 	EXP 	Set Munch sound=munch.wav
+58.8936 	EXP 	Set Splat sound=splat.wav
+58.9069 	EXP 	Banana: autoDraw = False
+58.9069 	EXP 	SplatBanana: autoDraw = False
+58.9069 	EXP 	MonkeyMouth: autoDraw = False
+58.9069 	EXP 	MonkeyHappy: autoDraw = False
+58.9069 	EXP 	MonkeySad: autoDraw = False
+58.9069 	EXP 	Banana: autoDraw = True
+58.9069 	EXP 	SplatBanana: autoDraw = True
+58.9069 	EXP 	MonkeyMouth: autoDraw = True
+58.9069 	EXP 	MonkeyHappy: autoDraw = True
+58.9069 	EXP 	MonkeySad: autoDraw = True
+59.4749 	EXP 	Sound Munch started
+59.9105 	EXP 	Sound Munch stopped
+59.9105 	EXP 	Sound Splat stopped
+59.9109 	EXP 	New trial (rep=6, index=0): None
+59.9117 	EXP 	Set Munch sound=munch.wav
+59.9126 	EXP 	Set Splat sound=splat.wav
+59.9244 	EXP 	Banana: autoDraw = False
+59.9244 	EXP 	SplatBanana: autoDraw = False
+59.9244 	EXP 	MonkeyMouth: autoDraw = False
+59.9244 	EXP 	MonkeyHappy: autoDraw = False
+59.9244 	EXP 	MonkeySad: autoDraw = False
+59.9244 	EXP 	Banana: autoDraw = True
+59.9244 	EXP 	SplatBanana: autoDraw = True
+59.9244 	EXP 	MonkeyMouth: autoDraw = True
+59.9244 	EXP 	MonkeyHappy: autoDraw = True
+59.9244 	EXP 	MonkeySad: autoDraw = True
+60.4758 	EXP 	Sound Splat started
+60.9277 	EXP 	Sound Munch stopped
+60.9277 	EXP 	Sound Splat stopped
+60.9281 	EXP 	New trial (rep=7, index=0): None
+60.9288 	EXP 	Set Munch sound=munch.wav
+60.9294 	EXP 	Set Splat sound=splat.wav
+60.9425 	EXP 	Banana: autoDraw = False
+60.9425 	EXP 	SplatBanana: autoDraw = False
+60.9425 	EXP 	MonkeyMouth: autoDraw = False
+60.9425 	EXP 	MonkeyHappy: autoDraw = False
+60.9425 	EXP 	MonkeySad: autoDraw = False
+60.9425 	EXP 	Banana: autoDraw = True
+60.9425 	EXP 	SplatBanana: autoDraw = True
+60.9425 	EXP 	MonkeyMouth: autoDraw = True
+60.9425 	EXP 	MonkeyHappy: autoDraw = True
+60.9425 	EXP 	MonkeySad: autoDraw = True
+61.5606 	EXP 	Sound Munch started
+61.9460 	EXP 	Sound Munch stopped
+61.9460 	EXP 	Sound Splat stopped
+61.9464 	EXP 	New trial (rep=8, index=0): None
+61.9472 	EXP 	Set Munch sound=munch.wav
+61.9479 	EXP 	Set Splat sound=splat.wav
+61.9602 	EXP 	Banana: autoDraw = False
+61.9602 	EXP 	SplatBanana: autoDraw = False
+61.9602 	EXP 	MonkeyMouth: autoDraw = False
+61.9602 	EXP 	MonkeyHappy: autoDraw = False
+61.9602 	EXP 	MonkeySad: autoDraw = False
+61.9602 	EXP 	Banana: autoDraw = True
+61.9602 	EXP 	SplatBanana: autoDraw = True
+61.9602 	EXP 	MonkeyMouth: autoDraw = True
+61.9602 	EXP 	MonkeyHappy: autoDraw = True
+61.9602 	EXP 	MonkeySad: autoDraw = True
+62.5615 	EXP 	Sound Munch started
+62.9634 	EXP 	Sound Munch stopped
+62.9634 	EXP 	Sound Splat stopped
+62.9637 	EXP 	New trial (rep=9, index=0): None
+62.9644 	EXP 	Set Munch sound=munch.wav
+62.9650 	EXP 	Set Splat sound=splat.wav
+62.9781 	EXP 	Banana: autoDraw = False
+62.9781 	EXP 	SplatBanana: autoDraw = False
+62.9781 	EXP 	MonkeyMouth: autoDraw = False
+62.9781 	EXP 	MonkeyHappy: autoDraw = False
+62.9781 	EXP 	MonkeySad: autoDraw = False
+62.9781 	EXP 	Banana: autoDraw = True
+62.9781 	EXP 	SplatBanana: autoDraw = True
+62.9781 	EXP 	MonkeyMouth: autoDraw = True
+62.9781 	EXP 	MonkeyHappy: autoDraw = True
+62.9781 	EXP 	MonkeySad: autoDraw = True
+63.5622 	EXP 	Sound Munch started
+63.9816 	EXP 	Sound Munch stopped
+63.9816 	EXP 	Sound Splat stopped
+63.9820 	EXP 	New trial (rep=10, index=0): None
+63.9828 	EXP 	Set Munch sound=munch.wav
+63.9833 	EXP 	Set Splat sound=splat.wav
+63.9956 	EXP 	Banana: autoDraw = False
+63.9956 	EXP 	SplatBanana: autoDraw = False
+63.9956 	EXP 	MonkeyMouth: autoDraw = False
+63.9956 	EXP 	MonkeyHappy: autoDraw = False
+63.9956 	EXP 	MonkeySad: autoDraw = False
+63.9956 	EXP 	Banana: autoDraw = True
+63.9956 	EXP 	SplatBanana: autoDraw = True
+63.9956 	EXP 	MonkeyMouth: autoDraw = True
+63.9956 	EXP 	MonkeyHappy: autoDraw = True
+63.9956 	EXP 	MonkeySad: autoDraw = True
+64.5635 	EXP 	Sound Munch started
+65.0003 	EXP 	Sound Munch stopped
+65.0003 	EXP 	Sound Splat stopped
+65.0007 	EXP 	New trial (rep=11, index=0): None
+65.0017 	EXP 	Set Munch sound=munch.wav
+65.0025 	EXP 	Set Splat sound=splat.wav
+65.0134 	EXP 	Banana: autoDraw = False
+65.0134 	EXP 	SplatBanana: autoDraw = False
+65.0134 	EXP 	MonkeyMouth: autoDraw = False
+65.0134 	EXP 	MonkeyHappy: autoDraw = False
+65.0134 	EXP 	MonkeySad: autoDraw = False
+65.0134 	EXP 	Banana: autoDraw = True
+65.0134 	EXP 	SplatBanana: autoDraw = True
+65.0134 	EXP 	MonkeyMouth: autoDraw = True
+65.0134 	EXP 	MonkeyHappy: autoDraw = True
+65.0134 	EXP 	MonkeySad: autoDraw = True
+65.5647 	EXP 	Sound Munch started
+66.0174 	EXP 	Sound Munch stopped
+66.0174 	EXP 	Sound Splat stopped
+66.0183 	EXP 	New trial (rep=12, index=0): None
+66.0203 	EXP 	Set Munch sound=munch.wav
+66.0220 	EXP 	Set Splat sound=splat.wav
+66.0323 	EXP 	Banana: autoDraw = False
+66.0323 	EXP 	SplatBanana: autoDraw = False
+66.0323 	EXP 	MonkeyMouth: autoDraw = False
+66.0323 	EXP 	MonkeyHappy: autoDraw = False
+66.0323 	EXP 	MonkeySad: autoDraw = False
+66.0323 	EXP 	Banana: autoDraw = True
+66.0323 	EXP 	SplatBanana: autoDraw = True
+66.0323 	EXP 	MonkeyMouth: autoDraw = True
+66.0323 	EXP 	MonkeyHappy: autoDraw = True
+66.0323 	EXP 	MonkeySad: autoDraw = True
+66.5661 	EXP 	Sound Munch started
+67.0350 	EXP 	Sound Munch stopped
+67.0350 	EXP 	Sound Splat stopped
+67.0356 	EXP 	New trial (rep=13, index=0): None
+67.0367 	EXP 	Set Munch sound=munch.wav
+67.0376 	EXP 	Set Splat sound=splat.wav
+67.0487 	EXP 	Banana: autoDraw = False
+67.0487 	EXP 	SplatBanana: autoDraw = False
+67.0487 	EXP 	MonkeyMouth: autoDraw = False
+67.0487 	EXP 	MonkeyHappy: autoDraw = False
+67.0487 	EXP 	MonkeySad: autoDraw = False
+67.0487 	EXP 	Banana: autoDraw = True
+67.0487 	EXP 	SplatBanana: autoDraw = True
+67.0487 	EXP 	MonkeyMouth: autoDraw = True
+67.0487 	EXP 	MonkeyHappy: autoDraw = True
+67.0487 	EXP 	MonkeySad: autoDraw = True
+67.5671 	EXP 	Sound Munch started
+68.0513 	EXP 	Sound Munch stopped
+68.0513 	EXP 	Sound Splat stopped
+68.0517 	EXP 	New trial (rep=14, index=0): None
+68.0526 	EXP 	Set Munch sound=munch.wav
+68.0533 	EXP 	Set Splat sound=splat.wav
+68.0662 	EXP 	Banana: autoDraw = False
+68.0662 	EXP 	SplatBanana: autoDraw = False
+68.0662 	EXP 	MonkeyMouth: autoDraw = False
+68.0662 	EXP 	MonkeyHappy: autoDraw = False
+68.0662 	EXP 	MonkeySad: autoDraw = False
+68.0662 	EXP 	Banana: autoDraw = True
+68.0662 	EXP 	SplatBanana: autoDraw = True
+68.0662 	EXP 	MonkeyMouth: autoDraw = True
+68.0662 	EXP 	MonkeyHappy: autoDraw = True
+68.0662 	EXP 	MonkeySad: autoDraw = True
+68.5675 	EXP 	Sound Splat started
+69.0699 	EXP 	Sound Munch stopped
+69.0699 	EXP 	Sound Splat stopped
+69.0703 	EXP 	New trial (rep=15, index=0): None
+69.0710 	EXP 	Set Munch sound=munch.wav
+69.0715 	EXP 	Set Splat sound=splat.wav
+69.0844 	EXP 	Banana: autoDraw = False
+69.0844 	EXP 	SplatBanana: autoDraw = False
+69.0844 	EXP 	MonkeyMouth: autoDraw = False
+69.0844 	EXP 	MonkeyHappy: autoDraw = False
+69.0844 	EXP 	MonkeySad: autoDraw = False
+69.0844 	EXP 	Banana: autoDraw = True
+69.0844 	EXP 	SplatBanana: autoDraw = True
+69.0844 	EXP 	MonkeyMouth: autoDraw = True
+69.0844 	EXP 	MonkeyHappy: autoDraw = True
+69.0844 	EXP 	MonkeySad: autoDraw = True
+69.6518 	EXP 	Sound Munch started
+70.0893 	EXP 	Sound Munch stopped
+70.0893 	EXP 	Sound Splat stopped
+70.0900 	EXP 	New trial (rep=16, index=0): None
+70.0914 	EXP 	Set Munch sound=munch.wav
+70.0927 	EXP 	Set Splat sound=splat.wav
+70.1041 	EXP 	Banana: autoDraw = False
+70.1041 	EXP 	SplatBanana: autoDraw = False
+70.1041 	EXP 	MonkeyMouth: autoDraw = False
+70.1041 	EXP 	MonkeyHappy: autoDraw = False
+70.1041 	EXP 	MonkeySad: autoDraw = False
+70.1041 	EXP 	Banana: autoDraw = True
+70.1041 	EXP 	SplatBanana: autoDraw = True
+70.1041 	EXP 	MonkeyMouth: autoDraw = True
+70.1041 	EXP 	MonkeyHappy: autoDraw = True
+70.1041 	EXP 	MonkeySad: autoDraw = True
+70.6532 	EXP 	Sound Munch started
+71.1050 	EXP 	Sound Munch stopped
+71.1051 	EXP 	Sound Splat stopped
+71.1055 	EXP 	New trial (rep=17, index=0): None
+71.1064 	EXP 	Set Munch sound=munch.wav
+71.1071 	EXP 	Set Splat sound=splat.wav
+71.1190 	EXP 	Banana: autoDraw = False
+71.1190 	EXP 	SplatBanana: autoDraw = False
+71.1190 	EXP 	MonkeyMouth: autoDraw = False
+71.1190 	EXP 	MonkeyHappy: autoDraw = False
+71.1190 	EXP 	MonkeySad: autoDraw = False
+71.1190 	EXP 	Banana: autoDraw = True
+71.1190 	EXP 	SplatBanana: autoDraw = True
+71.1190 	EXP 	MonkeyMouth: autoDraw = True
+71.1190 	EXP 	MonkeyHappy: autoDraw = True
+71.1190 	EXP 	MonkeySad: autoDraw = True
+71.6536 	EXP 	Sound Munch started
+72.1240 	EXP 	Sound Munch stopped
+72.1240 	EXP 	Sound Splat stopped
+72.1246 	EXP 	New trial (rep=18, index=0): None
+72.1258 	EXP 	Set Munch sound=munch.wav
+72.1269 	EXP 	Set Splat sound=splat.wav
+72.1366 	EXP 	Banana: autoDraw = False
+72.1366 	EXP 	SplatBanana: autoDraw = False
+72.1366 	EXP 	MonkeyMouth: autoDraw = False
+72.1366 	EXP 	MonkeyHappy: autoDraw = False
+72.1366 	EXP 	MonkeySad: autoDraw = False
+72.1366 	EXP 	Banana: autoDraw = True
+72.1366 	EXP 	SplatBanana: autoDraw = True
+72.1366 	EXP 	MonkeyMouth: autoDraw = True
+72.1366 	EXP 	MonkeyHappy: autoDraw = True
+72.1366 	EXP 	MonkeySad: autoDraw = True
+72.6546 	EXP 	Sound Munch started
+73.1401 	EXP 	Sound Munch stopped
+73.1401 	EXP 	Sound Splat stopped
+73.1404 	EXP 	New trial (rep=19, index=0): None
+73.1411 	EXP 	Set Munch sound=munch.wav
+73.1416 	EXP 	Set Splat sound=splat.wav
+73.1547 	EXP 	Banana: autoDraw = False
+73.1547 	EXP 	SplatBanana: autoDraw = False
+73.1547 	EXP 	MonkeyMouth: autoDraw = False
+73.1547 	EXP 	MonkeyHappy: autoDraw = False
+73.1547 	EXP 	MonkeySad: autoDraw = False
+73.1547 	EXP 	Banana: autoDraw = True
+73.1547 	EXP 	SplatBanana: autoDraw = True
+73.1547 	EXP 	MonkeyMouth: autoDraw = True
+73.1547 	EXP 	MonkeyHappy: autoDraw = True
+73.1547 	EXP 	MonkeySad: autoDraw = True
+73.6557 	EXP 	Sound Splat started
+74.1587 	EXP 	Sound Munch stopped
+74.1587 	EXP 	Sound Splat stopped
+74.1595 	EXP 	Set level_up_sound sound=level_up.wav
+74.1597 	EXP 	Sound level_up_sound started
+74.1758 	EXP 	Banana: autoDraw = False
+74.1758 	EXP 	SplatBanana: autoDraw = False
+74.1758 	EXP 	MonkeyMouth: autoDraw = False
+74.1758 	EXP 	MonkeyHappy: autoDraw = False
+74.1758 	EXP 	MonkeySad: autoDraw = False
+74.1758 	EXP 	feedback_text: autoDraw = True
+74.1758 	EXP 	velo: autoDraw = True
+77.1586 	EXP 	Sound level_up_sound stopped
+77.1611 	EXP 	Sound level_up_sound stopped
+77.1749 	EXP 	feedback_text: autoDraw = False
+77.1749 	EXP 	velo: autoDraw = False
+77.1749 	EXP 	feedback_text: autoDraw = False
+77.1749 	EXP 	velo: autoDraw = False
+77.1749 	EXP 	text: autoDraw = True
+77.8491 	EXP 	New trial (rep=2, index=0): None
+77.8494 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+77.8496 	EXP 	New trial (rep=0, index=0): None
+77.8503 	EXP 	Set Munch sound=munch.wav
+77.8509 	EXP 	Set Splat sound=splat.wav
+77.8512 	DATA 	Keypress: s
+77.8589 	EXP 	text: autoDraw = False
+77.8589 	EXP 	Banana: autoDraw = True
+77.8589 	EXP 	SplatBanana: autoDraw = True
+77.8589 	EXP 	MonkeyMouth: autoDraw = True
+77.8589 	EXP 	MonkeyHappy: autoDraw = True
+77.8589 	EXP 	MonkeySad: autoDraw = True
+78.4270 	EXP 	Sound Munch started
+78.8625 	EXP 	Sound Munch stopped
+78.8625 	EXP 	Sound Splat stopped
+78.8628 	EXP 	New trial (rep=1, index=0): None
+78.8636 	EXP 	Set Munch sound=munch.wav
+78.8642 	EXP 	Set Splat sound=splat.wav
+78.8771 	EXP 	Banana: autoDraw = False
+78.8771 	EXP 	SplatBanana: autoDraw = False
+78.8771 	EXP 	MonkeyMouth: autoDraw = False
+78.8771 	EXP 	MonkeyHappy: autoDraw = False
+78.8771 	EXP 	MonkeySad: autoDraw = False
+78.8771 	EXP 	Banana: autoDraw = True
+78.8771 	EXP 	SplatBanana: autoDraw = True
+78.8771 	EXP 	MonkeyMouth: autoDraw = True
+78.8771 	EXP 	MonkeyHappy: autoDraw = True
+78.8771 	EXP 	MonkeySad: autoDraw = True
+79.4278 	EXP 	Sound Munch started
+79.8805 	EXP 	Sound Munch stopped
+79.8805 	EXP 	Sound Splat stopped
+79.8808 	EXP 	New trial (rep=2, index=0): None
+79.8814 	EXP 	Set Munch sound=munch.wav
+79.8819 	EXP 	Set Splat sound=splat.wav
+79.8950 	EXP 	Banana: autoDraw = False
+79.8950 	EXP 	SplatBanana: autoDraw = False
+79.8950 	EXP 	MonkeyMouth: autoDraw = False
+79.8950 	EXP 	MonkeyHappy: autoDraw = False
+79.8950 	EXP 	MonkeySad: autoDraw = False
+79.8950 	EXP 	Banana: autoDraw = True
+79.8950 	EXP 	SplatBanana: autoDraw = True
+79.8950 	EXP 	MonkeyMouth: autoDraw = True
+79.8950 	EXP 	MonkeyHappy: autoDraw = True
+79.8950 	EXP 	MonkeySad: autoDraw = True
+80.4291 	EXP 	Sound Munch started
+80.8991 	EXP 	Sound Munch stopped
+80.8992 	EXP 	Sound Splat stopped
+80.8997 	EXP 	New trial (rep=3, index=0): None
+80.9010 	EXP 	Set Munch sound=munch.wav
+80.9021 	EXP 	Set Splat sound=splat.wav
+80.9126 	EXP 	Banana: autoDraw = False
+80.9126 	EXP 	SplatBanana: autoDraw = False
+80.9126 	EXP 	MonkeyMouth: autoDraw = False
+80.9126 	EXP 	MonkeyHappy: autoDraw = False
+80.9126 	EXP 	MonkeySad: autoDraw = False
+80.9126 	EXP 	Banana: autoDraw = True
+80.9126 	EXP 	SplatBanana: autoDraw = True
+80.9126 	EXP 	MonkeyMouth: autoDraw = True
+80.9126 	EXP 	MonkeyHappy: autoDraw = True
+80.9126 	EXP 	MonkeySad: autoDraw = True
+81.4304 	EXP 	Sound Munch started
+81.9159 	EXP 	Sound Munch stopped
+81.9159 	EXP 	Sound Splat stopped
+81.9162 	EXP 	New trial (rep=4, index=0): None
+81.9168 	EXP 	Set Munch sound=munch.wav
+81.9174 	EXP 	Set Splat sound=splat.wav
+81.9302 	EXP 	Banana: autoDraw = False
+81.9302 	EXP 	SplatBanana: autoDraw = False
+81.9302 	EXP 	MonkeyMouth: autoDraw = False
+81.9302 	EXP 	MonkeyHappy: autoDraw = False
+81.9302 	EXP 	MonkeySad: autoDraw = False
+81.9302 	EXP 	Banana: autoDraw = True
+81.9302 	EXP 	SplatBanana: autoDraw = True
+81.9302 	EXP 	MonkeyMouth: autoDraw = True
+81.9302 	EXP 	MonkeyHappy: autoDraw = True
+81.9302 	EXP 	MonkeySad: autoDraw = True
+82.4315 	EXP 	Sound Munch started
+82.9333 	EXP 	Sound Munch stopped
+82.9333 	EXP 	Sound Splat stopped
+82.9337 	EXP 	New trial (rep=5, index=0): None
+82.9345 	EXP 	Set Munch sound=munch.wav
+82.9352 	EXP 	Set Splat sound=splat.wav
+82.9475 	EXP 	Banana: autoDraw = False
+82.9475 	EXP 	SplatBanana: autoDraw = False
+82.9475 	EXP 	MonkeyMouth: autoDraw = False
+82.9475 	EXP 	MonkeyHappy: autoDraw = False
+82.9475 	EXP 	MonkeySad: autoDraw = False
+82.9475 	EXP 	Banana: autoDraw = True
+82.9475 	EXP 	SplatBanana: autoDraw = True
+82.9475 	EXP 	MonkeyMouth: autoDraw = True
+82.9475 	EXP 	MonkeyHappy: autoDraw = True
+82.9475 	EXP 	MonkeySad: autoDraw = True
+83.4487 	EXP 	Sound Splat started
+83.9514 	EXP 	Sound Munch stopped
+83.9514 	EXP 	Sound Splat stopped
+83.9518 	EXP 	New trial (rep=6, index=0): None
+83.9527 	EXP 	Set Munch sound=munch.wav
+83.9535 	EXP 	Set Splat sound=splat.wav
+83.9652 	EXP 	Banana: autoDraw = False
+83.9652 	EXP 	SplatBanana: autoDraw = False
+83.9652 	EXP 	MonkeyMouth: autoDraw = False
+83.9652 	EXP 	MonkeyHappy: autoDraw = False
+83.9652 	EXP 	MonkeySad: autoDraw = False
+83.9652 	EXP 	Banana: autoDraw = True
+83.9652 	EXP 	SplatBanana: autoDraw = True
+83.9652 	EXP 	MonkeyMouth: autoDraw = True
+83.9652 	EXP 	MonkeyHappy: autoDraw = True
+83.9652 	EXP 	MonkeySad: autoDraw = True
+84.5168 	EXP 	Sound Munch started
+84.9696 	EXP 	Sound Munch stopped
+84.9696 	EXP 	Sound Splat stopped
+84.9701 	EXP 	New trial (rep=7, index=0): None
+84.9712 	EXP 	Set Munch sound=munch.wav
+84.9720 	EXP 	Set Splat sound=splat.wav
+84.9832 	EXP 	Banana: autoDraw = False
+84.9832 	EXP 	SplatBanana: autoDraw = False
+84.9832 	EXP 	MonkeyMouth: autoDraw = False
+84.9832 	EXP 	MonkeyHappy: autoDraw = False
+84.9832 	EXP 	MonkeySad: autoDraw = False
+84.9832 	EXP 	Banana: autoDraw = True
+84.9832 	EXP 	SplatBanana: autoDraw = True
+84.9832 	EXP 	MonkeyMouth: autoDraw = True
+84.9832 	EXP 	MonkeyHappy: autoDraw = True
+84.9832 	EXP 	MonkeySad: autoDraw = True
+85.5176 	EXP 	Sound Munch started
+85.9866 	EXP 	Sound Munch stopped
+85.9866 	EXP 	Sound Splat stopped
+85.9871 	EXP 	New trial (rep=8, index=0): None
+85.9883 	EXP 	Set Munch sound=munch.wav
+85.9892 	EXP 	Set Splat sound=splat.wav
+86.0009 	EXP 	Banana: autoDraw = False
+86.0009 	EXP 	SplatBanana: autoDraw = False
+86.0009 	EXP 	MonkeyMouth: autoDraw = False
+86.0009 	EXP 	MonkeyHappy: autoDraw = False
+86.0009 	EXP 	MonkeySad: autoDraw = False
+86.0009 	EXP 	Banana: autoDraw = True
+86.0009 	EXP 	SplatBanana: autoDraw = True
+86.0009 	EXP 	MonkeyMouth: autoDraw = True
+86.0009 	EXP 	MonkeyHappy: autoDraw = True
+86.0009 	EXP 	MonkeySad: autoDraw = True
+86.5192 	EXP 	Sound Munch started
+87.0067 	EXP 	Sound Munch stopped
+87.0067 	EXP 	Sound Splat stopped
+87.0069 	EXP 	New trial (rep=9, index=0): None
+87.0076 	EXP 	Set Munch sound=munch.wav
+87.0081 	EXP 	Set Splat sound=splat.wav
+87.0183 	EXP 	Banana: autoDraw = False
+87.0183 	EXP 	SplatBanana: autoDraw = False
+87.0183 	EXP 	MonkeyMouth: autoDraw = False
+87.0183 	EXP 	MonkeyHappy: autoDraw = False
+87.0183 	EXP 	MonkeySad: autoDraw = False
+87.0183 	EXP 	Banana: autoDraw = True
+87.0183 	EXP 	SplatBanana: autoDraw = True
+87.0183 	EXP 	MonkeyMouth: autoDraw = True
+87.0183 	EXP 	MonkeyHappy: autoDraw = True
+87.0183 	EXP 	MonkeySad: autoDraw = True
+87.5193 	EXP 	Sound Munch started
+88.0213 	EXP 	Sound Munch stopped
+88.0213 	EXP 	Sound Splat stopped
+88.0217 	EXP 	New trial (rep=10, index=0): None
+88.0225 	EXP 	Set Munch sound=munch.wav
+88.0232 	EXP 	Set Splat sound=splat.wav
+88.0363 	EXP 	Banana: autoDraw = False
+88.0363 	EXP 	SplatBanana: autoDraw = False
+88.0363 	EXP 	MonkeyMouth: autoDraw = False
+88.0363 	EXP 	MonkeyHappy: autoDraw = False
+88.0363 	EXP 	MonkeySad: autoDraw = False
+88.0363 	EXP 	Banana: autoDraw = True
+88.0363 	EXP 	SplatBanana: autoDraw = True
+88.0363 	EXP 	MonkeyMouth: autoDraw = True
+88.0363 	EXP 	MonkeyHappy: autoDraw = True
+88.0363 	EXP 	MonkeySad: autoDraw = True
+88.5372 	EXP 	Sound Splat started
+89.0398 	EXP 	Sound Munch stopped
+89.0399 	EXP 	Sound Splat stopped
+89.0404 	EXP 	New trial (rep=11, index=0): None
+89.0417 	EXP 	Set Munch sound=munch.wav
+89.0427 	EXP 	Set Splat sound=splat.wav
+89.0538 	EXP 	Banana: autoDraw = False
+89.0538 	EXP 	SplatBanana: autoDraw = False
+89.0538 	EXP 	MonkeyMouth: autoDraw = False
+89.0538 	EXP 	MonkeyHappy: autoDraw = False
+89.0538 	EXP 	MonkeySad: autoDraw = False
+89.0538 	EXP 	Banana: autoDraw = True
+89.0538 	EXP 	SplatBanana: autoDraw = True
+89.0538 	EXP 	MonkeyMouth: autoDraw = True
+89.0538 	EXP 	MonkeyHappy: autoDraw = True
+89.0538 	EXP 	MonkeySad: autoDraw = True
+89.6050 	EXP 	Sound Munch started
+90.0576 	EXP 	Sound Munch stopped
+90.0576 	EXP 	Sound Splat stopped
+90.0580 	EXP 	New trial (rep=12, index=0): None
+90.0588 	EXP 	Set Munch sound=munch.wav
+90.0595 	EXP 	Set Splat sound=splat.wav
+90.0713 	EXP 	Banana: autoDraw = False
+90.0713 	EXP 	SplatBanana: autoDraw = False
+90.0713 	EXP 	MonkeyMouth: autoDraw = False
+90.0713 	EXP 	MonkeyHappy: autoDraw = False
+90.0713 	EXP 	MonkeySad: autoDraw = False
+90.0713 	EXP 	Banana: autoDraw = True
+90.0713 	EXP 	SplatBanana: autoDraw = True
+90.0713 	EXP 	MonkeyMouth: autoDraw = True
+90.0713 	EXP 	MonkeyHappy: autoDraw = True
+90.0713 	EXP 	MonkeySad: autoDraw = True
+90.6059 	EXP 	Sound Munch started
+91.0745 	EXP 	Sound Munch stopped
+91.0746 	EXP 	Sound Splat stopped
+91.0749 	EXP 	New trial (rep=13, index=0): None
+91.0758 	EXP 	Set Munch sound=munch.wav
+91.0765 	EXP 	Set Splat sound=splat.wav
+91.0893 	EXP 	Banana: autoDraw = False
+91.0893 	EXP 	SplatBanana: autoDraw = False
+91.0893 	EXP 	MonkeyMouth: autoDraw = False
+91.0893 	EXP 	MonkeyHappy: autoDraw = False
+91.0893 	EXP 	MonkeySad: autoDraw = False
+91.0893 	EXP 	Banana: autoDraw = True
+91.0893 	EXP 	SplatBanana: autoDraw = True
+91.0893 	EXP 	MonkeyMouth: autoDraw = True
+91.0893 	EXP 	MonkeyHappy: autoDraw = True
+91.0893 	EXP 	MonkeySad: autoDraw = True
+91.6065 	EXP 	Sound Munch started
+92.0931 	EXP 	Sound Munch stopped
+92.0931 	EXP 	Sound Splat stopped
+92.0936 	EXP 	New trial (rep=14, index=0): None
+92.0943 	EXP 	Set Munch sound=munch.wav
+92.0949 	EXP 	Set Splat sound=splat.wav
+92.1070 	EXP 	Banana: autoDraw = False
+92.1070 	EXP 	SplatBanana: autoDraw = False
+92.1070 	EXP 	MonkeyMouth: autoDraw = False
+92.1070 	EXP 	MonkeyHappy: autoDraw = False
+92.1070 	EXP 	MonkeySad: autoDraw = False
+92.1070 	EXP 	Banana: autoDraw = True
+92.1070 	EXP 	SplatBanana: autoDraw = True
+92.1070 	EXP 	MonkeyMouth: autoDraw = True
+92.1070 	EXP 	MonkeyHappy: autoDraw = True
+92.1070 	EXP 	MonkeySad: autoDraw = True
+92.6080 	EXP 	Sound Munch started
+93.1100 	EXP 	Sound Munch stopped
+93.1100 	EXP 	Sound Splat stopped
+93.1104 	EXP 	New trial (rep=15, index=0): None
+93.1111 	EXP 	Set Munch sound=munch.wav
+93.1117 	EXP 	Set Splat sound=splat.wav
+93.1247 	EXP 	Banana: autoDraw = False
+93.1247 	EXP 	SplatBanana: autoDraw = False
+93.1247 	EXP 	MonkeyMouth: autoDraw = False
+93.1247 	EXP 	MonkeyHappy: autoDraw = False
+93.1247 	EXP 	MonkeySad: autoDraw = False
+93.1247 	EXP 	Banana: autoDraw = True
+93.1247 	EXP 	SplatBanana: autoDraw = True
+93.1247 	EXP 	MonkeyMouth: autoDraw = True
+93.1247 	EXP 	MonkeyHappy: autoDraw = True
+93.1247 	EXP 	MonkeySad: autoDraw = True
+93.6252 	EXP 	Sound Splat started
+94.1281 	EXP 	Sound Munch stopped
+94.1281 	EXP 	Sound Splat stopped
+94.1286 	EXP 	New trial (rep=16, index=0): None
+94.1295 	EXP 	Set Munch sound=munch.wav
+94.1302 	EXP 	Set Splat sound=splat.wav
+94.1423 	EXP 	Banana: autoDraw = False
+94.1423 	EXP 	SplatBanana: autoDraw = False
+94.1423 	EXP 	MonkeyMouth: autoDraw = False
+94.1423 	EXP 	MonkeyHappy: autoDraw = False
+94.1423 	EXP 	MonkeySad: autoDraw = False
+94.1423 	EXP 	Banana: autoDraw = True
+94.1423 	EXP 	SplatBanana: autoDraw = True
+94.1423 	EXP 	MonkeyMouth: autoDraw = True
+94.1423 	EXP 	MonkeyHappy: autoDraw = True
+94.1423 	EXP 	MonkeySad: autoDraw = True
+94.6931 	EXP 	Sound Munch started
+95.1488 	EXP 	Sound Munch stopped
+95.1488 	EXP 	Sound Splat stopped
+95.1496 	EXP 	New trial (rep=17, index=0): None
+95.1512 	EXP 	Set Munch sound=munch.wav
+95.1527 	EXP 	Set Splat sound=splat.wav
+95.1625 	EXP 	Banana: autoDraw = False
+95.1625 	EXP 	SplatBanana: autoDraw = False
+95.1625 	EXP 	MonkeyMouth: autoDraw = False
+95.1625 	EXP 	MonkeyHappy: autoDraw = False
+95.1625 	EXP 	MonkeySad: autoDraw = False
+95.1625 	EXP 	Banana: autoDraw = True
+95.1625 	EXP 	SplatBanana: autoDraw = True
+95.1625 	EXP 	MonkeyMouth: autoDraw = True
+95.1625 	EXP 	MonkeyHappy: autoDraw = True
+95.1625 	EXP 	MonkeySad: autoDraw = True
+95.6944 	EXP 	Sound Munch started
+96.1664 	EXP 	Sound Munch stopped
+96.1665 	EXP 	Sound Splat stopped
+96.1670 	EXP 	New trial (rep=18, index=0): None
+96.1679 	EXP 	Set Munch sound=munch.wav
+96.1687 	EXP 	Set Splat sound=splat.wav
+96.1776 	EXP 	Banana: autoDraw = False
+96.1776 	EXP 	SplatBanana: autoDraw = False
+96.1776 	EXP 	MonkeyMouth: autoDraw = False
+96.1776 	EXP 	MonkeyHappy: autoDraw = False
+96.1776 	EXP 	MonkeySad: autoDraw = False
+96.1776 	EXP 	Banana: autoDraw = True
+96.1776 	EXP 	SplatBanana: autoDraw = True
+96.1776 	EXP 	MonkeyMouth: autoDraw = True
+96.1776 	EXP 	MonkeyHappy: autoDraw = True
+96.1776 	EXP 	MonkeySad: autoDraw = True
+96.6953 	EXP 	Sound Munch started
+97.1804 	EXP 	Sound Munch stopped
+97.1805 	EXP 	Sound Splat stopped
+97.1809 	EXP 	New trial (rep=19, index=0): None
+97.1820 	EXP 	Set Munch sound=munch.wav
+97.1827 	EXP 	Set Splat sound=splat.wav
+97.1961 	EXP 	Banana: autoDraw = False
+97.1961 	EXP 	SplatBanana: autoDraw = False
+97.1961 	EXP 	MonkeyMouth: autoDraw = False
+97.1961 	EXP 	MonkeyHappy: autoDraw = False
+97.1961 	EXP 	MonkeySad: autoDraw = False
+97.1961 	EXP 	Banana: autoDraw = True
+97.1961 	EXP 	SplatBanana: autoDraw = True
+97.1961 	EXP 	MonkeyMouth: autoDraw = True
+97.1961 	EXP 	MonkeyHappy: autoDraw = True
+97.1961 	EXP 	MonkeySad: autoDraw = True
+97.6960 	EXP 	Sound Munch started
+98.1988 	EXP 	Sound Munch stopped
+98.1989 	EXP 	Sound Splat stopped
+98.1997 	EXP 	Set level_up_sound sound=level_up.wav
+98.1999 	EXP 	Sound level_up_sound started
+98.2127 	EXP 	Banana: autoDraw = False
+98.2127 	EXP 	SplatBanana: autoDraw = False
+98.2127 	EXP 	MonkeyMouth: autoDraw = False
+98.2127 	EXP 	MonkeyHappy: autoDraw = False
+98.2127 	EXP 	MonkeySad: autoDraw = False
+98.2127 	EXP 	feedback_text: autoDraw = True
+98.2127 	EXP 	velo: autoDraw = True
+101.1997 	EXP 	Sound level_up_sound stopped
+101.2156 	EXP 	feedback_text: autoDraw = False
+101.2156 	EXP 	velo: autoDraw = False
+101.2156 	EXP 	text: autoDraw = True
+104.3753 	EXP 	New trial (rep=3, index=0): None
+104.3756 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+104.3759 	EXP 	New trial (rep=0, index=0): None
+104.3765 	EXP 	Set Munch sound=munch.wav
+104.3771 	EXP 	Set Splat sound=splat.wav
+104.3787 	DATA 	Keypress: s
+104.3855 	EXP 	text: autoDraw = False
+104.3855 	EXP 	Banana: autoDraw = True
+104.3855 	EXP 	SplatBanana: autoDraw = True
+104.3855 	EXP 	MonkeyMouth: autoDraw = True
+104.3855 	EXP 	MonkeyHappy: autoDraw = True
+104.3855 	EXP 	MonkeySad: autoDraw = True
+104.8879 	EXP 	Sound Splat started
+105.3891 	EXP 	Sound Munch stopped
+105.3891 	EXP 	Sound Splat stopped
+105.3896 	EXP 	New trial (rep=1, index=0): None
+105.3907 	EXP 	Set Munch sound=munch.wav
+105.3916 	EXP 	Set Splat sound=splat.wav
+105.4033 	EXP 	Banana: autoDraw = False
+105.4033 	EXP 	SplatBanana: autoDraw = False
+105.4033 	EXP 	MonkeyMouth: autoDraw = False
+105.4033 	EXP 	MonkeyHappy: autoDraw = False
+105.4033 	EXP 	MonkeySad: autoDraw = False
+105.4033 	EXP 	Banana: autoDraw = True
+105.4033 	EXP 	SplatBanana: autoDraw = True
+105.4033 	EXP 	MonkeyMouth: autoDraw = True
+105.4033 	EXP 	MonkeyHappy: autoDraw = True
+105.4033 	EXP 	MonkeySad: autoDraw = True
+105.9545 	EXP 	Sound Munch started
+106.4064 	EXP 	Sound Munch stopped
+106.4064 	EXP 	Sound Splat stopped
+106.4067 	EXP 	New trial (rep=2, index=0): None
+106.4073 	EXP 	Set Munch sound=munch.wav
+106.4078 	EXP 	Set Splat sound=splat.wav
+106.4215 	EXP 	Banana: autoDraw = False
+106.4215 	EXP 	SplatBanana: autoDraw = False
+106.4215 	EXP 	MonkeyMouth: autoDraw = False
+106.4215 	EXP 	MonkeyHappy: autoDraw = False
+106.4215 	EXP 	MonkeySad: autoDraw = False
+106.4215 	EXP 	Banana: autoDraw = True
+106.4215 	EXP 	SplatBanana: autoDraw = True
+106.4215 	EXP 	MonkeyMouth: autoDraw = True
+106.4215 	EXP 	MonkeyHappy: autoDraw = True
+106.4215 	EXP 	MonkeySad: autoDraw = True
+106.9562 	EXP 	Sound Munch started
+107.4245 	EXP 	Sound Munch stopped
+107.4245 	EXP 	Sound Splat stopped
+107.4249 	EXP 	New trial (rep=3, index=0): None
+107.4258 	EXP 	Set Munch sound=munch.wav
+107.4266 	EXP 	Set Splat sound=splat.wav
+107.4390 	EXP 	Banana: autoDraw = False
+107.4390 	EXP 	SplatBanana: autoDraw = False
+107.4390 	EXP 	MonkeyMouth: autoDraw = False
+107.4390 	EXP 	MonkeyHappy: autoDraw = False
+107.4390 	EXP 	MonkeySad: autoDraw = False
+107.4390 	EXP 	Banana: autoDraw = True
+107.4390 	EXP 	SplatBanana: autoDraw = True
+107.4390 	EXP 	MonkeyMouth: autoDraw = True
+107.4390 	EXP 	MonkeyHappy: autoDraw = True
+107.4390 	EXP 	MonkeySad: autoDraw = True
+107.9576 	EXP 	Sound Munch started
+108.4425 	EXP 	Sound Munch stopped
+108.4426 	EXP 	Sound Splat stopped
+108.4430 	EXP 	New trial (rep=4, index=0): None
+108.4438 	EXP 	Set Munch sound=munch.wav
+108.4444 	EXP 	Set Splat sound=splat.wav
+108.4562 	EXP 	Banana: autoDraw = False
+108.4562 	EXP 	SplatBanana: autoDraw = False
+108.4562 	EXP 	MonkeyMouth: autoDraw = False
+108.4562 	EXP 	MonkeyHappy: autoDraw = False
+108.4562 	EXP 	MonkeySad: autoDraw = False
+108.4562 	EXP 	Banana: autoDraw = True
+108.4562 	EXP 	SplatBanana: autoDraw = True
+108.4562 	EXP 	MonkeyMouth: autoDraw = True
+108.4562 	EXP 	MonkeyHappy: autoDraw = True
+108.4562 	EXP 	MonkeySad: autoDraw = True
+108.9572 	EXP 	Sound Munch started
+109.4598 	EXP 	Sound Munch stopped
+109.4598 	EXP 	Sound Splat stopped
+109.4601 	EXP 	New trial (rep=5, index=0): None
+109.4607 	EXP 	Set Munch sound=munch.wav
+109.4612 	EXP 	Set Splat sound=splat.wav
+109.4745 	EXP 	Banana: autoDraw = False
+109.4745 	EXP 	SplatBanana: autoDraw = False
+109.4745 	EXP 	MonkeyMouth: autoDraw = False
+109.4745 	EXP 	MonkeyHappy: autoDraw = False
+109.4745 	EXP 	MonkeySad: autoDraw = False
+109.4745 	EXP 	Banana: autoDraw = True
+109.4745 	EXP 	SplatBanana: autoDraw = True
+109.4745 	EXP 	MonkeyMouth: autoDraw = True
+109.4745 	EXP 	MonkeyHappy: autoDraw = True
+109.4745 	EXP 	MonkeySad: autoDraw = True
+109.9757 	EXP 	Sound Munch started
+110.4773 	EXP 	Sound Munch stopped
+110.4773 	EXP 	Sound Splat stopped
+110.4775 	EXP 	New trial (rep=6, index=0): None
+110.4782 	EXP 	Set Munch sound=munch.wav
+110.4786 	EXP 	Set Splat sound=splat.wav
+110.4922 	EXP 	Banana: autoDraw = False
+110.4922 	EXP 	SplatBanana: autoDraw = False
+110.4922 	EXP 	MonkeyMouth: autoDraw = False
+110.4922 	EXP 	MonkeyHappy: autoDraw = False
+110.4922 	EXP 	MonkeySad: autoDraw = False
+110.4922 	EXP 	Banana: autoDraw = True
+110.4922 	EXP 	SplatBanana: autoDraw = True
+110.4922 	EXP 	MonkeyMouth: autoDraw = True
+110.4922 	EXP 	MonkeyHappy: autoDraw = True
+110.4922 	EXP 	MonkeySad: autoDraw = True
+110.9767 	EXP 	Sound Splat started
+111.4953 	EXP 	Sound Munch stopped
+111.4953 	EXP 	Sound Splat stopped
+111.4957 	EXP 	New trial (rep=7, index=0): None
+111.4964 	EXP 	Set Munch sound=munch.wav
+111.4970 	EXP 	Set Splat sound=splat.wav
+111.5096 	EXP 	Banana: autoDraw = False
+111.5096 	EXP 	SplatBanana: autoDraw = False
+111.5096 	EXP 	MonkeyMouth: autoDraw = False
+111.5096 	EXP 	MonkeyHappy: autoDraw = False
+111.5096 	EXP 	MonkeySad: autoDraw = False
+111.5096 	EXP 	Banana: autoDraw = True
+111.5096 	EXP 	SplatBanana: autoDraw = True
+111.5096 	EXP 	MonkeyMouth: autoDraw = True
+111.5096 	EXP 	MonkeyHappy: autoDraw = True
+111.5096 	EXP 	MonkeySad: autoDraw = True
+112.0439 	EXP 	Sound Munch started
+112.5124 	EXP 	Sound Munch stopped
+112.5124 	EXP 	Sound Splat stopped
+112.5127 	EXP 	New trial (rep=8, index=0): None
+112.5133 	EXP 	Set Munch sound=munch.wav
+112.5140 	EXP 	Set Splat sound=splat.wav
+112.5282 	EXP 	Banana: autoDraw = False
+112.5282 	EXP 	SplatBanana: autoDraw = False
+112.5282 	EXP 	MonkeyMouth: autoDraw = False
+112.5282 	EXP 	MonkeyHappy: autoDraw = False
+112.5282 	EXP 	MonkeySad: autoDraw = False
+112.5282 	EXP 	Banana: autoDraw = True
+112.5282 	EXP 	SplatBanana: autoDraw = True
+112.5282 	EXP 	MonkeyMouth: autoDraw = True
+112.5282 	EXP 	MonkeyHappy: autoDraw = True
+112.5282 	EXP 	MonkeySad: autoDraw = True
+113.0450 	EXP 	Sound Munch started
+113.5306 	EXP 	Sound Munch stopped
+113.5306 	EXP 	Sound Splat stopped
+113.5310 	EXP 	New trial (rep=9, index=0): None
+113.5318 	EXP 	Set Munch sound=munch.wav
+113.5324 	EXP 	Set Splat sound=splat.wav
+113.5449 	EXP 	Banana: autoDraw = False
+113.5449 	EXP 	SplatBanana: autoDraw = False
+113.5449 	EXP 	MonkeyMouth: autoDraw = False
+113.5449 	EXP 	MonkeyHappy: autoDraw = False
+113.5449 	EXP 	MonkeySad: autoDraw = False
+113.5449 	EXP 	Banana: autoDraw = True
+113.5449 	EXP 	SplatBanana: autoDraw = True
+113.5449 	EXP 	MonkeyMouth: autoDraw = True
+113.5449 	EXP 	MonkeyHappy: autoDraw = True
+113.5449 	EXP 	MonkeySad: autoDraw = True
+114.0468 	EXP 	Sound Munch started
+114.5486 	EXP 	Sound Munch stopped
+114.5487 	EXP 	Sound Splat stopped
+114.5489 	EXP 	New trial (rep=10, index=0): None
+114.5497 	EXP 	Set Munch sound=munch.wav
+114.5503 	EXP 	Set Splat sound=splat.wav
+114.5623 	EXP 	Banana: autoDraw = False
+114.5623 	EXP 	SplatBanana: autoDraw = False
+114.5623 	EXP 	MonkeyMouth: autoDraw = False
+114.5623 	EXP 	MonkeyHappy: autoDraw = False
+114.5623 	EXP 	MonkeySad: autoDraw = False
+114.5623 	EXP 	Banana: autoDraw = True
+114.5623 	EXP 	SplatBanana: autoDraw = True
+114.5623 	EXP 	MonkeyMouth: autoDraw = True
+114.5623 	EXP 	MonkeyHappy: autoDraw = True
+114.5623 	EXP 	MonkeySad: autoDraw = True
+115.0639 	EXP 	Sound Munch started
+115.5658 	EXP 	Sound Munch stopped
+115.5659 	EXP 	Sound Splat stopped
+115.5662 	EXP 	New trial (rep=11, index=0): None
+115.5669 	EXP 	Set Munch sound=munch.wav
+115.5675 	EXP 	Set Splat sound=splat.wav
+115.5802 	EXP 	Banana: autoDraw = False
+115.5802 	EXP 	SplatBanana: autoDraw = False
+115.5802 	EXP 	MonkeyMouth: autoDraw = False
+115.5802 	EXP 	MonkeyHappy: autoDraw = False
+115.5802 	EXP 	MonkeySad: autoDraw = False
+115.5802 	EXP 	Banana: autoDraw = True
+115.5802 	EXP 	SplatBanana: autoDraw = True
+115.5802 	EXP 	MonkeyMouth: autoDraw = True
+115.5802 	EXP 	MonkeyHappy: autoDraw = True
+115.5802 	EXP 	MonkeySad: autoDraw = True
+116.0663 	EXP 	Sound Munch started
+116.5835 	EXP 	Sound Munch stopped
+116.5835 	EXP 	Sound Splat stopped
+116.5838 	EXP 	New trial (rep=12, index=0): None
+116.5846 	EXP 	Set Munch sound=munch.wav
+116.5851 	EXP 	Set Splat sound=splat.wav
+116.5981 	EXP 	Banana: autoDraw = False
+116.5981 	EXP 	SplatBanana: autoDraw = False
+116.5981 	EXP 	MonkeyMouth: autoDraw = False
+116.5981 	EXP 	MonkeyHappy: autoDraw = False
+116.5981 	EXP 	MonkeySad: autoDraw = False
+116.5981 	EXP 	Banana: autoDraw = True
+116.5981 	EXP 	SplatBanana: autoDraw = True
+116.5981 	EXP 	MonkeyMouth: autoDraw = True
+116.5981 	EXP 	MonkeyHappy: autoDraw = True
+116.5981 	EXP 	MonkeySad: autoDraw = True
+117.0660 	EXP 	Sound Munch started
+117.6013 	EXP 	Sound Munch stopped
+117.6014 	EXP 	Sound Splat stopped
+117.6017 	EXP 	New trial (rep=13, index=0): None
+117.6027 	EXP 	Set Munch sound=munch.wav
+117.6033 	EXP 	Set Splat sound=splat.wav
+117.6159 	EXP 	Banana: autoDraw = False
+117.6159 	EXP 	SplatBanana: autoDraw = False
+117.6159 	EXP 	MonkeyMouth: autoDraw = False
+117.6159 	EXP 	MonkeyHappy: autoDraw = False
+117.6159 	EXP 	MonkeySad: autoDraw = False
+117.6159 	EXP 	Banana: autoDraw = True
+117.6159 	EXP 	SplatBanana: autoDraw = True
+117.6159 	EXP 	MonkeyMouth: autoDraw = True
+117.6159 	EXP 	MonkeyHappy: autoDraw = True
+117.6159 	EXP 	MonkeySad: autoDraw = True
+118.0833 	EXP 	Sound Munch started
+118.6189 	EXP 	Sound Munch stopped
+118.6190 	EXP 	Sound Splat stopped
+118.6194 	EXP 	New trial (rep=14, index=0): None
+118.6204 	EXP 	Set Munch sound=munch.wav
+118.6212 	EXP 	Set Splat sound=splat.wav
+118.6336 	EXP 	Banana: autoDraw = False
+118.6336 	EXP 	SplatBanana: autoDraw = False
+118.6336 	EXP 	MonkeyMouth: autoDraw = False
+118.6336 	EXP 	MonkeyHappy: autoDraw = False
+118.6336 	EXP 	MonkeySad: autoDraw = False
+118.6336 	EXP 	Banana: autoDraw = True
+118.6336 	EXP 	SplatBanana: autoDraw = True
+118.6336 	EXP 	MonkeyMouth: autoDraw = True
+118.6336 	EXP 	MonkeyHappy: autoDraw = True
+118.6336 	EXP 	MonkeySad: autoDraw = True
+119.0854 	EXP 	Sound Splat started
+119.6374 	EXP 	Sound Munch stopped
+119.6374 	EXP 	Sound Splat stopped
+119.6378 	EXP 	New trial (rep=15, index=0): None
+119.6386 	EXP 	Set Munch sound=munch.wav
+119.6394 	EXP 	Set Splat sound=splat.wav
+119.6512 	EXP 	Banana: autoDraw = False
+119.6512 	EXP 	SplatBanana: autoDraw = False
+119.6512 	EXP 	MonkeyMouth: autoDraw = False
+119.6512 	EXP 	MonkeyHappy: autoDraw = False
+119.6512 	EXP 	MonkeySad: autoDraw = False
+119.6512 	EXP 	Banana: autoDraw = True
+119.6512 	EXP 	SplatBanana: autoDraw = True
+119.6512 	EXP 	MonkeyMouth: autoDraw = True
+119.6512 	EXP 	MonkeyHappy: autoDraw = True
+119.6512 	EXP 	MonkeySad: autoDraw = True
+120.1520 	EXP 	Sound Munch started
+120.6542 	EXP 	Sound Munch stopped
+120.6542 	EXP 	Sound Splat stopped
+120.6545 	EXP 	New trial (rep=16, index=0): None
+120.6551 	EXP 	Set Munch sound=munch.wav
+120.6556 	EXP 	Set Splat sound=splat.wav
+120.6690 	EXP 	Banana: autoDraw = False
+120.6690 	EXP 	SplatBanana: autoDraw = False
+120.6690 	EXP 	MonkeyMouth: autoDraw = False
+120.6690 	EXP 	MonkeyHappy: autoDraw = False
+120.6690 	EXP 	MonkeySad: autoDraw = False
+120.6690 	EXP 	Banana: autoDraw = True
+120.6690 	EXP 	SplatBanana: autoDraw = True
+120.6690 	EXP 	MonkeyMouth: autoDraw = True
+120.6690 	EXP 	MonkeyHappy: autoDraw = True
+120.6690 	EXP 	MonkeySad: autoDraw = True
+121.1536 	EXP 	Sound Munch started
+121.6719 	EXP 	Sound Munch stopped
+121.6719 	EXP 	Sound Splat stopped
+121.6722 	EXP 	New trial (rep=17, index=0): None
+121.6730 	EXP 	Set Munch sound=munch.wav
+121.6736 	EXP 	Set Splat sound=splat.wav
+121.6863 	EXP 	Banana: autoDraw = False
+121.6863 	EXP 	SplatBanana: autoDraw = False
+121.6863 	EXP 	MonkeyMouth: autoDraw = False
+121.6863 	EXP 	MonkeyHappy: autoDraw = False
+121.6863 	EXP 	MonkeySad: autoDraw = False
+121.6863 	EXP 	Banana: autoDraw = True
+121.6863 	EXP 	SplatBanana: autoDraw = True
+121.6863 	EXP 	MonkeyMouth: autoDraw = True
+121.6863 	EXP 	MonkeyHappy: autoDraw = True
+121.6863 	EXP 	MonkeySad: autoDraw = True
+122.1544 	EXP 	Sound Munch started
+122.6898 	EXP 	Sound Munch stopped
+122.6898 	EXP 	Sound Splat stopped
+122.6901 	EXP 	New trial (rep=18, index=0): None
+122.6907 	EXP 	Set Munch sound=munch.wav
+122.6912 	EXP 	Set Splat sound=splat.wav
+122.7047 	EXP 	Banana: autoDraw = False
+122.7047 	EXP 	SplatBanana: autoDraw = False
+122.7047 	EXP 	MonkeyMouth: autoDraw = False
+122.7047 	EXP 	MonkeyHappy: autoDraw = False
+122.7047 	EXP 	MonkeySad: autoDraw = False
+122.7047 	EXP 	Banana: autoDraw = True
+122.7047 	EXP 	SplatBanana: autoDraw = True
+122.7047 	EXP 	MonkeyMouth: autoDraw = True
+122.7047 	EXP 	MonkeyHappy: autoDraw = True
+122.7047 	EXP 	MonkeySad: autoDraw = True
+123.1733 	EXP 	Sound Splat started
+123.7080 	EXP 	Sound Munch stopped
+123.7080 	EXP 	Sound Splat stopped
+123.7083 	EXP 	New trial (rep=19, index=0): None
+123.7089 	EXP 	Set Munch sound=munch.wav
+123.7094 	EXP 	Set Splat sound=splat.wav
+123.7216 	EXP 	Banana: autoDraw = False
+123.7216 	EXP 	SplatBanana: autoDraw = False
+123.7216 	EXP 	MonkeyMouth: autoDraw = False
+123.7216 	EXP 	MonkeyHappy: autoDraw = False
+123.7216 	EXP 	MonkeySad: autoDraw = False
+123.7216 	EXP 	Banana: autoDraw = True
+123.7216 	EXP 	SplatBanana: autoDraw = True
+123.7216 	EXP 	MonkeyMouth: autoDraw = True
+123.7216 	EXP 	MonkeyHappy: autoDraw = True
+123.7216 	EXP 	MonkeySad: autoDraw = True
+124.2231 	EXP 	Sound Munch started
+124.7255 	EXP 	Sound Munch stopped
+124.7255 	EXP 	Sound Splat stopped
+124.7265 	EXP 	Set level_up_sound sound=level_up.wav
+124.7266 	EXP 	Sound level_up_sound started
+124.7402 	EXP 	Banana: autoDraw = False
+124.7402 	EXP 	SplatBanana: autoDraw = False
+124.7402 	EXP 	MonkeyMouth: autoDraw = False
+124.7402 	EXP 	MonkeyHappy: autoDraw = False
+124.7402 	EXP 	MonkeySad: autoDraw = False
+124.7402 	EXP 	feedback_text: autoDraw = True
+124.7402 	EXP 	velo: autoDraw = True
+127.7266 	EXP 	Sound level_up_sound stopped
+127.7418 	EXP 	feedback_text: autoDraw = False
+127.7418 	EXP 	velo: autoDraw = False
+127.7418 	EXP 	text: autoDraw = True
+129.0495 	EXP 	New trial (rep=4, index=0): None
+129.0498 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+129.0500 	EXP 	New trial (rep=0, index=0): None
+129.0507 	EXP 	Set Munch sound=munch.wav
+129.0511 	EXP 	Set Splat sound=splat.wav
+129.0514 	DATA 	Keypress: s
+129.0605 	EXP 	text: autoDraw = False
+129.0605 	EXP 	Banana: autoDraw = True
+129.0605 	EXP 	SplatBanana: autoDraw = True
+129.0605 	EXP 	MonkeyMouth: autoDraw = True
+129.0605 	EXP 	MonkeyHappy: autoDraw = True
+129.0605 	EXP 	MonkeySad: autoDraw = True
+129.5618 	EXP 	Sound Munch started
+130.0636 	EXP 	Sound Munch stopped
+130.0637 	EXP 	Sound Splat stopped
+130.0640 	EXP 	New trial (rep=1, index=0): None
+130.0648 	EXP 	Set Munch sound=munch.wav
+130.0655 	EXP 	Set Splat sound=splat.wav
+130.0782 	EXP 	Banana: autoDraw = False
+130.0782 	EXP 	SplatBanana: autoDraw = False
+130.0782 	EXP 	MonkeyMouth: autoDraw = False
+130.0782 	EXP 	MonkeyHappy: autoDraw = False
+130.0782 	EXP 	MonkeySad: autoDraw = False
+130.0782 	EXP 	Banana: autoDraw = True
+130.0782 	EXP 	SplatBanana: autoDraw = True
+130.0782 	EXP 	MonkeyMouth: autoDraw = True
+130.0782 	EXP 	MonkeyHappy: autoDraw = True
+130.0782 	EXP 	MonkeySad: autoDraw = True
+130.5628 	EXP 	Sound Munch started
+131.0820 	EXP 	Sound Munch stopped
+131.0821 	EXP 	Sound Splat stopped
+131.0826 	EXP 	New trial (rep=2, index=0): None
+131.0837 	EXP 	Set Munch sound=munch.wav
+131.0846 	EXP 	Set Splat sound=splat.wav
+131.0957 	EXP 	Banana: autoDraw = False
+131.0957 	EXP 	SplatBanana: autoDraw = False
+131.0957 	EXP 	MonkeyMouth: autoDraw = False
+131.0957 	EXP 	MonkeyHappy: autoDraw = False
+131.0957 	EXP 	MonkeySad: autoDraw = False
+131.0957 	EXP 	Banana: autoDraw = True
+131.0957 	EXP 	SplatBanana: autoDraw = True
+131.0957 	EXP 	MonkeyMouth: autoDraw = True
+131.0957 	EXP 	MonkeyHappy: autoDraw = True
+131.0957 	EXP 	MonkeySad: autoDraw = True
+131.5635 	EXP 	Sound Splat started
+132.0998 	EXP 	Sound Munch stopped
+132.0998 	EXP 	Sound Splat stopped
+132.1001 	EXP 	New trial (rep=3, index=0): None
+132.1008 	EXP 	Set Munch sound=munch.wav
+132.1014 	EXP 	Set Splat sound=splat.wav
+132.1138 	EXP 	Banana: autoDraw = False
+132.1138 	EXP 	SplatBanana: autoDraw = False
+132.1138 	EXP 	MonkeyMouth: autoDraw = False
+132.1138 	EXP 	MonkeyHappy: autoDraw = False
+132.1138 	EXP 	MonkeySad: autoDraw = False
+132.1138 	EXP 	Banana: autoDraw = True
+132.1138 	EXP 	SplatBanana: autoDraw = True
+132.1138 	EXP 	MonkeyMouth: autoDraw = True
+132.1138 	EXP 	MonkeyHappy: autoDraw = True
+132.1138 	EXP 	MonkeySad: autoDraw = True
+132.6311 	EXP 	Sound Munch started
+133.1165 	EXP 	Sound Munch stopped
+133.1165 	EXP 	Sound Splat stopped
+133.1168 	EXP 	New trial (rep=4, index=0): None
+133.1174 	EXP 	Set Munch sound=munch.wav
+133.1179 	EXP 	Set Splat sound=splat.wav
+133.1314 	EXP 	Banana: autoDraw = False
+133.1314 	EXP 	SplatBanana: autoDraw = False
+133.1314 	EXP 	MonkeyMouth: autoDraw = False
+133.1314 	EXP 	MonkeyHappy: autoDraw = False
+133.1314 	EXP 	MonkeySad: autoDraw = False
+133.1314 	EXP 	Banana: autoDraw = True
+133.1314 	EXP 	SplatBanana: autoDraw = True
+133.1314 	EXP 	MonkeyMouth: autoDraw = True
+133.1314 	EXP 	MonkeyHappy: autoDraw = True
+133.1314 	EXP 	MonkeySad: autoDraw = True
+133.6325 	EXP 	Sound Munch started
+134.1463 	EXP 	Sound Munch stopped
+134.1465 	EXP 	Sound Splat stopped
+134.1486 	EXP 	New trial (rep=5, index=0): None
+134.1513 	EXP 	Set Munch sound=munch.wav
+134.1531 	EXP 	Set Splat sound=splat.wav
+134.1636 	EXP 	Banana: autoDraw = False
+134.1636 	EXP 	SplatBanana: autoDraw = False
+134.1636 	EXP 	MonkeyMouth: autoDraw = False
+134.1636 	EXP 	MonkeyHappy: autoDraw = False
+134.1636 	EXP 	MonkeySad: autoDraw = False
+134.1636 	EXP 	Banana: autoDraw = True
+134.1636 	EXP 	SplatBanana: autoDraw = True
+134.1636 	EXP 	MonkeyMouth: autoDraw = True
+134.1636 	EXP 	MonkeyHappy: autoDraw = True
+134.1636 	EXP 	MonkeySad: autoDraw = True
+134.6501 	EXP 	Sound Munch started
+135.1523 	EXP 	Sound Munch stopped
+135.1523 	EXP 	Sound Splat stopped
+135.1527 	EXP 	New trial (rep=6, index=0): None
+135.1534 	EXP 	Set Munch sound=munch.wav
+135.1539 	EXP 	Set Splat sound=splat.wav
+135.1666 	EXP 	Banana: autoDraw = False
+135.1666 	EXP 	SplatBanana: autoDraw = False
+135.1666 	EXP 	MonkeyMouth: autoDraw = False
+135.1666 	EXP 	MonkeyHappy: autoDraw = False
+135.1666 	EXP 	MonkeySad: autoDraw = False
+135.1666 	EXP 	Banana: autoDraw = True
+135.1666 	EXP 	SplatBanana: autoDraw = True
+135.1666 	EXP 	MonkeyMouth: autoDraw = True
+135.1666 	EXP 	MonkeyHappy: autoDraw = True
+135.1666 	EXP 	MonkeySad: autoDraw = True
+135.6508 	EXP 	Sound Munch started
+136.1708 	EXP 	Sound Munch stopped
+136.1708 	EXP 	Sound Splat stopped
+136.1712 	EXP 	New trial (rep=7, index=0): None
+136.1719 	EXP 	Set Munch sound=munch.wav
+136.1725 	EXP 	Set Splat sound=splat.wav
+136.1840 	EXP 	Banana: autoDraw = False
+136.1840 	EXP 	SplatBanana: autoDraw = False
+136.1840 	EXP 	MonkeyMouth: autoDraw = False
+136.1840 	EXP 	MonkeyHappy: autoDraw = False
+136.1840 	EXP 	MonkeySad: autoDraw = False
+136.1840 	EXP 	Banana: autoDraw = True
+136.1840 	EXP 	SplatBanana: autoDraw = True
+136.1840 	EXP 	MonkeyMouth: autoDraw = True
+136.1840 	EXP 	MonkeyHappy: autoDraw = True
+136.1840 	EXP 	MonkeySad: autoDraw = True
+136.6564 	EXP 	Sound Splat started
+137.1886 	EXP 	Sound Munch stopped
+137.1886 	EXP 	Sound Splat stopped
+137.1890 	EXP 	New trial (rep=8, index=0): None
+137.1897 	EXP 	Set Munch sound=munch.wav
+137.1902 	EXP 	Set Splat sound=splat.wav
+137.2019 	EXP 	Banana: autoDraw = False
+137.2019 	EXP 	SplatBanana: autoDraw = False
+137.2019 	EXP 	MonkeyMouth: autoDraw = False
+137.2019 	EXP 	MonkeyHappy: autoDraw = False
+137.2019 	EXP 	MonkeySad: autoDraw = False
+137.2019 	EXP 	Banana: autoDraw = True
+137.2019 	EXP 	SplatBanana: autoDraw = True
+137.2019 	EXP 	MonkeyMouth: autoDraw = True
+137.2019 	EXP 	MonkeyHappy: autoDraw = True
+137.2019 	EXP 	MonkeySad: autoDraw = True
+137.7196 	EXP 	Sound Munch started
+138.2057 	EXP 	Sound Munch stopped
+138.2057 	EXP 	Sound Splat stopped
+138.2063 	EXP 	New trial (rep=9, index=0): None
+138.2073 	EXP 	Set Munch sound=munch.wav
+138.2081 	EXP 	Set Splat sound=splat.wav
+138.2197 	EXP 	Banana: autoDraw = False
+138.2197 	EXP 	SplatBanana: autoDraw = False
+138.2197 	EXP 	MonkeyMouth: autoDraw = False
+138.2197 	EXP 	MonkeyHappy: autoDraw = False
+138.2197 	EXP 	MonkeySad: autoDraw = False
+138.2197 	EXP 	Banana: autoDraw = True
+138.2197 	EXP 	SplatBanana: autoDraw = True
+138.2197 	EXP 	MonkeyMouth: autoDraw = True
+138.2197 	EXP 	MonkeyHappy: autoDraw = True
+138.2197 	EXP 	MonkeySad: autoDraw = True
+138.7208 	EXP 	Sound Munch started
+139.2228 	EXP 	Sound Munch stopped
+139.2228 	EXP 	Sound Splat stopped
+139.2232 	EXP 	New trial (rep=10, index=0): None
+139.2241 	EXP 	Set Munch sound=munch.wav
+139.2248 	EXP 	Set Splat sound=splat.wav
+139.2374 	EXP 	Banana: autoDraw = False
+139.2374 	EXP 	SplatBanana: autoDraw = False
+139.2374 	EXP 	MonkeyMouth: autoDraw = False
+139.2374 	EXP 	MonkeyHappy: autoDraw = False
+139.2374 	EXP 	MonkeySad: autoDraw = False
+139.2374 	EXP 	Banana: autoDraw = True
+139.2374 	EXP 	SplatBanana: autoDraw = True
+139.2374 	EXP 	MonkeyMouth: autoDraw = True
+139.2374 	EXP 	MonkeyHappy: autoDraw = True
+139.2374 	EXP 	MonkeySad: autoDraw = True
+139.7383 	EXP 	Sound Munch started
+140.2411 	EXP 	Sound Munch stopped
+140.2411 	EXP 	Sound Splat stopped
+140.2416 	EXP 	New trial (rep=11, index=0): None
+140.2427 	EXP 	Set Munch sound=munch.wav
+140.2436 	EXP 	Set Splat sound=splat.wav
+140.2547 	EXP 	Banana: autoDraw = False
+140.2547 	EXP 	SplatBanana: autoDraw = False
+140.2547 	EXP 	MonkeyMouth: autoDraw = False
+140.2547 	EXP 	MonkeyHappy: autoDraw = False
+140.2547 	EXP 	MonkeySad: autoDraw = False
+140.2547 	EXP 	Banana: autoDraw = True
+140.2547 	EXP 	SplatBanana: autoDraw = True
+140.2547 	EXP 	MonkeyMouth: autoDraw = True
+140.2547 	EXP 	MonkeyHappy: autoDraw = True
+140.2547 	EXP 	MonkeySad: autoDraw = True
+140.7395 	EXP 	Sound Munch started
+141.2582 	EXP 	Sound Munch stopped
+141.2582 	EXP 	Sound Splat stopped
+141.2586 	EXP 	New trial (rep=12, index=0): None
+141.2593 	EXP 	Set Munch sound=munch.wav
+141.2598 	EXP 	Set Splat sound=splat.wav
+141.2723 	EXP 	Banana: autoDraw = False
+141.2723 	EXP 	SplatBanana: autoDraw = False
+141.2723 	EXP 	MonkeyMouth: autoDraw = False
+141.2723 	EXP 	MonkeyHappy: autoDraw = False
+141.2723 	EXP 	MonkeySad: autoDraw = False
+141.2723 	EXP 	Banana: autoDraw = True
+141.2723 	EXP 	SplatBanana: autoDraw = True
+141.2723 	EXP 	MonkeyMouth: autoDraw = True
+141.2723 	EXP 	MonkeyHappy: autoDraw = True
+141.2723 	EXP 	MonkeySad: autoDraw = True
+141.7407 	EXP 	Sound Splat started
+142.2770 	EXP 	Sound Munch stopped
+142.2770 	EXP 	Sound Splat stopped
+142.2774 	EXP 	New trial (rep=13, index=0): None
+142.2782 	EXP 	Set Munch sound=munch.wav
+142.2788 	EXP 	Set Splat sound=splat.wav
+142.2903 	EXP 	Banana: autoDraw = False
+142.2903 	EXP 	SplatBanana: autoDraw = False
+142.2903 	EXP 	MonkeyMouth: autoDraw = False
+142.2903 	EXP 	MonkeyHappy: autoDraw = False
+142.2903 	EXP 	MonkeySad: autoDraw = False
+142.2903 	EXP 	Banana: autoDraw = True
+142.2903 	EXP 	SplatBanana: autoDraw = True
+142.2903 	EXP 	MonkeyMouth: autoDraw = True
+142.2903 	EXP 	MonkeyHappy: autoDraw = True
+142.2903 	EXP 	MonkeySad: autoDraw = True
+142.8082 	EXP 	Sound Munch started
+143.2932 	EXP 	Sound Munch stopped
+143.2932 	EXP 	Sound Splat stopped
+143.2935 	EXP 	New trial (rep=14, index=0): None
+143.2944 	EXP 	Set Munch sound=munch.wav
+143.2949 	EXP 	Set Splat sound=splat.wav
+143.3081 	EXP 	Banana: autoDraw = False
+143.3081 	EXP 	SplatBanana: autoDraw = False
+143.3081 	EXP 	MonkeyMouth: autoDraw = False
+143.3081 	EXP 	MonkeyHappy: autoDraw = False
+143.3081 	EXP 	MonkeySad: autoDraw = False
+143.3081 	EXP 	Banana: autoDraw = True
+143.3081 	EXP 	SplatBanana: autoDraw = True
+143.3081 	EXP 	MonkeyMouth: autoDraw = True
+143.3081 	EXP 	MonkeyHappy: autoDraw = True
+143.3081 	EXP 	MonkeySad: autoDraw = True
+143.8096 	EXP 	Sound Munch started
+144.3181 	EXP 	Sound Munch stopped
+144.3181 	EXP 	Sound Splat stopped
+144.3189 	EXP 	New trial (rep=15, index=0): None
+144.3207 	EXP 	Set Munch sound=munch.wav
+144.3220 	EXP 	Set Splat sound=splat.wav
+144.3294 	EXP 	Banana: autoDraw = False
+144.3294 	EXP 	SplatBanana: autoDraw = False
+144.3294 	EXP 	MonkeyMouth: autoDraw = False
+144.3294 	EXP 	MonkeyHappy: autoDraw = False
+144.3294 	EXP 	MonkeySad: autoDraw = False
+144.3294 	EXP 	Banana: autoDraw = True
+144.3294 	EXP 	SplatBanana: autoDraw = True
+144.3294 	EXP 	MonkeyMouth: autoDraw = True
+144.3294 	EXP 	MonkeyHappy: autoDraw = True
+144.3294 	EXP 	MonkeySad: autoDraw = True
+144.8286 	EXP 	Sound Munch started
+145.3303 	EXP 	Sound Munch stopped
+145.3303 	EXP 	Sound Splat stopped
+145.3306 	EXP 	New trial (rep=16, index=0): None
+145.3314 	EXP 	Set Munch sound=munch.wav
+145.3320 	EXP 	Set Splat sound=splat.wav
+145.3435 	EXP 	Banana: autoDraw = False
+145.3435 	EXP 	SplatBanana: autoDraw = False
+145.3435 	EXP 	MonkeyMouth: autoDraw = False
+145.3435 	EXP 	MonkeyHappy: autoDraw = False
+145.3435 	EXP 	MonkeySad: autoDraw = False
+145.3435 	EXP 	Banana: autoDraw = True
+145.3435 	EXP 	SplatBanana: autoDraw = True
+145.3435 	EXP 	MonkeyMouth: autoDraw = True
+145.3435 	EXP 	MonkeyHappy: autoDraw = True
+145.3435 	EXP 	MonkeySad: autoDraw = True
+145.8281 	EXP 	Sound Munch started
+146.3464 	EXP 	Sound Munch stopped
+146.3464 	EXP 	Sound Splat stopped
+146.3468 	EXP 	New trial (rep=17, index=0): None
+146.3477 	EXP 	Set Munch sound=munch.wav
+146.3483 	EXP 	Set Splat sound=splat.wav
+146.3611 	EXP 	Banana: autoDraw = False
+146.3611 	EXP 	SplatBanana: autoDraw = False
+146.3611 	EXP 	MonkeyMouth: autoDraw = False
+146.3611 	EXP 	MonkeyHappy: autoDraw = False
+146.3611 	EXP 	MonkeySad: autoDraw = False
+146.3611 	EXP 	Banana: autoDraw = True
+146.3611 	EXP 	SplatBanana: autoDraw = True
+146.3611 	EXP 	MonkeyMouth: autoDraw = True
+146.3611 	EXP 	MonkeyHappy: autoDraw = True
+146.3611 	EXP 	MonkeySad: autoDraw = True
+146.8287 	EXP 	Sound Splat started
+147.3657 	EXP 	Sound Munch stopped
+147.3657 	EXP 	Sound Splat stopped
+147.3662 	EXP 	New trial (rep=18, index=0): None
+147.3673 	EXP 	Set Munch sound=munch.wav
+147.3682 	EXP 	Set Splat sound=splat.wav
+147.3788 	EXP 	Banana: autoDraw = False
+147.3788 	EXP 	SplatBanana: autoDraw = False
+147.3788 	EXP 	MonkeyMouth: autoDraw = False
+147.3788 	EXP 	MonkeyHappy: autoDraw = False
+147.3788 	EXP 	MonkeySad: autoDraw = False
+147.3788 	EXP 	Banana: autoDraw = True
+147.3788 	EXP 	SplatBanana: autoDraw = True
+147.3788 	EXP 	MonkeyMouth: autoDraw = True
+147.3788 	EXP 	MonkeyHappy: autoDraw = True
+147.3788 	EXP 	MonkeySad: autoDraw = True
+147.8996 	EXP 	Sound Munch started
+148.3821 	EXP 	Sound Munch stopped
+148.3822 	EXP 	Sound Splat stopped
+148.3825 	EXP 	New trial (rep=19, index=0): None
+148.3834 	EXP 	Set Munch sound=munch.wav
+148.3841 	EXP 	Set Splat sound=splat.wav
+148.3965 	EXP 	Banana: autoDraw = False
+148.3965 	EXP 	SplatBanana: autoDraw = False
+148.3965 	EXP 	MonkeyMouth: autoDraw = False
+148.3965 	EXP 	MonkeyHappy: autoDraw = False
+148.3965 	EXP 	MonkeySad: autoDraw = False
+148.3965 	EXP 	Banana: autoDraw = True
+148.3965 	EXP 	SplatBanana: autoDraw = True
+148.3965 	EXP 	MonkeyMouth: autoDraw = True
+148.3965 	EXP 	MonkeyHappy: autoDraw = True
+148.3965 	EXP 	MonkeySad: autoDraw = True
+148.8974 	EXP 	Sound Splat started
+149.4002 	EXP 	Sound Munch stopped
+149.4002 	EXP 	Sound Splat stopped
+149.4013 	EXP 	Set level_up_sound sound=level_up.wav
+149.4014 	EXP 	Sound level_up_sound started
+149.4136 	EXP 	Banana: autoDraw = False
+149.4136 	EXP 	SplatBanana: autoDraw = False
+149.4136 	EXP 	MonkeyMouth: autoDraw = False
+149.4136 	EXP 	MonkeyHappy: autoDraw = False
+149.4136 	EXP 	MonkeySad: autoDraw = False
+149.4136 	EXP 	feedback_text: autoDraw = True
+149.4136 	EXP 	velo: autoDraw = True
+152.4000 	EXP 	Sound level_up_sound stopped
+152.4023 	EXP 	Sound level_up_sound stopped
+152.4163 	EXP 	feedback_text: autoDraw = False
+152.4163 	EXP 	velo: autoDraw = False
+152.4163 	EXP 	feedback_text: autoDraw = False
+152.4163 	EXP 	velo: autoDraw = False
+152.4163 	EXP 	text: autoDraw = True
+153.2240 	EXP 	New trial (rep=5, index=0): None
+153.2245 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+153.2249 	EXP 	New trial (rep=0, index=0): None
+153.2257 	EXP 	Set Munch sound=munch.wav
+153.2263 	EXP 	Set Splat sound=splat.wav
+153.2267 	DATA 	Keypress: s
+153.2347 	EXP 	text: autoDraw = False
+153.2347 	EXP 	Banana: autoDraw = True
+153.2347 	EXP 	SplatBanana: autoDraw = True
+153.2347 	EXP 	MonkeyMouth: autoDraw = True
+153.2347 	EXP 	MonkeyHappy: autoDraw = True
+153.2347 	EXP 	MonkeySad: autoDraw = True
+153.8024 	EXP 	Sound Munch started
+154.2379 	EXP 	Sound Munch stopped
+154.2379 	EXP 	Sound Splat stopped
+154.2382 	EXP 	New trial (rep=1, index=0): None
+154.2390 	EXP 	Set Munch sound=munch.wav
+154.2397 	EXP 	Set Splat sound=splat.wav
+154.2520 	EXP 	Banana: autoDraw = False
+154.2520 	EXP 	SplatBanana: autoDraw = False
+154.2520 	EXP 	MonkeyMouth: autoDraw = False
+154.2520 	EXP 	MonkeyHappy: autoDraw = False
+154.2520 	EXP 	MonkeySad: autoDraw = False
+154.2520 	EXP 	Banana: autoDraw = True
+154.2520 	EXP 	SplatBanana: autoDraw = True
+154.2520 	EXP 	MonkeyMouth: autoDraw = True
+154.2520 	EXP 	MonkeyHappy: autoDraw = True
+154.2520 	EXP 	MonkeySad: autoDraw = True
+154.8029 	EXP 	Sound Munch started
+155.2566 	EXP 	Sound Munch stopped
+155.2567 	EXP 	Sound Splat stopped
+155.2573 	EXP 	New trial (rep=2, index=0): None
+155.2587 	EXP 	Set Munch sound=munch.wav
+155.2599 	EXP 	Set Splat sound=splat.wav
+155.2698 	EXP 	Banana: autoDraw = False
+155.2698 	EXP 	SplatBanana: autoDraw = False
+155.2698 	EXP 	MonkeyMouth: autoDraw = False
+155.2698 	EXP 	MonkeyHappy: autoDraw = False
+155.2698 	EXP 	MonkeySad: autoDraw = False
+155.2698 	EXP 	Banana: autoDraw = True
+155.2698 	EXP 	SplatBanana: autoDraw = True
+155.2698 	EXP 	MonkeyMouth: autoDraw = True
+155.2698 	EXP 	MonkeyHappy: autoDraw = True
+155.2698 	EXP 	MonkeySad: autoDraw = True
+155.8045 	EXP 	Sound Munch started
+156.2735 	EXP 	Sound Munch stopped
+156.2736 	EXP 	Sound Splat stopped
+156.2739 	EXP 	New trial (rep=3, index=0): None
+156.2746 	EXP 	Set Munch sound=munch.wav
+156.2751 	EXP 	Set Splat sound=splat.wav
+156.2877 	EXP 	Banana: autoDraw = False
+156.2877 	EXP 	SplatBanana: autoDraw = False
+156.2877 	EXP 	MonkeyMouth: autoDraw = False
+156.2877 	EXP 	MonkeyHappy: autoDraw = False
+156.2877 	EXP 	MonkeySad: autoDraw = False
+156.2877 	EXP 	Banana: autoDraw = True
+156.2877 	EXP 	SplatBanana: autoDraw = True
+156.2877 	EXP 	MonkeyMouth: autoDraw = True
+156.2877 	EXP 	MonkeyHappy: autoDraw = True
+156.2877 	EXP 	MonkeySad: autoDraw = True
+156.8057 	EXP 	Sound Munch started
+157.2907 	EXP 	Sound Munch stopped
+157.2907 	EXP 	Sound Splat stopped
+157.2911 	EXP 	New trial (rep=4, index=0): None
+157.2919 	EXP 	Set Munch sound=munch.wav
+157.2926 	EXP 	Set Splat sound=splat.wav
+157.3054 	EXP 	Banana: autoDraw = False
+157.3054 	EXP 	SplatBanana: autoDraw = False
+157.3054 	EXP 	MonkeyMouth: autoDraw = False
+157.3054 	EXP 	MonkeyHappy: autoDraw = False
+157.3054 	EXP 	MonkeySad: autoDraw = False
+157.3054 	EXP 	Banana: autoDraw = True
+157.3054 	EXP 	SplatBanana: autoDraw = True
+157.3054 	EXP 	MonkeyMouth: autoDraw = True
+157.3054 	EXP 	MonkeyHappy: autoDraw = True
+157.3054 	EXP 	MonkeySad: autoDraw = True
+157.8064 	EXP 	Sound Splat started
+158.3097 	EXP 	Sound Munch stopped
+158.3097 	EXP 	Sound Splat stopped
+158.3101 	EXP 	New trial (rep=5, index=0): None
+158.3108 	EXP 	Set Munch sound=munch.wav
+158.3113 	EXP 	Set Splat sound=splat.wav
+158.3231 	EXP 	Banana: autoDraw = False
+158.3231 	EXP 	SplatBanana: autoDraw = False
+158.3231 	EXP 	MonkeyMouth: autoDraw = False
+158.3231 	EXP 	MonkeyHappy: autoDraw = False
+158.3231 	EXP 	MonkeySad: autoDraw = False
+158.3231 	EXP 	Banana: autoDraw = True
+158.3231 	EXP 	SplatBanana: autoDraw = True
+158.3231 	EXP 	MonkeyMouth: autoDraw = True
+158.3231 	EXP 	MonkeyHappy: autoDraw = True
+158.3231 	EXP 	MonkeySad: autoDraw = True
+158.8912 	EXP 	Sound Munch started
+159.3267 	EXP 	Sound Munch stopped
+159.3267 	EXP 	Sound Splat stopped
+159.3271 	EXP 	New trial (rep=6, index=0): None
+159.3279 	EXP 	Set Munch sound=munch.wav
+159.3285 	EXP 	Set Splat sound=splat.wav
+159.3404 	EXP 	Banana: autoDraw = False
+159.3404 	EXP 	SplatBanana: autoDraw = False
+159.3404 	EXP 	MonkeyMouth: autoDraw = False
+159.3404 	EXP 	MonkeyHappy: autoDraw = False
+159.3404 	EXP 	MonkeySad: autoDraw = False
+159.3404 	EXP 	Banana: autoDraw = True
+159.3404 	EXP 	SplatBanana: autoDraw = True
+159.3404 	EXP 	MonkeyMouth: autoDraw = True
+159.3404 	EXP 	MonkeyHappy: autoDraw = True
+159.3404 	EXP 	MonkeySad: autoDraw = True
+159.8922 	EXP 	Sound Munch started
+160.3448 	EXP 	Sound Munch stopped
+160.3448 	EXP 	Sound Splat stopped
+160.3451 	EXP 	New trial (rep=7, index=0): None
+160.3459 	EXP 	Set Munch sound=munch.wav
+160.3466 	EXP 	Set Splat sound=splat.wav
+160.3581 	EXP 	Banana: autoDraw = False
+160.3581 	EXP 	SplatBanana: autoDraw = False
+160.3581 	EXP 	MonkeyMouth: autoDraw = False
+160.3581 	EXP 	MonkeyHappy: autoDraw = False
+160.3581 	EXP 	MonkeySad: autoDraw = False
+160.3581 	EXP 	Banana: autoDraw = True
+160.3581 	EXP 	SplatBanana: autoDraw = True
+160.3581 	EXP 	MonkeyMouth: autoDraw = True
+160.3581 	EXP 	MonkeyHappy: autoDraw = True
+160.3581 	EXP 	MonkeySad: autoDraw = True
+160.8924 	EXP 	Sound Munch started
+161.3618 	EXP 	Sound Munch stopped
+161.3619 	EXP 	Sound Splat stopped
+161.3622 	EXP 	New trial (rep=8, index=0): None
+161.3631 	EXP 	Set Munch sound=munch.wav
+161.3638 	EXP 	Set Splat sound=splat.wav
+161.3761 	EXP 	Banana: autoDraw = False
+161.3761 	EXP 	SplatBanana: autoDraw = False
+161.3761 	EXP 	MonkeyMouth: autoDraw = False
+161.3761 	EXP 	MonkeyHappy: autoDraw = False
+161.3761 	EXP 	MonkeySad: autoDraw = False
+161.3761 	EXP 	Banana: autoDraw = True
+161.3761 	EXP 	SplatBanana: autoDraw = True
+161.3761 	EXP 	MonkeyMouth: autoDraw = True
+161.3761 	EXP 	MonkeyHappy: autoDraw = True
+161.3761 	EXP 	MonkeySad: autoDraw = True
+161.8938 	EXP 	Sound Munch started
+162.3804 	EXP 	Sound Munch stopped
+162.3805 	EXP 	Sound Splat stopped
+162.3807 	EXP 	New trial (rep=9, index=0): None
+162.3813 	EXP 	Set Munch sound=munch.wav
+162.3818 	EXP 	Set Splat sound=splat.wav
+162.3939 	EXP 	Banana: autoDraw = False
+162.3939 	EXP 	SplatBanana: autoDraw = False
+162.3939 	EXP 	MonkeyMouth: autoDraw = False
+162.3939 	EXP 	MonkeyHappy: autoDraw = False
+162.3939 	EXP 	MonkeySad: autoDraw = False
+162.3939 	EXP 	Banana: autoDraw = True
+162.3939 	EXP 	SplatBanana: autoDraw = True
+162.3939 	EXP 	MonkeyMouth: autoDraw = True
+162.3939 	EXP 	MonkeyHappy: autoDraw = True
+162.3939 	EXP 	MonkeySad: autoDraw = True
+162.8947 	EXP 	Sound Munch started
+163.3968 	EXP 	Sound Munch stopped
+163.3968 	EXP 	Sound Splat stopped
+163.3974 	EXP 	New trial (rep=10, index=0): None
+163.3985 	EXP 	Set Munch sound=munch.wav
+163.3993 	EXP 	Set Splat sound=splat.wav
+163.4114 	EXP 	Banana: autoDraw = False
+163.4114 	EXP 	SplatBanana: autoDraw = False
+163.4114 	EXP 	MonkeyMouth: autoDraw = False
+163.4114 	EXP 	MonkeyHappy: autoDraw = False
+163.4114 	EXP 	MonkeySad: autoDraw = False
+163.4114 	EXP 	Banana: autoDraw = True
+163.4114 	EXP 	SplatBanana: autoDraw = True
+163.4114 	EXP 	MonkeyMouth: autoDraw = True
+163.4114 	EXP 	MonkeyHappy: autoDraw = True
+163.4114 	EXP 	MonkeySad: autoDraw = True
+163.9124 	EXP 	Sound Munch started
+164.4176 	EXP 	Sound Munch stopped
+164.4176 	EXP 	Sound Splat stopped
+164.4188 	EXP 	New trial (rep=11, index=0): None
+164.4215 	EXP 	Set Munch sound=munch.wav
+164.4238 	EXP 	Set Splat sound=splat.wav
+164.4378 	EXP 	Banana: autoDraw = False
+164.4378 	EXP 	SplatBanana: autoDraw = False
+164.4378 	EXP 	MonkeyMouth: autoDraw = False
+164.4378 	EXP 	MonkeyHappy: autoDraw = False
+164.4378 	EXP 	MonkeySad: autoDraw = False
+164.4378 	EXP 	Banana: autoDraw = True
+164.4378 	EXP 	SplatBanana: autoDraw = True
+164.4378 	EXP 	MonkeyMouth: autoDraw = True
+164.4378 	EXP 	MonkeyHappy: autoDraw = True
+164.4378 	EXP 	MonkeySad: autoDraw = True
+164.9134 	EXP 	Sound Munch started
+165.4329 	EXP 	Sound Munch stopped
+165.4329 	EXP 	Sound Splat stopped
+165.4332 	EXP 	New trial (rep=12, index=0): None
+165.4339 	EXP 	Set Munch sound=munch.wav
+165.4343 	EXP 	Set Splat sound=splat.wav
+165.4473 	EXP 	Banana: autoDraw = False
+165.4473 	EXP 	SplatBanana: autoDraw = False
+165.4473 	EXP 	MonkeyMouth: autoDraw = False
+165.4473 	EXP 	MonkeyHappy: autoDraw = False
+165.4473 	EXP 	MonkeySad: autoDraw = False
+165.4473 	EXP 	Banana: autoDraw = True
+165.4473 	EXP 	SplatBanana: autoDraw = True
+165.4473 	EXP 	MonkeyMouth: autoDraw = True
+165.4473 	EXP 	MonkeyHappy: autoDraw = True
+165.4473 	EXP 	MonkeySad: autoDraw = True
+165.9152 	EXP 	Sound Splat started
+166.4504 	EXP 	Sound Munch stopped
+166.4505 	EXP 	Sound Splat stopped
+166.4509 	EXP 	New trial (rep=13, index=0): None
+166.4517 	EXP 	Set Munch sound=munch.wav
+166.4523 	EXP 	Set Splat sound=splat.wav
+166.4643 	EXP 	Banana: autoDraw = False
+166.4643 	EXP 	SplatBanana: autoDraw = False
+166.4643 	EXP 	MonkeyMouth: autoDraw = False
+166.4643 	EXP 	MonkeyHappy: autoDraw = False
+166.4643 	EXP 	MonkeySad: autoDraw = False
+166.4643 	EXP 	Banana: autoDraw = True
+166.4643 	EXP 	SplatBanana: autoDraw = True
+166.4643 	EXP 	MonkeyMouth: autoDraw = True
+166.4643 	EXP 	MonkeyHappy: autoDraw = True
+166.4643 	EXP 	MonkeySad: autoDraw = True
+166.9842 	EXP 	Sound Munch started
+167.4681 	EXP 	Sound Munch stopped
+167.4681 	EXP 	Sound Splat stopped
+167.4687 	EXP 	New trial (rep=14, index=0): None
+167.4697 	EXP 	Set Munch sound=munch.wav
+167.4706 	EXP 	Set Splat sound=splat.wav
+167.4819 	EXP 	Banana: autoDraw = False
+167.4819 	EXP 	SplatBanana: autoDraw = False
+167.4819 	EXP 	MonkeyMouth: autoDraw = False
+167.4819 	EXP 	MonkeyHappy: autoDraw = False
+167.4819 	EXP 	MonkeySad: autoDraw = False
+167.4819 	EXP 	Banana: autoDraw = True
+167.4819 	EXP 	SplatBanana: autoDraw = True
+167.4819 	EXP 	MonkeyMouth: autoDraw = True
+167.4819 	EXP 	MonkeyHappy: autoDraw = True
+167.4819 	EXP 	MonkeySad: autoDraw = True
+167.9831 	EXP 	Sound Munch started
+168.4885 	EXP 	Sound Munch stopped
+168.4886 	EXP 	Sound Splat stopped
+168.4894 	EXP 	New trial (rep=15, index=0): None
+168.4912 	EXP 	Set Munch sound=munch.wav
+168.4927 	EXP 	Set Splat sound=splat.wav
+168.5012 	EXP 	Banana: autoDraw = False
+168.5012 	EXP 	SplatBanana: autoDraw = False
+168.5012 	EXP 	MonkeyMouth: autoDraw = False
+168.5012 	EXP 	MonkeyHappy: autoDraw = False
+168.5012 	EXP 	MonkeySad: autoDraw = False
+168.5012 	EXP 	Banana: autoDraw = True
+168.5012 	EXP 	SplatBanana: autoDraw = True
+168.5012 	EXP 	MonkeyMouth: autoDraw = True
+168.5012 	EXP 	MonkeyHappy: autoDraw = True
+168.5012 	EXP 	MonkeySad: autoDraw = True
+169.0012 	EXP 	Sound Munch started
+169.5028 	EXP 	Sound Munch stopped
+169.5029 	EXP 	Sound Splat stopped
+169.5033 	EXP 	New trial (rep=16, index=0): None
+169.5043 	EXP 	Set Munch sound=munch.wav
+169.5051 	EXP 	Set Splat sound=splat.wav
+169.5176 	EXP 	Banana: autoDraw = False
+169.5176 	EXP 	SplatBanana: autoDraw = False
+169.5176 	EXP 	MonkeyMouth: autoDraw = False
+169.5176 	EXP 	MonkeyHappy: autoDraw = False
+169.5176 	EXP 	MonkeySad: autoDraw = False
+169.5176 	EXP 	Banana: autoDraw = True
+169.5176 	EXP 	SplatBanana: autoDraw = True
+169.5176 	EXP 	MonkeyMouth: autoDraw = True
+169.5176 	EXP 	MonkeyHappy: autoDraw = True
+169.5176 	EXP 	MonkeySad: autoDraw = True
+170.0022 	EXP 	Sound Splat started
+170.5208 	EXP 	Sound Munch stopped
+170.5208 	EXP 	Sound Splat stopped
+170.5211 	EXP 	New trial (rep=17, index=0): None
+170.5219 	EXP 	Set Munch sound=munch.wav
+170.5225 	EXP 	Set Splat sound=splat.wav
+170.5355 	EXP 	Banana: autoDraw = False
+170.5355 	EXP 	SplatBanana: autoDraw = False
+170.5355 	EXP 	MonkeyMouth: autoDraw = False
+170.5355 	EXP 	MonkeyHappy: autoDraw = False
+170.5355 	EXP 	MonkeySad: autoDraw = False
+170.5355 	EXP 	Banana: autoDraw = True
+170.5355 	EXP 	SplatBanana: autoDraw = True
+170.5355 	EXP 	MonkeyMouth: autoDraw = True
+170.5355 	EXP 	MonkeyHappy: autoDraw = True
+170.5355 	EXP 	MonkeySad: autoDraw = True
+171.0697 	EXP 	Sound Munch started
+171.5386 	EXP 	Sound Munch stopped
+171.5386 	EXP 	Sound Splat stopped
+171.5390 	EXP 	New trial (rep=18, index=0): None
+171.5402 	EXP 	Set Munch sound=munch.wav
+171.5410 	EXP 	Set Splat sound=splat.wav
+171.5528 	EXP 	Banana: autoDraw = False
+171.5528 	EXP 	SplatBanana: autoDraw = False
+171.5528 	EXP 	MonkeyMouth: autoDraw = False
+171.5528 	EXP 	MonkeyHappy: autoDraw = False
+171.5528 	EXP 	MonkeySad: autoDraw = False
+171.5528 	EXP 	Banana: autoDraw = True
+171.5528 	EXP 	SplatBanana: autoDraw = True
+171.5528 	EXP 	MonkeyMouth: autoDraw = True
+171.5528 	EXP 	MonkeyHappy: autoDraw = True
+171.5528 	EXP 	MonkeySad: autoDraw = True
+172.0710 	EXP 	Sound Munch started
+172.5568 	EXP 	Sound Munch stopped
+172.5568 	EXP 	Sound Splat stopped
+172.5571 	EXP 	New trial (rep=19, index=0): None
+172.5578 	EXP 	Set Munch sound=munch.wav
+172.5584 	EXP 	Set Splat sound=splat.wav
+172.5705 	EXP 	Banana: autoDraw = False
+172.5705 	EXP 	SplatBanana: autoDraw = False
+172.5705 	EXP 	MonkeyMouth: autoDraw = False
+172.5705 	EXP 	MonkeyHappy: autoDraw = False
+172.5705 	EXP 	MonkeySad: autoDraw = False
+172.5705 	EXP 	Banana: autoDraw = True
+172.5705 	EXP 	SplatBanana: autoDraw = True
+172.5705 	EXP 	MonkeyMouth: autoDraw = True
+172.5705 	EXP 	MonkeyHappy: autoDraw = True
+172.5705 	EXP 	MonkeySad: autoDraw = True
+173.0718 	EXP 	Sound Munch started
+173.5755 	EXP 	Sound Munch stopped
+173.5756 	EXP 	Sound Splat stopped
+173.5772 	EXP 	Set level_up_sound sound=level_up.wav
+173.5774 	EXP 	Sound level_up_sound started
+173.5961 	EXP 	Banana: autoDraw = False
+173.5961 	EXP 	SplatBanana: autoDraw = False
+173.5961 	EXP 	MonkeyMouth: autoDraw = False
+173.5961 	EXP 	MonkeyHappy: autoDraw = False
+173.5961 	EXP 	MonkeySad: autoDraw = False
+173.5961 	EXP 	feedback_text: autoDraw = True
+173.5961 	EXP 	velo: autoDraw = True
+176.5740 	EXP 	Sound level_up_sound stopped
+176.5913 	EXP 	Sound level_up_sound stopped
+176.6078 	EXP 	feedback_text: autoDraw = False
+176.6078 	EXP 	velo: autoDraw = False
+176.6078 	EXP 	text: autoDraw = True
+177.3651 	DATA 	Keypress: s
+177.3817 	EXP 	New trial (rep=6, index=0): None
+177.3823 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+177.3826 	EXP 	New trial (rep=0, index=0): None
+177.3836 	EXP 	Set Munch sound=munch.wav
+177.3845 	EXP 	Set Splat sound=splat.wav
+177.3922 	EXP 	text: autoDraw = False
+177.3922 	EXP 	Banana: autoDraw = True
+177.3922 	EXP 	SplatBanana: autoDraw = True
+177.3922 	EXP 	MonkeyMouth: autoDraw = True
+177.3922 	EXP 	MonkeyHappy: autoDraw = True
+177.3922 	EXP 	MonkeySad: autoDraw = True
+177.8932 	EXP 	Sound Splat started
+178.3965 	EXP 	Sound Munch stopped
+178.3965 	EXP 	Sound Splat stopped
+178.3970 	EXP 	New trial (rep=1, index=0): None
+178.3982 	EXP 	Set Munch sound=munch.wav
+178.3992 	EXP 	Set Splat sound=splat.wav
+178.4097 	EXP 	Banana: autoDraw = False
+178.4097 	EXP 	SplatBanana: autoDraw = False
+178.4097 	EXP 	MonkeyMouth: autoDraw = False
+178.4097 	EXP 	MonkeyHappy: autoDraw = False
+178.4097 	EXP 	MonkeySad: autoDraw = False
+178.4097 	EXP 	Banana: autoDraw = True
+178.4097 	EXP 	SplatBanana: autoDraw = True
+178.4097 	EXP 	MonkeyMouth: autoDraw = True
+178.4097 	EXP 	MonkeyHappy: autoDraw = True
+178.4097 	EXP 	MonkeySad: autoDraw = True
+178.9607 	EXP 	Sound Munch started
+179.4135 	EXP 	Sound Munch stopped
+179.4135 	EXP 	Sound Splat stopped
+179.4140 	EXP 	New trial (rep=2, index=0): None
+179.4151 	EXP 	Set Munch sound=munch.wav
+179.4159 	EXP 	Set Splat sound=splat.wav
+179.4273 	EXP 	Banana: autoDraw = False
+179.4273 	EXP 	SplatBanana: autoDraw = False
+179.4273 	EXP 	MonkeyMouth: autoDraw = False
+179.4273 	EXP 	MonkeyHappy: autoDraw = False
+179.4273 	EXP 	MonkeySad: autoDraw = False
+179.4273 	EXP 	Banana: autoDraw = True
+179.4273 	EXP 	SplatBanana: autoDraw = True
+179.4273 	EXP 	MonkeyMouth: autoDraw = True
+179.4273 	EXP 	MonkeyHappy: autoDraw = True
+179.4273 	EXP 	MonkeySad: autoDraw = True
+179.9615 	EXP 	Sound Splat started
+180.4317 	EXP 	Sound Munch stopped
+180.4317 	EXP 	Sound Splat stopped
+180.4321 	EXP 	New trial (rep=3, index=0): None
+180.4329 	EXP 	Set Munch sound=munch.wav
+180.4335 	EXP 	Set Splat sound=splat.wav
+180.4454 	EXP 	Banana: autoDraw = False
+180.4454 	EXP 	SplatBanana: autoDraw = False
+180.4454 	EXP 	MonkeyMouth: autoDraw = False
+180.4454 	EXP 	MonkeyHappy: autoDraw = False
+180.4454 	EXP 	MonkeySad: autoDraw = False
+180.4454 	EXP 	Banana: autoDraw = True
+180.4454 	EXP 	SplatBanana: autoDraw = True
+180.4454 	EXP 	MonkeyMouth: autoDraw = True
+180.4454 	EXP 	MonkeyHappy: autoDraw = True
+180.4454 	EXP 	MonkeySad: autoDraw = True
+181.0465 	EXP 	Sound Splat started
+181.4494 	EXP 	Sound Munch stopped
+181.4494 	EXP 	Sound Splat stopped
+181.4497 	EXP 	New trial (rep=4, index=0): None
+181.4504 	EXP 	Set Munch sound=munch.wav
+181.4510 	EXP 	Set Splat sound=splat.wav
+181.4630 	EXP 	Banana: autoDraw = False
+181.4630 	EXP 	SplatBanana: autoDraw = False
+181.4630 	EXP 	MonkeyMouth: autoDraw = False
+181.4630 	EXP 	MonkeyHappy: autoDraw = False
+181.4630 	EXP 	MonkeySad: autoDraw = False
+181.4630 	EXP 	Banana: autoDraw = True
+181.4630 	EXP 	SplatBanana: autoDraw = True
+181.4630 	EXP 	MonkeyMouth: autoDraw = True
+181.4630 	EXP 	MonkeyHappy: autoDraw = True
+181.4630 	EXP 	MonkeySad: autoDraw = True
+182.1639 	EXP 	Sound Munch started
+182.4992 	EXP 	Sound Munch stopped
+182.4992 	EXP 	Sound Splat stopped
+182.4995 	EXP 	New trial (rep=5, index=0): None
+182.5001 	EXP 	Set Munch sound=munch.wav
+182.5006 	EXP 	Set Splat sound=splat.wav
+182.5139 	EXP 	Banana: autoDraw = False
+182.5139 	EXP 	SplatBanana: autoDraw = False
+182.5139 	EXP 	MonkeyMouth: autoDraw = False
+182.5139 	EXP 	MonkeyHappy: autoDraw = False
+182.5139 	EXP 	MonkeySad: autoDraw = False
+182.5139 	EXP 	Banana: autoDraw = True
+182.5139 	EXP 	SplatBanana: autoDraw = True
+182.5139 	EXP 	MonkeyMouth: autoDraw = True
+182.5139 	EXP 	MonkeyHappy: autoDraw = True
+182.5139 	EXP 	MonkeySad: autoDraw = True
+183.1830 	EXP 	Sound Munch started
+183.5180 	EXP 	Sound Munch stopped
+183.5180 	EXP 	Sound Splat stopped
+183.5186 	EXP 	New trial (rep=6, index=0): None
+183.5198 	EXP 	Set Munch sound=munch.wav
+183.5213 	EXP 	Set Splat sound=splat.wav
+183.5317 	EXP 	Banana: autoDraw = False
+183.5317 	EXP 	SplatBanana: autoDraw = False
+183.5317 	EXP 	MonkeyMouth: autoDraw = False
+183.5317 	EXP 	MonkeyHappy: autoDraw = False
+183.5317 	EXP 	MonkeySad: autoDraw = False
+183.5317 	EXP 	Banana: autoDraw = True
+183.5317 	EXP 	SplatBanana: autoDraw = True
+183.5317 	EXP 	MonkeyMouth: autoDraw = True
+183.5317 	EXP 	MonkeyHappy: autoDraw = True
+183.5317 	EXP 	MonkeySad: autoDraw = True
+184.1839 	EXP 	Sound Munch started
+184.5222 	EXP 	Sound Munch stopped
+184.5223 	EXP 	Sound Splat stopped
+184.5235 	EXP 	New trial (rep=7, index=0): None
+184.5260 	EXP 	Set Munch sound=munch.wav
+184.5278 	EXP 	Set Splat sound=splat.wav
+184.5366 	EXP 	Banana: autoDraw = False
+184.5366 	EXP 	SplatBanana: autoDraw = False
+184.5366 	EXP 	MonkeyMouth: autoDraw = False
+184.5366 	EXP 	MonkeyHappy: autoDraw = False
+184.5366 	EXP 	MonkeySad: autoDraw = False
+184.5366 	EXP 	Banana: autoDraw = True
+184.5366 	EXP 	SplatBanana: autoDraw = True
+184.5366 	EXP 	MonkeyMouth: autoDraw = True
+184.5366 	EXP 	MonkeyHappy: autoDraw = True
+184.5366 	EXP 	MonkeySad: autoDraw = True
+185.1507 	EXP 	Sound Splat started
+185.5363 	EXP 	Sound Munch stopped
+185.5364 	EXP 	Sound Splat stopped
+185.5366 	EXP 	New trial (rep=8, index=0): None
+185.5372 	EXP 	Set Munch sound=munch.wav
+185.5378 	EXP 	Set Splat sound=splat.wav
+185.5500 	EXP 	Banana: autoDraw = False
+185.5500 	EXP 	SplatBanana: autoDraw = False
+185.5500 	EXP 	MonkeyMouth: autoDraw = False
+185.5500 	EXP 	MonkeyHappy: autoDraw = False
+185.5500 	EXP 	MonkeySad: autoDraw = False
+185.5500 	EXP 	Banana: autoDraw = True
+185.5500 	EXP 	SplatBanana: autoDraw = True
+185.5500 	EXP 	MonkeyMouth: autoDraw = True
+185.5500 	EXP 	MonkeyHappy: autoDraw = True
+185.5500 	EXP 	MonkeySad: autoDraw = True
+186.2855 	EXP 	Sound Munch started
+186.6376 	EXP 	Sound Munch stopped
+186.6376 	EXP 	Sound Splat stopped
+186.6381 	EXP 	New trial (rep=9, index=0): None
+186.6392 	EXP 	Set Munch sound=munch.wav
+186.6402 	EXP 	Set Splat sound=splat.wav
+186.6512 	EXP 	Banana: autoDraw = False
+186.6512 	EXP 	SplatBanana: autoDraw = False
+186.6512 	EXP 	MonkeyMouth: autoDraw = False
+186.6512 	EXP 	MonkeyHappy: autoDraw = False
+186.6512 	EXP 	MonkeySad: autoDraw = False
+186.6512 	EXP 	Banana: autoDraw = True
+186.6512 	EXP 	SplatBanana: autoDraw = True
+186.6512 	EXP 	MonkeyMouth: autoDraw = True
+186.6512 	EXP 	MonkeyHappy: autoDraw = True
+186.6512 	EXP 	MonkeySad: autoDraw = True
+187.3530 	EXP 	Sound Splat started
+187.6874 	EXP 	Sound Munch stopped
+187.6875 	EXP 	Sound Splat stopped
+187.6878 	EXP 	New trial (rep=10, index=0): None
+187.6886 	EXP 	Set Munch sound=munch.wav
+187.6893 	EXP 	Set Splat sound=splat.wav
+187.7021 	EXP 	Banana: autoDraw = False
+187.7021 	EXP 	SplatBanana: autoDraw = False
+187.7021 	EXP 	MonkeyMouth: autoDraw = False
+187.7021 	EXP 	MonkeyHappy: autoDraw = False
+187.7021 	EXP 	MonkeySad: autoDraw = False
+187.7021 	EXP 	Banana: autoDraw = True
+187.7021 	EXP 	SplatBanana: autoDraw = True
+187.7021 	EXP 	MonkeyMouth: autoDraw = True
+187.7021 	EXP 	MonkeyHappy: autoDraw = True
+187.7021 	EXP 	MonkeySad: autoDraw = True
+188.5369 	EXP 	Sound Munch started
+188.9397 	EXP 	Sound Munch stopped
+188.9397 	EXP 	Sound Splat stopped
+188.9403 	EXP 	New trial (rep=11, index=0): None
+188.9410 	EXP 	Set Munch sound=munch.wav
+188.9416 	EXP 	Set Splat sound=splat.wav
+188.9535 	EXP 	Banana: autoDraw = False
+188.9535 	EXP 	SplatBanana: autoDraw = False
+188.9535 	EXP 	MonkeyMouth: autoDraw = False
+188.9535 	EXP 	MonkeyHappy: autoDraw = False
+188.9535 	EXP 	MonkeySad: autoDraw = False
+188.9535 	EXP 	Banana: autoDraw = True
+188.9535 	EXP 	SplatBanana: autoDraw = True
+188.9535 	EXP 	MonkeyMouth: autoDraw = True
+188.9535 	EXP 	MonkeyHappy: autoDraw = True
+188.9535 	EXP 	MonkeySad: autoDraw = True
+189.7548 	EXP 	Sound Munch started
+190.1422 	EXP 	Sound Munch stopped
+190.1422 	EXP 	Sound Splat stopped
+190.1430 	EXP 	New trial (rep=12, index=0): None
+190.1446 	EXP 	Set Munch sound=munch.wav
+190.1458 	EXP 	Set Splat sound=splat.wav
+190.1548 	EXP 	Banana: autoDraw = False
+190.1548 	EXP 	SplatBanana: autoDraw = False
+190.1548 	EXP 	MonkeyMouth: autoDraw = False
+190.1548 	EXP 	MonkeyHappy: autoDraw = False
+190.1548 	EXP 	MonkeySad: autoDraw = False
+190.1548 	EXP 	Banana: autoDraw = True
+190.1548 	EXP 	SplatBanana: autoDraw = True
+190.1548 	EXP 	MonkeyMouth: autoDraw = True
+190.1548 	EXP 	MonkeyHappy: autoDraw = True
+190.1548 	EXP 	MonkeySad: autoDraw = True
+190.9064 	EXP 	Sound Munch started
+191.2754 	EXP 	Sound Munch stopped
+191.2754 	EXP 	Sound Splat stopped
+191.2758 	EXP 	New trial (rep=13, index=0): None
+191.2766 	EXP 	Set Munch sound=munch.wav
+191.2772 	EXP 	Set Splat sound=splat.wav
+191.2890 	EXP 	Banana: autoDraw = False
+191.2890 	EXP 	SplatBanana: autoDraw = False
+191.2890 	EXP 	MonkeyMouth: autoDraw = False
+191.2890 	EXP 	MonkeyHappy: autoDraw = False
+191.2890 	EXP 	MonkeySad: autoDraw = False
+191.2890 	EXP 	Banana: autoDraw = True
+191.2890 	EXP 	SplatBanana: autoDraw = True
+191.2890 	EXP 	MonkeyMouth: autoDraw = True
+191.2890 	EXP 	MonkeyHappy: autoDraw = True
+191.2890 	EXP 	MonkeySad: autoDraw = True
+192.0236 	EXP 	Sound Munch started
+192.3764 	EXP 	Sound Munch stopped
+192.3764 	EXP 	Sound Splat stopped
+192.3769 	EXP 	New trial (rep=14, index=0): None
+192.3780 	EXP 	Set Munch sound=munch.wav
+192.3790 	EXP 	Set Splat sound=splat.wav
+192.3900 	EXP 	Banana: autoDraw = False
+192.3900 	EXP 	SplatBanana: autoDraw = False
+192.3900 	EXP 	MonkeyMouth: autoDraw = False
+192.3900 	EXP 	MonkeyHappy: autoDraw = False
+192.3900 	EXP 	MonkeySad: autoDraw = False
+192.3900 	EXP 	Banana: autoDraw = True
+192.3900 	EXP 	SplatBanana: autoDraw = True
+192.3900 	EXP 	MonkeyMouth: autoDraw = True
+192.3900 	EXP 	MonkeyHappy: autoDraw = True
+192.3900 	EXP 	MonkeySad: autoDraw = True
+193.0920 	EXP 	Sound Munch started
+193.4274 	EXP 	Sound Munch stopped
+193.4274 	EXP 	Sound Splat stopped
+193.4279 	EXP 	New trial (rep=15, index=0): None
+193.4290 	EXP 	Set Munch sound=munch.wav
+193.4299 	EXP 	Set Splat sound=splat.wav
+193.4414 	EXP 	Banana: autoDraw = False
+193.4414 	EXP 	SplatBanana: autoDraw = False
+193.4414 	EXP 	MonkeyMouth: autoDraw = False
+193.4414 	EXP 	MonkeyHappy: autoDraw = False
+193.4414 	EXP 	MonkeySad: autoDraw = False
+193.4414 	EXP 	Banana: autoDraw = True
+193.4414 	EXP 	SplatBanana: autoDraw = True
+193.4414 	EXP 	MonkeyMouth: autoDraw = True
+193.4414 	EXP 	MonkeyHappy: autoDraw = True
+193.4414 	EXP 	MonkeySad: autoDraw = True
+194.1095 	EXP 	Sound Munch started
+194.4454 	EXP 	Sound Munch stopped
+194.4454 	EXP 	Sound Splat stopped
+194.4460 	EXP 	New trial (rep=16, index=0): None
+194.4472 	EXP 	Set Munch sound=munch.wav
+194.4481 	EXP 	Set Splat sound=splat.wav
+194.4590 	EXP 	Banana: autoDraw = False
+194.4590 	EXP 	SplatBanana: autoDraw = False
+194.4590 	EXP 	MonkeyMouth: autoDraw = False
+194.4590 	EXP 	MonkeyHappy: autoDraw = False
+194.4590 	EXP 	MonkeySad: autoDraw = False
+194.4590 	EXP 	Banana: autoDraw = True
+194.4590 	EXP 	SplatBanana: autoDraw = True
+194.4590 	EXP 	MonkeyMouth: autoDraw = True
+194.4590 	EXP 	MonkeyHappy: autoDraw = True
+194.4590 	EXP 	MonkeySad: autoDraw = True
+195.1104 	EXP 	Sound Splat started
+195.4633 	EXP 	Sound Munch stopped
+195.4634 	EXP 	Sound Splat stopped
+195.4637 	EXP 	New trial (rep=17, index=0): None
+195.4643 	EXP 	Set Munch sound=munch.wav
+195.4648 	EXP 	Set Splat sound=splat.wav
+195.4769 	EXP 	Banana: autoDraw = False
+195.4769 	EXP 	SplatBanana: autoDraw = False
+195.4769 	EXP 	MonkeyMouth: autoDraw = False
+195.4769 	EXP 	MonkeyHappy: autoDraw = False
+195.4769 	EXP 	MonkeySad: autoDraw = False
+195.4769 	EXP 	Banana: autoDraw = True
+195.4769 	EXP 	SplatBanana: autoDraw = True
+195.4769 	EXP 	MonkeyMouth: autoDraw = True
+195.4769 	EXP 	MonkeyHappy: autoDraw = True
+195.4769 	EXP 	MonkeySad: autoDraw = True
+196.2278 	EXP 	Sound Munch started
+196.5970 	EXP 	Sound Munch stopped
+196.5970 	EXP 	Sound Splat stopped
+196.5974 	EXP 	New trial (rep=18, index=0): None
+196.5981 	EXP 	Set Munch sound=munch.wav
+196.5987 	EXP 	Set Splat sound=splat.wav
+196.6109 	EXP 	Banana: autoDraw = False
+196.6109 	EXP 	SplatBanana: autoDraw = False
+196.6109 	EXP 	MonkeyMouth: autoDraw = False
+196.6109 	EXP 	MonkeyHappy: autoDraw = False
+196.6109 	EXP 	MonkeySad: autoDraw = False
+196.6109 	EXP 	Banana: autoDraw = True
+196.6109 	EXP 	SplatBanana: autoDraw = True
+196.6109 	EXP 	MonkeyMouth: autoDraw = True
+196.6109 	EXP 	MonkeyHappy: autoDraw = True
+196.6109 	EXP 	MonkeySad: autoDraw = True
+197.3461 	EXP 	Sound Munch started
+197.6982 	EXP 	Sound Munch stopped
+197.6982 	EXP 	Sound Splat stopped
+197.6985 	EXP 	New trial (rep=19, index=0): None
+197.6993 	EXP 	Set Munch sound=munch.wav
+197.6998 	EXP 	Set Splat sound=splat.wav
+197.7138 	EXP 	Banana: autoDraw = False
+197.7138 	EXP 	SplatBanana: autoDraw = False
+197.7138 	EXP 	MonkeyMouth: autoDraw = False
+197.7138 	EXP 	MonkeyHappy: autoDraw = False
+197.7138 	EXP 	MonkeySad: autoDraw = False
+197.7138 	EXP 	Banana: autoDraw = True
+197.7138 	EXP 	SplatBanana: autoDraw = True
+197.7138 	EXP 	MonkeyMouth: autoDraw = True
+197.7138 	EXP 	MonkeyHappy: autoDraw = True
+197.7138 	EXP 	MonkeySad: autoDraw = True
+198.4135 	EXP 	Sound Munch started
+198.7490 	EXP 	Sound Munch stopped
+198.7491 	EXP 	Sound Splat stopped
+198.7503 	EXP 	Set level_up_sound sound=level_up.wav
+198.7504 	EXP 	Sound level_up_sound started
+198.7629 	EXP 	Banana: autoDraw = False
+198.7629 	EXP 	SplatBanana: autoDraw = False
+198.7629 	EXP 	MonkeyMouth: autoDraw = False
+198.7629 	EXP 	MonkeyHappy: autoDraw = False
+198.7629 	EXP 	MonkeySad: autoDraw = False
+198.7629 	EXP 	feedback_text: autoDraw = True
+198.7629 	EXP 	velo: autoDraw = True
+201.7499 	EXP 	Sound level_up_sound stopped
+201.7657 	EXP 	feedback_text: autoDraw = False
+201.7657 	EXP 	velo: autoDraw = False
+201.7657 	EXP 	text: autoDraw = True
+202.9608 	DATA 	Keypress: n
+202.9667 	EXP 	text: autoDraw = False
+202.9667 	EXP 	Adios: autoDraw = True
+207.9716 	EXP 	Adios: autoDraw = False
+207.9716 	EXP 	Adios: autoDraw = False
+208.2956 	EXP 	window1: mouseVisible = True
