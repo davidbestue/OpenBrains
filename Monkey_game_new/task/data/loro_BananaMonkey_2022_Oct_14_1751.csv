@@ -1,0 +1,5 @@
+﻿repeat.thisRepN,repeat.thisTrialN,repeat.thisN,repeat.thisIndex,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,image.started,image.stopped,monkey_sound.started,monkey_sound.stopped,Bienvenida.started,Bienvenida.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,Participant,date,expName,psychopyVersion,frameRate,
+,,,,,,,,16.289362399998936,None,16.14118173988827,None,19.166084299999056,None,space,1.3360475999943446,19.166084299999056,None,loro,2022_Oct_14_1751,BananaMonkey,3.2.3,60.039758328406656,
+0,0,0,0,0,0,0,0,,,,,,,,,,,loro,2022_Oct_14_1751,BananaMonkey,3.2.3,60.039758328406656,
+0,0,0,0,1,0,1,0,,,,,,,,,,,loro,2022_Oct_14_1751,BananaMonkey,3.2.3,60.039758328406656,
+0,0,0,0,2,0,2,0,,,,,,,,,,,loro,2022_Oct_14_1751,BananaMonkey,3.2.3,60.039758328406656,

@@ -1,0 +1,40 @@
+5.8652 	WARNING 	User requested fullscreen with size [1366  768], but screen is actually [1920, 1080]. Using actual size
+8.0084 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([-1., -1., -1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000013C96F26A58>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000013C96FEDCC0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.0084 	EXP 	window1: recordFrameIntervals = False
+8.1748 	EXP 	window1: recordFrameIntervals = True
+8.4916 	EXP 	window1: recordFrameIntervals = False
+9.0884 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='imagenes/Title.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+9.7962 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+9.7974 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+9.7974 	EXP 	Set Sound monkey_sound volume=1.000
+10.0947 	EXP 	Created Bienvenida = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Bienvenida', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+11.1379 	EXP 	Created logo_OB_intro = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='logo_OB.png', interpolate=True, mask=None, maskParams=None, name='logo_OB_intro', opacity=1.0, ori=0.0, pos=array([0.6, 0.6]), size=array([0.2 , 0.23]), texRes=128, units='norm', win=Window(...))
+11.1436 	EXP 	Created Banana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='banana.png', interpolate=True, mask=None, maskParams=None, name='Banana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.4 ]), texRes=128, units='norm', win=Window(...))
+11.1593 	EXP 	Created SplatBanana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='bansplat.png', interpolate=True, mask=None, maskParams=None, name='SplatBanana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.3, 0.4]), texRes=128, units='norm', win=Window(...))
+11.1595 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+11.1880 	EXP 	Set Munch sound=A
+11.1880 	EXP 	Set Sound Munch volume=1.000
+11.1880 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+11.1889 	EXP 	Set Splat sound=splat.wav
+11.1889 	EXP 	Set Sound Splat volume=1.000
+11.1936 	EXP 	Created MonkeyMouth = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image='monkey.png', interpolate=True, mask=None, maskParams=None, name='MonkeyMouth', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+11.1977 	EXP 	Created MonkeyHappy = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, image='monkeymunch.png', interpolate=True, mask=None, maskParams=None, name='MonkeyHappy', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+11.2014 	EXP 	Created MonkeySad = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, image='monkeyno.png', interpolate=True, mask=None, maskParams=None, name='MonkeySad', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+11.2195 	EXP 	Created feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+11.2196 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+11.2204 	EXP 	Set level_up_sound sound=level_up.wav
+11.2204 	EXP 	Set Sound level_up_sound volume=1.000
+11.2377 	EXP 	Created velo = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='red', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.12, italic=False, languageStyle='LTR', name='velo', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([255.,   0.,   0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+11.2617 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+11.2714 	EXP 	Created Adios = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Adios', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='¡Muchas gracias por participar!', units='norm', win=Window(...), wrapWidth=1)
+11.8860 	EXP 	Created logo_ob_fin = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='logo_OB.png', interpolate=True, mask=None, maskParams=None, name='logo_ob_fin', opacity=1.0, ori=0.0, pos=array([0.6, 0.6]), size=array([0.2 , 0.23]), texRes=128, units='norm', win=Window(...))
+11.8869 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+11.8872 	EXP 	Sound monkey_sound started
+12.0014 	EXP 	image: autoDraw = True
+14.8829 	EXP 	Sound monkey_sound stopped
+14.8989 	EXP 	Sound monkey_sound stopped
+14.9344 	EXP 	image: autoDraw = False
+14.9344 	EXP 	Bienvenida: autoDraw = True
+14.9344 	EXP 	logo_OB_intro: autoDraw = True
+18.9923 	DATA 	Keypress: escape
+19.5378 	EXP 	window1: mouseVisible = True

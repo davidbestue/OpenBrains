@@ -1,0 +1,137 @@
+8.2523 	WARNING 	User requested fullscreen with size [1366  768], but screen is actually [1920, 1080]. Using actual size
+11.7393 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([-1., -1., -1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E8216159E8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001E8216DBC18>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.7393 	EXP 	window1: recordFrameIntervals = False
+11.9080 	EXP 	window1: recordFrameIntervals = True
+12.3098 	EXP 	window1: recordFrameIntervals = False
+13.0478 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='imagenes/Title.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+13.9533 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+13.9545 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+13.9545 	EXP 	Set Sound monkey_sound volume=1.000
+14.3190 	EXP 	Created Bienvenida = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Bienvenida', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+14.3282 	EXP 	Created Banana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='banana.png', interpolate=True, mask=None, maskParams=None, name='Banana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.4 ]), texRes=128, units='norm', win=Window(...))
+14.3351 	EXP 	Created SplatBanana = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='bansplat.png', interpolate=True, mask=None, maskParams=None, name='SplatBanana', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.3, 0.4]), texRes=128, units='norm', win=Window(...))
+14.3352 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+14.3553 	EXP 	Set Munch sound=A
+14.3554 	EXP 	Set Sound Munch volume=1.000
+14.3554 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+14.3563 	EXP 	Set Splat sound=splat.wav
+14.3563 	EXP 	Set Sound Splat volume=1.000
+14.3791 	EXP 	Created MonkeyMouth = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image='monkey.png', interpolate=True, mask=None, maskParams=None, name='MonkeyMouth', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+14.3873 	EXP 	Created MonkeyHappy = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, image='monkeymunch.png', interpolate=True, mask=None, maskParams=None, name='MonkeyHappy', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+14.3940 	EXP 	Created MonkeySad = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, image='monkeyno.png', interpolate=True, mask=None, maskParams=None, name='MonkeySad', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+14.4073 	EXP 	Created feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+14.4073 	WARNING 	Hamming was requested using the 'pygame' sound library but hamming is not supported there.
+14.4082 	EXP 	Set level_up_sound sound=level_up.wav
+14.4082 	EXP 	Set Sound level_up_sound volume=1.000
+14.4565 	EXP 	Created velo = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='red', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.12, italic=False, languageStyle='LTR', name='velo', opacity=1.0, ori=0, pos=array([-0.1, -0.2]), rgb=array([255.,   0.,   0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+14.5483 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+14.5749 	EXP 	Created Adios = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Adios', opacity=1.0, ori=0, pos=array([-0.05,  0.  ]), rgb=array([255., 255., 255.]), text='¡Muchas gracias por participar!', units='norm', win=Window(...), wrapWidth=1)
+14.5759 	EXP 	Set monkey_sound sound=monkeys_sound.wav
+14.5764 	EXP 	Sound monkey_sound started
+14.6983 	EXP 	image: autoDraw = True
+17.5818 	EXP 	Sound monkey_sound stopped
+17.5979 	EXP 	image: autoDraw = False
+17.5979 	EXP 	Bienvenida: autoDraw = True
+63.4784 	EXP 	Created sequence: random, trialTypes=1, nReps=10, seed=None
+63.4788 	EXP 	New trial (rep=0, index=0): None
+63.4791 	EXP 	Created sequence: random, trialTypes=1, nReps=5, seed=None
+63.4795 	EXP 	New trial (rep=0, index=0): None
+63.4807 	EXP 	Set Munch sound=munch.wav
+63.4818 	EXP 	Set Splat sound=splat.wav
+63.4824 	DATA 	Keypress: space
+63.4926 	EXP 	Bienvenida: autoDraw = False
+63.4926 	EXP 	Banana: autoDraw = True
+63.4926 	EXP 	SplatBanana: autoDraw = True
+63.4926 	EXP 	MonkeyMouth: autoDraw = True
+63.4926 	EXP 	MonkeyHappy: autoDraw = True
+63.4926 	EXP 	MonkeySad: autoDraw = True
+65.2443 	EXP 	Sound Munch started
+66.1640 	EXP 	Sound Munch stopped
+66.1641 	EXP 	Sound Splat stopped
+66.1646 	EXP 	New trial (rep=1, index=0): None
+66.1663 	EXP 	Set Munch sound=munch.wav
+66.1677 	EXP 	Set Splat sound=splat.wav
+66.1772 	EXP 	Banana: autoDraw = False
+66.1772 	EXP 	SplatBanana: autoDraw = False
+66.1772 	EXP 	MonkeyMouth: autoDraw = False
+66.1772 	EXP 	MonkeyHappy: autoDraw = False
+66.1772 	EXP 	MonkeySad: autoDraw = False
+66.1772 	EXP 	Banana: autoDraw = True
+66.1772 	EXP 	SplatBanana: autoDraw = True
+66.1772 	EXP 	MonkeyMouth: autoDraw = True
+66.1772 	EXP 	MonkeyHappy: autoDraw = True
+66.1772 	EXP 	MonkeySad: autoDraw = True
+67.7462 	EXP 	Sound Munch started
+68.5657 	EXP 	Sound Munch stopped
+68.5657 	EXP 	Sound Splat stopped
+68.5663 	EXP 	New trial (rep=2, index=0): None
+68.5678 	EXP 	Set Munch sound=munch.wav
+68.5690 	EXP 	Set Splat sound=splat.wav
+68.5799 	EXP 	Banana: autoDraw = False
+68.5799 	EXP 	SplatBanana: autoDraw = False
+68.5799 	EXP 	MonkeyMouth: autoDraw = False
+68.5799 	EXP 	MonkeyHappy: autoDraw = False
+68.5799 	EXP 	MonkeySad: autoDraw = False
+68.5799 	EXP 	Banana: autoDraw = True
+68.5799 	EXP 	SplatBanana: autoDraw = True
+68.5799 	EXP 	MonkeyMouth: autoDraw = True
+68.5799 	EXP 	MonkeyHappy: autoDraw = True
+68.5799 	EXP 	MonkeySad: autoDraw = True
+69.5984 	DATA 	Mouse: Left button down, pos=(809,190)
+69.6740 	DATA 	Mouse:  Left button up, pos=(809,190)
+70.0151 	EXP 	Sound Munch started
+70.7522 	EXP 	Sound Munch stopped
+70.7522 	EXP 	Sound Splat stopped
+70.7526 	EXP 	New trial (rep=3, index=0): None
+70.7539 	EXP 	Set Munch sound=munch.wav
+70.7550 	EXP 	Set Splat sound=splat.wav
+70.7655 	EXP 	Banana: autoDraw = False
+70.7655 	EXP 	SplatBanana: autoDraw = False
+70.7655 	EXP 	MonkeyMouth: autoDraw = False
+70.7655 	EXP 	MonkeyHappy: autoDraw = False
+70.7655 	EXP 	MonkeySad: autoDraw = False
+70.7655 	EXP 	Banana: autoDraw = True
+70.7655 	EXP 	SplatBanana: autoDraw = True
+70.7655 	EXP 	MonkeyMouth: autoDraw = True
+70.7655 	EXP 	MonkeyHappy: autoDraw = True
+70.7655 	EXP 	MonkeySad: autoDraw = True
+71.7836 	DATA 	Mouse: Left button down, pos=(1191,230)
+71.9173 	DATA 	Mouse:  Left button up, pos=(1192,230)
+72.0671 	EXP 	Sound Munch started
+72.7370 	EXP 	Sound Munch stopped
+72.7370 	EXP 	Sound Splat stopped
+72.7375 	EXP 	New trial (rep=4, index=0): None
+72.7390 	EXP 	Set Munch sound=munch.wav
+72.7401 	EXP 	Set Splat sound=splat.wav
+72.7507 	EXP 	Banana: autoDraw = False
+72.7507 	EXP 	SplatBanana: autoDraw = False
+72.7507 	EXP 	MonkeyMouth: autoDraw = False
+72.7507 	EXP 	MonkeyHappy: autoDraw = False
+72.7507 	EXP 	MonkeySad: autoDraw = False
+72.7507 	EXP 	Banana: autoDraw = True
+72.7507 	EXP 	SplatBanana: autoDraw = True
+72.7507 	EXP 	MonkeyMouth: autoDraw = True
+72.7507 	EXP 	MonkeyHappy: autoDraw = True
+72.7507 	EXP 	MonkeySad: autoDraw = True
+73.9529 	EXP 	Sound Munch started
+74.6026 	EXP 	Sound Munch stopped
+74.6028 	EXP 	Sound Splat stopped
+74.6070 	EXP 	Set level_up_sound sound=level_up.wav
+74.6276 	EXP 	Sound level_up_sound started
+74.6512 	EXP 	Banana: autoDraw = False
+74.6512 	EXP 	SplatBanana: autoDraw = False
+74.6512 	EXP 	MonkeyMouth: autoDraw = False
+74.6512 	EXP 	MonkeyHappy: autoDraw = False
+74.6512 	EXP 	MonkeySad: autoDraw = False
+74.6512 	EXP 	feedback_text: autoDraw = True
+74.6512 	EXP 	velo: autoDraw = True
+77.6070 	EXP 	Sound level_up_sound stopped
+77.6221 	EXP 	feedback_text: autoDraw = False
+77.6221 	EXP 	velo: autoDraw = False
+77.6221 	EXP 	text: autoDraw = True
+112.1474 	DATA 	Keypress: n
+112.1760 	EXP 	text: autoDraw = False
+112.1760 	EXP 	Adios: autoDraw = True
+117.1780 	EXP 	Adios: autoDraw = False
+117.1780 	EXP 	Adios: autoDraw = False
+117.7856 	EXP 	window1: mouseVisible = True

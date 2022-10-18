@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on octubre 12, 2022, at 22:17
+    on octubre 16, 2022, at 14:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -49,7 +49,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['Participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\David\\Documents\\GitHub\\OpenBrains\\Monkey_game\\task\\BananaMonkey.py',
+    originPath='C:\\Users\\David\\Documents\\GitHub\\OpenBrains\\Monkey_game_new\\task\\BananaMonkey.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -98,13 +98,21 @@ monkey_sound.setVolume(1)
 # Initialize components for Routine "Instructions"
 InstructionsClock = core.Clock()
 Bienvenida = visual.TextStim(win=win, name='Bienvenida',
-    text='Bienvenido a nuestro juego!\n¡Mueve el mouse para comerte las bananas!\n\n      Pulsa "space" para empezar',
+    text='        ¡Bienvenido a nuestro juego!\n\nMueve al mono con el "mouse" para comerte todas las bananas posibles.\n\n      Pulsa "space" para iniciar el juego',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 key_resp = keyboard.Keyboard()
+logo_OB_intro = visual.ImageStim(
+    win=win,
+    name='logo_OB_intro', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.6, 0.6), size=(0.2, 0.25),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "Game"
 GameClock = core.Clock()
@@ -196,7 +204,7 @@ level_up_sound.setVolume(1)
 velo = visual.TextStim(win=win, name='velo',
     text='default text',
     font='Arial',
-    pos=(-0.1, -0.2), height=0.12, wrapWidth=None, ori=0, 
+    pos=(0, -0.2), height=0.12, wrapWidth=None, ori=0, 
     color='red', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -204,7 +212,7 @@ velo = visual.TextStim(win=win, name='velo',
 # Initialize components for Routine "repeat_"
 repeat_Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='¿quieres continuar?\n\n        sí: pulsa S\n\n        no: pulsa N',
+    text='¿Quieres continuar?\n\n        SÍ: pulsa "S"\n\n        NO: pulsa "N"',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -213,15 +221,34 @@ text = visual.TextStim(win=win, name='text',
 si = keyboard.Keyboard()
 no = keyboard.Keyboard()
 
+# Initialize components for Routine "valoracion"
+valoracionClock = core.Clock()
+text_2 = visual.TextStim(win=win, name='text_2',
+    text='¿Te ha parecido un juego divertido?\n\n        Puntúalo del 0 al 5 \n\n        0: muy aburrido\n        5: muy divertido\n\nPulsa en el teclado ese número para terminar',
+    font='Arial',
+    pos=(0, 0), height=0.07, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+valoracion_resp = keyboard.Keyboard()
+
 # Initialize components for Routine "End"
 EndClock = core.Clock()
 Adios = visual.TextStim(win=win, name='Adios',
     text='¡Muchas gracias por participar!',
     font='Arial',
-    pos=(-0.05, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
+logo_ob_fin = visual.ImageStim(
+    win=win,
+    name='logo_ob_fin', 
+    image='logo_OB.png', mask=None,
+    ori=0, pos=(0.6, 0.6), size=(0.2, 0.25),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -341,7 +368,7 @@ thisExp.addData('monkey_sound.stopped', monkey_sound.tStopRefresh)
 key_resp.keys = []
 key_resp.rt = []
 # keep track of which components have finished
-InstructionsComponents = [Bienvenida, key_resp]
+InstructionsComponents = [Bienvenida, key_resp, logo_OB_intro]
 for thisComponent in InstructionsComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -400,6 +427,15 @@ while continueRoutine:
             # a response ends the routine
             continueRoutine = False
     
+    # *logo_OB_intro* updates
+    if logo_OB_intro.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        logo_OB_intro.frameNStart = frameN  # exact frame index
+        logo_OB_intro.tStart = t  # local t and not account for scr refresh
+        logo_OB_intro.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(logo_OB_intro, 'tStartRefresh')  # time at next scr refresh
+        logo_OB_intro.setAutoDraw(True)
+    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -432,6 +468,8 @@ if key_resp.keys != None:  # we had a response
 thisExp.addData('key_resp.started', key_resp.tStartRefresh)
 thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
+thisExp.addData('logo_OB_intro.started', logo_OB_intro.tStartRefresh)
+thisExp.addData('logo_OB_intro.stopped', logo_OB_intro.tStopRefresh)
 # the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -455,7 +493,7 @@ for thisRepeat in repeat:
             exec('{} = thisRepeat[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=20, method='random', 
+    trials = data.TrialHandler(nReps=15, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -721,7 +759,7 @@ for thisRepeat in repeat:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 20 repeats of 'trials'
+    # completed 15 repeats of 'trials'
     
     
     # ------Prepare to start Routine "feedback_2"-------
@@ -771,10 +809,7 @@ for thisRepeat in repeat:
                 win.timeOnFlip(feedback_text, 'tStopRefresh')  # time at next scr refresh
                 feedback_text.setAutoDraw(False)
         if feedback_text.status == STARTED:  # only update if drawing
-            feedback_text.setText('         ¡Sigue así!' + '\n' + '\n'
-
-
-, log=False)
+            feedback_text.setText('¡Sigue así!\n\n', log=False)
         # start/stop level_up_sound
         if level_up_sound.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
@@ -808,10 +843,7 @@ for thisRepeat in repeat:
                 win.timeOnFlip(velo, 'tStopRefresh')  # time at next scr refresh
                 velo.setAutoDraw(False)
         if velo.status == STARTED:  # only update if drawing
-            velo.setText('velocidad = ' + str(SPEED_SHOW) + 'Km/h' + '\n'
-
-
-, log=False)
+            velo.setText('velocidad =' +str(SPEED_SHOW) +'Km/h' , log=False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -934,7 +966,8 @@ for thisRepeat in repeat:
                 # a response ends the routine
                 continueRoutine = False
         if no.keys == "n": 
-            repeat.finished = True 
+            repeat.finished = True    
+        
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -982,11 +1015,111 @@ for thisRepeat in repeat:
 # completed 10 repeats of 'repeat'
 
 
+# ------Prepare to start Routine "valoracion"-------
+# update component parameters for each repeat
+valoracion_resp.keys = []
+valoracion_resp.rt = []
+# keep track of which components have finished
+valoracionComponents = [text_2, valoracion_resp]
+for thisComponent in valoracionComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+valoracionClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
+
+# -------Run Routine "valoracion"-------
+while continueRoutine:
+    # get current time
+    t = valoracionClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=valoracionClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_2* updates
+    if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_2.frameNStart = frameN  # exact frame index
+        text_2.tStart = t  # local t and not account for scr refresh
+        text_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+        text_2.setAutoDraw(True)
+    
+    # *valoracion_resp* updates
+    waitOnFlip = False
+    if valoracion_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        valoracion_resp.frameNStart = frameN  # exact frame index
+        valoracion_resp.tStart = t  # local t and not account for scr refresh
+        valoracion_resp.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(valoracion_resp, 'tStartRefresh')  # time at next scr refresh
+        valoracion_resp.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(valoracion_resp.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(valoracion_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if valoracion_resp.status == STARTED and not waitOnFlip:
+        theseKeys = valoracion_resp.getKeys(keyList=['0', '1', '2', '3', '4', '5'], waitRelease=False)
+        if len(theseKeys):
+            theseKeys = theseKeys[0]  # at least one key was pressed
+            
+            # check for quit:
+            if "escape" == theseKeys:
+                endExpNow = True
+            if valoracion_resp.keys == []:  # then this was the first keypress
+                valoracion_resp.keys = theseKeys.name  # just the first key pressed
+                valoracion_resp.rt = theseKeys.rt
+                # a response ends the routine
+                continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in valoracionComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "valoracion"-------
+for thisComponent in valoracionComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_2.started', text_2.tStartRefresh)
+thisExp.addData('text_2.stopped', text_2.tStopRefresh)
+# check responses
+if valoracion_resp.keys in ['', [], None]:  # No response was made
+    valoracion_resp.keys = None
+thisExp.addData('valoracion_resp.keys',valoracion_resp.keys)
+if valoracion_resp.keys != None:  # we had a response
+    thisExp.addData('valoracion_resp.rt', valoracion_resp.rt)
+thisExp.addData('valoracion_resp.started', valoracion_resp.tStartRefresh)
+thisExp.addData('valoracion_resp.stopped', valoracion_resp.tStopRefresh)
+thisExp.nextEntry()
+# the Routine "valoracion" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
 # ------Prepare to start Routine "End"-------
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
-EndComponents = [Adios]
+EndComponents = [Adios, logo_ob_fin]
 for thisComponent in EndComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1027,6 +1160,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             win.timeOnFlip(Adios, 'tStopRefresh')  # time at next scr refresh
             Adios.setAutoDraw(False)
     
+    # *logo_ob_fin* updates
+    if logo_ob_fin.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        logo_ob_fin.frameNStart = frameN  # exact frame index
+        logo_ob_fin.tStart = t  # local t and not account for scr refresh
+        logo_ob_fin.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(logo_ob_fin, 'tStartRefresh')  # time at next scr refresh
+        logo_ob_fin.setAutoDraw(True)
+    if logo_ob_fin.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > logo_ob_fin.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            logo_ob_fin.tStop = t  # not accounting for scr refresh
+            logo_ob_fin.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(logo_ob_fin, 'tStopRefresh')  # time at next scr refresh
+            logo_ob_fin.setAutoDraw(False)
+    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -1052,11 +1202,6 @@ thisExp.addData('Adios.started', Adios.tStartRefresh)
 thisExp.addData('Adios.stopped', Adios.tStopRefresh)
 import numpy as np
 
-print(np.mean(speeds_)) ##mean speed -->the larger the better
-print(len(trials_done)) ##number of trials
-print(np.sum(trials_done))  ##number corrects
-import numpy as np
-
 mean_speed = np.mean(speeds_) ##mean speed -->the larger the better
 max_speed = np.max(speeds_)
 number_trials_done = len(trials_done) ##number of trials
@@ -1066,6 +1211,13 @@ thisExp.addData('mean_speed', mean_speed)
 thisExp.addData('max_speed', max_speed)
 thisExp.addData('number_trials', number_trials_done)
 thisExp.addData('number_trials_correct', number_trials_correct)
+thisExp.addData('logo_ob_fin.started', logo_ob_fin.tStartRefresh)
+thisExp.addData('logo_ob_fin.stopped', logo_ob_fin.tStopRefresh)
+import numpy as np
+
+print(np.mean(speeds_)) ##mean speed -->the larger the better
+print(len(trials_done)) ##number of trials
+print(np.sum(trials_done))  ##number corrects
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
