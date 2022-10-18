@@ -1,8 +1,0 @@
-﻿repeat.thisRepN,repeat.thisTrialN,repeat.thisN,repeat.thisIndex,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,image.started,image.stopped,monkey_sound.started,monkey_sound.stopped,Bienvenida.started,Bienvenida.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,feedback_text.started,feedback_text.stopped,level_up_sound.started,level_up_sound.stopped,velo.started,velo.stopped,Participant,date,expName,psychopyVersion,frameRate,
-,,,,,,,,13.996008300004178,None,13.877568760080612,16.88285110000288,16.89934400000493,None,space,1.0836446000030264,16.89934400000493,None,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-0,0,0,0,1,0,1,0,,,,,,,,,,,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-0,0,0,0,2,0,2,0,,,,,,,,,,,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-0,0,0,0,3,0,3,0,,,,,,,,,,,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-0,0,0,0,4,0,4,0,,,,,,,,,,,,,,,,,roro,2022_Oct_14_1827,BananaMonkey,3.2.3,59.85887671083173,
-,,,,,,,,,,,,,,,,,,29.181942400013213,None,29.094994460008458,32.09819150000112,29.181942400013213,None,,,,,,

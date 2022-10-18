@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on octubre 16, 2022, at 14:38
+    on octubre 18, 2022, at 15:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -493,7 +493,7 @@ for thisRepeat in repeat:
             exec('{} = thisRepeat[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=3, method='random', 
+    trials = data.TrialHandler(nReps=15, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -759,7 +759,7 @@ for thisRepeat in repeat:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 3 repeats of 'trials'
+    # completed 15 repeats of 'trials'
     
     
     # ------Prepare to start Routine "feedback_2"-------
