@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on marzo 07, 2023, at 14:03
+    on marzo 07, 2023, at 14:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -307,7 +307,7 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *colores1* updates
-        if colores1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if colores1.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
             # keep track of start time/frame for later
             colores1.frameNStart = frameN  # exact frame index
             colores1.tStart = t  # local t and not account for scr refresh
@@ -530,7 +530,7 @@ for thisTrial_2 in trials_2:
         # update/draw components on each frame
         
         # *rectangulo* updates
-        if rectangulo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if rectangulo.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
             # keep track of start time/frame for later
             rectangulo.frameNStart = frameN  # exact frame index
             rectangulo.tStart = t  # local t and not account for scr refresh
@@ -753,7 +753,7 @@ for thisTrial_3 in trials_3:
         # update/draw components on each frame
         
         # *colores2* updates
-        if colores2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if colores2.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
             # keep track of start time/frame for later
             colores2.frameNStart = frameN  # exact frame index
             colores2.tStart = t  # local t and not account for scr refresh
