@@ -1,0 +1,38 @@
+﻿;;;;;;;;;;;;
+;0,7498696;0,8343779;;;;;;;;;;
+0,8479245;0,6588968;;;;;;;;;;;
+;;;;;;;;;;;;
+0,6933815;0,7899334;;;;Prueba t para dos muestras suponiendo varianzas iguales;;;;;Prueba t para dos muestras suponiendo varianzas iguales;;
+0,7718478;0,7334025;0,9002065;;;;;;;;;;
+0,8250166;0,6559359;;;;;Variable 1;Variable 2;;;;Variable 1;Variable 2
+0,7016938;0,8614689;0,5992693;;;Media;0,779288173;0,729159296;;;Media;0,779288173;0,7932975
+0,8379515;0,7542463;;;;Varianza;0,009591131;0,013307149;;;Varianza;0,009591131;0,017710558
+0,7889071;0,9693189;0,7861924;;;Observaciones;26;24;;;Observaciones;26;16
+0,9039022;0,7637182;0,9854231;;;Varianza agrupada;0,011371723;;;;Varianza agrupada;0,012635916;
+0,6842458;0,7290626;0,7931385;;;Diferencia hipotética de las medias;0;;;;Diferencia hipotética de las medias;0;
+0,9294064;0,7431846;;;;Grados de libertad;48;;;;Grados de libertad;40;
+0,6388731;0,7003734;;;;Estadístico t;1,660665387;;;;Estadístico t;-0,39222559;
+0,61701;0,6190269;;;;P(T<=t) una cola;0,051650056;;;;P(T<=t) una cola;0,348486857;
+0,9691886;0,6174558;0,9998893;;;Valor crítico de t (una cola);1,677224196;;;;Valor crítico de t (una cola);1,683851013;
+0,7615568;0,5436022;0,836649;;;P(T<=t) dos colas;0,103300112;;;;P(T<=t) dos colas;0,696973714;
+0,7155253;;0,75899;;;Valor crítico de t (dos colas);2,010634758;;;;Valor crítico de t (dos colas);2,02107539;
+0,9680497;;0,8631934;;;;;;;;;;
+0,8963858;0,8698974;;;;;;;;;;;
+0,8012045;;0,6421849;;;;;;;;;;
+0,8060017;0,9903216;0,66663;;;;;;;;;;
+0,739503;0,7181106;;;;;;;;;;;
+0,8141216;0,7045025;;;;;;;;;;;
+0,6937796;0,7062814;0,8862943;;;;;;;;Prueba t para dos muestras suponiendo varianzas iguales;;
+0,7515308;0,7981688;0,8692203;;;;;;;;;;
+0,7371089;0,6542415;0,5254392;;;;;;;;;Variable 1;Variable 2
+0,705171;0,6650393;0,7456619;;;;;;;;Media;0,729159296;0,7932975
+0,6622049;0,503764;;;;;;;;;Varianza;0,013307149;0,017710558
+;;;;;;;;;;Observaciones;24;16
+;;;;;;;;;;Varianza agrupada;0,015045337;
+;;;;;;;;;;Diferencia hipotética de las medias;0;
+0,771;0,733;0,834;;;;;;;;Grados de libertad;38;
+;;;;;;;;;;Estadístico t;-1,620135939;
+;;;;;;;;;;P(T<=t) una cola;0,056736741;
+;;;;;;;;;;Valor crítico de t (una cola);1,68595446;
+0,130540276;;;;;;;;;;P(T<=t) dos colas;0,113473482;
+;;;;;;;;;;Valor crítico de t (dos colas);2,024394164;
