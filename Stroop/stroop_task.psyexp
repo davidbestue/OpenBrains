@@ -58,7 +58,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="respuesta">
-        <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'a','v','n','l'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="False" valType="bool"/>
@@ -118,7 +118,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
       <KeyboardComponent name="respuesta_rect">
-        <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'a','v','n','l'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="False" valType="bool"/>
@@ -177,7 +177,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="respuesta_mix">
-        <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'a','v','n','l'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="False" valType="bool"/>
@@ -219,7 +219,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="Instrucciones_texto" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -231,7 +231,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="En esta tarea, tendrás que responder lo más rápido que puedas.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra es &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra es &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra es &quot;naranja&quot;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
+        <Param name="text" updates="constant" val="En esta tarea, tendrás que responder lo más rápido que puedas.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra es &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra es &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra es &quot;naranja&quot;&amp;#10;Presiona &quot;l&quot; si la palabra es &quot;lila&quot;&amp;#10;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -263,7 +263,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="text_intructionses2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -275,7 +275,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ahora tendrás que indicar el color del cuadrado.&amp;#10;&amp;#10;Presiona &quot;a&quot; si es de color &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si es de color &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si es de color &quot;naranja&quot;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
+        <Param name="text" updates="constant" val="Ahora tendrás que indicar el color del cuadrado.&amp;#10;&amp;#10;Presiona &quot;a&quot; si es de color &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si es de color &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si es de color &quot;naranja&quot;&amp;#10;Presiona &quot;l&quot; si es de color &quot;lila&quot;&amp;#10;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -307,7 +307,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -319,7 +319,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Finalmente,&amp;#10;&amp;#10;tendrás que indicar de qué color está escrita la palabra.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra está escrita en color &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra está escrita en color &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra está escrita en color &quot;naranja&quot;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
+        <Param name="text" updates="constant" val="Finalmente,&amp;#10;&amp;#10;tendrás que indicar de qué color está escrita la palabra.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra está escrita en color &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra está escrita en color &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra está escrita en color &quot;naranja&quot;&amp;#10;Presiona &quot;l&quot; si la palabra está escrita en color &quot;lila&quot;&amp;#10;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -372,7 +372,7 @@
   <Flow>
     <Routine name="Instrucciones"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
-      <Param name="Selected rows" updates="None" val="1:31" valType="str"/>
+      <Param name="Selected rows" updates="None" val="1:38" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="colores1_negro.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -386,7 +386,7 @@
     <LoopTerminator name="trials"/>
     <Routine name="instrucciones_2"/>
     <LoopInitiator loopType="TrialHandler" name="trials_2">
-      <Param name="Selected rows" updates="None" val="1:31" valType="str"/>
+      <Param name="Selected rows" updates="None" val="1:38" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="colores2_rectangulos.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -400,7 +400,7 @@
     <LoopTerminator name="trials_2"/>
     <Routine name="instrucciones_3"/>
     <LoopInitiator loopType="TrialHandler" name="trials_3">
-      <Param name="Selected rows" updates="None" val="1:31" valType="str"/>
+      <Param name="Selected rows" updates="None" val="1:38" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="colores3_mix.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>

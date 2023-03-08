@@ -1,0 +1,551 @@
+6.6888 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+7.6949 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000027EB2C3C9E8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000027EB2D0DC18>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.6949 	EXP 	window1: recordFrameIntervals = False
+7.8602 	EXP 	window1: recordFrameIntervals = True
+8.0442 	EXP 	window1: recordFrameIntervals = False
+8.2891 	EXP 	Created Instrucciones_texto = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instrucciones_texto', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3149 	EXP 	Created colores1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='colores1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+8.3545 	EXP 	Created text_intructionses2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_intructionses2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3569 	EXP 	Created rectangulo = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='rectangulo', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+8.3933 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3970 	EXP 	Created colores2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='colores2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+8.4149 	EXP 	Created despedida = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='despedida', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='¡Muchas gracias por participar!', units='height', win=Window(...), wrapWidth=1)
+8.4457 	EXP 	Instrucciones_texto: autoDraw = True
+15.5142 	EXP 	Imported colores1_negro.xlsx as conditions, 30 conditions, 2 params
+15.5145 	EXP 	Created sequence: random, trialTypes=30, nReps=1, seed=None
+15.5147 	EXP 	New trial (rep=0, index=0): OrderedDict([('texto', 'lila'), ('answer', 'l')])
+15.5221 	DATA 	Keypress: space
+15.5251 	EXP 	Instrucciones_texto: autoDraw = False
+15.5251 	EXP 	colores1: text = 'lila'
+15.5743 	EXP 	colores1: autoDraw = True
+16.2995 	EXP 	New trial (rep=0, index=1): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+16.3221 	DATA 	Keypress: l
+16.3249 	EXP 	colores1: autoDraw = False
+16.3249 	EXP 	colores1: text = 'naranja'
+16.3736 	EXP 	colores1: autoDraw = True
+17.4776 	EXP 	New trial (rep=0, index=2): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+17.4874 	DATA 	Keypress: n
+17.4902 	EXP 	colores1: autoDraw = False
+17.4902 	EXP 	colores1: text = 'azul'
+17.5398 	EXP 	colores1: autoDraw = True
+18.0312 	EXP 	New trial (rep=0, index=3): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+18.0407 	DATA 	Keypress: a
+18.0434 	EXP 	colores1: autoDraw = False
+18.0434 	EXP 	colores1: text = 'naranja'
+18.0897 	EXP 	colores1: autoDraw = True
+18.5102 	EXP 	New trial (rep=0, index=4): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+18.5181 	DATA 	Keypress: n
+18.5231 	EXP 	colores1: autoDraw = False
+18.5231 	EXP 	colores1: text = 'verde'
+18.5729 	EXP 	colores1: autoDraw = True
+19.3107 	EXP 	New trial (rep=0, index=5): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+19.3191 	DATA 	Keypress: v
+19.3224 	EXP 	colores1: autoDraw = False
+19.3224 	EXP 	colores1: text = 'naranja'
+19.3730 	EXP 	colores1: autoDraw = True
+19.8806 	DATA 	Keypress: n
+19.8927 	EXP 	New trial (rep=0, index=6): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+19.9061 	EXP 	colores1: autoDraw = False
+19.9061 	EXP 	colores1: text = 'azul'
+19.9389 	EXP 	colores1: autoDraw = True
+20.7275 	EXP 	New trial (rep=0, index=7): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+20.7300 	DATA 	Keypress: a
+20.7391 	EXP 	colores1: autoDraw = False
+20.7391 	EXP 	colores1: text = 'azul'
+20.7727 	EXP 	colores1: autoDraw = True
+21.3964 	DATA 	Keypress: l
+21.8958 	DATA 	Keypress: a
+21.9103 	EXP 	New trial (rep=0, index=8): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+21.9220 	EXP 	colores1: autoDraw = False
+21.9220 	EXP 	colores1: text = 'naranja'
+21.9717 	EXP 	colores1: autoDraw = True
+22.7949 	EXP 	New trial (rep=0, index=9): OrderedDict([('texto', 'lila'), ('answer', 'l')])
+22.8067 	DATA 	Keypress: n
+22.8098 	EXP 	colores1: autoDraw = False
+22.8098 	EXP 	colores1: text = 'lila'
+22.8549 	EXP 	colores1: autoDraw = True
+23.4749 	EXP 	New trial (rep=0, index=10): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+23.4816 	DATA 	Keypress: l
+23.4876 	EXP 	colores1: autoDraw = False
+23.4876 	EXP 	colores1: text = 'verde'
+23.5215 	EXP 	colores1: autoDraw = True
+24.1297 	EXP 	New trial (rep=0, index=11): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+24.1336 	DATA 	Keypress: v
+24.1377 	EXP 	colores1: autoDraw = False
+24.1377 	EXP 	colores1: text = 'verde'
+24.1712 	EXP 	colores1: autoDraw = True
+24.5609 	EXP 	New trial (rep=0, index=12): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+24.5677 	DATA 	Keypress: v
+24.5707 	EXP 	colores1: autoDraw = False
+24.5707 	EXP 	colores1: text = 'naranja'
+24.6213 	EXP 	colores1: autoDraw = True
+25.0425 	EXP 	New trial (rep=0, index=13): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+25.0545 	DATA 	Keypress: n
+25.0572 	EXP 	colores1: autoDraw = False
+25.0572 	EXP 	colores1: text = 'verde'
+25.1044 	EXP 	colores1: autoDraw = True
+25.6779 	EXP 	New trial (rep=0, index=14): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+25.6820 	DATA 	Keypress: v
+25.6872 	EXP 	colores1: autoDraw = False
+25.6872 	EXP 	colores1: text = 'verde'
+25.7201 	EXP 	colores1: autoDraw = True
+26.0955 	DATA 	Keypress: v
+26.1108 	EXP 	New trial (rep=0, index=15): OrderedDict([('texto', 'lila'), ('answer', 'l')])
+26.1233 	EXP 	colores1: autoDraw = False
+26.1233 	EXP 	colores1: text = 'lila'
+26.1705 	EXP 	colores1: autoDraw = True
+26.6443 	EXP 	New trial (rep=0, index=16): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+26.6621 	DATA 	Keypress: l
+26.6650 	EXP 	colores1: autoDraw = False
+26.6650 	EXP 	colores1: text = 'naranja'
+26.7039 	EXP 	colores1: autoDraw = True
+27.2949 	EXP 	New trial (rep=0, index=17): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+27.3107 	DATA 	Keypress: n
+27.3135 	EXP 	colores1: autoDraw = False
+27.3135 	EXP 	colores1: text = 'verde'
+27.3534 	EXP 	colores1: autoDraw = True
+27.8241 	EXP 	New trial (rep=0, index=18): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+27.8270 	DATA 	Keypress: v
+27.8362 	EXP 	colores1: autoDraw = False
+27.8362 	EXP 	colores1: text = 'verde'
+27.8698 	EXP 	colores1: autoDraw = True
+28.2116 	EXP 	New trial (rep=0, index=19): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+28.2273 	DATA 	Keypress: v
+28.2300 	EXP 	colores1: autoDraw = False
+28.2300 	EXP 	colores1: text = 'naranja'
+28.2700 	EXP 	colores1: autoDraw = True
+28.6910 	DATA 	Keypress: n
+28.7098 	EXP 	New trial (rep=0, index=20): OrderedDict([('texto', 'lila'), ('answer', 'l')])
+28.7229 	EXP 	colores1: autoDraw = False
+28.7229 	EXP 	colores1: text = 'lila'
+28.7698 	EXP 	colores1: autoDraw = True
+29.1602 	EXP 	New trial (rep=0, index=21): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+29.1667 	DATA 	Keypress: l
+29.1694 	EXP 	colores1: autoDraw = False
+29.1694 	EXP 	colores1: text = 'azul'
+29.2196 	EXP 	colores1: autoDraw = True
+29.7235 	DATA 	Keypress: a
+29.7405 	EXP 	New trial (rep=0, index=22): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+29.7526 	EXP 	colores1: autoDraw = False
+29.7526 	EXP 	colores1: text = 'naranja'
+29.8026 	EXP 	colores1: autoDraw = True
+30.3262 	EXP 	New trial (rep=0, index=23): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+30.3451 	DATA 	Keypress: n
+30.3480 	EXP 	colores1: autoDraw = False
+30.3480 	EXP 	colores1: text = 'verde'
+30.3858 	EXP 	colores1: autoDraw = True
+30.8916 	EXP 	New trial (rep=0, index=24): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+30.9015 	DATA 	Keypress: v
+30.9044 	EXP 	colores1: autoDraw = False
+30.9044 	EXP 	colores1: text = 'azul'
+30.9523 	EXP 	colores1: autoDraw = True
+31.6091 	EXP 	New trial (rep=0, index=25): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+31.6121 	DATA 	Keypress: a
+31.6190 	EXP 	colores1: autoDraw = False
+31.6190 	EXP 	colores1: text = 'azul'
+31.6524 	EXP 	colores1: autoDraw = True
+32.1054 	DATA 	Keypress: v
+32.1397 	EXP 	New trial (rep=0, index=26): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+32.1421 	DATA 	Keypress: a
+32.1519 	EXP 	colores1: autoDraw = False
+32.1519 	EXP 	colores1: text = 'azul'
+32.1851 	EXP 	colores1: autoDraw = True
+32.5755 	EXP 	New trial (rep=0, index=27): OrderedDict([('texto', 'naranja'), ('answer', 'n')])
+32.5842 	DATA 	Keypress: a
+32.5869 	EXP 	colores1: autoDraw = False
+32.5869 	EXP 	colores1: text = 'naranja'
+32.6348 	EXP 	colores1: autoDraw = True
+33.2744 	DATA 	Keypress: n
+33.2929 	EXP 	New trial (rep=0, index=28): OrderedDict([('texto', 'azul'), ('answer', 'a')])
+33.3099 	EXP 	colores1: autoDraw = False
+33.3099 	EXP 	colores1: text = 'azul'
+33.3514 	EXP 	colores1: autoDraw = True
+33.7894 	DATA 	Keypress: v
+33.9098 	EXP 	New trial (rep=0, index=29): OrderedDict([('texto', 'verde'), ('answer', 'v')])
+33.9181 	DATA 	Keypress: a
+33.9208 	EXP 	colores1: autoDraw = False
+33.9208 	EXP 	colores1: text = 'verde'
+33.9681 	EXP 	colores1: autoDraw = True
+34.7597 	DATA 	Keypress: v
+34.7677 	EXP 	colores1: autoDraw = False
+34.7677 	EXP 	text_intructionses2: autoDraw = True
+36.1771 	DATA 	Keypress: space
+39.6698 	DATA 	Keypress: space
+41.7864 	DATA 	Keypress: space
+41.8171 	EXP 	Imported colores2_rectangulos.xlsx as conditions, 30 conditions, 2 params
+41.8175 	EXP 	Created sequence: random, trialTypes=30, nReps=1, seed=None
+41.8179 	EXP 	New trial (rep=0, index=0): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+41.8233 	EXP 	text_intructionses2: autoDraw = False
+41.8233 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+41.8233 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+41.8652 	EXP 	rectangulo: autoDraw = True
+42.7396 	EXP 	New trial (rep=0, index=1): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+42.7436 	DATA 	Keypress: n
+42.7484 	EXP 	rectangulo: autoDraw = False
+42.7484 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+42.7484 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+42.7985 	EXP 	rectangulo: autoDraw = True
+43.2063 	EXP 	New trial (rep=0, index=2): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+43.2116 	DATA 	Keypress: n
+43.2148 	EXP 	rectangulo: autoDraw = False
+43.2148 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+43.2148 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+43.2651 	EXP 	rectangulo: autoDraw = True
+43.6530 	EXP 	New trial (rep=0, index=3): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+43.6554 	DATA 	Keypress: n
+43.6642 	EXP 	rectangulo: autoDraw = False
+43.6642 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+43.6642 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+43.6980 	EXP 	rectangulo: autoDraw = True
+44.1695 	EXP 	New trial (rep=0, index=4): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+44.1720 	DATA 	Keypress: a
+44.1813 	EXP 	rectangulo: autoDraw = False
+44.1813 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+44.1813 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+44.2146 	EXP 	rectangulo: autoDraw = True
+44.6229 	EXP 	New trial (rep=0, index=5): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+44.6276 	DATA 	Keypress: n
+44.6309 	EXP 	rectangulo: autoDraw = False
+44.6309 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+44.6309 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+44.6818 	EXP 	rectangulo: autoDraw = True
+45.1525 	DATA 	Keypress: v
+45.1721 	EXP 	New trial (rep=0, index=6): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+45.1810 	EXP 	rectangulo: autoDraw = False
+45.1810 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+45.1810 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+45.2311 	EXP 	rectangulo: autoDraw = True
+45.8381 	DATA 	Keypress: a
+45.8544 	EXP 	New trial (rep=0, index=7): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+45.8641 	EXP 	rectangulo: autoDraw = False
+45.8641 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+45.8641 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+45.8978 	EXP 	rectangulo: autoDraw = True
+46.4879 	DATA 	Keypress: n
+46.8215 	EXP 	New trial (rep=0, index=8): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+46.8258 	DATA 	Keypress: v
+46.8301 	EXP 	rectangulo: autoDraw = False
+46.8301 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+46.8301 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+46.8808 	EXP 	rectangulo: autoDraw = True
+47.2881 	EXP 	New trial (rep=0, index=9): OrderedDict([('color', [0.004, -1, 0.004]), ('answer', 'l')])
+47.2935 	DATA 	Keypress: v
+47.2979 	EXP 	rectangulo: autoDraw = False
+47.2979 	EXP 	rectangulo: fillColor = '[ 0.004 -1.     0.004] (rgb)'
+47.2979 	EXP 	rectangulo: lineColor = '[ 0.004 -1.     0.004] (rgb)'
+47.3472 	EXP 	rectangulo: autoDraw = True
+47.8385 	EXP 	New trial (rep=0, index=10): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+47.8450 	DATA 	Keypress: l
+47.8483 	EXP 	rectangulo: autoDraw = False
+47.8483 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+47.8483 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+47.8969 	EXP 	rectangulo: autoDraw = True
+48.5213 	EXP 	New trial (rep=0, index=11): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+48.5270 	DATA 	Keypress: n
+48.5307 	EXP 	rectangulo: autoDraw = False
+48.5307 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+48.5307 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+48.5801 	EXP 	rectangulo: autoDraw = True
+49.2187 	DATA 	Keypress: n
+49.2347 	EXP 	New trial (rep=0, index=12): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+49.2455 	EXP 	rectangulo: autoDraw = False
+49.2455 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+49.2455 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+49.2800 	EXP 	rectangulo: autoDraw = True
+49.8703 	EXP 	New trial (rep=0, index=13): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+49.8755 	DATA 	Keypress: a
+49.8791 	EXP 	rectangulo: autoDraw = False
+49.8791 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+49.8791 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+49.9134 	EXP 	rectangulo: autoDraw = True
+50.3529 	DATA 	Keypress: a
+50.3710 	EXP 	New trial (rep=0, index=14): OrderedDict([('color', [0.004, -1, 0.004]), ('answer', 'l')])
+50.3789 	EXP 	rectangulo: autoDraw = False
+50.3789 	EXP 	rectangulo: fillColor = '[ 0.004 -1.     0.004] (rgb)'
+50.3789 	EXP 	rectangulo: lineColor = '[ 0.004 -1.     0.004] (rgb)'
+50.4290 	EXP 	rectangulo: autoDraw = True
+51.1021 	EXP 	New trial (rep=0, index=15): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+51.1067 	DATA 	Keypress: l
+51.1119 	EXP 	rectangulo: autoDraw = False
+51.1119 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+51.1119 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+51.1457 	EXP 	rectangulo: autoDraw = True
+52.3689 	EXP 	New trial (rep=0, index=16): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+52.3732 	DATA 	Keypress: v
+52.3785 	EXP 	rectangulo: autoDraw = False
+52.3785 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+52.3785 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+52.4121 	EXP 	rectangulo: autoDraw = True
+52.8332 	EXP 	New trial (rep=0, index=17): OrderedDict([('color', [0.004, -1, 0.004]), ('answer', 'l')])
+52.8366 	DATA 	Keypress: n
+52.8449 	EXP 	rectangulo: autoDraw = False
+52.8449 	EXP 	rectangulo: fillColor = '[ 0.004 -1.     0.004] (rgb)'
+52.8449 	EXP 	rectangulo: lineColor = '[ 0.004 -1.     0.004] (rgb)'
+52.8785 	EXP 	rectangulo: autoDraw = True
+53.5521 	EXP 	New trial (rep=0, index=18): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+53.5610 	DATA 	Keypress: l
+53.5652 	EXP 	rectangulo: autoDraw = False
+53.5652 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+53.5652 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+53.5952 	EXP 	rectangulo: autoDraw = True
+54.2646 	EXP 	New trial (rep=0, index=19): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+54.2672 	DATA 	Keypress: n
+54.2773 	EXP 	rectangulo: autoDraw = False
+54.2773 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+54.2773 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+54.3113 	EXP 	rectangulo: autoDraw = True
+54.7695 	DATA 	Keypress: v
+54.7853 	EXP 	New trial (rep=0, index=20): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+54.7941 	EXP 	rectangulo: autoDraw = False
+54.7941 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+54.7941 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+54.8443 	EXP 	rectangulo: autoDraw = True
+55.3516 	EXP 	New trial (rep=0, index=21): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+55.3570 	DATA 	Keypress: a
+55.3605 	EXP 	rectangulo: autoDraw = False
+55.3605 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+55.3605 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+55.4112 	EXP 	rectangulo: autoDraw = True
+55.9662 	DATA 	Keypress: n
+56.4191 	EXP 	New trial (rep=0, index=22): OrderedDict([('color', [0.004, -1, 0.004]), ('answer', 'l')])
+56.4237 	DATA 	Keypress: v
+56.4268 	EXP 	rectangulo: autoDraw = False
+56.4268 	EXP 	rectangulo: fillColor = '[ 0.004 -1.     0.004] (rgb)'
+56.4268 	EXP 	rectangulo: lineColor = '[ 0.004 -1.     0.004] (rgb)'
+56.4774 	EXP 	rectangulo: autoDraw = True
+57.0667 	EXP 	New trial (rep=0, index=23): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+57.0692 	DATA 	Keypress: l
+57.0769 	EXP 	rectangulo: autoDraw = False
+57.0769 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+57.0769 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+57.1104 	EXP 	rectangulo: autoDraw = True
+57.7477 	EXP 	New trial (rep=0, index=24): OrderedDict([('color', [1, 0.1, -1]), ('answer', 'n')])
+57.7502 	DATA 	Keypress: a
+57.7595 	EXP 	rectangulo: autoDraw = False
+57.7595 	EXP 	rectangulo: fillColor = '[ 1.   0.1 -1. ] (rgb)'
+57.7595 	EXP 	rectangulo: lineColor = '[ 1.   0.1 -1. ] (rgb)'
+57.7934 	EXP 	rectangulo: autoDraw = True
+58.1990 	DATA 	Keypress: n
+58.2156 	EXP 	New trial (rep=0, index=25): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+58.2268 	EXP 	rectangulo: autoDraw = False
+58.2268 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+58.2268 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+58.2599 	EXP 	rectangulo: autoDraw = True
+58.9334 	EXP 	New trial (rep=0, index=26): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+58.9371 	DATA 	Keypress: a
+58.9428 	EXP 	rectangulo: autoDraw = False
+58.9428 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+58.9428 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+58.9760 	EXP 	rectangulo: autoDraw = True
+59.7460 	DATA 	Keypress: v
+59.7644 	EXP 	New trial (rep=0, index=27): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+59.7756 	EXP 	rectangulo: autoDraw = False
+59.7756 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+59.7756 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+59.8096 	EXP 	rectangulo: autoDraw = True
+60.3521 	EXP 	New trial (rep=0, index=28): OrderedDict([('color', [-1, 0.04, -1]), ('answer', 'v')])
+60.3580 	DATA 	Keypress: v
+60.3611 	EXP 	rectangulo: autoDraw = False
+60.3611 	EXP 	rectangulo: fillColor = '[-1.    0.04 -1.  ] (rgb)'
+60.3611 	EXP 	rectangulo: lineColor = '[-1.    0.04 -1.  ] (rgb)'
+60.4094 	EXP 	rectangulo: autoDraw = True
+60.8318 	EXP 	New trial (rep=0, index=29): OrderedDict([('color', [-1, -1, 1]), ('answer', 'a')])
+60.8358 	DATA 	Keypress: v
+60.8423 	EXP 	rectangulo: autoDraw = False
+60.8423 	EXP 	rectangulo: fillColor = '[-1. -1.  1.] (rgb)'
+60.8423 	EXP 	rectangulo: lineColor = '[-1. -1.  1.] (rgb)'
+60.8761 	EXP 	rectangulo: autoDraw = True
+61.4147 	DATA 	Keypress: a
+61.4420 	EXP 	rectangulo: autoDraw = False
+61.4420 	EXP 	text: autoDraw = True
+67.4507 	EXP 	Imported colores3_mix.xlsx as conditions, 30 conditions, 3 params
+67.4512 	EXP 	Created sequence: random, trialTypes=30, nReps=1, seed=None
+67.4516 	EXP 	New trial (rep=0, index=0): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'azul'), ('answer', 'n')])
+67.4609 	DATA 	Keypress: space
+67.4634 	EXP 	text: autoDraw = False
+67.4634 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+67.4634 	EXP 	colores2: text = 'azul'
+67.5063 	EXP 	colores2: autoDraw = True
+68.6808 	DATA 	Keypress: n
+68.6939 	EXP 	New trial (rep=0, index=1): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'azul'), ('answer', 'v')])
+68.7054 	EXP 	colores2: autoDraw = False
+68.7054 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+68.7054 	EXP 	colores2: text = 'azul'
+68.7393 	EXP 	colores2: autoDraw = True
+69.3258 	EXP 	New trial (rep=0, index=2): OrderedDict([('color', [0.004, -1, 0.004]), ('texto', 'azul'), ('answer', 'l')])
+69.3294 	DATA 	Keypress: v
+69.3392 	EXP 	colores2: autoDraw = False
+69.3392 	EXP 	colores2: color = '[ 0.004 -1.     0.004] (rgb)'
+69.3392 	EXP 	colores2: text = 'azul'
+69.3729 	EXP 	colores2: autoDraw = True
+69.9763 	EXP 	New trial (rep=0, index=3): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'naranja'), ('answer', 'v')])
+69.9850 	DATA 	Keypress: l
+69.9887 	EXP 	colores2: autoDraw = False
+69.9887 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+69.9887 	EXP 	colores2: text = 'naranja'
+70.0391 	EXP 	colores2: autoDraw = True
+70.9766 	EXP 	New trial (rep=0, index=4): OrderedDict([('color', [-1, -1, 1]), ('texto', 'naranja'), ('answer', 'a')])
+70.9795 	DATA 	Keypress: v
+70.9883 	EXP 	colores2: autoDraw = False
+70.9883 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+70.9883 	EXP 	colores2: text = 'naranja'
+71.0221 	EXP 	colores2: autoDraw = True
+71.5617 	DATA 	Keypress: a
+71.5783 	EXP 	New trial (rep=0, index=5): OrderedDict([('color', [0.004, -1, 0.004]), ('texto', 'verde'), ('answer', 'l')])
+71.5919 	EXP 	colores2: autoDraw = False
+71.5919 	EXP 	colores2: color = '[ 0.004 -1.     0.004] (rgb)'
+71.5919 	EXP 	colores2: text = 'verde'
+71.6384 	EXP 	colores2: autoDraw = True
+72.2929 	EXP 	New trial (rep=0, index=6): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'lila'), ('answer', 'v')])
+72.2976 	DATA 	Keypress: l
+72.3050 	EXP 	colores2: autoDraw = False
+72.3050 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+72.3050 	EXP 	colores2: text = 'lila'
+72.3378 	EXP 	colores2: autoDraw = True
+72.9927 	DATA 	Keypress: v
+73.0091 	EXP 	New trial (rep=0, index=7): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'azul'), ('answer', 'n')])
+73.0206 	EXP 	colores2: autoDraw = False
+73.0206 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+73.0206 	EXP 	colores2: text = 'azul'
+73.0708 	EXP 	colores2: autoDraw = True
+73.9439 	DATA 	Keypress: n
+73.9621 	EXP 	New trial (rep=0, index=8): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'lila'), ('answer', 'n')])
+73.9767 	EXP 	colores2: autoDraw = False
+73.9767 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+73.9767 	EXP 	colores2: text = 'lila'
+74.0210 	EXP 	colores2: autoDraw = True
+74.9434 	EXP 	New trial (rep=0, index=9): OrderedDict([('color', [-1, -1, 1]), ('texto', 'lila'), ('answer', 'a')])
+74.9467 	DATA 	Keypress: n
+74.9542 	EXP 	colores2: autoDraw = False
+74.9542 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+74.9542 	EXP 	colores2: text = 'lila'
+74.9876 	EXP 	colores2: autoDraw = True
+75.6612 	EXP 	New trial (rep=0, index=10): OrderedDict([('color', [-1, -1, 1]), ('texto', 'lila'), ('answer', 'a')])
+75.6654 	DATA 	Keypress: a
+75.6698 	EXP 	colores2: autoDraw = False
+75.6698 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+75.6698 	EXP 	colores2: text = 'lila'
+75.7032 	EXP 	colores2: autoDraw = True
+76.6765 	EXP 	New trial (rep=0, index=11): OrderedDict([('color', [0.004, -1, 0.004]), ('texto', 'azul'), ('answer', 'l')])
+76.6862 	DATA 	Keypress: a
+76.6888 	EXP 	colores2: autoDraw = False
+76.6888 	EXP 	colores2: color = '[ 0.004 -1.     0.004] (rgb)'
+76.6888 	EXP 	colores2: text = 'azul'
+76.7369 	EXP 	colores2: autoDraw = True
+78.4906 	DATA 	Keypress: l
+78.5073 	EXP 	New trial (rep=0, index=12): OrderedDict([('color', [-1, -1, 1]), ('texto', 'lila'), ('answer', 'a')])
+78.5188 	EXP 	colores2: autoDraw = False
+78.5188 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+78.5188 	EXP 	colores2: text = 'lila'
+78.5688 	EXP 	colores2: autoDraw = True
+79.0938 	EXP 	New trial (rep=0, index=13): OrderedDict([('color', [0.004, -1, 0.004]), ('texto', 'azul'), ('answer', 'l')])
+79.1078 	DATA 	Keypress: a
+79.1106 	EXP 	colores2: autoDraw = False
+79.1106 	EXP 	colores2: color = '[ 0.004 -1.     0.004] (rgb)'
+79.1106 	EXP 	colores2: text = 'azul'
+79.1526 	EXP 	colores2: autoDraw = True
+79.9088 	EXP 	New trial (rep=0, index=14): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'lila'), ('answer', 'v')])
+79.9206 	DATA 	Keypress: l
+79.9237 	EXP 	colores2: autoDraw = False
+79.9237 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+79.9237 	EXP 	colores2: text = 'lila'
+79.9690 	EXP 	colores2: autoDraw = True
+80.8075 	DATA 	Keypress: v
+80.8230 	EXP 	New trial (rep=0, index=15): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'naranja'), ('answer', 'v')])
+80.8349 	EXP 	colores2: autoDraw = False
+80.8349 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+80.8349 	EXP 	colores2: text = 'naranja'
+80.8854 	EXP 	colores2: autoDraw = True
+81.8586 	DATA 	Keypress: v
+81.8763 	EXP 	New trial (rep=0, index=16): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'verde'), ('answer', 'n')])
+81.8945 	EXP 	colores2: autoDraw = False
+81.8945 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+81.8945 	EXP 	colores2: text = 'verde'
+81.9350 	EXP 	colores2: autoDraw = True
+82.8918 	EXP 	New trial (rep=0, index=17): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'naranja'), ('answer', 'v')])
+82.9098 	DATA 	Keypress: n
+82.9127 	EXP 	colores2: autoDraw = False
+82.9127 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+82.9127 	EXP 	colores2: text = 'naranja'
+82.9510 	EXP 	colores2: autoDraw = True
+84.1575 	DATA 	Keypress: v
+84.1749 	EXP 	New trial (rep=0, index=18): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'azul'), ('answer', 'v')])
+84.1954 	EXP 	colores2: autoDraw = False
+84.1954 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+84.1954 	EXP 	colores2: text = 'azul'
+84.2341 	EXP 	colores2: autoDraw = True
+85.0234 	DATA 	Keypress: a
+86.0880 	EXP 	New trial (rep=0, index=19): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'lila'), ('answer', 'n')])
+86.0934 	DATA 	Keypress: v
+86.0999 	EXP 	colores2: autoDraw = False
+86.0999 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+86.0999 	EXP 	colores2: text = 'lila'
+86.1336 	EXP 	colores2: autoDraw = True
+87.1036 	DATA 	Keypress: l
+87.5907 	DATA 	Keypress: l
+88.2553 	EXP 	New trial (rep=0, index=20): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'azul'), ('answer', 'v')])
+88.2607 	DATA 	Keypress: n
+88.2665 	EXP 	colores2: autoDraw = False
+88.2665 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+88.2665 	EXP 	colores2: text = 'azul'
+88.3166 	EXP 	colores2: autoDraw = True
+89.2417 	DATA 	Keypress: a
+90.4032 	EXP 	New trial (rep=0, index=21): OrderedDict([('color', [-1, -1, 1]), ('texto', 'verde'), ('answer', 'a')])
+90.4116 	DATA 	Keypress: v
+90.4152 	EXP 	colores2: autoDraw = False
+90.4152 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+90.4152 	EXP 	colores2: text = 'verde'
+90.4655 	EXP 	colores2: autoDraw = True
+91.7519 	EXP 	New trial (rep=0, index=22): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'verde'), ('answer', 'n')])
+91.7545 	DATA 	Keypress: a
+91.7647 	EXP 	colores2: autoDraw = False
+91.7647 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+91.7647 	EXP 	colores2: text = 'verde'
+91.7981 	EXP 	colores2: autoDraw = True
+92.6041 	EXP 	New trial (rep=0, index=23): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'verde'), ('answer', 'n')])
+92.6073 	DATA 	Keypress: n
+92.6145 	EXP 	colores2: autoDraw = False
+92.6145 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+92.6145 	EXP 	colores2: text = 'verde'
+92.6485 	EXP 	colores2: autoDraw = True
+93.1385 	EXP 	New trial (rep=0, index=24): OrderedDict([('color', [-1, -1, 1]), ('texto', 'naranja'), ('answer', 'a')])
+93.1566 	DATA 	Keypress: n
+93.1594 	EXP 	colores2: autoDraw = False
+93.1594 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+93.1594 	EXP 	colores2: text = 'naranja'
+93.1972 	EXP 	colores2: autoDraw = True
+94.0211 	DATA 	Keypress: a
+94.0383 	EXP 	New trial (rep=0, index=25): OrderedDict([('color', [-1, -1, 1]), ('texto', 'naranja'), ('answer', 'a')])
+94.0474 	EXP 	colores2: autoDraw = False
+94.0474 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+94.0474 	EXP 	colores2: text = 'naranja'
+94.0813 	EXP 	colores2: autoDraw = True
+94.5386 	EXP 	New trial (rep=0, index=26): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'azul'), ('answer', 'n')])
+94.5563 	DATA 	Keypress: a
+94.5591 	EXP 	colores2: autoDraw = False
+94.5591 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+94.5591 	EXP 	colores2: text = 'azul'
+94.5972 	EXP 	colores2: autoDraw = True
+95.2178 	EXP 	New trial (rep=0, index=27): OrderedDict([('color', [1, 0.1, -1]), ('texto', 'lila'), ('answer', 'n')])
+95.2230 	DATA 	Keypress: n
+95.2298 	EXP 	colores2: autoDraw = False
+95.2298 	EXP 	colores2: color = '[ 1.   0.1 -1. ] (rgb)'
+95.2298 	EXP 	colores2: text = 'lila'
+95.2638 	EXP 	colores2: autoDraw = True
+95.8353 	EXP 	New trial (rep=0, index=28): OrderedDict([('color', [-1, -1, 1]), ('texto', 'verde'), ('answer', 'a')])
+95.8478 	DATA 	Keypress: n
+95.8504 	EXP 	colores2: autoDraw = False
+95.8504 	EXP 	colores2: color = '[-1. -1.  1.] (rgb)'
+95.8504 	EXP 	colores2: text = 'verde'
+95.8972 	EXP 	colores2: autoDraw = True
+96.5033 	DATA 	Keypress: a
+96.5212 	EXP 	New trial (rep=0, index=29): OrderedDict([('color', [-1, 0.04, -1]), ('texto', 'lila'), ('answer', 'v')])
+96.5361 	EXP 	colores2: autoDraw = False
+96.5361 	EXP 	colores2: color = '[-1.    0.04 -1.  ] (rgb)'
+96.5361 	EXP 	colores2: text = 'lila'
+96.5798 	EXP 	colores2: autoDraw = True
+97.3411 	DATA 	Keypress: v
+97.3466 	EXP 	colores2: autoDraw = False
+97.3466 	EXP 	despedida: autoDraw = True
+100.3623 	EXP 	despedida: autoDraw = False
+100.5153 	EXP 	window1: mouseVisible = True

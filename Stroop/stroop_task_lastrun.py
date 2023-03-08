@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on marzo 08, 2023, at 16:05
+    on marzo 08, 2023, at 17:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -81,9 +81,9 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "Instrucciones"
 InstruccionesClock = core.Clock()
 Instrucciones_texto = visual.TextStim(win=win, name='Instrucciones_texto',
-    text='En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
+    text='En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\nPresiona "l" si la palabra es "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -103,9 +103,9 @@ respuesta = keyboard.Keyboard()
 # Initialize components for Routine "instrucciones_2"
 instrucciones_2Clock = core.Clock()
 text_intructionses2 = visual.TextStim(win=win, name='text_intructionses2',
-    text='Ahora tendrás que indicar el color del cuadrado.\n\nPresiona "a" si es de color "azul"\nPresiona "v" si es de color "verde"\nPresiona "n" si es de color "naranja"\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
+    text='Ahora tendrás que indicar el color del cuadrado.\n\nPresiona "a" si es de color "azul"\nPresiona "v" si es de color "verde"\nPresiona "n" si es de color "naranja"\nPresiona "l" si es de color "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -125,9 +125,9 @@ respuesta_rect = keyboard.Keyboard()
 # Initialize components for Routine "instrucciones_3"
 instrucciones_3Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Finalmente,\n\ntendrás que indicar de qué color está escrita la palabra.\n\nPresiona "a" si la palabra está escrita en color "azul"\nPresiona "v" si la palabra está escrita en color "verde"\nPresiona "n" si la palabra está escrita en color "naranja"\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
+    text='Finalmente,\n\ntendrás que indicar de qué color está escrita la palabra.\n\nPresiona "a" si la palabra está escrita en color "azul"\nPresiona "v" si la palabra está escrita en color "verde"\nPresiona "n" si la palabra está escrita en color "naranja"\nPresiona "l" si la palabra está escrita en color "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -260,7 +260,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('colores1_negro.xlsx', selection='1:31'),
+    trialList=data.importConditions('colores1_negro.xlsx', selection='1:38'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -328,7 +328,7 @@ for thisTrial in trials:
             waitOnFlip = True
             win.callOnFlip(respuesta.clock.reset)  # t=0 on next screen flip
         if respuesta.status == STARTED and not waitOnFlip:
-            theseKeys = respuesta.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
+            theseKeys = respuesta.getKeys(keyList=['a', 'v', 'n', 'l'], waitRelease=False)
             if len(theseKeys):
                 theseKeys = theseKeys[0]  # at least one key was pressed
                 
@@ -495,7 +495,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('colores2_rectangulos.xlsx', selection='1:31'),
+    trialList=data.importConditions('colores2_rectangulos.xlsx', selection='1:38'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -564,7 +564,7 @@ for thisTrial_2 in trials_2:
             waitOnFlip = True
             win.callOnFlip(respuesta_rect.clock.reset)  # t=0 on next screen flip
         if respuesta_rect.status == STARTED and not waitOnFlip:
-            theseKeys = respuesta_rect.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
+            theseKeys = respuesta_rect.getKeys(keyList=['a', 'v', 'n', 'l'], waitRelease=False)
             if len(theseKeys):
                 theseKeys = theseKeys[0]  # at least one key was pressed
                 
@@ -731,7 +731,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('colores3_mix.xlsx', selection='1:31'),
+    trialList=data.importConditions('colores3_mix.xlsx', selection='1:38'),
     seed=None, name='trials_3')
 thisExp.addLoop(trials_3)  # add the loop to the experiment
 thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
@@ -801,7 +801,7 @@ for thisTrial_3 in trials_3:
             waitOnFlip = True
             win.callOnFlip(respuesta_mix.clock.reset)  # t=0 on next screen flip
         if respuesta_mix.status == STARTED and not waitOnFlip:
-            theseKeys = respuesta_mix.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
+            theseKeys = respuesta_mix.getKeys(keyList=['a', 'v', 'n', 'l'], waitRelease=False)
             if len(theseKeys):
                 theseKeys = theseKeys[0]  # at least one key was pressed
                 
