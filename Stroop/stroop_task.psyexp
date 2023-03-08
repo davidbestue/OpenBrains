@@ -59,11 +59,11 @@
       </TextComponent>
       <KeyboardComponent name="respuesta">
         <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="respuesta" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -71,10 +71,25 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="first key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if respuesta.keys: # ie if the list isn't empty:&amp;#10;    if respuesta.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="color_rectangulo">
       <PolygonComponent name="rectangulo">
@@ -104,11 +119,11 @@
       </PolygonComponent>
       <KeyboardComponent name="respuesta_rect">
         <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="respuesta_rect" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -116,10 +131,25 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code_2">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if respuesta_rect.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_rect.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_rect.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="color_variado">
       <TextComponent name="colores2">
@@ -148,22 +178,37 @@
       </TextComponent>
       <KeyboardComponent name="respuesta_mix">
         <Param name="allowedKeys" updates="constant" val="'a','v','n'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="correctAns" updates="constant" val="$answer" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="respuesta_mix" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="time (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code_3">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if respuesta_mix.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_mix.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_mix.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_3" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="Instrucciones">
       <TextComponent name="Instrucciones_texto">

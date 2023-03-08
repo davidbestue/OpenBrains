@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on marzo 07, 2023, at 14:47
+    on marzo 08, 2023, at 16:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -327,7 +327,6 @@ for thisTrial in trials:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(respuesta.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(respuesta.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if respuesta.status == STARTED and not waitOnFlip:
             theseKeys = respuesta.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
             if len(theseKeys):
@@ -336,11 +335,18 @@ for thisTrial in trials:
                 # check for quit:
                 if "escape" == theseKeys:
                     endExpNow = True
-                if respuesta.keys == []:  # then this was the first keypress
-                    respuesta.keys = theseKeys.name  # just the first key pressed
-                    respuesta.rt = theseKeys.rt
-                    # a response ends the routine
-                    continueRoutine = False
+                respuesta.keys.append(theseKeys.name)  # storing all keys
+                respuesta.rt.append(theseKeys.rt)
+                # was this 'correct'?
+                if (respuesta.keys == str(answer)) or (respuesta.keys == answer):
+                    respuesta.corr = 1
+                else:
+                    respuesta.corr = 0
+        if respuesta.keys: # ie if the list isn't empty:
+            if respuesta.keys[-1] != answer: # check the latest response
+                continueRoutine = True 
+            elif respuesta.keys[-1] == answer: # check the latest response
+                continueRoutine = False #"
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -368,7 +374,14 @@ for thisTrial in trials:
     # check responses
     if respuesta.keys in ['', [], None]:  # No response was made
         respuesta.keys = None
+        # was no response the correct answer?!
+        if str(answer).lower() == 'none':
+           respuesta.corr = 1;  # correct non-response
+        else:
+           respuesta.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials (TrialHandler)
     trials.addData('respuesta.keys',respuesta.keys)
+    trials.addData('respuesta.corr', respuesta.corr)
     if respuesta.keys != None:  # we had a response
         trials.addData('respuesta.rt', respuesta.rt)
     trials.addData('respuesta.started', respuesta.tStartRefresh)
@@ -550,7 +563,6 @@ for thisTrial_2 in trials_2:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(respuesta_rect.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(respuesta_rect.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if respuesta_rect.status == STARTED and not waitOnFlip:
             theseKeys = respuesta_rect.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
             if len(theseKeys):
@@ -559,10 +571,18 @@ for thisTrial_2 in trials_2:
                 # check for quit:
                 if "escape" == theseKeys:
                     endExpNow = True
-                respuesta_rect.keys = theseKeys.name  # just the last key pressed
-                respuesta_rect.rt = theseKeys.rt
-                # a response ends the routine
-                continueRoutine = False
+                respuesta_rect.keys.append(theseKeys.name)  # storing all keys
+                respuesta_rect.rt.append(theseKeys.rt)
+                # was this 'correct'?
+                if (respuesta_rect.keys == str(answer)) or (respuesta_rect.keys == answer):
+                    respuesta_rect.corr = 1
+                else:
+                    respuesta_rect.corr = 0
+        if respuesta_rect.keys: # ie if the list isn't empty:
+            if respuesta_rect.keys[-1] != answer: # check the latest response
+                continueRoutine = True 
+            elif respuesta_rect.keys[-1] == answer: # check the latest response
+                continueRoutine = False #"
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -590,7 +610,14 @@ for thisTrial_2 in trials_2:
     # check responses
     if respuesta_rect.keys in ['', [], None]:  # No response was made
         respuesta_rect.keys = None
+        # was no response the correct answer?!
+        if str(answer).lower() == 'none':
+           respuesta_rect.corr = 1;  # correct non-response
+        else:
+           respuesta_rect.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_2 (TrialHandler)
     trials_2.addData('respuesta_rect.keys',respuesta_rect.keys)
+    trials_2.addData('respuesta_rect.corr', respuesta_rect.corr)
     if respuesta_rect.keys != None:  # we had a response
         trials_2.addData('respuesta_rect.rt', respuesta_rect.rt)
     trials_2.addData('respuesta_rect.started', respuesta_rect.tStartRefresh)
@@ -773,7 +800,6 @@ for thisTrial_3 in trials_3:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(respuesta_mix.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(respuesta_mix.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if respuesta_mix.status == STARTED and not waitOnFlip:
             theseKeys = respuesta_mix.getKeys(keyList=['a', 'v', 'n'], waitRelease=False)
             if len(theseKeys):
@@ -782,10 +808,18 @@ for thisTrial_3 in trials_3:
                 # check for quit:
                 if "escape" == theseKeys:
                     endExpNow = True
-                respuesta_mix.keys = theseKeys.name  # just the last key pressed
-                respuesta_mix.rt = theseKeys.rt
-                # a response ends the routine
-                continueRoutine = False
+                respuesta_mix.keys.append(theseKeys.name)  # storing all keys
+                respuesta_mix.rt.append(theseKeys.rt)
+                # was this 'correct'?
+                if (respuesta_mix.keys == str(answer)) or (respuesta_mix.keys == answer):
+                    respuesta_mix.corr = 1
+                else:
+                    respuesta_mix.corr = 0
+        if respuesta_mix.keys: # ie if the list isn't empty:
+            if respuesta_mix.keys[-1] != answer: # check the latest response
+                continueRoutine = True 
+            elif respuesta_mix.keys[-1] == answer: # check the latest response
+                continueRoutine = False #"
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -813,7 +847,14 @@ for thisTrial_3 in trials_3:
     # check responses
     if respuesta_mix.keys in ['', [], None]:  # No response was made
         respuesta_mix.keys = None
+        # was no response the correct answer?!
+        if str(answer).lower() == 'none':
+           respuesta_mix.corr = 1;  # correct non-response
+        else:
+           respuesta_mix.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_3 (TrialHandler)
     trials_3.addData('respuesta_mix.keys',respuesta_mix.keys)
+    trials_3.addData('respuesta_mix.corr', respuesta_mix.corr)
     if respuesta_mix.keys != None:  # we had a response
         trials_3.addData('respuesta_mix.rt', respuesta_mix.rt)
     trials_3.addData('respuesta_mix.started', respuesta_mix.tStartRefresh)

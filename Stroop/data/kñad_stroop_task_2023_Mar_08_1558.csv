@@ -1,0 +1,5 @@
+﻿texto,answer,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,Instrucciones_texto.started,Instrucciones_texto.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,colores1.started,colores1.stopped,respuesta.keys,respuesta.corr,respuesta.rt,respuesta.started,respuesta.stopped,participant,session,date,expName,psychopyVersion,frameRate,
+,,,,,,7.485120800090954,None,space,0.8935384000651538,13.455237100133672,None,,,,,,,,kñad,001,2023_Mar_08_1558,stroop_task,3.2.3,59.88450676711791,
+azul,a,0,0,0,7,,,,,,,14.453810000093654,None,['n'],0,[1.3121521999128163],14.407588999951258,None,kñad,001,2023_Mar_08_1558,stroop_task,3.2.3,59.88450676711791,
+azul,a,0,1,1,8,,,,,,,15.786914200056344,None,['n'],0,[1.340451299911365],15.736707499949262,None,kñad,001,2023_Mar_08_1558,stroop_task,3.2.3,59.88450676711791,
+azul,a,0,2,2,2,,,,,,,17.136304599931464,None,['n'],0,[0.6551071999128908],17.103187500033528,None,kñad,001,2023_Mar_08_1558,stroop_task,3.2.3,59.88450676711791,
