@@ -12,17 +12,21 @@ import seaborn as sns
 import os
 import glob
 from ast import literal_eval
+import tkinter as tk
+from tkinter import filedialog
 
-
-path_folder_all = 'C:\\Users\\David\\Documents\\GitHub\\OpenBrains\\Stroop\\data'
+#abrir dialogue box para seleccionar path de la carpeta
+root = tk.Tk()
+root.withdraw()
+path_folder_all = filedialog.askdirectory()
 
 search_string=os.path.join(path_folder_all,'*.csv') 
 files = glob.glob(search_string) #list of data files in the named location
 
 
+## dataframe con todos los datos relevantes
+
 summary=[]
-
-
 
 for file in files:
     #
@@ -82,13 +86,11 @@ for file in files:
     #
 #
 ##
-
 data = pd.concat(summary).reset_index() 
-data
 
 
-### simplificado
 
+### dataframe simplificado
 simplificado =[]
 
 for subj in data.participant.unique():
@@ -101,4 +103,11 @@ for subj in data.participant.unique():
 df_simple = pd.DataFrame(simplificado)
 df_simple.columns=['palabra negra (C1)', 'rectangulo (C2)', 'palabra color (E)', 'sujeto']
 
+
+
+##guardar ambos archivos en el mismo excel
+writer = pd.ExcelWriter(os.path.join(path_folder_all,'resumen.xlsx'))
+data.to_excel(writer, sheet_name='datos completos') 
+df_simple.to_excel(writer, sheet_name='simplificado')
+writer.save()   #save reconstructions (heatmaps)
 
