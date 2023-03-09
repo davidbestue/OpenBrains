@@ -65,7 +65,7 @@ for file in files:
             elif isinstance(df1['color'].iloc[i], str) == True:
                 conditions.append('palabra_color')
         else:
-            conditions.append(['rectangulo'])
+            conditions.append('rectangulo')
         #
     #
     df1['condition'] = conditions
@@ -85,4 +85,20 @@ for file in files:
 
 data = pd.concat(summary).reset_index() 
 data
+
+
+### simplificado
+
+simplificado =[]
+
+for subj in data.participant.unique():
+    mean_rt_pn = data.loc[(data['condition']=='palabra_negra') & (data['participant']==subj)].rt.mean() 
+    mean_rt_rec = data.loc[(data['condition']=='rectangulo') & (data['participant']==subj)].rt.mean()
+    mean_rt_pcol = data.loc[(data['condition']=='palabra_color') & (data['participant']==subj)].rt.mean()  
+    simplificado.append([mean_rt_pn, mean_rt_rec, mean_rt_pcol, subj ])
+
+
+df_simple = pd.DataFrame(simplificado)
+df_simple.columns=['palabra negra (C1)', 'rectangulo (C2)', 'palabra color (E)', 'sujeto']
+
 
