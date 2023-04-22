@@ -106,8 +106,14 @@ df_simple.columns=['palabra negra (C1)', 'rectangulo (C2)', 'palabra color (E)',
 
 
 ##guardar ambos archivos en el mismo excel
-writer = pd.ExcelWriter(os.path.join(path_folder_all,'resumen.xlsx'))
-data.to_excel(writer, sheet_name='datos completos') 
-df_simple.to_excel(writer, sheet_name='simplificado')
-writer.save()   #save reconstructions (heatmaps)
+#writer = pd.ExcelWriter(os.path.join(path_folder_all,'resumen.xlsx'))
+#data.to_excel(writer, sheet_name='datos completos') 
+#df_simple.to_excel(writer, sheet_name='simplificado')
+#writer.save()   #save reconstructions (heatmaps)
+
+path_1 = os.path.join(path_folder_all,'datos_completos.xlsx')
+data.to_excel(path_1)
+
+path_2 = os.path.join(path_folder_all,'resumen.xlsx')
+df_simple.to_excel(path_2)
 

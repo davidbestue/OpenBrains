@@ -1,1 +1,0 @@
-python -i procesador_datos.py
