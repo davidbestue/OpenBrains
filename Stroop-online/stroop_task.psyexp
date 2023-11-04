@@ -75,30 +75,30 @@
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="code">
+      <CodeComponent name="code_1">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Py" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if respuesta.keys: # ie if the list isn't empty:&amp;#10;    if respuesta.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if respuesta_rect.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_rect.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_rect.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (respuesta_rect.keys) {&amp;#10;  if (respuesta_rect.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_rect.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code" valType="code"/>
+        <Param name="name" updates="None" val="code_1" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="color_rectangulo">
       <PolygonComponent name="rectangulo">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="set every repeat" val="$color" valType="str"/>
+        <Param name="fillColor" updates="set every repeat" val="$[farber, farbeg, farbeb]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="set every repeat" val="$color" valType="str"/>
+        <Param name="lineColor" updates="set every repeat" val="$[farber, farbeg, farbeb]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
@@ -140,9 +140,9 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if respuesta_rect.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_rect.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_rect.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (respuesta_rect.keys) {&amp;#10;  if (respuesta_rect.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_rect.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -199,9 +199,9 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if respuesta_mix.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_mix.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_mix.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (respuesta_rect.keys) {&amp;#10;  if (respuesta_rect.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_rect.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -231,7 +231,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="En esta tarea, tendrás que responder lo más rápido que puedas.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra es &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra es &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra es &quot;naranja&quot;&amp;#10;Presiona &quot;l&quot; si la palabra es &quot;lila&quot;&amp;#10;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando estés listo, presiona &quot;space&quot;" valType="str"/>
+        <Param name="text" updates="constant" val="En esta tarea, tendrás que responder lo más rápido que puedas.&amp;#10;&amp;#10;Presiona &quot;a&quot; si la palabra es &quot;azul&quot;&amp;#10;Presiona &quot;v&quot; si la palabra es &quot;verde&quot;&amp;#10;Presiona &quot;n&quot; si la palabra es &quot;naranja&quot;&amp;#10;Presiona &quot;l&quot; si la palabra es &quot;lila&quot;&amp;#10;&amp;#10;&amp;#10;Para hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.&amp;#10;&amp;#10;Cuando quieras, presiona &quot;space&quot;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

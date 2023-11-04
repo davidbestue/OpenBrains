@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on November 04, 2023, at 10:36
+    on November 04, 2023, at 11:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -81,7 +81,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "Instrucciones"
 InstruccionesClock = core.Clock()
 Instrucciones_texto = visual.TextStim(win=win, name='Instrucciones_texto',
-    text='En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\nPresiona "l" si la palabra es "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
+    text='En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\nPresiona "l" si la palabra es "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando quieras, presiona "space"',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -342,10 +342,10 @@ for thisTrial in trials:
                     respuesta.corr = 1
                 else:
                     respuesta.corr = 0
-        if respuesta.keys: # ie if the list isn't empty:
-            if respuesta.keys[-1] != answer: # check the latest response
+        if respuesta_rect.keys: # ie if the list isn't empty:
+            if respuesta_rect.keys[-1] != answer: # check the latest response
                 continueRoutine = True 
-            elif respuesta.keys[-1] == answer: # check the latest response
+            elif respuesta_rect.keys[-1] == answer: # check the latest response
                 continueRoutine = False #"
         
         # check for quit (typically the Esc key)
@@ -513,8 +513,8 @@ for thisTrial_2 in trials_2:
     
     # ------Prepare to start Routine "color_rectangulo"-------
     # update component parameters for each repeat
-    rectangulo.setFillColor(color)
-    rectangulo.setLineColor(color)
+    rectangulo.setFillColor([farber, farbeg, farbeb])
+    rectangulo.setLineColor([farber, farbeg, farbeb])
     respuesta_rect.keys = []
     respuesta_rect.rt = []
     # keep track of which components have finished

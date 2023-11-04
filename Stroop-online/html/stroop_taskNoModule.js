@@ -111,7 +111,7 @@ function experimentInit() {
   Instrucciones_texto = new visual.TextStim({
     win: psychoJS.window,
     name: 'Instrucciones_texto',
-    text: 'En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\nPresiona "l" si la palabra es "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando estés listo, presiona "space"',
+    text: 'En esta tarea, tendrás que responder lo más rápido que puedas.\n\nPresiona "a" si la palabra es "azul"\nPresiona "v" si la palabra es "verde"\nPresiona "n" si la palabra es "naranja"\nPresiona "l" si la palabra es "lila"\n\n\nPara hacerlo la más rápido posible, mantén siempre un dedo encima de cada letra.\n\nCuando quieras, presiona "space"',
     font: 'Arial',
     units : undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -509,6 +509,15 @@ function color_negroRoutineEachFrame() {
     }
   }
   
+  if (respuesta_rect.keys) {
+    if (respuesta_rect.keys.slice(-1)[0] !== answer) {
+      continueRoutine = true;
+    } else {
+      if (respuesta_rect.keys.slice(-1)[0] === answer) {
+        continueRoutine = false;
+      }
+    }
+  }
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
@@ -682,8 +691,8 @@ function color_rectanguloRoutineBegin() {
   color_rectanguloClock.reset(); // clock
   frameN = -1;
   // update component parameters for each repeat
-  rectangulo.setFillColor(new util.Color(color));
-  rectangulo.setLineColor(new util.Color(color));
+  rectangulo.setFillColor(new util.Color([farber, farbeg, farbeb]));
+  rectangulo.setLineColor(new util.Color([farber, farbeg, farbeb]));
   respuesta_rect.keys = undefined;
   respuesta_rect.rt = undefined;
   // keep track of which components have finished
@@ -747,6 +756,15 @@ function color_rectanguloRoutineEachFrame() {
     }
   }
   
+  if (respuesta_rect.keys) {
+    if (respuesta_rect.keys.slice(-1)[0] !== answer) {
+      continueRoutine = true;
+    } else {
+      if (respuesta_rect.keys.slice(-1)[0] === answer) {
+        continueRoutine = false;
+      }
+    }
+  }
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
@@ -985,6 +1003,15 @@ function color_variadoRoutineEachFrame() {
     }
   }
   
+  if (respuesta_rect.keys) {
+    if (respuesta_rect.keys.slice(-1)[0] !== answer) {
+      continueRoutine = true;
+    } else {
+      if (respuesta_rect.keys.slice(-1)[0] === answer) {
+        continueRoutine = false;
+      }
+    }
+  }
   // check for quit (typically the Esc key)
   if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
     return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
