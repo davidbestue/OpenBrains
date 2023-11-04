@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on November 04, 2023, at 11:50
+    on November 04, 2023, at 11:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -342,10 +342,10 @@ for thisTrial in trials:
                     respuesta.corr = 1
                 else:
                     respuesta.corr = 0
-        if respuesta_rect.keys: # ie if the list isn't empty:
-            if respuesta_rect.keys[-1] != answer: # check the latest response
+        if respuesta.keys: # ie if the list isn't empty:
+            if respuesta.keys[-1] != answer: # check the latest response
                 continueRoutine = True 
-            elif respuesta_rect.keys[-1] == answer: # check the latest response
+            elif respuesta.keys[-1] == answer: # check the latest response
                 continueRoutine = False #"
         
         # check for quit (typically the Esc key)
@@ -749,7 +749,7 @@ for thisTrial_3 in trials_3:
     
     # ------Prepare to start Routine "color_variado"-------
     # update component parameters for each repeat
-    colores2.setColor(color, colorSpace='rgb')
+    colores2.setColor([farber, farbeg, farbeb], colorSpace='rgb')
     colores2.setText(texto
 )
     respuesta_mix.keys = []

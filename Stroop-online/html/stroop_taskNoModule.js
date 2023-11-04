@@ -509,11 +509,11 @@ function color_negroRoutineEachFrame() {
     }
   }
   
-  if (respuesta_rect.keys) {
-    if (respuesta_rect.keys.slice(-1)[0] !== answer) {
+  if (respuesta.keys) {
+    if (respuesta.keys.slice(-1)[0] !== answer) {
       continueRoutine = true;
     } else {
-      if (respuesta_rect.keys.slice(-1)[0] === answer) {
+      if (respuesta.keys.slice(-1)[0] === answer) {
         continueRoutine = false;
       }
     }
@@ -938,7 +938,7 @@ function color_variadoRoutineBegin() {
   color_variadoClock.reset(); // clock
   frameN = -1;
   // update component parameters for each repeat
-  colores2.setColor(new util.Color(color));
+  colores2.setColor(new util.Color([farber, farbeg, farbeb]));
   colores2.setText(texto);
   respuesta_mix.keys = undefined;
   respuesta_mix.rt = undefined;
@@ -1003,11 +1003,11 @@ function color_variadoRoutineEachFrame() {
     }
   }
   
-  if (respuesta_rect.keys) {
-    if (respuesta_rect.keys.slice(-1)[0] !== answer) {
+  if (respuesta_mix.keys) {
+    if (respuesta_mix.keys.slice(-1)[0] !== answer) {
       continueRoutine = true;
     } else {
-      if (respuesta_rect.keys.slice(-1)[0] === answer) {
+      if (respuesta_mix.keys.slice(-1)[0] === answer) {
         continueRoutine = false;
       }
     }

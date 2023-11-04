@@ -81,8 +81,8 @@
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if respuesta_rect.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_rect.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_rect.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if (respuesta_rect.keys) {&amp;#10;  if (respuesta_rect.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_rect.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if respuesta.keys: # ie if the list isn't empty:&amp;#10;    if respuesta.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (respuesta.keys) {&amp;#10;  if (respuesta.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -153,7 +153,7 @@
     </Routine>
     <Routine name="color_variado">
       <TextComponent name="colores2">
-        <Param name="color" updates="set every repeat" val="$color" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$[farber, farbeg, farbeb]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -201,7 +201,7 @@
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if respuesta_mix.keys: # ie if the list isn't empty:&amp;#10;    if respuesta_mix.keys[-1] != answer: # check the latest response&amp;#10;        continueRoutine = True &amp;#10;    elif respuesta_mix.keys[-1] == answer: # check the latest response&amp;#10;        continueRoutine = False #&quot;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if (respuesta_rect.keys) {&amp;#10;  if (respuesta_rect.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_rect.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (respuesta_mix.keys) {&amp;#10;  if (respuesta_mix.keys.slice(-1)[0] !== answer) {&amp;#10;    continueRoutine = true;&amp;#10;  } else {&amp;#10;    if (respuesta_mix.keys.slice(-1)[0] === answer) {&amp;#10;      continueRoutine = false;&amp;#10;    }&amp;#10;  }&amp;#10;}" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
