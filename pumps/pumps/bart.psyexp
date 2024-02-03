@@ -138,17 +138,17 @@
       <CodeComponent name="updateEarnings" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="bankedEarnings=0.0&amp;#10;balloonEarnings = ''&amp;#10;bankedText = ''&amp;#10;lastBalloonEarnings=0.0&amp;#10;thisBalloonEarnings=0.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="bankedEarnings = 0.0;&amp;#10;balloonEarnings = &quot;&quot;;&amp;#10;bankedText = &quot;&quot;;&amp;#10;lastBalloonEarnings = 0.0;&amp;#10;thisBalloonEarnings = 0.0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="thisBalloonEarnings = ((pump.thisN + 1) * 0.05);&amp;#10;balloonEarnings = (&quot;Valor d'aquest globus:\n\u20ac&quot; + util.round(thisBalloonEarnings, 2).toString());&amp;#10;bankedText = (&quot;Has guanyat:\n\u20ac&quot; + util.round(bankedEarnings, 2).toString());&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="thisBalloonEarnings=(pump.thisN+1)*0.05&amp;#10;balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;bankedText = &quot;Has guanyat:\n€&quot; + str(round(bankedEarnings, 2))" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="bankedEarnings=0.0&amp;#10;totalPumps=0.0&amp;#10;balloonEarnings = ''&amp;#10;bankedText = ''&amp;#10;lastBalloonEarnings=0.0&amp;#10;thisBalloonEarnings=0.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="bankedEarnings = 0.0;&amp;#10;totalPumps = 0.0;&amp;#10;balloonEarnings = &quot;&quot;;&amp;#10;bankedText = &quot;&quot;;&amp;#10;lastBalloonEarnings = 0.0;&amp;#10;thisBalloonEarnings = 0.0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="thisBalloonEarnings = (pump.thisN * 0.05);&amp;#10;balloonEarnings = (&quot;Valor d'aquest globus:\n\u20ac&quot; + util.round(thisBalloonEarnings, 2).toString());&amp;#10;bankedText = (&quot;Has guanyat:\n\u20ac&quot; + util.round(bankedEarnings, 2).toString());&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="thisBalloonEarnings=(pump.thisN)*0.05&amp;#10;balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;bankedText = &quot;Has guanyat:\n€&quot; + str(round(bankedEarnings, 2))" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (((pump.thisN + 1) === maxPumps)) {&amp;#10;    popped = true;&amp;#10;} else {&amp;#10;    popped = false;&amp;#10;}&amp;#10;if (popped) {&amp;#10;    thisBalloonEarnings = 0.0;&amp;#10;    lastBalloonEarnings = 0.0;&amp;#10;} else {&amp;#10;    lastBalloonEarnings = thisBalloonEarnings;&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;return&quot;, bankButton.keys)) {&amp;#10;    pump.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="#calculate cash 'earned'&amp;#10;if pump.thisN+1 == maxPumps:&amp;#10;    popped = True&amp;#10;else:&amp;#10;    popped = False&amp;#10;&amp;#10;# if balloon popped reset the earnings&amp;#10;if popped:&amp;#10;  thisBalloonEarnings=0.0&amp;#10;  lastBalloonEarnings=0.0&amp;#10;else:&amp;#10;    lastBalloonEarnings=thisBalloonEarnings&amp;#10;&amp;#10;if 'return' in bankButton.keys:&amp;#10;    pump.finished = True&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="#calculate cash 'earned'&amp;#10;if pump.thisN + 1 == maxPumps:&amp;#10;    popped = True&amp;#10;else:&amp;#10;    popped = False&amp;#10;&amp;#10;# if balloon popped reset the earnings&amp;#10;if popped:&amp;#10;  thisBalloonEarnings=0.0&amp;#10;  lastBalloonEarnings=0.0&amp;#10;else:&amp;#10;    lastBalloonEarnings=thisBalloonEarnings&amp;#10;&amp;#10;if 'return' in bankButton.keys:&amp;#10;    pump.finished = True&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="updateEarnings" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -284,8 +284,8 @@
         <Param val="balloonSize = (0.1 + ((pump.thisN + 1) * 0.015));&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="trials.addData(&quot;nPumps&quot;, (pump.thisN + 1));&amp;#10;trials.addData(&quot;size&quot;, balloonSize);&amp;#10;trials.addData(&quot;earnings&quot;, thisBalloonEarnings);&amp;#10;trials.addData(&quot;popped&quot;, popped);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="#save data&amp;#10;trials.addData('nPumps', pump.thisN+1)&amp;#10;trials.addData('size', balloonSize)&amp;#10;trials.addData('earnings', thisBalloonEarnings)&amp;#10;trials.addData('popped', popped)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="trials.addData(&quot;nPumps&quot;, pump.thisN);&amp;#10;trials.addData(&quot;size&quot;, balloonSize);&amp;#10;trials.addData(&quot;earnings&quot;, thisBalloonEarnings);&amp;#10;trials.addData(&quot;popped&quot;, popped);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#save data&amp;#10;trials.addData('nPumps', pump.thisN)&amp;#10;trials.addData('size', balloonSize)&amp;#10;trials.addData('earnings', thisBalloonEarnings)&amp;#10;trials.addData('popped', popped)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="setBalloonSize" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -405,8 +405,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="scoreText = (&quot;Molt b\u00e9! Has guanyat un total de\n\u20ac&quot; + util.round(bankedEarnings, 2).toString());&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="scoreText=&quot;Molt bé! Has guanyat un total de\n€&quot; + str(round(bankedEarnings,2));&amp;#10;#balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="scoreText = ((&quot;Has guanyat un total de\n&quot; + util.round(bankedEarnings, 2).toString()) + &quot;\u20ac&quot;);&amp;#10;scoreText2 = ((&quot;Has fet un total de\n&quot; + Number.parseInt(totalPumps).toString()) + &quot; bombeigs&quot;);&amp;#10;totalPumps;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="scoreText=&quot;Has guanyat un total de\n&quot; + str(round(bankedEarnings,2)) + &quot;€&quot;;&amp;#10;#balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;scoreText2=&quot;Has fet un total de\n&quot; + str(int(totalPumps)) + &quot; bombeigs&quot;;&amp;#10;&amp;#10;totalPumps" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -444,7 +444,7 @@
         <Param val="visible" valType="str" updates="constant" name="overflow"/>
         <Param val="0" valType="num" updates="constant" name="padding"/>
         <Param val="Type here..." valType="str" updates="constant" name="placeholder"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0, 0.5)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1, 0.7)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="list" updates="constant" name="speechPoint"/>
@@ -454,7 +454,47 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$scoreText" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$scoreText&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </TextboxComponent>
+      <TextboxComponent name="scoremsg_2" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="alignment"/>
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="True" valType="bool" updates="constant" name="autoLog"/>
+        <Param val="False" valType="bool" updates="constant" name="bold"/>
+        <Param val="black" valType="color" updates="constant" name="borderColor"/>
+        <Param val="2" valType="num" updates="constant" name="borderWidth"/>
+        <Param val="black" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="editable"/>
+        <Param val="white" valType="color" updates="constant" name="fillColor"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="False" valType="bool" updates="constant" name="italic"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.04" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="1.0" valType="num" updates="constant" name="lineSpacing"/>
+        <Param val="scoremsg_2" valType="code" updates="None" name="name"/>
+        <Param val="0.8" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="visible" valType="str" updates="constant" name="overflow"/>
+        <Param val="0" valType="num" updates="constant" name="padding"/>
+        <Param val="Type here..." valType="str" updates="constant" name="placeholder"/>
+        <Param val="(0, -0.5)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(1, 0.7)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="list" updates="constant" name="speechPoint"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$scoreText2&amp;#10;" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </TextboxComponent>
     </Routine>
@@ -506,8 +546,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="feedbackText=&quot;&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="feedbackText = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="bankedEarnings = (bankedEarnings + lastBalloonEarnings);&amp;#10;balloonEarnings = (&quot;Valor d'aquest globus:\n\u20ac&quot; + util.round(thisBalloonEarnings, 2).toString());&amp;#10;bankedText = (&quot;Has guanyat:\n\u20ac&quot; + util.round(bankedEarnings, 2).toString());&amp;#10;pop_sound.setVolume(1);&amp;#10;if ((popped === true)) {&amp;#10;    feedbackText = &quot;Ooooh! Has perdut aquest globus!&quot;;&amp;#10;    pop_sound.play();&amp;#10;} else {&amp;#10;    feedbackText = (&quot;Has guanyat \u20ac&quot; + util.round(lastBalloonEarnings, 2).toString());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# track the banked earnings&amp;#10;bankedEarnings = bankedEarnings+lastBalloonEarnings&amp;#10;&amp;#10;#update the text &amp;#10;balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;bankedText = &quot;Has guanyat:\n€&quot; + str(round(bankedEarnings, 2))&amp;#10;&amp;#10;pop_sound.setVolume(1)&amp;#10;&amp;#10;# play the pop sound&amp;#10;if popped==True:&amp;#10;  feedbackText=&quot;Ooooh! Has perdut aquest globus!&quot;&amp;#10;  pop_sound.play()&amp;#10;else:&amp;#10;  feedbackText=&quot;Has guanyat €&quot; + str(round(lastBalloonEarnings, 2))&amp;#10;  " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="bankedEarnings = (bankedEarnings + lastBalloonEarnings);&amp;#10;totalPumps = (totalPumps + (pump.thisN - 1));&amp;#10;balloonEarnings = (&quot;Valor d'aquest globus:\n\u20ac&quot; + util.round(thisBalloonEarnings, 2).toString());&amp;#10;bankedText = (&quot;Has guanyat:\n\u20ac&quot; + util.round(bankedEarnings, 2).toString());&amp;#10;pop_sound.setVolume(1);&amp;#10;if ((popped === true)) {&amp;#10;    feedbackText = &quot;Ooooh! Has perdut aquest globus!&quot;;&amp;#10;    pop_sound.play();&amp;#10;} else {&amp;#10;    feedbackText = (&quot;Has guanyat \u20ac&quot; + util.round(lastBalloonEarnings, 2).toString());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# track the banked earnings&amp;#10;bankedEarnings = bankedEarnings+lastBalloonEarnings&amp;#10;&amp;#10;# track the total amount of pumps&amp;#10;totalPumps = totalPumps+(pump.thisN-1)&amp;#10;&amp;#10;&amp;#10;#update the text &amp;#10;balloonEarnings = &quot;Valor d'aquest globus:\n€&quot; + str(round(thisBalloonEarnings, 2))&amp;#10;bankedText = &quot;Has guanyat:\n€&quot; + str(round(bankedEarnings, 2))&amp;#10;&amp;#10;pop_sound.setVolume(1)&amp;#10;&amp;#10;# play the pop sound&amp;#10;if popped==True:&amp;#10;  feedbackText=&quot;Ooooh! Has perdut aquest globus!&quot;&amp;#10;  pop_sound.play()&amp;#10;else:&amp;#10;  feedbackText=&quot;Has guanyat €&quot; + str(round(lastBalloonEarnings, 2))&amp;#10;  " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -818,7 +858,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Aquest és un joc on has d'optimitzar els teus guanys en una competició de bombament de globus.&amp;#10;&amp;#10;Rebreu un premi en diners per cada globus que bombeu, segons la seva mida. Però si el bombeu massa, el globus esclatarà i no obtindreu res per aquest globus.&amp;#10;&amp;#10;Els globus es diferencien en la seva mida màxima: de vegades poden arribar a gairebé la mida de la pantalla, però la majoria explotarà molt abans.&amp;#10;&amp;#10;Premeu&amp;#10;    ESPAI per bombar el globus&amp;#10;    ENTER per posar al banc l'efectiu d'aquest globus i passar al següent" valType="str" updates="constant" name="text"/>
+        <Param val="Aquest és un joc on has d'optimitzar els teus guanys en una competició d'inflar globus.&amp;#10;&amp;#10;Rebreu un premi en diners per cada globus que infleu segons la seva mida. Però si l'infleu massa (bombant el globus), el globus esclatarà i no obtindreu diners.&amp;#10;&amp;#10;Els globus es diferencien en la seva mida màxima: de vegades poden arribar a gairebé la mida de la pantalla, però la majoria explotarà molt abans.&amp;#10;&amp;#10;Premeu&amp;#10;    ESPAI per inflar el globus&amp;#10;    ENTER per posar al banc l'efectiu d'aquest globus i passar al següent&amp;#10;&amp;#10;Per començar l'experiement, premeu &quot;ESPAI&quot;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </TextboxComponent>
       <SoundComponent name="pop_sound" plugin="None">

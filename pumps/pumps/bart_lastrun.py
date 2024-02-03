@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on February 03, 2024, at 11:42
+    on February 03, 2024, at 13:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -324,7 +324,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     resp = keyboard.Keyboard()
     instrtxt = visual.TextBox2(
-         win, text="Aquest és un joc on has d'optimitzar els teus guanys en una competició de bombament de globus.\n\nRebreu un premi en diners per cada globus que bombeu, segons la seva mida. Però si el bombeu massa, el globus esclatarà i no obtindreu res per aquest globus.\n\nEls globus es diferencien en la seva mida màxima: de vegades poden arribar a gairebé la mida de la pantalla, però la majoria explotarà molt abans.\n\nPremeu\n    ESPAI per bombar el globus\n    ENTER per posar al banc l'efectiu d'aquest globus i passar al següent", placeholder='Type here...', font='Arial',
+         win, text='Aquest és un joc on has d\'optimitzar els teus guanys en una competició d\'inflar globus.\n\nRebreu un premi en diners per cada globus que infleu segons la seva mida. Però si l\'infleu massa (bombant el globus), el globus esclatarà i no obtindreu diners.\n\nEls globus es diferencien en la seva mida màxima: de vegades poden arribar a gairebé la mida de la pantalla, però la majoria explotarà molt abans.\n\nPremeu\n    ESPAI per inflar el globus\n    ENTER per posar al banc l\'efectiu d\'aquest globus i passar al següent\n\nPer començar l\'experiement, premeu "ESPAI"', placeholder='Type here...', font='Arial',
          pos=(0, 0),     letterHeight=0.04,
          size=(1, 0.7), borderWidth=2.0,
          color='black', colorSpace='rgb',
@@ -357,6 +357,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     bankButton = keyboard.Keyboard()
     # Run 'Begin Experiment' code from updateEarnings
     bankedEarnings=0.0
+    totalPumps=0.0
     balloonEarnings = ''
     bankedText = ''
     lastBalloonEarnings=0.0
@@ -541,7 +542,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     scoremsg = visual.TextBox2(
          win, text='', placeholder='Type here...', font='Arial',
-         pos=(0, 0),     letterHeight=0.04,
+         pos=(0, 0.5),     letterHeight=0.04,
          size=(1, 0.7), borderWidth=2.0,
          color='black', colorSpace='rgb',
          opacity=0.8,
@@ -554,6 +555,22 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
          editable=False,
          name='scoremsg',
          depth=-2, autoLog=True,
+    )
+    scoremsg_2 = visual.TextBox2(
+         win, text='', placeholder='Type here...', font='Arial',
+         pos=(0, -0.5),     letterHeight=0.04,
+         size=(1, 0.7), borderWidth=2.0,
+         color='black', colorSpace='rgb',
+         opacity=0.8,
+         bold=False, italic=False,
+         lineSpacing=1.0, speechPoint=None,
+         padding=0.0, alignment='center',
+         anchor='center', overflow='visible',
+         fillColor='white', borderColor='black',
+         flipHoriz=False, flipVert=False, languageStyle='LTR',
+         editable=False,
+         name='scoremsg_2',
+         depth=-3, autoLog=True,
     )
     
     # create some handy timers
@@ -857,7 +874,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             bankButton.rt = []
             _bankButton_allKeys = []
             # Run 'Begin Routine' code from updateEarnings
-            thisBalloonEarnings=(pump.thisN+1)*0.05
+            thisBalloonEarnings=(pump.thisN)*0.05
             balloonEarnings = "Valor d'aquest globus:\n€" + str(round(thisBalloonEarnings, 2))
             bankedText = "Has guanyat:\n€" + str(round(bankedEarnings, 2))
             reminder.reset()
@@ -1071,7 +1088,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             thisExp.addData('trial.stopped', globalClock.getTime())
             # Run 'End Routine' code from updateEarnings
             #calculate cash 'earned'
-            if pump.thisN+1 == maxPumps:
+            if pump.thisN + 1 == maxPumps:
                 popped = True
             else:
                 popped = False
@@ -1089,7 +1106,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             
             # Run 'End Routine' code from setBalloonSize
             #save data
-            trials.addData('nPumps', pump.thisN+1)
+            trials.addData('nPumps', pump.thisN)
             trials.addData('size', balloonSize)
             trials.addData('earnings', thisBalloonEarnings)
             trials.addData('popped', popped)
@@ -1107,6 +1124,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from checkPopped
         # track the banked earnings
         bankedEarnings = bankedEarnings+lastBalloonEarnings
+        
+        # track the total amount of pumps
+        totalPumps = totalPumps+(pump.thisN-1)
+        
         
         #update the text 
         balloonEarnings = "Valor d'aquest globus:\n€" + str(round(thisBalloonEarnings, 2))
@@ -1403,13 +1424,19 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('finalScore.started', globalClock.getTime())
     # Run 'Begin Routine' code from finalScoreCode
-    scoreText="Molt bé! Has guanyat un total de\n€" + str(round(bankedEarnings,2));
+    scoreText="Has guanyat un total de\n" + str(round(bankedEarnings,2)) + "€";
     #balloonEarnings = "Valor d'aquest globus:\n€" + str(round(thisBalloonEarnings, 2))
+    scoreText2="Has fet un total de\n" + str(int(totalPumps)) + " bombeigs";
     
+    totalPumps
     scoremsg.reset()
-    scoremsg.setText(scoreText)
+    scoremsg.setText(scoreText
+    )
+    scoremsg_2.reset()
+    scoremsg_2.setText(scoreText2
+    )
     # keep track of which components have finished
-    finalScoreComponents = [background_4, scoremsg]
+    finalScoreComponents = [background_4, scoremsg, scoremsg_2]
     for thisComponent in finalScoreComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1469,6 +1496,26 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         # if scoremsg is active this frame...
         if scoremsg.status == STARTED:
+            # update params
+            pass
+        
+        # *scoremsg_2* updates
+        
+        # if scoremsg_2 is starting this frame...
+        if scoremsg_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            scoremsg_2.frameNStart = frameN  # exact frame index
+            scoremsg_2.tStart = t  # local t and not account for scr refresh
+            scoremsg_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(scoremsg_2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'scoremsg_2.started')
+            # update status
+            scoremsg_2.status = STARTED
+            scoremsg_2.setAutoDraw(True)
+        
+        # if scoremsg_2 is active this frame...
+        if scoremsg_2.status == STARTED:
             # update params
             pass
         
