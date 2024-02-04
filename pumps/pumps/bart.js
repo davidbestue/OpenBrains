@@ -2,7 +2,7 @@
  * Bart *
  *************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2023.2.2.js';
+import { core, data, sound, util, visual, hardware } from './lib/psychojs-2023.2.3.js';
 const { PsychoJS } = core;
 const { TrialHandler, MultiStairHandler } = data;
 const { Scheduler } = util;
@@ -93,7 +93,7 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2023.2.2';
+  expInfo['psychopyVersion'] = '2023.2.3';
   expInfo['OS'] = window.navigator.platform;
 
 
@@ -127,6 +127,7 @@ var trialClock;
 var background_2;
 var bankButton;
 var bankedEarnings;
+var totalPumps;
 var balloonEarnings;
 var bankedText;
 var lastBalloonEarnings;
@@ -149,6 +150,7 @@ var trialcount_2;
 var finalScoreClock;
 var background_4;
 var scoremsg;
+var scoremsg_2;
 var globalClock;
 var routineTimer;
 async function experimentInit() {
@@ -169,7 +171,7 @@ async function experimentInit() {
   instrtxt = new visual.TextBox({
     win: psychoJS.window,
     name: 'instrtxt',
-    text: "This is a game where you have to optimise your earnings in a balloon pumping competition.\n\nYou get prize money for each balloon you pump up, according to its size. But if you pump it too far it will pop and you'll get nothing for that balloon.\n\nBalloons differ in their maximum size - they can occasionally reach to almost the size of the screen but most will pop well before that.\n\nPress\n    SPACE to pump the balloon\n    RETURN to bank the cash for this balloon and move onto the next",
+    text: 'Aquest és un joc on has d\'optimitzar els teus guanys en una competició d\'inflar globus.\n\nRebreu un premi en diners per cada globus que infleu segons la seva mida. Però si l\'infleu massa (bombant el globus), el globus esclatarà i no obtindreu diners.\n\nEls globus es diferencien en la seva mida màxima: de vegades poden arribar a gairebé la mida de la pantalla, però la majoria explotarà molt abans.\n\nPremeu\n    ESPAI per inflar el globus\n    ENTER per posar al banc l\'efectiu d\'aquest globus i passar al següent\n\nPer començar l\'experiement, premeu "ESPAI"',
     placeholder: 'Type here...',
     font: 'Arial',
     pos: [0, 0], 
@@ -214,6 +216,7 @@ async function experimentInit() {
   
   // Run 'Begin Experiment' code from updateEarnings
   bankedEarnings = 0.0;
+  totalPumps = 0.0;
   balloonEarnings = "";
   bankedText = "";
   lastBalloonEarnings = 0.0;
@@ -222,7 +225,7 @@ async function experimentInit() {
   reminder = new visual.TextBox({
     win: psychoJS.window,
     name: 'reminder',
-    text: 'Press SPACE to pump the balloon\nPress RETURN to bank this sum',
+    text: "Premeu ESPAI per bombar el globus\nPremeu ENTER per posar al banc l'efectiu d'aquest globus i passar al següent",
     placeholder: 'Type here...',
     font: 'Arial',
     pos: [(- 0.4), (- 0.3)], 
@@ -419,7 +422,7 @@ async function experimentInit() {
   reminder_2 = new visual.TextBox({
     win: psychoJS.window,
     name: 'reminder_2',
-    text: 'Press SPACE to pump the balloon\nPress RETURN to bank this sum',
+    text: "Premeu ESPAI per bombar el globus\nPremeu ENTER per posar al banc l'efectiu d'aquest globus i passar al següent",
     placeholder: 'Type here...',
     font: 'Arial',
     pos: [(- 0.4), (- 0.3)], 
@@ -482,7 +485,7 @@ async function experimentInit() {
     text: '',
     placeholder: 'Type here...',
     font: 'Arial',
-    pos: [0, 0], 
+    pos: [0, 0.5], 
     letterHeight: 0.04,
     lineSpacing: 1.0,
     size: [1, 0.7],  units: undefined, 
@@ -498,6 +501,30 @@ async function experimentInit() {
     multiline: true,
     anchor: 'center',
     depth: -2.0 
+  });
+  
+  scoremsg_2 = new visual.TextBox({
+    win: psychoJS.window,
+    name: 'scoremsg_2',
+    text: '',
+    placeholder: 'Type here...',
+    font: 'Arial',
+    pos: [0, (- 0.5)], 
+    letterHeight: 0.04,
+    lineSpacing: 1.0,
+    size: [1, 0.7],  units: undefined, 
+    color: 'black', colorSpace: 'rgb',
+    fillColor: 'white', borderColor: 'black',
+    languageStyle: 'LTR',
+    bold: false, italic: false,
+    opacity: 0.8,
+    padding: 0.0,
+    alignment: 'center',
+    overflow: 'visible',
+    editable: false,
+    multiline: true,
+    anchor: 'center',
+    depth: -3.0 
   });
   
   // Create some handy timers
@@ -896,15 +923,15 @@ function trialRoutineBegin(snapshot) {
     bankButton.rt = undefined;
     _bankButton_allKeys = [];
     // Run 'Begin Routine' code from updateEarnings
-    thisBalloonEarnings = ((pump.thisN + 1) * 0.05);
-    balloonEarnings = ("This balloon value:\n\u00a3" + util.round(thisBalloonEarnings, 2).toString());
-    bankedText = ("You have banked:\n\u00a3" + util.round(bankedEarnings, 2).toString());
+    thisBalloonEarnings = (pump.thisN * 0.05);
+    balloonEarnings = ("Valor d'aquest globus:\n\u20ac" + util.round(thisBalloonEarnings, 2).toString());
+    bankedText = ("Has guanyat:\n\u20ac" + util.round(bankedEarnings, 2).toString());
     
     // Run 'Begin Routine' code from setBalloonSize
     balloonBody.setPos([0, ((balloonSize / 2) - 0.5)]);
     balloonBody.setSize(balloonSize);
     
-    trialcount.setText(((("Ballon number: " + (trials.thisN + 1).toString()) + "/") + trials.nTotal.toString()));
+    trialcount.setText(((("Globus n\u00famero: " + (trials.thisN + 1).toString()) + "/") + trials.nTotal.toString()));
     // keep track of which components have finished
     trialComponents = [];
     trialComponents.push(background_2);
@@ -1104,7 +1131,7 @@ function trialRoutineEnd(snapshot) {
     }
     
     // Run 'End Routine' code from setBalloonSize
-    trials.addData("nPumps", (pump.thisN + 1));
+    trials.addData("nPumps", pump.thisN);
     trials.addData("size", balloonSize);
     trials.addData("earnings", thisBalloonEarnings);
     trials.addData("popped", popped);
@@ -1136,18 +1163,19 @@ function feedbackRoutineBegin(snapshot) {
     psychoJS.experiment.addData('feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from checkPopped
     bankedEarnings = (bankedEarnings + lastBalloonEarnings);
-    balloonEarnings = ("This balloon value:\n\u00a3" + util.round(thisBalloonEarnings, 2).toString());
-    bankedText = ("You have banked:\n\u00a3" + util.round(bankedEarnings, 2).toString());
+    totalPumps = (totalPumps + (pump.thisN - 1));
+    balloonEarnings = ("Valor d'aquest globus:\n\u20ac" + util.round(thisBalloonEarnings, 2).toString());
+    bankedText = ("Has guanyat:\n\u20ac" + util.round(bankedEarnings, 2).toString());
     pop_sound.setVolume(1);
     if ((popped === true)) {
-        feedbackText = "Oops! Lost that one!";
+        feedbackText = "Ooooh! Has perdut aquest globus!";
         pop_sound.play();
     } else {
-        feedbackText = ("You banked \u00a3" + util.round(lastBalloonEarnings, 2).toString());
+        feedbackText = ("Has guanyat \u20ac" + util.round(lastBalloonEarnings, 2).toString());
     }
     
     feedbacktxt.setText(feedbackText);
-    trialcount_2.setText(((("Ballon number: " + (trials.thisN + 1).toString()) + "/") + trials.nTotal.toString()));
+    trialcount_2.setText(((("Globus n\u00famero: " + (trials.thisN + 1).toString()) + "/") + trials.nTotal.toString()));
     // keep track of which components have finished
     feedbackComponents = [];
     feedbackComponents.push(background_3);
@@ -1310,6 +1338,7 @@ function feedbackRoutineEnd(snapshot) {
 
 
 var scoreText;
+var scoreText2;
 var finalScoreComponents;
 function finalScoreRoutineBegin(snapshot) {
   return async function () {
@@ -1323,12 +1352,17 @@ function finalScoreRoutineBegin(snapshot) {
     // update component parameters for each repeat
     psychoJS.experiment.addData('finalScore.started', globalClock.getTime());
     // Run 'Begin Routine' code from finalScoreCode
-    scoreText="Well done! You banked a total of\n£" + bankedEarnings.toFixed(2);
+    scoreText = (("Has guanyat un total de\n" + util.round(bankedEarnings, 2).toString()) + "\u20ac");
+    scoreText2 = (("Has fet un total de\n" + Number.parseInt(totalPumps).toString()) + " bombeigs");
+    totalPumps;
+    
     scoremsg.setText(scoreText);
+    scoremsg_2.setText(scoreText2);
     // keep track of which components have finished
     finalScoreComponents = [];
     finalScoreComponents.push(background_4);
     finalScoreComponents.push(scoremsg);
+    finalScoreComponents.push(scoremsg_2);
     
     for (const thisComponent of finalScoreComponents)
       if ('status' in thisComponent)
@@ -1363,6 +1397,16 @@ function finalScoreRoutineEachFrame() {
       scoremsg.frameNStart = frameN;  // exact frame index
       
       scoremsg.setAutoDraw(true);
+    }
+    
+    
+    // *scoremsg_2* updates
+    if (t >= 0.0 && scoremsg_2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      scoremsg_2.tStart = t;  // (not accounting for frame time here)
+      scoremsg_2.frameNStart = frameN;  // exact frame index
+      
+      scoremsg_2.setAutoDraw(true);
     }
     
     // check for quit (typically the Esc key)
