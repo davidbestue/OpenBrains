@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on February 04, 2024, at 12:00
+    on February 04, 2024, at 20:04
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -542,8 +542,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     scoremsg = visual.TextBox2(
          win, text='', placeholder='Type here...', font='Arial',
-         pos=(0, 0.5),     letterHeight=0.04,
-         size=(1, 0.7), borderWidth=2.0,
+         pos=(0, 0.25),     letterHeight=0.04,
+         size=(1, 0.3), borderWidth=2.0,
          color='black', colorSpace='rgb',
          opacity=0.8,
          bold=False, italic=False,
@@ -558,8 +558,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     )
     scoremsg_2 = visual.TextBox2(
          win, text='', placeholder='Type here...', font='Arial',
-         pos=(0, -0.5),     letterHeight=0.04,
-         size=(1, 0.7), borderWidth=2.0,
+         pos=(0, -0.25),     letterHeight=0.04,
+         size=(1, 0.3), borderWidth=2.0,
          color='black', colorSpace='rgb',
          opacity=0.8,
          bold=False, italic=False,
