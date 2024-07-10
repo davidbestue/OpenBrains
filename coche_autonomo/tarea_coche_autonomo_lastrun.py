@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on July 10, 2024, at 20:16
+    on July 10, 2024, at 20:17
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -415,7 +415,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     text_7 = visual.TextStim(win=win, name='text_7',
         text='Para salir, pulsa "space"',
         font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -435,7 +435,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('trials_coche.csv', selection='1:10'),
+        trialList=data.importConditions('trials_coche.csv'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
