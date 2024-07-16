@@ -1,0 +1,487 @@
+6.0875 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+6.6945 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022965411FA0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022965411F40>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022965411D60>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002296595EF70>, multiSample=False, name='window1', numSamples=2, pos=(1920, 789), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.6946 	EXP 	window1: mouseVisible = True
+6.6946 	EXP 	window1: backgroundImage = ''
+6.6946 	EXP 	window1: backgroundFit = 'none'
+6.6957 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.6958 	EXP 	window1: recordFrameIntervals = False
+6.8596 	EXP 	window1: recordFrameIntervals = True
+7.0440 	EXP 	Screen (0) actual frame rate measured at 59.83Hz
+7.0441 	EXP 	window1: recordFrameIntervals = False
+7.0441 	EXP 	window1: mouseVisible = False
+9.2237 	EXP 	untitled: status = STARTED
+9.2239 	EXP 	window1: mouseVisible = True
+10.3334 	EXP 	Created image_11 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/pexels-riciardus-228094.jpg', interpolate=True, mask=None, maskParams=None, name='image_11', opacity=0.6, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+10.3340 	EXP 	window1: mouseVisible = True
+10.4667 	EXP 	Created text_19 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='text_19', opacity=1.0, ori=0.0, pos=array([-0.2 ,  0.18]), rgb=UNKNOWN, text='Experimento del coche autónomo', units='height', win=Window(...), wrapWidth=1)
+10.4668 	EXP 	window1: mouseVisible = True
+10.4901 	EXP 	Created text_8 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_8', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.4902 	EXP 	window1: mouseVisible = True
+10.7435 	EXP 	Created image_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/41.png', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([-0.53, -0.1 ]), size=array([0.4, 0.8]), texRes=128.0, units='height', win=Window(...))
+10.7436 	EXP 	window1: mouseVisible = True
+10.9914 	EXP 	Created image_4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/42.png', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.53, -0.1 ]), size=array([0.4, 0.8]), texRes=128.0, units='height', win=Window(...))
+10.9916 	EXP 	window1: mouseVisible = True
+10.9952 	EXP 	Created text_9 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_9', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.25]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.9953 	EXP 	window1: mouseVisible = True
+10.9987 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.9988 	EXP 	window1: mouseVisible = True
+11.0082 	EXP 	Created text_11 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_11', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.0090 	EXP 	window1: mouseVisible = True
+11.0151 	EXP 	Created text_12 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_12', opacity=1.0, ori=0.0, pos=array([-0.5 ,  0.25]), rgb=UNKNOWN, text='hombre', units='height', win=Window(...), wrapWidth=1)
+11.0152 	EXP 	window1: mouseVisible = True
+11.0169 	EXP 	Created text_13 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_13', opacity=1.0, ori=0.0, pos=array([-0.5,  0. ]), rgb=UNKNOWN, text='mujer', units='height', win=Window(...), wrapWidth=1)
+11.0170 	EXP 	window1: mouseVisible = True
+11.0185 	EXP 	Created text_14 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_14', opacity=1.0, ori=0.0, pos=array([-0.5 , -0.25]), rgb=UNKNOWN, text='delincuente', units='height', win=Window(...), wrapWidth=1)
+11.0186 	EXP 	window1: mouseVisible = True
+11.0200 	EXP 	Created text_15 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_15', opacity=1.0, ori=0.0, pos=array([0.5 , 0.25]), rgb=UNKNOWN, text='animal', units='height', win=Window(...), wrapWidth=1)
+11.0200 	EXP 	window1: mouseVisible = True
+11.0219 	EXP 	Created text_16 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_16', opacity=1.0, ori=0.0, pos=array([0.5, 0. ]), rgb=UNKNOWN, text='peatón puede cruzar', units='height', win=Window(...), wrapWidth=1)
+11.0220 	EXP 	window1: mouseVisible = True
+11.0238 	EXP 	Created text_17 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_17', opacity=1.0, ori=0.0, pos=array([ 0.5 , -0.25]), rgb=UNKNOWN, text='peatón no puede cruzar', units='height', win=Window(...), wrapWidth=1)
+11.0239 	EXP 	window1: mouseVisible = True
+11.0273 	EXP 	Created image_5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/hombre.png', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([-0.65,  0.25]), size=array([0.12, 0.12]), texRes=128.0, units='height', win=Window(...))
+11.0275 	EXP 	window1: mouseVisible = True
+11.0311 	EXP 	Created text_18 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-9.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_18', opacity=1.0, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='¡Pulsa "space" para empezar!', units='height', win=Window(...), wrapWidth=1)
+11.0312 	EXP 	window1: mouseVisible = True
+11.0346 	EXP 	Created image_6 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-10.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/mujer.png', interpolate=True, mask=None, maskParams=None, name='image_6', opacity=1.0, ori=0.0, pos=array([-0.7,  0. ]), size=array([0.15, 0.15]), texRes=128.0, units='height', win=Window(...))
+11.0347 	EXP 	window1: mouseVisible = True
+11.0378 	EXP 	Created image_7 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-11.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/delincuente.png', interpolate=True, mask=None, maskParams=None, name='image_7', opacity=1.0, ori=0.0, pos=array([-0.7 , -0.25]), size=array([0.15, 0.12]), texRes=128.0, units='height', win=Window(...))
+11.0379 	EXP 	window1: mouseVisible = True
+11.0422 	EXP 	Created image_8 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-12.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/animal.png', interpolate=True, mask=None, maskParams=None, name='image_8', opacity=1.0, ori=0.0, pos=array([0.3 , 0.25]), size=array([0.15, 0.15]), texRes=128.0, units='height', win=Window(...))
+11.0422 	EXP 	window1: mouseVisible = True
+11.0461 	EXP 	Created image_9 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-13.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/peaton_verde.png', interpolate=True, mask=None, maskParams=None, name='image_9', opacity=1.0, ori=0.0, pos=array([0.2, 0. ]), size=array([0.1 , 0.15]), texRes=128.0, units='height', win=Window(...))
+11.0462 	EXP 	window1: mouseVisible = True
+11.0497 	EXP 	Created image_10 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-14.0, draggable=False, flipHoriz=False, flipVert=False, image='pngs/peaton_rojo.png', interpolate=True, mask=None, maskParams=None, name='image_10', opacity=1.0, ori=0.0, pos=array([ 0.2 , -0.25]), size=array([0.1 , 0.15]), texRes=128.0, units='height', win=Window(...))
+11.0497 	EXP 	window1: mouseVisible = True
+11.0572 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([-0.5,  0. ]), size=array([0.6, 1. ]), texRes=128.0, units='height', win=Window(...))
+11.0573 	EXP 	window1: mouseVisible = True
+11.0641 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0.5, 0. ]), size=array([0.6, 1. ]), texRes=128.0, units='height', win=Window(...))
+11.0643 	EXP 	window1: mouseVisible = True
+11.0649 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0. , 0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0650 	EXP 	window1: mouseVisible = True
+11.0656 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0656 	EXP 	window1: mouseVisible = True
+11.0662 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0.0, pos=array([0. , 0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0663 	EXP 	window1: mouseVisible = True
+11.0668 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0669 	EXP 	window1: mouseVisible = True
+11.0674 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0.0, pos=array([ 0. , -0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0675 	EXP 	window1: mouseVisible = True
+11.0681 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0681 	EXP 	window1: mouseVisible = True
+11.0701 	EXP 	Created text_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_7', opacity=1.0, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='Para salir, pulsa "space"', units='height', win=Window(...), wrapWidth=1)
+0.0282 	EXP 	image_11: autoDraw = True
+0.0282 	EXP 	text_19: autoDraw = True
+5.0317 	EXP 	image_11: autoDraw = False
+5.0317 	EXP 	text_19: autoDraw = False
+5.0317 	EXP 	text_8: autoDraw = True
+5.6377 	DATA 	Keypress: space
+5.6499 	EXP 	text_8: autoDraw = False
+5.6499 	EXP 	image_3: autoDraw = True
+5.6499 	EXP 	image_4: autoDraw = True
+5.6499 	EXP 	text_9: autoDraw = True
+5.6499 	EXP 	text_10: autoDraw = True
+7.2749 	DATA 	Keypress: right
+7.2846 	EXP 	image_3: autoDraw = False
+7.2846 	EXP 	image_4: autoDraw = False
+7.2846 	EXP 	text_9: autoDraw = False
+7.2846 	EXP 	text_10: autoDraw = False
+7.2846 	EXP 	text_11: autoDraw = True
+7.2846 	EXP 	text_12: autoDraw = True
+7.2846 	EXP 	text_13: autoDraw = True
+7.2846 	EXP 	text_14: autoDraw = True
+7.2846 	EXP 	text_15: autoDraw = True
+7.2846 	EXP 	text_16: autoDraw = True
+7.2846 	EXP 	text_17: autoDraw = True
+7.2846 	EXP 	image_5: autoDraw = True
+7.2846 	EXP 	text_18: autoDraw = True
+7.2846 	EXP 	image_6: autoDraw = True
+7.2846 	EXP 	image_7: autoDraw = True
+7.2846 	EXP 	image_8: autoDraw = True
+7.2846 	EXP 	image_9: autoDraw = True
+7.2846 	EXP 	image_10: autoDraw = True
+7.8399 	DATA 	Keypress: left
+8.8103 	EXP 	Imported trials_coche.csv as conditions, 40 conditions, 14 params
+8.8108 	EXP 	Created sequence: random, trialTypes=40, nReps=1, seed=None
+8.8110 	EXP 	New trial (rep=0, index=0): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\29.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\30.png'), ('hm1', -1), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 1), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+8.9386 	DATA 	Keypress: space
+8.9490 	EXP 	text_11: autoDraw = False
+8.9490 	EXP 	text_12: autoDraw = False
+8.9490 	EXP 	text_13: autoDraw = False
+8.9490 	EXP 	text_14: autoDraw = False
+8.9490 	EXP 	text_15: autoDraw = False
+8.9490 	EXP 	text_16: autoDraw = False
+8.9490 	EXP 	text_17: autoDraw = False
+8.9490 	EXP 	image_5: autoDraw = False
+8.9490 	EXP 	text_18: autoDraw = False
+8.9490 	EXP 	image_6: autoDraw = False
+8.9490 	EXP 	image_7: autoDraw = False
+8.9490 	EXP 	image_8: autoDraw = False
+8.9490 	EXP 	image_9: autoDraw = False
+8.9490 	EXP 	image_10: autoDraw = False
+8.9490 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\29.png'
+8.9490 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\30.png'
+8.9490 	EXP 	image: autoDraw = True
+8.9490 	EXP 	image_2: autoDraw = True
+9.6558 	EXP 	New trial (rep=0, index=1): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\35.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\36.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+9.7823 	DATA 	Keypress: left
+9.7824 	DATA 	Keypress: right
+9.8017 	EXP 	image: autoDraw = False
+9.8017 	EXP 	image_2: autoDraw = False
+9.8017 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\35.png'
+9.8017 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\36.png'
+9.8017 	EXP 	image: autoDraw = True
+9.8017 	EXP 	image_2: autoDraw = True
+9.9883 	EXP 	New trial (rep=0, index=2): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\25.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\26.png'), ('hm1', 1), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', -1), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+10.1209 	DATA 	Keypress: right
+10.1210 	DATA 	Keypress: left
+10.1380 	EXP 	image: autoDraw = False
+10.1380 	EXP 	image_2: autoDraw = False
+10.1380 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\25.png'
+10.1380 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\26.png'
+10.1380 	EXP 	image: autoDraw = True
+10.1380 	EXP 	image_2: autoDraw = True
+10.2555 	EXP 	New trial (rep=0, index=3): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\13.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\14.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+10.3745 	DATA 	Keypress: right
+10.3816 	EXP 	image: autoDraw = False
+10.3816 	EXP 	image_2: autoDraw = False
+10.3816 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\13.png'
+10.3816 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\14.png'
+10.3816 	EXP 	image: autoDraw = True
+10.3816 	EXP 	image_2: autoDraw = True
+10.4719 	EXP 	New trial (rep=0, index=4): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\71.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\72.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 1), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', -1)])
+10.6185 	DATA 	Keypress: right
+10.6351 	EXP 	image: autoDraw = False
+10.6351 	EXP 	image_2: autoDraw = False
+10.6351 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\71.png'
+10.6351 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\72.png'
+10.6351 	EXP 	image: autoDraw = True
+10.6351 	EXP 	image_2: autoDraw = True
+10.6375 	DATA 	Keypress: right
+10.8228 	DATA 	Keypress: left
+10.8392 	EXP 	New trial (rep=0, index=5): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\67.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\68.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', -1), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 1)])
+10.9724 	EXP 	image: autoDraw = False
+10.9724 	EXP 	image_2: autoDraw = False
+10.9724 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\67.png'
+10.9724 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\68.png'
+10.9724 	EXP 	image: autoDraw = True
+10.9724 	EXP 	image_2: autoDraw = True
+11.0060 	EXP 	New trial (rep=0, index=6): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\59.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\60.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+11.1326 	DATA 	Keypress: right
+11.1404 	EXP 	image: autoDraw = False
+11.1404 	EXP 	image_2: autoDraw = False
+11.1404 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\59.png'
+11.1404 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\60.png'
+11.1404 	EXP 	image: autoDraw = True
+11.1404 	EXP 	image_2: autoDraw = True
+11.1727 	EXP 	New trial (rep=0, index=7): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\75.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\76.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 1), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', -1)])
+11.2933 	DATA 	Keypress: left
+11.3005 	EXP 	image: autoDraw = False
+11.3005 	EXP 	image_2: autoDraw = False
+11.3005 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\75.png'
+11.3005 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\76.png'
+11.3005 	EXP 	image: autoDraw = True
+11.3005 	EXP 	image_2: autoDraw = True
+11.3750 	DATA 	Keypress: right
+11.3893 	EXP 	New trial (rep=0, index=8): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\23.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\24.png'), ('hm1', 1), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', -1), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+11.5180 	EXP 	image: autoDraw = False
+11.5180 	EXP 	image_2: autoDraw = False
+11.5180 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\23.png'
+11.5180 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\24.png'
+11.5180 	EXP 	image: autoDraw = True
+11.5180 	EXP 	image_2: autoDraw = True
+11.5426 	EXP 	New trial (rep=0, index=9): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\39.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\40.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+11.6750 	DATA 	Keypress: left
+11.6829 	EXP 	image: autoDraw = False
+11.6829 	EXP 	image_2: autoDraw = False
+11.6829 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\39.png'
+11.6829 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\40.png'
+11.6829 	EXP 	image: autoDraw = True
+11.6829 	EXP 	image_2: autoDraw = True
+11.7906 	EXP 	New trial (rep=0, index=10): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\19.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\20.png'), ('hm1', -1), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 1), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+11.9153 	DATA 	Keypress: left
+11.9236 	EXP 	image: autoDraw = False
+11.9236 	EXP 	image_2: autoDraw = False
+11.9236 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\19.png'
+11.9236 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\20.png'
+11.9236 	EXP 	image: autoDraw = True
+11.9236 	EXP 	image_2: autoDraw = True
+11.9746 	EXP 	New trial (rep=0, index=11): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\45.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\46.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 1), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', -1), ('vr2', 1), ('cl2', 0)])
+12.0998 	DATA 	Keypress: left
+12.1175 	EXP 	image: autoDraw = False
+12.1175 	EXP 	image_2: autoDraw = False
+12.1175 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\45.png'
+12.1175 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\46.png'
+12.1175 	EXP 	image: autoDraw = True
+12.1175 	EXP 	image_2: autoDraw = True
+12.1575 	EXP 	New trial (rep=0, index=12): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\43.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\44.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', -1), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 1), ('vr2', 1), ('cl2', 0)])
+12.2814 	DATA 	Keypress: left
+12.2984 	EXP 	image: autoDraw = False
+12.2984 	EXP 	image_2: autoDraw = False
+12.2984 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\43.png'
+12.2984 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\44.png'
+12.2984 	EXP 	image: autoDraw = True
+12.2984 	EXP 	image_2: autoDraw = True
+12.3743 	EXP 	New trial (rep=0, index=13): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\65.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\66.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', -1), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 1)])
+12.4948 	DATA 	Keypress: right
+12.5118 	EXP 	image: autoDraw = False
+12.5118 	EXP 	image_2: autoDraw = False
+12.5118 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\65.png'
+12.5118 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\66.png'
+12.5118 	EXP 	image: autoDraw = True
+12.5118 	EXP 	image_2: autoDraw = True
+12.5508 	EXP 	New trial (rep=0, index=14): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\11.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\12.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+12.6765 	DATA 	Keypress: right
+12.6929 	EXP 	image: autoDraw = False
+12.6929 	EXP 	image_2: autoDraw = False
+12.6929 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\11.png'
+12.6929 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\12.png'
+12.6929 	EXP 	image: autoDraw = True
+12.6929 	EXP 	image_2: autoDraw = True
+12.6959 	DATA 	Keypress: right
+12.7016 	EXP 	New trial (rep=0, index=15): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\5.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\6.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+12.8375 	EXP 	image: autoDraw = False
+12.8375 	EXP 	image_2: autoDraw = False
+12.8375 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\5.png'
+12.8375 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\6.png'
+12.8375 	EXP 	image: autoDraw = True
+12.8375 	EXP 	image_2: autoDraw = True
+12.8581 	EXP 	New trial (rep=0, index=16): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\17.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\18.png'), ('hm1', -1), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 1), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+12.9790 	DATA 	Keypress: right
+12.9876 	EXP 	image: autoDraw = False
+12.9876 	EXP 	image_2: autoDraw = False
+12.9876 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\17.png'
+12.9876 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\18.png'
+12.9876 	EXP 	image: autoDraw = True
+12.9876 	EXP 	image_2: autoDraw = True
+13.0748 	EXP 	New trial (rep=0, index=17): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\3.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\4.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+13.1950 	DATA 	Keypress: right
+13.2121 	EXP 	image: autoDraw = False
+13.2121 	EXP 	image_2: autoDraw = False
+13.2121 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\3.png'
+13.2121 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\4.png'
+13.2121 	EXP 	image: autoDraw = True
+13.2121 	EXP 	image_2: autoDraw = True
+13.2413 	EXP 	New trial (rep=0, index=18): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\27.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\28.png'), ('hm1', 1), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', -1), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+13.3616 	DATA 	Keypress: left
+13.3684 	EXP 	image: autoDraw = False
+13.3684 	EXP 	image_2: autoDraw = False
+13.3684 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\27.png'
+13.3684 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\28.png'
+13.3684 	EXP 	image: autoDraw = True
+13.3684 	EXP 	image_2: autoDraw = True
+13.4580 	EXP 	New trial (rep=0, index=19): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\79.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\80.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', -1), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 1)])
+13.6037 	DATA 	Keypress: right
+13.6049 	DATA 	Keypress: left
+13.6134 	EXP 	image: autoDraw = False
+13.6134 	EXP 	image_2: autoDraw = False
+13.6134 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\79.png'
+13.6134 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\80.png'
+13.6134 	EXP 	image: autoDraw = True
+13.6134 	EXP 	image_2: autoDraw = True
+13.7086 	EXP 	New trial (rep=0, index=20): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\57.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\58.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+13.8341 	DATA 	Keypress: right
+13.8508 	EXP 	image: autoDraw = False
+13.8508 	EXP 	image_2: autoDraw = False
+13.8508 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\57.png'
+13.8508 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\58.png'
+13.8508 	EXP 	image: autoDraw = True
+13.8508 	EXP 	image_2: autoDraw = True
+13.9422 	EXP 	New trial (rep=0, index=21): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\77.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\78.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', -1), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 1)])
+14.0667 	DATA 	Keypress: left
+14.0746 	EXP 	image: autoDraw = False
+14.0746 	EXP 	image_2: autoDraw = False
+14.0746 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\77.png'
+14.0746 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\78.png'
+14.0746 	EXP 	image: autoDraw = True
+14.0746 	EXP 	image_2: autoDraw = True
+14.1422 	EXP 	New trial (rep=0, index=22): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\47.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\48.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 1), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', -1), ('vr2', -1), ('cl2', 0)])
+14.2666 	DATA 	Keypress: left
+14.2847 	EXP 	image: autoDraw = False
+14.2847 	EXP 	image_2: autoDraw = False
+14.2847 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\47.png'
+14.2847 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\48.png'
+14.2847 	EXP 	image: autoDraw = True
+14.2847 	EXP 	image_2: autoDraw = True
+14.3926 	EXP 	New trial (rep=0, index=23): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\37.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\38.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+14.5191 	DATA 	Keypress: left
+14.5628 	EXP 	image: autoDraw = False
+14.5628 	EXP 	image_2: autoDraw = False
+14.5628 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\37.png'
+14.5628 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\38.png'
+14.5628 	EXP 	image: autoDraw = True
+14.5628 	EXP 	image_2: autoDraw = True
+14.5668 	DATA 	Keypress: right
+14.7599 	EXP 	New trial (rep=0, index=24): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\55.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\56.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', -1), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 1), ('vr2', -1), ('cl2', 0)])
+14.8797 	DATA 	Keypress: right
+14.8961 	EXP 	image: autoDraw = False
+14.8961 	EXP 	image_2: autoDraw = False
+14.8961 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\55.png'
+14.8961 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\56.png'
+14.8961 	EXP 	image: autoDraw = True
+14.8961 	EXP 	image_2: autoDraw = True
+14.9431 	EXP 	New trial (rep=0, index=25): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\69.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\70.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 1), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', -1)])
+15.0680 	DATA 	Keypress: right
+15.0846 	EXP 	image: autoDraw = False
+15.0846 	EXP 	image_2: autoDraw = False
+15.0846 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\69.png'
+15.0846 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\70.png'
+15.0846 	EXP 	image: autoDraw = True
+15.0846 	EXP 	image_2: autoDraw = True
+15.0868 	DATA 	Keypress: left
+15.0931 	EXP 	New trial (rep=0, index=26): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\33.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\34.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+15.2189 	EXP 	image: autoDraw = False
+15.2189 	EXP 	image_2: autoDraw = False
+15.2189 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\33.png'
+15.2189 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\34.png'
+15.2189 	EXP 	image: autoDraw = True
+15.2189 	EXP 	image_2: autoDraw = True
+15.3265 	EXP 	New trial (rep=0, index=27): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\31.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\32.png'), ('hm1', -1), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 1), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+15.4515 	DATA 	Keypress: left
+15.4681 	EXP 	image: autoDraw = False
+15.4681 	EXP 	image_2: autoDraw = False
+15.4681 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\31.png'
+15.4681 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\32.png'
+15.4681 	EXP 	image: autoDraw = True
+15.4681 	EXP 	image_2: autoDraw = True
+15.5102 	EXP 	New trial (rep=0, index=28): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\15.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\16.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+15.6516 	DATA 	Keypress: right
+15.6601 	EXP 	image: autoDraw = False
+15.6601 	EXP 	image_2: autoDraw = False
+15.6601 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\15.png'
+15.6601 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\16.png'
+15.6601 	EXP 	image: autoDraw = True
+15.6601 	EXP 	image_2: autoDraw = True
+15.6940 	EXP 	New trial (rep=0, index=29): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\61.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\62.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+15.8197 	DATA 	Keypress: left
+15.8364 	EXP 	image: autoDraw = False
+15.8364 	EXP 	image_2: autoDraw = False
+15.8364 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\61.png'
+15.8364 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\62.png'
+15.8364 	EXP 	image: autoDraw = True
+15.8364 	EXP 	image_2: autoDraw = True
+16.1108 	EXP 	New trial (rep=0, index=30): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\53.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\54.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', -1), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 1), ('vr2', 1), ('cl2', 0)])
+16.2299 	DATA 	Keypress: left
+16.2372 	EXP 	image: autoDraw = False
+16.2372 	EXP 	image_2: autoDraw = False
+16.2372 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\53.png'
+16.2372 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\54.png'
+16.2372 	EXP 	image: autoDraw = True
+16.2372 	EXP 	image_2: autoDraw = True
+16.3123 	DATA 	Keypress: left
+16.3277 	EXP 	New trial (rep=0, index=31): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\51.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\52.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 1), ('vr1', -1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', -1), ('vr2', 1), ('cl2', 0)])
+16.4695 	EXP 	image: autoDraw = False
+16.4695 	EXP 	image_2: autoDraw = False
+16.4695 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\51.png'
+16.4695 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\52.png'
+16.4695 	EXP 	image: autoDraw = True
+16.4695 	EXP 	image_2: autoDraw = True
+16.5654 	EXP 	New trial (rep=0, index=32): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\21.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\22.png'), ('hm1', 1), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', -1), ('cl1', 0), ('hm2', -1), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', 1), ('cl2', 0)])
+16.6917 	DATA 	Keypress: right
+16.7094 	EXP 	image: autoDraw = False
+16.7094 	EXP 	image_2: autoDraw = False
+16.7094 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\21.png'
+16.7094 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\22.png'
+16.7094 	EXP 	image: autoDraw = True
+16.7094 	EXP 	image_2: autoDraw = True
+16.7450 	EXP 	New trial (rep=0, index=33): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\1.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\2.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+16.8646 	DATA 	Keypress: right
+16.8718 	EXP 	image: autoDraw = False
+16.8718 	EXP 	image_2: autoDraw = False
+16.8718 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\1.png'
+16.8718 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\2.png'
+16.8718 	EXP 	image: autoDraw = True
+16.8718 	EXP 	image_2: autoDraw = True
+16.9286 	EXP 	New trial (rep=0, index=34): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\63.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\64.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+17.0551 	DATA 	Keypress: right
+17.0720 	EXP 	image: autoDraw = False
+17.0720 	EXP 	image_2: autoDraw = False
+17.0720 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\63.png'
+17.0720 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\64.png'
+17.0720 	EXP 	image: autoDraw = True
+17.0720 	EXP 	image_2: autoDraw = True
+17.1618 	EXP 	New trial (rep=0, index=35): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\49.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\50.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 1), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', -1), ('vr2', -1), ('cl2', 0)])
+17.2862 	DATA 	Keypress: right
+17.3047 	EXP 	image: autoDraw = False
+17.3047 	EXP 	image_2: autoDraw = False
+17.3047 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\49.png'
+17.3047 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\50.png'
+17.3047 	EXP 	image: autoDraw = True
+17.3047 	EXP 	image_2: autoDraw = True
+17.3460 	EXP 	New trial (rep=0, index=36): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\7.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\8.png'), ('hm1', 0), ('cp1', 1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', -1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+17.4712 	DATA 	Keypress: right
+17.4884 	EXP 	image: autoDraw = False
+17.4884 	EXP 	image_2: autoDraw = False
+17.4884 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\7.png'
+17.4884 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\8.png'
+17.4884 	EXP 	image: autoDraw = True
+17.4884 	EXP 	image_2: autoDraw = True
+17.4969 	EXP 	New trial (rep=0, index=37): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\9.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\10.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', 0)])
+17.6525 	DATA 	Keypress: left
+17.6702 	EXP 	image: autoDraw = False
+17.6702 	EXP 	image_2: autoDraw = False
+17.6702 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\9.png'
+17.6702 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\10.png'
+17.6702 	EXP 	image: autoDraw = True
+17.6702 	EXP 	image_2: autoDraw = True
+17.6725 	EXP 	New trial (rep=0, index=38): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\41.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\42.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', -1), ('vr1', 1), ('cl1', 0), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 1), ('vr2', -1), ('cl2', 0)])
+17.7930 	DATA 	Keypress: left
+17.8000 	EXP 	image: autoDraw = False
+17.8000 	EXP 	image_2: autoDraw = False
+17.8000 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\41.png'
+17.8000 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\42.png'
+17.8000 	EXP 	image: autoDraw = True
+17.8000 	EXP 	image_2: autoDraw = True
+17.8634 	EXP 	New trial (rep=0, index=39): OrderedDict([('imagen1', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\73.png'), ('imagen2', 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\74.png'), ('hm1', 0), ('cp1', -1), ('ai1', 1), ('pa1', 0), ('vr1', 1), ('cl1', 1), ('hm2', 0), ('cp2', 1), ('ai2', -1), ('pa2', 0), ('vr2', -1), ('cl2', -1)])
+17.9881 	DATA 	Keypress: left
+17.9962 	EXP 	image: autoDraw = False
+17.9962 	EXP 	image_2: autoDraw = False
+17.9962 	EXP 	image: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\73.png'
+17.9962 	EXP 	image_2: image = 'C:\\Users\\david\\OneDrive\\Documentos\\GitHub\\OpenBrains\\coche_autonomo_pavlovia\\task\\pngs\\74.png'
+17.9962 	EXP 	image: autoDraw = True
+17.9962 	EXP 	image_2: autoDraw = True
+18.2468 	DATA 	Keypress: left
+18.2847 	EXP 	image: autoDraw = False
+18.2847 	EXP 	image_2: autoDraw = False
+18.2847 	EXP 	text: height = 0.04
+18.2847 	EXP 	text: height = 0.04
+18.2847 	EXP 	text: height = 0.04
+18.2847 	EXP 	text: text = 'Salvar hombres antes que mujeres = 37.5%'
+18.2847 	EXP 	text_2: height = 0.04
+18.2847 	EXP 	text_2: height = 0.04
+18.2847 	EXP 	text_2: height = 0.04
+18.2847 	EXP 	text_2: text = 'Salvar conductor antes que peatón = 60.0%'
+18.2847 	EXP 	text_3: height = 0.04
+18.2847 	EXP 	text_3: height = 0.04
+18.2847 	EXP 	text_3: height = 0.04
+18.2847 	EXP 	text_3: text = 'Dejar que el coche vaya recto = 50.0%'
+18.2847 	EXP 	text_4: height = 0.04
+18.2847 	EXP 	text_4: height = 0.04
+18.2847 	EXP 	text_4: height = 0.04
+18.2847 	EXP 	text_4: text = 'Salvar personas antes que animales = 50.0%'
+18.2847 	EXP 	text_5: height = 0.04
+18.2847 	EXP 	text_5: height = 0.04
+18.2847 	EXP 	text_5: height = 0.04
+18.2847 	EXP 	text_5: text = 'Salvar a quien respeta la ley = 55.0%'
+18.2847 	EXP 	text_6: height = 0.04
+18.2847 	EXP 	text_6: height = 0.04
+18.2847 	EXP 	text_6: height = 0.04
+18.2847 	EXP 	text_6: text = 'Salvar a cívicos antes que ladrones = 75.0%'
+18.2847 	EXP 	text: autoDraw = True
+18.2847 	EXP 	text_2: autoDraw = True
+18.2847 	EXP 	text_3: autoDraw = True
+18.2847 	EXP 	text_4: autoDraw = True
+18.2847 	EXP 	text_5: autoDraw = True
+18.2847 	EXP 	text_6: autoDraw = True
+18.2847 	EXP 	text_7: autoDraw = True
+18.3834 	DATA 	Keypress: right
+19.8818 	DATA 	Keypress: space
+19.8974 	EXP 	text: autoDraw = False
+19.8974 	EXP 	text_2: autoDraw = False
+19.8974 	EXP 	text_3: autoDraw = False
+19.8974 	EXP 	text_4: autoDraw = False
+19.8974 	EXP 	text_5: autoDraw = False
+19.8974 	EXP 	text_6: autoDraw = False
+19.8974 	EXP 	text_7: autoDraw = False
+19.8976 	EXP 	untitled: status = STOPPED
+19.9723 	EXP 	window1: mouseVisible = True
