@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on July 11, 2024, at 12:17
+    on July 12, 2024, at 10:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -619,7 +619,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Run Routine "Portada" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 10.0:
+    while continueRoutine and routineTimer.getTime() < 5.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -650,7 +650,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # if image_11 is stopping this frame...
         if image_11.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > image_11.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > image_11.tStartRefresh + 5-frameTolerance:
                 # keep track of stop time/frame for later
                 image_11.tStop = t  # not accounting for scr refresh
                 image_11.frameNStop = frameN  # exact frame index
@@ -683,7 +683,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # if text_19 is stopping this frame...
         if text_19.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_19.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > text_19.tStartRefresh + 5-frameTolerance:
                 # keep track of stop time/frame for later
                 text_19.tStop = t  # not accounting for scr refresh
                 text_19.frameNStop = frameN  # exact frame index
@@ -723,7 +723,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-10.000000)
+        routineTimer.addTime(-5.000000)
     
     # --- Prepare to start Routine "Instruccions" ---
     continueRoutine = True
