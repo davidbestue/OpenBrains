@@ -1,0 +1,21 @@
+4.7533 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+5.4699 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B540AB5CD0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B540AB5C70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B540AB5AF0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002B54104A9A0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.4701 	EXP 	window1: mouseVisible = True
+5.4701 	EXP 	window1: backgroundImage = ''
+5.4701 	EXP 	window1: backgroundFit = 'none'
+5.4723 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.4723 	EXP 	window1: recordFrameIntervals = False
+5.6351 	EXP 	window1: recordFrameIntervals = True
+5.8196 	EXP 	Screen (0) actual frame rate measured at 59.74Hz
+5.8197 	EXP 	window1: recordFrameIntervals = False
+5.8200 	EXP 	window1: mouseVisible = False
+7.7840 	EXP 	tarea_iceberg: status = STARTED
+7.7863 	EXP 	window1: mouseVisible = True
+7.9649 	EXP 	window1: mouseVisible = True
+7.9818 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+7.9824 	EXP 	window1: mouseVisible = True
+8.0695 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='¡Empezamos la segunda ronda!', units='height', win=Window(...), wrapWidth=1)
+8.0696 	EXP 	window1: mouseVisible = True
+8.1804 	EXP 	window1: mouseVisible = True
+8.1886 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+8.3659 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,44 @@
+4.8328 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+5.4739 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000205705BDD00>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000205705BDCA0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000205705BDAC0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000020570B77C40>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.4741 	EXP 	window1: mouseVisible = True
+5.4741 	EXP 	window1: backgroundImage = ''
+5.4741 	EXP 	window1: backgroundFit = 'none'
+5.4770 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.4770 	EXP 	window1: recordFrameIntervals = False
+5.6399 	EXP 	window1: recordFrameIntervals = True
+5.8236 	EXP 	Screen (0) actual frame rate measured at 60.09Hz
+5.8237 	EXP 	window1: recordFrameIntervals = False
+5.8241 	EXP 	window1: mouseVisible = False
+8.0055 	EXP 	tarea_iceberg: status = STARTED
+8.0076 	EXP 	window1: mouseVisible = True
+8.1737 	EXP 	window1: mouseVisible = True
+8.1875 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128.0, units='height', win=Window(...))
+0.0092 	EXP 	movie: autoLog = True
+0.0156 	EXP 	Imported imgs/trials_iceberg.xlsx as conditions, 4 conditions, 3 params
+0.0161 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+0.0163 	EXP 	New trial (rep=0, index=0): {'timepresentation': 3, 'posx': -0.5, 'posy': 0.2}
+0.0884 	EXP 	image: image = 'imgs/iceberg.png'
+0.0884 	EXP 	movie: autoDraw = True
+3.0059 	EXP 	image: autoDraw = True
+5.4448 	EXP 	New trial (rep=0, index=1): {'timepresentation': 4, 'posx': 0.3, 'posy': 0.2}
+5.5027 	EXP 	movie: autoDraw = False
+5.5027 	EXP 	image: autoDraw = False
+5.5027 	EXP 	image: image = 'imgs/iceberg.png'
+5.5027 	EXP 	movie: autoDraw = True
+9.4475 	EXP 	image: autoDraw = True
+15.8678 	EXP 	New trial (rep=0, index=2): {'timepresentation': 8, 'posx': 0.5, 'posy': 0.2}
+15.9213 	EXP 	movie: autoDraw = False
+15.9213 	EXP 	image: autoDraw = False
+15.9213 	EXP 	image: image = 'imgs/iceberg.png'
+15.9213 	EXP 	movie: autoDraw = True
+23.8722 	EXP 	image: autoDraw = True
+24.4132 	EXP 	New trial (rep=0, index=3): {'timepresentation': 6, 'posx': -0.3, 'posy': 0.2}
+24.4641 	EXP 	movie: autoDraw = False
+24.4641 	EXP 	image: autoDraw = False
+24.4641 	EXP 	image: image = 'imgs/iceberg.png'
+24.4641 	EXP 	movie: autoDraw = True
+30.4185 	EXP 	image: autoDraw = True
+34.3564 	EXP 	movie: autoDraw = False
+34.3564 	EXP 	image: autoDraw = False
+34.3565 	EXP 	tarea_iceberg: status = STOPPED
+34.4324 	EXP 	window1: mouseVisible = True

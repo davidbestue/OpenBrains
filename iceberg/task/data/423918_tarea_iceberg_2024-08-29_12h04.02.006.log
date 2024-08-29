@@ -1,0 +1,106 @@
+4.8935 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+5.6605 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000014590C21C70>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000014590C21C10>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000014590C21A30>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000145911DAB50>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.6607 	EXP 	window1: mouseVisible = True
+5.6607 	EXP 	window1: backgroundImage = ''
+5.6608 	EXP 	window1: backgroundFit = 'none'
+5.6632 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.6632 	EXP 	window1: recordFrameIntervals = False
+5.8259 	EXP 	window1: recordFrameIntervals = True
+6.0092 	EXP 	Screen (0) actual frame rate measured at 60.37Hz
+6.0092 	EXP 	window1: recordFrameIntervals = False
+6.0096 	EXP 	window1: mouseVisible = False
+7.9881 	EXP 	tarea_iceberg: status = STARTED
+7.9904 	EXP 	window1: mouseVisible = True
+8.1436 	EXP 	window1: mouseVisible = True
+8.1594 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+8.1601 	EXP 	window1: mouseVisible = True
+8.2229 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='¡Empezamos la segunda ronda!', units='height', win=Window(...), wrapWidth=1)
+8.2231 	EXP 	window1: mouseVisible = True
+8.3252 	EXP 	window1: mouseVisible = True
+8.3377 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+9.4835 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/song_titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+10.5826 	WARNING 	1.0991090999996231: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.041666666666666664
+10.5827 	WARNING 	1.0991838999998436: Video catchup needed, advancing self._nextFrameT from 0.041666666666666664 to 0.08333333333333333
+10.5827 	WARNING 	1.099198999998407: Video catchup needed, advancing self._nextFrameT from 0.08333333333333333 to 0.125
+10.5827 	WARNING 	1.0992095999990852: Video catchup needed, advancing self._nextFrameT from 0.125 to 0.16666666666666666
+10.5827 	WARNING 	1.099219899999298: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.20833333333333331
+10.5827 	WARNING 	1.0992310000001453: Video catchup needed, advancing self._nextFrameT from 0.20833333333333331 to 0.24999999999999997
+10.5827 	WARNING 	1.0992410999988351: Video catchup needed, advancing self._nextFrameT from 0.24999999999999997 to 0.29166666666666663
+10.5827 	WARNING 	1.0992502999997669: Video catchup needed, advancing self._nextFrameT from 0.29166666666666663 to 0.3333333333333333
+10.5828 	WARNING 	1.0992593999999372: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.375
+10.5828 	WARNING 	1.0992682999985846: Video catchup needed, advancing self._nextFrameT from 0.375 to 0.4166666666666667
+10.5828 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+10.6161 	EXP 	window1: mouseVisible = True
+10.7105 	EXP 	window1: mouseVisible = True
+10.7203 	EXP 	Created image_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+0.0032 	EXP 	movie: autoLog = True
+0.0032 	EXP 	movie_2: autoLog = True
+0.0032 	EXP 	unnamed MovieStim3: autoLog = True
+0.0032 	EXP 	unnamed MovieStim3: movie = 'imgs/song_titanic.mp4'
+0.0032 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0032 	EXP 	movie_3: autoLog = True
+0.0075 	EXP 	Imported imgs/trials_fake.xlsx as conditions, 2 conditions, 3 params
+0.0079 	EXP 	Created sequence: random, trialTypes=2, nReps=1, seed=None
+0.0080 	EXP 	New trial (rep=0, index=0): {'timepresentation': 2, 'posx': -0.8, 'posy': 0.15}
+0.0716 	EXP 	image: image = 'imgs/iceberg.png'
+0.0716 	EXP 	movie: autoDraw = True
+2.0050 	EXP 	image: autoDraw = True
+12.4144 	EXP 	New trial (rep=0, index=1): {'timepresentation': 2, 'posx': -0.7, 'posy': 0.15}
+12.4670 	DATA 	Keypress: space
+12.4729 	EXP 	movie: autoDraw = False
+12.4729 	EXP 	image: autoDraw = False
+12.4729 	EXP 	image: image = 'imgs/iceberg.png'
+12.4729 	EXP 	movie: autoDraw = True
+14.4136 	EXP 	image: autoDraw = True
+16.5015 	DATA 	Keypress: space
+16.6417 	EXP 	movie: autoDraw = False
+16.6417 	EXP 	image: autoDraw = False
+16.6417 	EXP 	text: autoDraw = True
+19.6442 	EXP 	Imported imgs/trials_iceberg_2.xlsx as conditions, 8 conditions, 3 params
+19.6447 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+19.6448 	EXP 	New trial (rep=0, index=0): {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}
+19.6495 	EXP 	Sound  started
+19.6964 	EXP 	text: autoDraw = False
+19.6964 	EXP 	image_2: image = 'imgs/iceberg.png'
+19.6964 	EXP 	Set unnamed MovieStim3 playing
+19.6964 	EXP 	movie_2: autoDraw = True
+27.6388 	EXP 	image_2: autoDraw = True
+28.3080 	EXP 	New trial (rep=0, index=1): {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}
+28.3599 	DATA 	Keypress: space
+28.3655 	EXP 	movie_2: autoDraw = False
+28.3655 	EXP 	image_2: autoDraw = False
+28.3655 	EXP 	image_2: image = 'imgs/iceberg.png'
+28.3655 	EXP 	movie_2: autoDraw = True
+31.3182 	EXP 	image_2: autoDraw = True
+33.4899 	EXP 	New trial (rep=0, index=2): {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}
+33.5379 	DATA 	Keypress: space
+33.5440 	EXP 	movie_2: autoDraw = False
+33.5440 	EXP 	image_2: autoDraw = False
+33.5440 	EXP 	image_2: image = 'imgs/iceberg.png'
+33.5440 	EXP 	movie_2: autoDraw = True
+37.4985 	EXP 	image_2: autoDraw = True
+38.9933 	EXP 	New trial (rep=0, index=3): {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}
+39.0407 	DATA 	Keypress: space
+39.0467 	EXP 	movie_2: autoDraw = False
+39.0467 	EXP 	image_2: autoDraw = False
+39.0467 	EXP 	image_2: image = 'imgs/iceberg.png'
+39.0467 	EXP 	movie_2: autoDraw = True
+51.0070 	EXP 	image_2: autoDraw = True
+51.5352 	EXP 	New trial (rep=0, index=4): {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}
+51.5842 	DATA 	Keypress: space
+51.5901 	EXP 	movie_2: autoDraw = False
+51.5901 	EXP 	image_2: autoDraw = False
+51.5901 	EXP 	image_2: image = 'imgs/iceberg.png'
+51.5901 	EXP 	movie_2: autoDraw = True
+62.5495 	EXP 	image_2: autoDraw = True
+63.0384 	EXP 	New trial (rep=0, index=5): {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}
+63.0877 	DATA 	Keypress: space
+63.0966 	EXP 	movie_2: autoDraw = False
+63.0966 	EXP 	image_2: autoDraw = False
+63.0966 	EXP 	image_2: image = 'imgs/iceberg.png'
+63.0966 	EXP 	movie_2: autoDraw = True
+67.3487 	DATA 	Keypress: escape
+67.4474 	EXP 	tarea_iceberg: status = STOPPED
+67.4594 	EXP 	movie_2: autoDraw = False
+67.4595 	EXP 	tarea_iceberg: status = STOPPED
+67.6651 	EXP 	window1: mouseVisible = True
