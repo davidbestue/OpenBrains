@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on August 29, 2024, at 12:49
+    on August 29, 2024, at 13:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -315,14 +315,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "control" ---
-    movie = visual.MovieStim(
-        win, name='movie',
-        filename='imgs/video_mar.mp4', movieLib='ffpyplayer',
-        loop=False, volume=1.0, noAudio=False,
-        pos=(0, 0), size=(1.8, 1.2), units=win.units,
-        ori=0.0, anchor='center',opacity=None, contrast=1.0,
-        depth=0
-    )
     image = visual.ImageStim(
         win=win,
         name='image', 
@@ -330,8 +322,18 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         ori=0.0, pos=[0,0], size=(0.35, 0.35),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
+        texRes=128.0, interpolate=True, depth=0.0)
     key_resp = keyboard.Keyboard()
+    # Run 'Begin Experiment' code from mar1
+    mar_movie = visual.MovieStim3(
+        win=win,                        # Ventana en la que se va a mostrar el video
+        filename='imgs/video_mar.mp4', # Ruta al archivo de video
+        size=(1900,1200),               # Tamaño del video (opcional)
+        pos=(0,0),
+        flipVert=False,                 # Si se debe voltear verticalmente
+        flipHoriz=False,                # Si se debe voltear horizontalmente
+        loop=True                      # Si el video debe repetirse
+    )
     
     # --- Initialize components for Routine "instructions2" ---
     text = visual.TextStim(win=win, name='text',
@@ -343,14 +345,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "music" ---
-    movie_2 = visual.MovieStim(
-        win, name='movie_2',
-        filename='imgs/video_mar.mp4', movieLib='ffpyplayer',
-        loop=False, volume=1.0, noAudio=False,
-        pos=(0, 0), size=(1.8, 1.2), units=win.units,
-        ori=0.0, anchor='center',opacity=None, contrast=1.0,
-        depth=0
-    )
     image_2 = visual.ImageStim(
         win=win,
         name='image_2', 
@@ -358,7 +352,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         ori=0.0, pos=[0,0], size=(0.35, 0.35),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
+        texRes=128.0, interpolate=True, depth=0.0)
     key_resp_2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
     #background_sound = visual.MovieStim('imgs/song_titanic.mp4')
@@ -385,13 +379,15 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "music_words" ---
-    movie_3 = visual.MovieStim(
-        win, name='movie_3',
-        filename='imgs/video_mar.mp4', movieLib='ffpyplayer',
-        loop=False, volume=1.0, noAudio=False,
-        pos=(0, 0), size=(1.8, 1.2), units=win.units,
-        ori=0.0, anchor='center',opacity=None, contrast=1.0,
-        depth=0
+    # Run 'Begin Experiment' code from code_2
+    background_movie = visual.MovieStim3(
+        win=win,                        # Ventana en la que se va a mostrar el video
+        filename='imgs/video_celine.mp4', # Ruta al archivo de video
+        size=(10,10),               # Tamaño del video (opcional)
+        pos=(0,0),
+        flipVert=False,                 # Si se debe voltear verticalmente
+        flipHoriz=False,                # Si se debe voltear horizontalmente
+        loop=False                      # Si el video debe repetirse
     )
     image_3 = visual.ImageStim(
         win=win,
@@ -400,22 +396,38 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         ori=0.0, pos=[0,0], size=(0.35, 0.35),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
-    # Run 'Begin Experiment' code from code_2
-    #background_sound = visual.MovieStim('imgs/song_titanic.mp4')
-    #background_sound = sound.Sound('imgs/song_titanic.mp4')
-    #myMovie.movie = 'imgs/song_titanic.mp4'
+        texRes=128.0, interpolate=True, depth=-2.0)
+    key_resp_3 = keyboard.Keyboard()
     
-    background_movie = visual.MovieStim3(
+    # --- Initialize components for Routine "instructions4" ---
+    text_3 = visual.TextStim(win=win, name='text_3',
+        text='¡última ronda!',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
+    # --- Initialize components for Routine "music_video" ---
+    # Run 'Begin Experiment' code from code_3
+    background_movie2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/video_celine.mp4', # Ruta al archivo de video
-        size=(1000,1000),               # Tamaño del video (opcional)
-        pos=(0,0),
+        size=(400,300),               # Tamaño del video (opcional)
+        pos=(0,100),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
         loop=False                      # Si el video debe repetirse
     )
-    key_resp_3 = keyboard.Keyboard()
+    image_4 = visual.ImageStim(
+        win=win,
+        name='image_4', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-2.0)
+    Key_resp_4 = keyboard.Keyboard()
     
     # create some handy timers
     if globalClock is None:
@@ -431,7 +443,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_fake.xlsx'),
+        trialList=data.importConditions('imgs/trials_iceberg.xlsx'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -466,8 +478,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         key_resp.keys = []
         key_resp.rt = []
         _key_resp_allKeys = []
+        # Run 'Begin Routine' code from mar1
+        mar_movie.play()  
+        
         # keep track of which components have finished
-        controlComponents = [movie, image, key_resp]
+        controlComponents = [image, key_resp]
         for thisComponent in controlComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -489,36 +504,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
-            
-            # *movie* updates
-            
-            # if movie is starting this frame...
-            if movie.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                movie.frameNStart = frameN  # exact frame index
-                movie.tStart = t  # local t and not account for scr refresh
-                movie.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(movie, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'movie.started')
-                # update status
-                movie.status = STARTED
-                movie.setAutoDraw(True)
-                movie.play()
-            
-            # if movie is stopping this frame...
-            if movie.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > movie.tStartRefresh + 18-frameTolerance:
-                    # keep track of stop time/frame for later
-                    movie.tStop = t  # not accounting for scr refresh
-                    movie.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'movie.stopped')
-                    # update status
-                    movie.status = FINISHED
-                    movie.setAutoDraw(False)
-                    movie.stop()
             
             # *image* updates
             
@@ -593,6 +578,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     key_resp.duration = _key_resp_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
+            # Run 'Each Frame' code from mar1
+            mar_movie.draw()
+            
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -620,7 +608,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('control.stopped', globalClock.getTime())
-        movie.stop()  # ensure movie has stopped at end of Routine
         # check responses
         if key_resp.keys in ['', [], None]:  # No response was made
             key_resp.keys = None
@@ -658,7 +645,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Run Routine "instructions2" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 3.0:
+    while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -689,7 +676,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # if text is stopping this frame...
         if text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text.tStartRefresh + 3-frameTolerance:
+            if tThisFlipGlobal > text.tStartRefresh + 1-frameTolerance:
                 # keep track of stop time/frame for later
                 text.tStop = t  # not accounting for scr refresh
                 text.frameNStop = frameN  # exact frame index
@@ -729,12 +716,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-3.000000)
+        routineTimer.addTime(-1.000000)
     
     # set up handler to look after randomisation of conditions etc
     trials_2 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_fake.xlsx'),
+        trialList=data.importConditions('imgs/trials_iceberg_2.xlsx'),
         seed=None, name='trials_2')
     thisExp.addLoop(trials_2)  # add the loop to the experiment
     thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -771,12 +758,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         _key_resp_2_allKeys = []
         # Run 'Begin Routine' code from code
         if trials_2.thisN == 0:
-            background_sound.play()
-            #background_sound.pos(0,0)
-            #background_sound.size(0.1, 0.1)
-            
+            background_sound.play()        
+        # Run 'Begin Routine' code from mar2
+        mar_movie.play()  
+        
         # keep track of which components have finished
-        musicComponents = [movie_2, image_2, key_resp_2]
+        musicComponents = [image_2, key_resp_2]
         for thisComponent in musicComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -798,36 +785,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
-            
-            # *movie_2* updates
-            
-            # if movie_2 is starting this frame...
-            if movie_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                movie_2.frameNStart = frameN  # exact frame index
-                movie_2.tStart = t  # local t and not account for scr refresh
-                movie_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(movie_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'movie_2.started')
-                # update status
-                movie_2.status = STARTED
-                movie_2.setAutoDraw(True)
-                movie_2.play()
-            
-            # if movie_2 is stopping this frame...
-            if movie_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > movie_2.tStartRefresh + 18-frameTolerance:
-                    # keep track of stop time/frame for later
-                    movie_2.tStop = t  # not accounting for scr refresh
-                    movie_2.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'movie_2.stopped')
-                    # update status
-                    movie_2.status = FINISHED
-                    movie_2.setAutoDraw(False)
-                    movie_2.stop()
             
             # *image_2* updates
             
@@ -902,6 +859,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     key_resp_2.duration = _key_resp_2_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
+            # Run 'Each Frame' code from mar2
+            mar_movie.draw()
+            
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -929,7 +889,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music.stopped', globalClock.getTime())
-        movie_2.stop()  # ensure movie has stopped at end of Routine
         # check responses
         if key_resp_2.keys in ['', [], None]:  # No response was made
             key_resp_2.keys = None
@@ -938,7 +897,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             trials_2.addData('key_resp_2.rt', key_resp_2.rt)
             trials_2.addData('key_resp_2.duration', key_resp_2.duration)
         # Run 'End Routine' code from code
-        if trials_2.thisN == 1:
+        if trials_2.thisN == 7:
             background_sound.stop()
         # the Routine "music" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
@@ -1076,20 +1035,20 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         thisExp.addData('music_words.started', globalClock.getTime())
-        image_3.setPos([posx, posy])
-        image_3.setImage('imgs/iceberg.png')
         # Run 'Begin Routine' code from code_2
         if trials_3.thisN == 0:
             background_movie.play()
-            background_movie.draw()
-            #background_sound.pos(0,0)
-            #background_sound.size(0.1, 0.1)
-            
+            background_movie.draw()    
+        # Run 'Begin Routine' code from mar3
+        mar_movie.play()  
+        
+        image_3.setPos([posx, posy])
+        image_3.setImage('imgs/iceberg.png')
         key_resp_3.keys = []
         key_resp_3.rt = []
         _key_resp_3_allKeys = []
         # keep track of which components have finished
-        music_wordsComponents = [movie_3, image_3, key_resp_3]
+        music_wordsComponents = [image_3, key_resp_3]
         for thisComponent in music_wordsComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1111,36 +1070,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from code_2
+            background_movie.draw()
+            # Run 'Each Frame' code from mar3
+            mar_movie.draw()
             
-            # *movie_3* updates
-            
-            # if movie_3 is starting this frame...
-            if movie_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                movie_3.frameNStart = frameN  # exact frame index
-                movie_3.tStart = t  # local t and not account for scr refresh
-                movie_3.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(movie_3, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'movie_3.started')
-                # update status
-                movie_3.status = STARTED
-                movie_3.setAutoDraw(True)
-                movie_3.play()
-            
-            # if movie_3 is stopping this frame...
-            if movie_3.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > movie_3.tStartRefresh + 18-frameTolerance:
-                    # keep track of stop time/frame for later
-                    movie_3.tStop = t  # not accounting for scr refresh
-                    movie_3.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'movie_3.stopped')
-                    # update status
-                    movie_3.status = FINISHED
-                    movie_3.setAutoDraw(False)
-                    movie_3.stop()
             
             # *image_3* updates
             
@@ -1174,8 +1108,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update status
                     image_3.status = FINISHED
                     image_3.setAutoDraw(False)
-            # Run 'Each Frame' code from code_2
-            background_movie.draw()
             
             # *key_resp_3* updates
             waitOnFlip = False
@@ -1244,9 +1176,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music_words.stopped', globalClock.getTime())
-        movie_3.stop()  # ensure movie has stopped at end of Routine
         # Run 'End Routine' code from code_2
-        if trials_3.thisN == 8:
+        if trials_3.thisN == 7:
             background_movie.stop()
         # check responses
         if key_resp_3.keys in ['', [], None]:  # No response was made
@@ -1263,6 +1194,294 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
     # completed 1.0 repeats of 'trials_3'
+    
+    
+    # --- Prepare to start Routine "instructions4" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('instructions4.started', globalClock.getTime())
+    # keep track of which components have finished
+    instructions4Components = [text_3]
+    for thisComponent in instructions4Components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "instructions4" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 1.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_3* updates
+        
+        # if text_3 is starting this frame...
+        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.tStart = t  # local t and not account for scr refresh
+            text_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_3.started')
+            # update status
+            text_3.status = STARTED
+            text_3.setAutoDraw(True)
+        
+        # if text_3 is active this frame...
+        if text_3.status == STARTED:
+            # update params
+            pass
+        
+        # if text_3 is stopping this frame...
+        if text_3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_3.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text_3.tStop = t  # not accounting for scr refresh
+                text_3.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_3.stopped')
+                # update status
+                text_3.status = FINISHED
+                text_3.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in instructions4Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "instructions4" ---
+    for thisComponent in instructions4Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('instructions4.stopped', globalClock.getTime())
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
+    
+    # set up handler to look after randomisation of conditions etc
+    trials_4 = data.TrialHandler(nReps=1.0, method='random', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=data.importConditions('imgs/trials_iceberg_4.xlsx'),
+        seed=None, name='trials_4')
+    thisExp.addLoop(trials_4)  # add the loop to the experiment
+    thisTrial_4 = trials_4.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_4.rgb)
+    if thisTrial_4 != None:
+        for paramName in thisTrial_4:
+            globals()[paramName] = thisTrial_4[paramName]
+    
+    for thisTrial_4 in trials_4:
+        currentLoop = trials_4
+        thisExp.timestampOnFlip(win, 'thisRow.t')
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                inputs=inputs, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+        )
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial_4.rgb)
+        if thisTrial_4 != None:
+            for paramName in thisTrial_4:
+                globals()[paramName] = thisTrial_4[paramName]
+        
+        # --- Prepare to start Routine "music_video" ---
+        continueRoutine = True
+        # update component parameters for each repeat
+        thisExp.addData('music_video.started', globalClock.getTime())
+        # Run 'Begin Routine' code from mar4
+        mar_movie.play()  
+        
+        # Run 'Begin Routine' code from code_3
+        if trials_4.thisN == 0:
+            background_movie2.play()
+            background_movie2.draw()    
+        image_4.setPos([posx, posy])
+        image_4.setImage('imgs/iceberg.png')
+        Key_resp_4.keys = []
+        Key_resp_4.rt = []
+        _Key_resp_4_allKeys = []
+        # keep track of which components have finished
+        music_videoComponents = [image_4, Key_resp_4]
+        for thisComponent in music_videoComponents:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "music_video" ---
+        routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            # Run 'Each Frame' code from mar4
+            mar_movie.draw()
+            
+            # Run 'Each Frame' code from code_3
+            background_movie2.draw()
+            
+            
+            # *image_4* updates
+            
+            # if image_4 is starting this frame...
+            if image_4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+                # keep track of start time/frame for later
+                image_4.frameNStart = frameN  # exact frame index
+                image_4.tStart = t  # local t and not account for scr refresh
+                image_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'image_4.started')
+                # update status
+                image_4.status = STARTED
+                image_4.setAutoDraw(True)
+            
+            # if image_4 is active this frame...
+            if image_4.status == STARTED:
+                # update params
+                pass
+            
+            # if image_4 is stopping this frame...
+            if image_4.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > image_4.tStartRefresh + 15-frameTolerance:
+                    # keep track of stop time/frame for later
+                    image_4.tStop = t  # not accounting for scr refresh
+                    image_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'image_4.stopped')
+                    # update status
+                    image_4.status = FINISHED
+                    image_4.setAutoDraw(False)
+            
+            # *Key_resp_4* updates
+            waitOnFlip = False
+            
+            # if Key_resp_4 is starting this frame...
+            if Key_resp_4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+                # keep track of start time/frame for later
+                Key_resp_4.frameNStart = frameN  # exact frame index
+                Key_resp_4.tStart = t  # local t and not account for scr refresh
+                Key_resp_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Key_resp_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'Key_resp_4.started')
+                # update status
+                Key_resp_4.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(Key_resp_4.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(Key_resp_4.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            
+            # if Key_resp_4 is stopping this frame...
+            if Key_resp_4.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > Key_resp_4.tStartRefresh + 15-frameTolerance:
+                    # keep track of stop time/frame for later
+                    Key_resp_4.tStop = t  # not accounting for scr refresh
+                    Key_resp_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'Key_resp_4.stopped')
+                    # update status
+                    Key_resp_4.status = FINISHED
+                    Key_resp_4.status = FINISHED
+            if Key_resp_4.status == STARTED and not waitOnFlip:
+                theseKeys = Key_resp_4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _Key_resp_4_allKeys.extend(theseKeys)
+                if len(_Key_resp_4_allKeys):
+                    Key_resp_4.keys = _Key_resp_4_allKeys[-1].name  # just the last key pressed
+                    Key_resp_4.rt = _Key_resp_4_allKeys[-1].rt
+                    Key_resp_4.duration = _Key_resp_4_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, inputs=inputs, win=win)
+                return
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in music_videoComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "music_video" ---
+        for thisComponent in music_videoComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        thisExp.addData('music_video.stopped', globalClock.getTime())
+        # Run 'End Routine' code from code_3
+        if trials_4.thisN == 7:
+            background_movie2.stop()
+        # check responses
+        if Key_resp_4.keys in ['', [], None]:  # No response was made
+            Key_resp_4.keys = None
+        trials_4.addData('Key_resp_4.keys',Key_resp_4.keys)
+        if Key_resp_4.keys != None:  # we had a response
+            trials_4.addData('Key_resp_4.rt', Key_resp_4.rt)
+            trials_4.addData('Key_resp_4.duration', Key_resp_4.duration)
+        # the Routine "music_video" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
+    # completed 1.0 repeats of 'trials_4'
     
     
     # mark experiment as finished
