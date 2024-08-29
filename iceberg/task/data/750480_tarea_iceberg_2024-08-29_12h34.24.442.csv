@@ -1,0 +1,4 @@
+﻿timepresentation,posx,posy,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,thisRow.t,notes,control.started,movie.started,image.started,key_resp.started,control.stopped,key_resp.keys,key_resp.rt,key_resp.duration,videonotworking.started,participant,session,date,expName,psychopyVersion,frameRate,expStart,
+2,-0.8,0.15,0,0,0,0,0.09588070000063453,,0.03240220000043337,0.09588070000063453,2.008095499999399,2.008095499999399,2.74192260000018,space,0.7272030000003724,None,,750480,001,2024-08-29_12h34.24.442,tarea_iceberg,2023.2.3,60.31905159149031,2024-08-29 12h34.34.216189 +0200,
+2,-0.7,0.15,0,1,1,1,2.912420700000439,,2.85397009999906,2.912420700000439,4.856546799999705,4.856546799999705,5.223637499999313,space,0.36490020000019285,None,,750480,001,2024-08-29_12h34.24.442,tarea_iceberg,2023.2.3,60.31905159149031,2024-08-29 12h34.34.216189 +0200,
+,,,,,,,,,,,,,,,,,5.356002099999387,,,,,,,,

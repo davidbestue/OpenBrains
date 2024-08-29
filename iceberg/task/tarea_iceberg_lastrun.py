@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on August 29, 2024, at 12:11
+    on August 29, 2024, at 12:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -375,6 +375,15 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         loop=False                      # Si el video debe repetirse
     )
     
+    # --- Initialize components for Routine "instructions3" ---
+    text_2 = visual.TextStim(win=win, name='text_2',
+        text='¡empezamos la tercera ronda!',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
     # --- Initialize components for Routine "music_words" ---
     movie_3 = visual.MovieStim(
         win, name='movie_3',
@@ -392,21 +401,21 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_3 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_2
     #background_sound = visual.MovieStim('imgs/song_titanic.mp4')
     #background_sound = sound.Sound('imgs/song_titanic.mp4')
     #myMovie.movie = 'imgs/song_titanic.mp4'
     
-    background_sound = visual.MovieStim3(
+    background_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/video_celine.mp4', # Ruta al archivo de video
-        size=(400, 400),               # Tamaño del video (opcional)
+        size=(1000,1000),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
         loop=False                      # Si el video debe repetirse
     )
+    key_resp_3 = keyboard.Keyboard()
     
     # create some handy timers
     if globalClock is None:
@@ -725,7 +734,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_2 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_iceberg_2.xlsx'),
+        trialList=data.importConditions('imgs/trials_fake.xlsx'),
         seed=None, name='trials_2')
     thisExp.addLoop(trials_2)  # add the loop to the experiment
     thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -929,7 +938,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             trials_2.addData('key_resp_2.rt', key_resp_2.rt)
             trials_2.addData('key_resp_2.duration', key_resp_2.duration)
         # Run 'End Routine' code from code
-        if trials_2.thisN == 8:
+        if trials_2.thisN == 1:
             background_sound.stop()
         # the Routine "music" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
@@ -940,6 +949,99 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             thisSession.sendExperimentData()
     # completed 1.0 repeats of 'trials_2'
     
+    
+    # --- Prepare to start Routine "instructions3" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('instructions3.started', globalClock.getTime())
+    # keep track of which components have finished
+    instructions3Components = [text_2]
+    for thisComponent in instructions3Components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "instructions3" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 1.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_2* updates
+        
+        # if text_2 is starting this frame...
+        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_2.frameNStart = frameN  # exact frame index
+            text_2.tStart = t  # local t and not account for scr refresh
+            text_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_2.started')
+            # update status
+            text_2.status = STARTED
+            text_2.setAutoDraw(True)
+        
+        # if text_2 is active this frame...
+        if text_2.status == STARTED:
+            # update params
+            pass
+        
+        # if text_2 is stopping this frame...
+        if text_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_2.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text_2.tStop = t  # not accounting for scr refresh
+                text_2.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_2.stopped')
+                # update status
+                text_2.status = FINISHED
+                text_2.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in instructions3Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "instructions3" ---
+    for thisComponent in instructions3Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('instructions3.stopped', globalClock.getTime())
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
     
     # set up handler to look after randomisation of conditions etc
     trials_3 = data.TrialHandler(nReps=1.0, method='random', 
@@ -976,15 +1078,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         thisExp.addData('music_words.started', globalClock.getTime())
         image_3.setPos([posx, posy])
         image_3.setImage('imgs/iceberg.png')
-        key_resp_3.keys = []
-        key_resp_3.rt = []
-        _key_resp_3_allKeys = []
         # Run 'Begin Routine' code from code_2
-        if trials_2.thisN == 0:
-            background_sound.play()
+        if trials_3.thisN == 0:
+            background_movie.play()
+            background_movie.draw()
             #background_sound.pos(0,0)
             #background_sound.size(0.1, 0.1)
             
+        key_resp_3.keys = []
+        key_resp_3.rt = []
+        _key_resp_3_allKeys = []
         # keep track of which components have finished
         music_wordsComponents = [movie_3, image_3, key_resp_3]
         for thisComponent in music_wordsComponents:
@@ -1071,6 +1174,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update status
                     image_3.status = FINISHED
                     image_3.setAutoDraw(False)
+            # Run 'Each Frame' code from code_2
+            background_movie.draw()
             
             # *key_resp_3* updates
             waitOnFlip = False
@@ -1140,6 +1245,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music_words.stopped', globalClock.getTime())
         movie_3.stop()  # ensure movie has stopped at end of Routine
+        # Run 'End Routine' code from code_2
+        if trials_3.thisN == 8:
+            background_movie.stop()
         # check responses
         if key_resp_3.keys in ['', [], None]:  # No response was made
             key_resp_3.keys = None
@@ -1147,9 +1255,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if key_resp_3.keys != None:  # we had a response
             trials_3.addData('key_resp_3.rt', key_resp_3.rt)
             trials_3.addData('key_resp_3.duration', key_resp_3.duration)
-        # Run 'End Routine' code from code_2
-        if trials_2.thisN == 8:
-            background_sound.stop()
         # the Routine "music_words" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()

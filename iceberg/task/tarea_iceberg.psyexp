@@ -262,28 +262,13 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((trials_2.thisN === 8)) {&amp;#10;    background_sound.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if trials_2.thisN == 8:&amp;#10;    background_sound.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if ((trials_2.thisN === 1)) {&amp;#10;    background_sound.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_2.thisN == 1:&amp;#10;    background_sound.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="music_words">
-      <RoutineSettingsComponent name="music_words" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="music_words" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
       <MovieComponent name="movie_3" plugin="None">
         <Param val="False" valType="bool" updates="None" name="No audio"/>
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -337,6 +322,38 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
+      <CodeComponent name="code_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="#background_sound = visual.MovieStim('imgs/song_titanic.mp4')&amp;#10;#background_sound = sound.Sound('imgs/song_titanic.mp4')&amp;#10;#myMovie.movie = 'imgs/song_titanic.mp4'&amp;#10;&amp;#10;background_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_celine.mp4', # Ruta al archivo de video&amp;#10;    size=(1000,1000),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/video_celine.mp4&quot;, &quot;size&quot;: [1000, 1000], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((trials_3.thisN === 0)) {&amp;#10;    background_movie.play();&amp;#10;    background_movie.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_3.thisN == 0:&amp;#10;    background_movie.play()&amp;#10;    background_movie.draw()&amp;#10;    #background_sound.pos(0,0)&amp;#10;    #background_sound.size(0.1, 0.1)&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_movie.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_3.thisN === 8)) {&amp;#10;    background_movie.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_3.thisN == 8:&amp;#10;    background_movie.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <RoutineSettingsComponent name="music_words" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="music_words" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
       <KeyboardComponent name="key_resp_3" plugin="None">
         <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
@@ -356,23 +373,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <CodeComponent name="code_2" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="#background_sound = visual.MovieStim('imgs/song_titanic.mp4')&amp;#10;#background_sound = sound.Sound('imgs/song_titanic.mp4')&amp;#10;#myMovie.movie = 'imgs/song_titanic.mp4'&amp;#10;&amp;#10;background_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_celine.mp4', # Ruta al archivo de video&amp;#10;    size=(400, 400),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="background_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/video_celine.mp4&quot;, &quot;size&quot;: [400, 400], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((trials_3.thisN === 0)) {&amp;#10;    background_movie.play();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if trials_3.thisN == 0:&amp;#10;    background_movie.play()&amp;#10;    #background_sound.pos(0,0)&amp;#10;    #background_sound.size(0.1, 0.1)&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((trials_3.thisN === 8)) {&amp;#10;    background_movie.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if trials_3.thisN == 8:&amp;#10;    background_movie.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code_2" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
     <Routine name="instructions2">
       <RoutineSettingsComponent name="instructions2" plugin="None">
@@ -416,6 +416,101 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
+    <Routine name="instructions3">
+      <RoutineSettingsComponent name="instructions3" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="instructions3" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text_2" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="¡empezamos la tercera ronda!" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="videonotworking">
+      <RoutineSettingsComponent name="videonotworking" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="videonotworking" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code_X" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="#background_sound = visual.MovieStim('imgs/song_titanic.mp4')&amp;#10;#background_sound = sound.Sound('imgs/song_titanic.mp4')&amp;#10;#myMovie.movie = 'imgs/song_titanic.mp4'&amp;#10;&amp;#10;background_movie2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_celine.mp4', # Ruta al archivo de video&amp;#10;    size=(1000, 1000),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie2 = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/video_celine.mp4&quot;, &quot;size&quot;: [1000, 1000], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((trials_4.thisN === 0)) {&amp;#10;    background_movie2.play();&amp;#10;    background_movie2.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_4.thisN == 0:&amp;#10;    background_movie2.play()&amp;#10;    background_movie2.draw()&amp;#10;    #background_sound.pos(0,0)&amp;#10;    #background_sound.size(0.1, 0.1)&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_movie2.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie2.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_4.thisN === 1)) {&amp;#10;    background_movie2.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_4.thisN == 1:&amp;#10;    background_movie2.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_X" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_4" plugin="None">
+        <Param val="'y','n','left','right','space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_4" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <LoopInitiator loopType="TrialHandler" name="trials">
@@ -445,6 +540,7 @@
     </LoopInitiator>
     <Routine name="music"/>
     <LoopTerminator name="trials_2"/>
+    <Routine name="instructions3"/>
     <LoopInitiator loopType="TrialHandler" name="trials_3">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}]" valType="str"/>
