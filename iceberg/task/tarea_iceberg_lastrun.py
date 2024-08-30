@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on August 30, 2024, at 10:25
+    on August 30, 2024, at 11:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -314,11 +314,28 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
+    # --- Initialize components for Routine "portada" ---
+    image_5 = visual.ImageStim(
+        win=win,
+        name='image_5', 
+        image='imgs/logo_OB.jpeg', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), size=(0.6, 0.7),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    text_6 = visual.TextStim(win=win, name='text_6',
+        text='¡Bienvenido a un experimento de Open Brains!',
+        font='Open Sans',
+        pos=(0, -0.35), height=0.04, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    
     # --- Initialize components for Routine "instructions" ---
     text_5 = visual.TextStim(win=win, name='text_5',
         text='En este experiemento te verás navegando por el mar...\n\n¡Pero hay icebergs que aparcerán de repente en pantalla!\n\nCuando veas uno, debes pulsar "SPACE" lo más rápido posible.\n\nHay 4 rondas.\n\nCuando estés listo, aprieta "SPACE" para empezar.',
         font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.035, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -372,8 +389,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     key_resp_2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
-    nRows = 8
-    totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
     selectedRowsStr = [i for i in selectedRows]
     
@@ -400,7 +415,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_2
     background_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic.mp4', # Ruta al archivo de video
+        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -427,6 +442,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "music_video" ---
+    # Run 'Begin Experiment' code from code_2_2
+    background_movie_s = visual.MovieStim3(
+        win=win,                        # Ventana en la que se va a mostrar el video
+        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
+        size=(10,10),               # Tamaño del video (opcional)
+        pos=(0,0),
+        flipVert=False,                 # Si se debe voltear verticalmente
+        flipHoriz=False,                # Si se debe voltear horizontalmente
+        loop=False                      # Si el video debe repetirse
+    )
     # Run 'Begin Experiment' code from code_3
     background_movie2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -444,7 +469,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         ori=0.0, pos=[0,0], size=(0.35, 0.35),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-2.0)
+        texRes=128.0, interpolate=True, depth=-3.0)
     Key_resp_4 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "final" ---
@@ -466,6 +491,132 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     win.flip()  # flip window to reset last flip timer
     # store the exact time the global clock started
     expInfo['expStart'] = data.getDateStr(format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6)
+    
+    # --- Prepare to start Routine "portada" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('portada.started', globalClock.getTime())
+    # keep track of which components have finished
+    portadaComponents = [image_5, text_6]
+    for thisComponent in portadaComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "portada" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 3.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *image_5* updates
+        
+        # if image_5 is starting this frame...
+        if image_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image_5.frameNStart = frameN  # exact frame index
+            image_5.tStart = t  # local t and not account for scr refresh
+            image_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_5, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'image_5.started')
+            # update status
+            image_5.status = STARTED
+            image_5.setAutoDraw(True)
+        
+        # if image_5 is active this frame...
+        if image_5.status == STARTED:
+            # update params
+            pass
+        
+        # if image_5 is stopping this frame...
+        if image_5.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image_5.tStartRefresh + 3-frameTolerance:
+                # keep track of stop time/frame for later
+                image_5.tStop = t  # not accounting for scr refresh
+                image_5.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'image_5.stopped')
+                # update status
+                image_5.status = FINISHED
+                image_5.setAutoDraw(False)
+        
+        # *text_6* updates
+        
+        # if text_6 is starting this frame...
+        if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_6.frameNStart = frameN  # exact frame index
+            text_6.tStart = t  # local t and not account for scr refresh
+            text_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_6.started')
+            # update status
+            text_6.status = STARTED
+            text_6.setAutoDraw(True)
+        
+        # if text_6 is active this frame...
+        if text_6.status == STARTED:
+            # update params
+            pass
+        
+        # if text_6 is stopping this frame...
+        if text_6.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_6.tStartRefresh + 3.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text_6.tStop = t  # not accounting for scr refresh
+                text_6.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_6.stopped')
+                # update status
+                text_6.status = FINISHED
+                text_6.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in portadaComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "portada" ---
+    for thisComponent in portadaComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('portada.stopped', globalClock.getTime())
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-3.000000)
     
     # --- Prepare to start Routine "instructions" ---
     continueRoutine = True
@@ -1179,8 +1330,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('music_words.started', globalClock.getTime())
         # Run 'Begin Routine' code from code_2
-        nRows = 8
-        totalRows = 118  # Replace with the total number of rows in your Excel file
         selectedRows = random.sample(range(totalRows), nRows)
         selectedRowsStr = [i for i in selectedRows]
         
@@ -1470,12 +1619,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         thisExp.addData('music_video.started', globalClock.getTime())
+        # Run 'Begin Routine' code from code_2_2
+        if trials_4.thisN == 0:
+            background_movie_s.play()
+            background_movie_s.draw()    
         # Run 'Begin Routine' code from mar4
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_3
-        nRows = 8
-        totalRows = 118  # Replace with the total number of rows in your Excel file
         selectedRows = random.sample(range(totalRows), nRows)
         selectedRowsStr = [i for i in selectedRows]
         
@@ -1511,6 +1662,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from code_2_2
+            background_movie_s.draw()
             # Run 'Each Frame' code from mar4
             mar_movie.draw()
             
@@ -1618,6 +1771,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music_video.stopped', globalClock.getTime())
+        # Run 'End Routine' code from code_2_2
+        if trials_4.thisN == nRows-1:
+            background_movie_s.stop()
         # Run 'End Routine' code from code_3
         if trials_4.thisN == nRows-1:
             background_movie2.stop()
