@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on August 29, 2024, at 14:09
+    on August 30, 2024, at 10:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -335,6 +335,13 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     key_resp = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar1
+    import random
+    nRows = 8
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
+    
+    
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/video_mar.mp4', # Ruta al archivo de video
@@ -365,9 +372,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     key_resp_2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
-    #background_sound = visual.MovieStim('imgs/song_titanic.mp4')
-    #background_sound = sound.Sound('imgs/song_titanic.mp4')
-    #myMovie.movie = 'imgs/song_titanic.mp4'
+    nRows = 8
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
     
     background_sound = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -392,7 +400,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_2
     background_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/video_celine.mp4', # Ruta al archivo de video
+        filename='imgs/titanic.mp4', # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -422,8 +430,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_3
     background_movie2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/video_celine.mp4', # Ruta al archivo de video
-        size=(400,300),               # Tamaño del video (opcional)
+        filename='imgs/titanic.mp4', # Ruta al archivo de video
+        size=(500,400),               # Tamaño del video (opcional)
         pos=(0,100),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
@@ -578,7 +586,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_iceberg.xlsx'),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -856,7 +864,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_2 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_iceberg_2.xlsx'),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_2')
     thisExp.addLoop(trials_2)  # add the loop to the experiment
     thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -1032,7 +1040,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             trials_2.addData('key_resp_2.rt', key_resp_2.rt)
             trials_2.addData('key_resp_2.duration', key_resp_2.duration)
         # Run 'End Routine' code from code
-        if trials_2.thisN == 7:
+        if trials_2.thisN == nRows-1:
             background_sound.stop()
         # the Routine "music" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
@@ -1140,7 +1148,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_3 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_iceberg_3.xlsx'),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_3')
     thisExp.addLoop(trials_3)  # add the loop to the experiment
     thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
@@ -1171,6 +1179,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('music_words.started', globalClock.getTime())
         # Run 'Begin Routine' code from code_2
+        nRows = 8
+        totalRows = 118  # Replace with the total number of rows in your Excel file
+        selectedRows = random.sample(range(totalRows), nRows)
+        selectedRowsStr = [i for i in selectedRows]
+        
         if trials_3.thisN == 0:
             background_movie.play()
             background_movie.draw()    
@@ -1312,7 +1325,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music_words.stopped', globalClock.getTime())
         # Run 'End Routine' code from code_2
-        if trials_3.thisN == 7:
+        if trials_3.thisN == nRows-1:
             background_movie.stop()
         # check responses
         if key_resp_3.keys in ['', [], None]:  # No response was made
@@ -1427,7 +1440,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_4 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/trials_iceberg_4.xlsx'),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_4')
     thisExp.addLoop(trials_4)  # add the loop to the experiment
     thisTrial_4 = trials_4.trialList[0]  # so we can initialise stimuli with some values
@@ -1461,6 +1474,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_3
+        nRows = 8
+        totalRows = 118  # Replace with the total number of rows in your Excel file
+        selectedRows = random.sample(range(totalRows), nRows)
+        selectedRowsStr = [i for i in selectedRows]
+        
+        
         if trials_4.thisN == 0:
             background_movie2.play()
             background_movie2.draw()    
@@ -1600,7 +1619,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music_video.stopped', globalClock.getTime())
         # Run 'End Routine' code from code_3
-        if trials_4.thisN == 7:
+        if trials_4.thisN == nRows-1:
             background_movie2.stop()
         # check responses
         if Key_resp_4.keys in ['', [], None]:  # No response was made
