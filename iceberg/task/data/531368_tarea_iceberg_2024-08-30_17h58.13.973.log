@@ -1,0 +1,25 @@
+5.7361 	WARNING 	User requested fullscreen with size [1536  864], but screen is actually [1920, 1080]. Using actual size
+6.3897 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000278FB4780A0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000278FB478040>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000278FB461EE0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000278FB934610>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.3899 	EXP 	window1: mouseVisible = True
+6.3899 	EXP 	window1: backgroundImage = ''
+6.3900 	EXP 	window1: backgroundFit = 'none'
+6.3924 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.3924 	EXP 	window1: recordFrameIntervals = False
+6.5558 	EXP 	window1: recordFrameIntervals = True
+6.7393 	EXP 	Screen (0) actual frame rate measured at 60.22Hz
+6.7394 	EXP 	window1: recordFrameIntervals = False
+6.7399 	EXP 	window1: mouseVisible = False
+8.4086 	EXP 	tarea_iceberg: status = STARTED
+8.4089 	EXP 	window1: mouseVisible = True
+8.4096 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+8.4150 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+8.4197 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+8.4233 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+8.4276 	EXP 	Created image_5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='imgs/logo_OB.jpeg', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.6, 0.7]), texRes=128.0, units='height', win=Window(...))
+8.4278 	EXP 	window1: mouseVisible = True
+8.4805 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.35]), rgb=UNKNOWN, text='¡Bienvenido a un experimento de Open Brains!', units='height', win=Window(...), wrapWidth=1)
+8.4806 	EXP 	window1: mouseVisible = True
+8.4967 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.035, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.4968 	EXP 	window1: mouseVisible = True
+8.4979 	EXP 	Created text_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_7', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.5813 	EXP 	window1: mouseVisible = True

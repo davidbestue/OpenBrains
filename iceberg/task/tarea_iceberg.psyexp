@@ -74,13 +74,13 @@
   </Settings>
   <Routines>
     <Routine name="control">
-      <CodeComponent name="control_starter" plugin="None">
+      <CodeComponent name="control_r1" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (control_started) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Verificar si la rutina debe ejecutarse basándose en la bandera correspondiente&amp;#10;if control_started:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((ronda1 === &quot;control&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda1==&quot;control&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -89,7 +89,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="control_starter" valType="code" updates="None" name="name"/>
+        <Param val="control_r1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <RoutineSettingsComponent name="control" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -155,7 +155,7 @@
       <CodeComponent name="mar1" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random&amp;#10;nRows = 2&amp;#10;totalRows = 118  # Replace with the total number of rows in your Excel file&amp;#10;selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;&amp;#10;mar_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_mar.mp4', # Ruta al archivo de video&amp;#10;    size=(1900,1200),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=True                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import random&amp;#10;nRows = 2&amp;#10;totalRows = 118  # Replace with the total number of rows in your Excel file&amp;#10;selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;mar_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_mar.mp4', # Ruta al archivo de video&amp;#10;    size=(1900,1200),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=True                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="import * as random from 'random';&amp;#10;nRows = 2;&amp;#10;totalRows = 118;&amp;#10;selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;mar_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/video_mar.mp4&quot;, &quot;size&quot;: [1900, 1200], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: true});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="mar_movie.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="mar_movie.play()  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -171,13 +171,13 @@
       </CodeComponent>
     </Routine>
     <Routine name="music">
-      <CodeComponent name="music_starter" plugin="None">
+      <CodeComponent name="music_r1" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (music_started) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Verificar si la rutina debe ejecutarse basándose en la bandera correspondiente&amp;#10;if music_started:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((ronda1 === &quot;music&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda1==&quot;music&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -186,7 +186,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="music_starter" valType="code" updates="None" name="name"/>
+        <Param val="music_r1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <RoutineSettingsComponent name="music" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -252,13 +252,13 @@
       <CodeComponent name="code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;background_sound = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/song_titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(20, 20),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;background_sound = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/song_titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(20, 20),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;background_sound = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/song_titanic.mp4&quot;, &quot;size&quot;: [20, 20], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="if ((trials_2.thisN === 0)) {&amp;#10;    background_sound.play();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="if trials_2.thisN == 0:&amp;#10;    background_sound.play()        " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="background_sound.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_sound.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="if ((trials_2.thisN === (nRows - 1))) {&amp;#10;    background_sound.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -285,13 +285,13 @@
       </CodeComponent>
     </Routine>
     <Routine name="music_words">
-      <CodeComponent name="music_words_starter" plugin="None">
+      <CodeComponent name="musicw_r1" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((music_words_started === true)) {&amp;#10;    continueRoutine = true;&amp;#10;}&amp;#10;if ((music_words_started === false)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Verificar si la rutina debe ejecutarse basándose en la bandera correspondiente&amp;#10;if music_words_started == True:&amp;#10;    continueRoutine = True&amp;#10;if music_words_started == False:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((ronda1 === &quot;music_words&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda1==&quot;music_words&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -300,7 +300,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="music_words_starter" valType="code" updates="None" name="name"/>
+        <Param val="musicw_r1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <RoutineSettingsComponent name="music_words" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -320,10 +320,10 @@
       <CodeComponent name="code_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="background_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="background_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic_spanish.mp4&quot;, &quot;size&quot;: [10, 10], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;background_movie.setAutoDraw(true);&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    background_movie.play();&amp;#10;    background_movie.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;background_movie.setAutoDraw(True)&amp;#10;&amp;#10;if trials_3.thisN == 0:&amp;#10;    background_movie.play()&amp;#10;    background_movie.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    background_movie.play();&amp;#10;    background_movie.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;if trials_3.thisN == 0:&amp;#10;    background_movie.play()&amp;#10;    background_movie.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="background_movie.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="background_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -536,13 +536,13 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="music_video">
-      <CodeComponent name="music_video_starter" plugin="None">
+      <CodeComponent name="musicv_r1" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (music_video_started) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Verificar si la rutina debe ejecutarse basándose en la bandera correspondiente&amp;#10;if music_video_started:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((ronda1 === &quot;music_video&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda1==&quot;music_video&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -551,7 +551,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="music_video_starter" valType="code" updates="None" name="name"/>
+        <Param val="musicv_r1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <RoutineSettingsComponent name="music_video" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -571,17 +571,17 @@
       <CodeComponent name="code_2_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="background_movie_s = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="background_movie_s = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic_spanish.mp4&quot;, &quot;size&quot;: [10, 10], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((trials_4.thisN === 0)) {&amp;#10;    background_movie_s.play();&amp;#10;    background_movie_s.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if trials_4.thisN == 0:&amp;#10;    background_movie_s.play()&amp;#10;    background_movie_s.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="background_movie_s2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie_s2 = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic_spanish.mp4&quot;, &quot;size&quot;: [10, 10], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((trials_4.thisN === 0)) {&amp;#10;    background_movie_s2.play();&amp;#10;    background_movie_s2.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_4.thisN == 0:&amp;#10;    background_movie_s2.play()&amp;#10;    background_movie_s2.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="background_movie_s.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="background_movie_s.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="background_movie_s2.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie_s2.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((trials_4.thisN === (nRows - 1))) {&amp;#10;    background_movie_s.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if trials_4.thisN == nRows-1:&amp;#10;    background_movie_s.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if ((trials_4.thisN === (nRows - 1))) {&amp;#10;    background_movie_s2.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_4.thisN == nRows-1:&amp;#10;    background_movie_s2.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_2_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -605,7 +605,7 @@
       <CodeComponent name="code_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="background_movie2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(500,400),               # Tamaño del video (opcional)&amp;#10;    pos=(0,100),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(500,400),               # Tamaño del video (opcional)&amp;#10;    pos=(0,100),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="background_movie2 = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic.mp4&quot;, &quot;size&quot;: [500, 400], &quot;pos&quot;: [0, 100], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;if ((trials_4.thisN === 0)) {&amp;#10;    background_movie2.play();&amp;#10;    background_movie2.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;&amp;#10;if trials_4.thisN == 0:&amp;#10;    background_movie2.play()&amp;#10;    background_movie2.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -901,8 +901,8 @@
         <Param val="control_started = false;&amp;#10;music_started = false;&amp;#10;music_words_started = false;&amp;#10;music_video_started = false;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="control_started = False&amp;#10;music_started = False&amp;#10;music_words_started = False&amp;#10;music_video_started = False" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="control_started = false;&amp;#10;music_started = false;&amp;#10;music_words_started = false;&amp;#10;music_video_started = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="currentRoutine = routineName;&amp;#10;console.log(currentRoutine);&amp;#10;TextoRonda = &quot;Nueva ronda&quot;;&amp;#10;continueRoutine = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Retrieve the name of the next routine from the loop&amp;#10;currentRoutine = routineName&amp;#10;print(currentRoutine)&amp;#10;&amp;#10;# Immediately end this routine to skip it visually&amp;#10;#roundNumber = 1&amp;#10;#TextoRonda=&quot;Ronda&quot; + str(roundNumber) + &quot;/4&quot;;&amp;#10;&amp;#10;TextoRonda=&quot;Nueva ronda&quot;&amp;#10;&amp;#10;continueRoutine = False&amp;#10;    &amp;#10; &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="currentRoutine = &quot;a&quot;;&amp;#10;TextoRonda = &quot;Nueva ronda&quot;;&amp;#10;continueRoutine = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Retrieve the name of the next routine from the loop&amp;#10;#currentRoutine = routineName&amp;#10;#print(currentRoutine)&amp;#10;&amp;#10;currentRoutine = &quot;a&quot;&amp;#10;# Immediately end this routine to skip it visually&amp;#10;#roundNumber = 1&amp;#10;#TextoRonda=&quot;Ronda&quot; + str(roundNumber) + &quot;/4&quot;;&amp;#10;&amp;#10;TextoRonda=&quot;Nueva ronda&quot;&amp;#10;&amp;#10;continueRoutine = False&amp;#10;    &amp;#10; &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -914,8 +914,8 @@
         <Param val="code_4" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="nueva_ronda">
-      <RoutineSettingsComponent name="nueva_ronda" plugin="None">
+    <Routine name="Ronda_1">
+      <RoutineSettingsComponent name="Ronda_1" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -923,7 +923,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="nueva_ronda" valType="code" updates="None" name="name"/>
+        <Param val="Ronda_1" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
@@ -951,28 +951,531 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="2" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$TextoRonda" valType="str" updates="set every repeat" name="text"/>
+        <Param val="Ronda 1/4" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <CodeComponent name="code_5" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import random &amp;#10;&amp;#10;# Lista de nombres de rutinas&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;]&amp;#10;&amp;#10;# Barajar el orden de las rutinas&amp;#10;random.shuffle(rutinas)&amp;#10;&amp;#10;print(rutinas)&amp;#10;&amp;#10;# Un índice para seguir qué rutina ejecutar&amp;#10;ronda1=rutinas[0]&amp;#10;ronda2=rutinas[1]&amp;#10;ronda3=rutinas[2]&amp;#10;ronda4=rutinas[3]" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;];&amp;#10;Math.random.shuffle(rutinas);&amp;#10;console.log(rutinas);&amp;#10;ronda1 = rutinas[0];&amp;#10;ronda2 = rutinas[1];&amp;#10;ronda3 = rutinas[2];&amp;#10;ronda4 = rutinas[3];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_5" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="Ronda_2">
+      <RoutineSettingsComponent name="Ronda_2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="Ronda_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text_8" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_8" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="2" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Ronda 2/4" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="control2">
+      <CodeComponent name="control_r2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((ronda2 === &quot;control&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda2==&quot;control&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="control_r2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <RoutineSettingsComponent name="control2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="control2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <ImageComponent name="image_6" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="imgs/iceberg.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="image_6" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_6" plugin="None">
+        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_6" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <CodeComponent name="mar_1_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import random&amp;#10;nRows = 2&amp;#10;totalRows = 118  # Replace with the total number of rows in your Excel file&amp;#10;selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;mar_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/video_mar.mp4', # Ruta al archivo de video&amp;#10;    size=(1900,1200),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=True                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;nRows = 2;&amp;#10;totalRows = 118;&amp;#10;selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;mar_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/video_mar.mp4&quot;, &quot;size&quot;: [1900, 1200], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: true});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="mar_movie.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="mar_movie.play()  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="mar_movie.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="mar_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="mar_1_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="music2">
+      <RoutineSettingsComponent name="music2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="music2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="music_r2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((ronda2 === &quot;music&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda2==&quot;music&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="music_r2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <ImageComponent name="image_7" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="imgs/iceberg.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="image_7" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_7" plugin="None">
+        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_7" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <CodeComponent name="code_6" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;background_sound = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/song_titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(20, 20),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;background_sound = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/song_titanic.mp4&quot;, &quot;size&quot;: [20, 20], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((trials_2.thisN === 0)) {&amp;#10;    background_sound.play();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_2.thisN == 0:&amp;#10;    background_sound.play()        " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_sound.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_sound.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_2.thisN === (nRows - 1))) {&amp;#10;    background_sound.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_2.thisN == nRows-1:&amp;#10;    background_sound.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_6" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="mar2_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="mar_movie.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="mar_movie.play()  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="mar_movie.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="mar_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="mar2_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="music_words2">
+      <RoutineSettingsComponent name="music_words2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="music_words2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="musicw_r2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((ronda2 === &quot;music_words&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda2==&quot;music_words&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="musicw_r2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="code_7" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="background_movie = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic_spanish.mp4&quot;, &quot;size&quot;: [10, 10], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    background_movie.play();&amp;#10;    background_movie.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;if trials_3.thisN == 0:&amp;#10;    background_movie.play()&amp;#10;    background_movie.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_movie.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_3.thisN === (nRows - 1))) {&amp;#10;    background_movie.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_3.thisN == nRows-1:&amp;#10;    background_movie.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_7" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="mar3_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="mar_movie.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="mar_movie.play()  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="mar_movie.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="mar_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="mar3_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <ImageComponent name="image_8" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="imgs/iceberg.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="image_8" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_8" plugin="None">
+        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_8" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="music_video2">
+      <RoutineSettingsComponent name="music_video2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="music_video2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="musicv_r2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((ronda2 === &quot;music_video&quot;)) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if ronda2==&quot;music_video&quot;:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="musicv_r2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="code_2_3" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="background_movie_s2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video&amp;#10;    size=(10,10),               # Tamaño del video (opcional)&amp;#10;    pos=(0,0),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie_s2 = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic_spanish.mp4&quot;, &quot;size&quot;: [10, 10], &quot;pos&quot;: [0, 0], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((trials_4.thisN === 0)) {&amp;#10;    background_movie_s2.play();&amp;#10;    background_movie_s2.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_4.thisN == 0:&amp;#10;    background_movie_s2.play()&amp;#10;    background_movie_s2.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_movie_s2.draw()" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie_s2.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_4.thisN === (nRows - 1))) {&amp;#10;    background_movie_s2.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_4.thisN == nRows-1:&amp;#10;    background_movie_s2.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_2_3" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="mar4_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="mar_movie.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="mar_movie.play()  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="mar_movie.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="mar_movie.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="mar4_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="code_8" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="background_movie2 = visual.MovieStim3(&amp;#10;    win=win,                        # Ventana en la que se va a mostrar el video&amp;#10;    filename='imgs/titanic.mp4', # Ruta al archivo de video&amp;#10;    size=(500,400),               # Tamaño del video (opcional)&amp;#10;    pos=(0,100),&amp;#10;    flipVert=False,                 # Si se debe voltear verticalmente&amp;#10;    flipHoriz=False,                # Si se debe voltear horizontalmente&amp;#10;    loop=False                      # Si el video debe repetirse&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="background_movie2 = new visual.MovieStim3({&quot;win&quot;: psychoJS.window, &quot;filename&quot;: &quot;imgs/titanic.mp4&quot;, &quot;size&quot;: [500, 400], &quot;pos&quot;: [0, 100], &quot;flipVert&quot;: false, &quot;flipHoriz&quot;: false, &quot;loop&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;if ((trials_4.thisN === 0)) {&amp;#10;    background_movie2.play();&amp;#10;    background_movie2.draw();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]&amp;#10;&amp;#10;&amp;#10;if trials_4.thisN == 0:&amp;#10;    background_movie2.play()&amp;#10;    background_movie2.draw()    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="background_movie2.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="background_movie2.draw();&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if ((trials_4.thisN === (nRows - 1))) {&amp;#10;    background_movie2.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trials_4.thisN == nRows-1:&amp;#10;    background_movie2.stop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_8" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <ImageComponent name="image_9" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="imgs/iceberg.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="image_9" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <KeyboardComponent name="Key_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="Key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
     </Routine>
   </Routines>
   <Flow>
     <Routine name="portada"/>
     <Routine name="instructions"/>
-    <LoopInitiator loopType="TrialHandler" name="trials_5">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'routineName': 'music_video'}, {'routineName': 'control'}, {'routineName': 'music_words'}, {'routineName': 'control'}, {'routineName': 'music'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="imgs/routines_order.xlsx" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="trials_5" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="random_routines"/>
-    <Routine name="nueva_ronda"/>
+    <Routine name="Ronda_1"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="$selectedRowsStr" valType="str"/>
       <Param name="conditions" updates="None" val="[{'timepresentation': 3, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 3, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.9, 'posy': 0.1}]" valType="str"/>
@@ -1025,7 +1528,59 @@
     </LoopInitiator>
     <Routine name="music_video"/>
     <LoopTerminator name="trials_4"/>
+    <Routine name="Ronda_2"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_5">
+      <Param name="Selected rows" updates="None" val="$selectedRowsStr" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'timepresentation': 3, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 3, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.9, 'posy': 0.1}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="imgs/iceberg_times.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_5" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="control2"/>
     <LoopTerminator name="trials_5"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_6">
+      <Param name="Selected rows" updates="None" val="$selectedRowsStr" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'timepresentation': 3, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 3, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.9, 'posy': 0.1}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="imgs/iceberg_times.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_6" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="music2"/>
+    <LoopTerminator name="trials_6"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_7">
+      <Param name="Selected rows" updates="None" val="$selectedRowsStr" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'timepresentation': 3, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 3, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.9, 'posy': 0.1}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="imgs/iceberg_times.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_7" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="music_words2"/>
+    <LoopTerminator name="trials_7"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_8">
+      <Param name="Selected rows" updates="None" val="$selectedRowsStr" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'timepresentation': 3, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.8, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.7, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.6, 'posy': 0.15}, {'timepresentation': 3, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 4, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 5, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 6, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 7, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 8, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 9, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 10, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 11, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 12, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 13, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 14, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 15, 'posx': -0.5, 'posy': 0.15}, {'timepresentation': 3, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.5, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.6, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.7, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.8, 'posy': 0.1}, {'timepresentation': 3, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 4, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 5, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 6, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 7, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 8, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 9, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 10, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 11, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 12, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 13, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 14, 'posx': 0.9, 'posy': 0.1}, {'timepresentation': 15, 'posx': 0.9, 'posy': 0.1}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="imgs/iceberg_times.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_8" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="music_video2"/>
+    <LoopTerminator name="trials_8"/>
     <Routine name="final"/>
   </Flow>
 </PsychoPy2experiment>
