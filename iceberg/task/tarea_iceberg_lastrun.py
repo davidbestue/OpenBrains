@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on August 30, 2024, at 18:02
+    on September 10, 2024, at 10:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -367,6 +367,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ronda3=rutinas[2]
     ronda4=rutinas[3]
     
+    ronda1="music_words"
+    ronda2="music"
+    
     # --- Initialize components for Routine "control" ---
     image = visual.ImageStim(
         win=win,
@@ -445,7 +448,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "music_video" ---
     # Run 'Begin Experiment' code from code_2_2
-    background_movie_s2 = visual.MovieStim3(
+    background_movie2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
@@ -456,7 +459,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     )
     
     # Run 'Begin Experiment' code from code_3
-    background_movie2 = visual.MovieStim3(
+    displayed_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/titanic.mp4', # Ruta al archivo de video
         size=(500,400),               # Tamaño del video (opcional)
@@ -527,7 +530,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     selectedRows = random.sample(range(totalRows), nRows)
     selectedRowsStr = [i for i in selectedRows]
     
-    background_sound = visual.MovieStim3(
+    background_sound_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/song_titanic.mp4', # Ruta al archivo de video
         size=(20, 20),               # Tamaño del video (opcional)
@@ -540,7 +543,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "music_words2" ---
     # Run 'Begin Experiment' code from code_7
-    background_movie = visual.MovieStim3(
+    background_movie_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
@@ -563,7 +566,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "music_video2" ---
     # Run 'Begin Experiment' code from code_2_3
-    background_movie_s2 = visual.MovieStim3(
+    displayed_movie_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
@@ -574,7 +577,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     )
     
     # Run 'Begin Experiment' code from code_8
-    background_movie2 = visual.MovieStim3(
+    background_movie2_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename='imgs/titanic.mp4', # Ruta al archivo de video
         size=(500,400),               # Tamaño del video (opcional)
@@ -1580,8 +1583,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         # Run 'Begin Routine' code from code_2_2
         if trials_4.thisN == 0:
-            background_movie_s2.play()
-            background_movie_s2.draw()    
+            background_movie2.play()
+            background_movie2.draw()    
         # Run 'Begin Routine' code from mar4
         mar_movie.play()  
         
@@ -1591,8 +1594,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         
         if trials_4.thisN == 0:
-            background_movie2.play()
-            background_movie2.draw()    
+            displayed_movie.play()
+            displayed_movie.draw()    
         image_4.setPos([posx, posy])
         image_4.setImage('imgs/iceberg.png')
         Key_resp_4.keys = []
@@ -1622,12 +1625,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from code_2_2
-            background_movie_s2.draw()
+            background_movie2.draw()
             # Run 'Each Frame' code from mar4
             mar_movie.draw()
             
             # Run 'Each Frame' code from code_3
-            background_movie2.draw()
+            displayed_movie.draw()
             
             
             # *image_4* updates
@@ -1732,10 +1735,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         thisExp.addData('music_video.stopped', globalClock.getTime())
         # Run 'End Routine' code from code_2_2
         if trials_4.thisN == nRows-1:
-            background_movie_s2.stop()
+            background_movie2.stop()
         # Run 'End Routine' code from code_3
         if trials_4.thisN == nRows-1:
-            background_movie2.stop()
+            displayed_movie.stop()
         # check responses
         if Key_resp_4.keys in ['', [], None]:  # No response was made
             Key_resp_4.keys = None
@@ -2082,7 +2085,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         _key_resp_7_allKeys = []
         # Run 'Begin Routine' code from code_6
         if trials_2.thisN == 0:
-            background_sound.play()        
+            background_sound_r2.play()        
         # Run 'Begin Routine' code from mar2_2
         mar_movie.play()  
         
@@ -2184,7 +2187,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from code_6
-            background_sound.draw()
+            background_sound_r2.draw()
             # Run 'Each Frame' code from mar2_2
             mar_movie.draw()
             
@@ -2224,7 +2227,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             trials_6.addData('key_resp_7.duration', key_resp_7.duration)
         # Run 'End Routine' code from code_6
         if trials_2.thisN == nRows-1:
-            background_sound.stop()
+            background_sound_r2.stop()
         # the Routine "music2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -2278,8 +2281,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         selectedRowsStr = [i for i in selectedRows]
         
         if trials_3.thisN == 0:
-            background_movie.play()
-            background_movie.draw()    
+            background_movie_r2.play()
+            background_movie_r2.draw()    
         # Run 'Begin Routine' code from mar3_2
         mar_movie.play()  
         
@@ -2312,7 +2315,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from code_7
-            background_movie.draw()
+            background_movie_r2.draw()
             # Run 'Each Frame' code from mar3_2
             mar_movie.draw()
             
@@ -2419,7 +2422,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         thisExp.addData('music_words2.stopped', globalClock.getTime())
         # Run 'End Routine' code from code_7
         if trials_3.thisN == nRows-1:
-            background_movie.stop()
+            background_movie_r2.stop()
         # check responses
         if key_resp_8.keys in ['', [], None]:  # No response was made
             key_resp_8.keys = None
@@ -2477,8 +2480,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         # Run 'Begin Routine' code from code_2_3
         if trials_4.thisN == 0:
-            background_movie_s2.play()
-            background_movie_s2.draw()    
+            displayed_movie_r2.play()
+            displayed_movie_r2.draw()    
         # Run 'Begin Routine' code from mar4_2
         mar_movie.play()  
         
@@ -2488,8 +2491,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         
         if trials_4.thisN == 0:
-            background_movie2.play()
-            background_movie2.draw()    
+            background_movie2_r2.play()
+            background_movie2_r2.draw()    
         image_9.setPos([posx, posy])
         image_9.setImage('imgs/iceberg.png')
         Key_resp.keys = []
@@ -2519,12 +2522,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from code_2_3
-            background_movie_s2.draw()
+            displayed_movie_r2.draw()
             # Run 'Each Frame' code from mar4_2
             mar_movie.draw()
             
             # Run 'Each Frame' code from code_8
-            background_movie2.draw()
+            background_movie2_r2.draw()
             
             
             # *image_9* updates
@@ -2629,10 +2632,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         thisExp.addData('music_video2.stopped', globalClock.getTime())
         # Run 'End Routine' code from code_2_3
         if trials_4.thisN == nRows-1:
-            background_movie_s2.stop()
+            displayed_movie_r2.stop()
         # Run 'End Routine' code from code_8
         if trials_4.thisN == nRows-1:
-            background_movie2.stop()
+            background_movie2_r2.stop()
         # check responses
         if Key_resp.keys in ['', [], None]:  # No response was made
             Key_resp.keys = None
