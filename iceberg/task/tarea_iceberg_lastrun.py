@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 10, 2024, at 10:16
+    on September 10, 2024, at 10:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,6 +33,11 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
+# Run 'Before Experiment' code from code_5
+path_videomar = 'imgs/marluis.mp4' #'imgs/video_mar.mp4'
+path_musicafondo = 'imgs/song_titanic.mp4'
+path_musicaletra = 'imgs/titanic_spanish.mp4'
+path_pelicula = 'imgs/titanic.mp4'
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -367,8 +372,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ronda3=rutinas[2]
     ronda4=rutinas[3]
     
-    ronda1="music_words"
-    ronda2="music"
+    ronda1="music_video"
+    ronda2="music_words"
     
     # --- Initialize components for Routine "control" ---
     image = visual.ImageStim(
@@ -389,7 +394,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/video_mar.mp4', # Ruta al archivo de video
+        filename=path_videomar, # Ruta al archivo de video
         size=(1900,1200),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -414,7 +419,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     background_sound = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/song_titanic.mp4', # Ruta al archivo de video
+        filename=path_musicafondo, # Ruta al archivo de video
         size=(20, 20),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -427,7 +432,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_2
     background_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
+        filename=path_musicaletra , # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -450,7 +455,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_2_2
     background_movie2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
+        filename=path_musicaletra , # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -461,7 +466,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_3
     displayed_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic.mp4', # Ruta al archivo de video
+        filename=path_pelicula, # Ruta al archivo de video
         size=(500,400),               # Tamaño del video (opcional)
         pos=(0,100),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -507,7 +512,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/video_mar.mp4', # Ruta al archivo de video
+        filename=path_videomar, # Ruta al archivo de video
         size=(1900,1200),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -532,7 +537,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     background_sound_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/song_titanic.mp4', # Ruta al archivo de video
+        filename=path_musicafondo, # Ruta al archivo de video
         size=(20, 20),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -545,7 +550,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_7
     background_movie_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
+        filename=path_musicaletra , # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -568,7 +573,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_2_3
     displayed_movie_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic_spanish.mp4', # Ruta al archivo de video
+        filename=path_musicaletra , # Ruta al archivo de video
         size=(10,10),               # Tamaño del video (opcional)
         pos=(0,0),
         flipVert=False,                 # Si se debe voltear verticalmente
@@ -579,7 +584,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code_8
     background_movie2_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
-        filename='imgs/titanic.mp4', # Ruta al archivo de video
+        filename=path_pelicula, # Ruta al archivo de video
         size=(500,400),               # Tamaño del video (opcional)
         pos=(0,100),
         flipVert=False,                 # Si se debe voltear verticalmente
