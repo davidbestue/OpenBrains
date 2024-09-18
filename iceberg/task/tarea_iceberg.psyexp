@@ -955,11 +955,11 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="code_5" plugin="None">
-        <Param val="path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.mp4'&amp;#10;path_musicafondo = 'imgs/song_titanic.mp4'&amp;#10;path_musicaletra = 'imgs/titanic_spanish.mp4'&amp;#10;path_pelicula = 'imgs/titanic.mp4'&amp;#10;&amp;#10;nRows = 3" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="path_videomar = &quot;imgs/video_mar_luis.mp4&quot;;&amp;#10;path_musicafondo = &quot;imgs/song_titanic.mp4&quot;;&amp;#10;path_musicaletra = &quot;imgs/titanic_spanish.mp4&quot;;&amp;#10;path_pelicula = &quot;imgs/titanic.mp4&quot;;&amp;#10;nRows = 3;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random &amp;#10;# Lista de nombres de rutinas&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;]&amp;#10;# Barajar el orden de las rutinas&amp;#10;random.shuffle(rutinas)&amp;#10;print(rutinas)&amp;#10;&amp;#10;# Un índice para seguir qué rutina ejecutar&amp;#10;ronda1=rutinas[0]&amp;#10;ronda2=rutinas[1]&amp;#10;ronda3=rutinas[2]&amp;#10;ronda4=rutinas[3]&amp;#10;&amp;#10;ronda1=&quot;music_video&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as random from 'random';&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;];&amp;#10;Math.random.shuffle(rutinas);&amp;#10;console.log(rutinas);&amp;#10;ronda1 = rutinas[0];&amp;#10;ronda2 = rutinas[1];&amp;#10;ronda3 = rutinas[2];&amp;#10;ronda4 = rutinas[3];&amp;#10;ronda1 = &quot;music_video&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+      <CodeComponent name="codigos_generales" plugin="None">
+        <Param val="path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.mp4'&amp;#10;path_musicafondo = 'imgs/song_titanic.mp4'&amp;#10;path_musicaletra = 'imgs/titanic_spanish.mp4'&amp;#10;path_pelicula = 'imgs/titanic.mp4'&amp;#10;&amp;#10;nRows = 8" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="path_videomar = &quot;imgs/video_mar_luis.mp4&quot;;&amp;#10;path_musicafondo = &quot;imgs/song_titanic.mp4&quot;;&amp;#10;path_musicaletra = &quot;imgs/titanic_spanish.mp4&quot;;&amp;#10;path_pelicula = &quot;imgs/titanic.mp4&quot;;&amp;#10;nRows = 8;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import random &amp;#10;# Lista de nombres de rutinas&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;]&amp;#10;# Barajar el orden de las rutinas&amp;#10;random.shuffle(rutinas)&amp;#10;print(rutinas)&amp;#10;&amp;#10;# Un índice para seguir qué rutina ejecutar&amp;#10;ronda1=rutinas[0]&amp;#10;ronda2=rutinas[1]&amp;#10;ronda3=rutinas[2]&amp;#10;ronda4=rutinas[3]&amp;#10;&amp;#10;#ronda1=&quot;music_video&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;];&amp;#10;Math.random.shuffle(rutinas);&amp;#10;console.log(rutinas);&amp;#10;ronda1 = rutinas[0];&amp;#10;ronda2 = rutinas[1];&amp;#10;ronda3 = rutinas[2];&amp;#10;ronda4 = rutinas[3];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="totalRows = 118;&amp;#10;selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="totalRows = 118  # Replace with the total number of rows in your Excel file&amp;#10;selectedRows = random.sample(range(totalRows), nRows)&amp;#10;selectedRowsStr = [i for i in selectedRows]" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -970,7 +970,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code_5" valType="code" updates="None" name="name"/>
+        <Param val="codigos_generales" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="Ronda_2">
