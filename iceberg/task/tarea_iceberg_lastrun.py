@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 14:00
+    on September 18, 2024, at 14:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -38,6 +38,8 @@ path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.m
 path_musicafondo = 'imgs/song_titanic.mp4'
 path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
+
+nRows = 3
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -357,13 +359,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     # Run 'Begin Experiment' code from code_5
     import random 
-    
     # Lista de nombres de rutinas
     rutinas = ["control", "music", "music_words", "music_video"]
-    
     # Barajar el orden de las rutinas
     random.shuffle(rutinas)
-    
     print(rutinas)
     
     # Un índice para seguir qué rutina ejecutar
@@ -373,8 +372,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ronda4=rutinas[3]
     
     ronda1="music_video"
-    #ronda2="music_words"
-    #ronda3="control"
+    
     
     # --- Initialize components for Routine "control" ---
     image = visual.ImageStim(
@@ -387,12 +385,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar1
-    import random
-    nRows = 2
-    totalRows = 195  # Replace with the total number of rows in your Excel file
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_videomar, # Ruta al archivo de video
@@ -415,9 +407,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     background_sound = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_musicafondo, # Ruta al archivo de video
@@ -505,12 +494,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_6 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_2
-    import random
-    nRows = 2
-    totalRows = 118  # Replace with the total number of rows in your Excel file
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_videomar, # Ruta al archivo de video
@@ -533,9 +516,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_7 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_6
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     background_sound_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_musicafondo, # Ruta al archivo de video
@@ -623,12 +603,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_9 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_3
-    import random
-    nRows = 2
-    totalRows = 118  # Replace with the total number of rows in your Excel file
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_videomar, # Ruta al archivo de video
@@ -651,9 +625,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_10 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_9
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     background_sound_r3 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_musicafondo, # Ruta al archivo de video
@@ -741,12 +712,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_12 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_4
-    import random
-    nRows = 2
-    totalRows = 118  # Replace with the total number of rows in your Excel file
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_videomar, # Ruta al archivo de video
@@ -769,9 +734,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=-1.0)
     key_resp_13 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_12
-    selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
-    
     background_sound_r4 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_musicafondo, # Ruta al archivo de video
@@ -1106,6 +1068,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('Ronda_1.started', globalClock.getTime())
     text_7.setText('Ronda 1/4')
+    # Run 'Begin Routine' code from code_5
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_1Components = [text_7]
     for thisComponent in Ronda_1Components:
@@ -1622,9 +1588,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         else:
             continueRoutine = False
         # Run 'Begin Routine' code from code_2
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
         if trials_3.thisN == 0:
             background_movie.play()
             background_movie.draw()    
@@ -1831,10 +1794,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_3
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
-        
         if trials_4.thisN == 0:
             displayed_movie.play()
             displayed_movie.draw()    
@@ -2003,6 +1962,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('Ronda_2.started', globalClock.getTime())
     text_8.setText('Ronda 2/4')
+    # Run 'Begin Routine' code from code_15
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_2Components = [text_8]
     for thisComponent in Ronda_2Components:
@@ -2519,9 +2482,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         else:
             continueRoutine = False
         # Run 'Begin Routine' code from code_7
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
         if trials_7.thisN == 0:
             background_movie_r2.play()
             background_movie_r2.draw()    
@@ -2728,10 +2688,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_8
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
-        
         if trials_8.thisN == 0:
             displayed_movie_r2.play()
             displayed_movie_r2.draw()    
@@ -2900,6 +2856,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('Ronda_3.started', globalClock.getTime())
     text_9.setText('Ronda 3/4')
+    # Run 'Begin Routine' code from code_16
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_3Components = [text_9]
     for thisComponent in Ronda_3Components:
@@ -3416,9 +3376,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         else:
             continueRoutine = False
         # Run 'Begin Routine' code from code_10
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
         if trials_11.thisN == 0:
             background_movie_r3.play()
             background_movie_r3.draw()    
@@ -3625,10 +3582,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_11
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
-        
         if trials_12.thisN == 0:
             displayed_movie_r3.play()
             displayed_movie_r3.draw()    
@@ -3797,6 +3750,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('Ronda_4.started', globalClock.getTime())
     text_10.setText('Ronda 4/4')
+    # Run 'Begin Routine' code from code_17
+    totalRows = 118  # Replace with the total number of rows in your Excel file
+    selectedRows = random.sample(range(totalRows), nRows)
+    selectedRowsStr = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_4Components = [text_10]
     for thisComponent in Ronda_4Components:
@@ -4313,9 +4270,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         else:
             continueRoutine = False
         # Run 'Begin Routine' code from code_13
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
         if trials_15.thisN == 0:
             background_movie_r4.play()
             background_movie_r4.draw()    
@@ -4522,10 +4476,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # Run 'Begin Routine' code from code_14
-        selectedRows = random.sample(range(totalRows), nRows)
-        selectedRowsStr = [i for i in selectedRows]
-        
-        
         if trials_16.thisN == 0:
             displayed_movie_r4.play()
             displayed_movie_r4.draw()    
