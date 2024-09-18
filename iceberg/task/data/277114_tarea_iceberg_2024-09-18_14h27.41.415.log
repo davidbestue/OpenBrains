@@ -1,0 +1,1010 @@
+6.6301 	WARNING 	User requested fullscreen with size [1536  864], but screen is actually [1920, 1080]. Using actual size
+7.1863 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002C85F9A0DC0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002C85F9A0D60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002C85F9A0B80>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002C85FDF0310>, multiSample=False, name='window1', numSamples=2, pos=(1920, 789), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.1864 	EXP 	window1: mouseVisible = True
+7.1865 	EXP 	window1: backgroundImage = ''
+7.1865 	EXP 	window1: backgroundFit = 'none'
+7.1883 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.1884 	EXP 	window1: recordFrameIntervals = False
+7.3524 	EXP 	window1: recordFrameIntervals = True
+7.5366 	EXP 	Screen (0) actual frame rate measured at 59.92Hz
+7.5367 	EXP 	window1: recordFrameIntervals = False
+7.5368 	EXP 	window1: mouseVisible = False
+9.1048 	EXP 	tarea_iceberg: status = STARTED
+9.1050 	EXP 	window1: mouseVisible = True
+9.1054 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+9.1103 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+9.1145 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+9.1188 	WARNING 	Requested image 'imgs/logo_OB.jpeg' not found but similar filename 'imgs/logo_OB.png' exists. This will be used instead but changing the filename is advised.
+9.1234 	EXP 	Created image_5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='imgs/logo_OB.jpeg', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.6, 0.7]), texRes=128.0, units='height', win=Window(...))
+9.1236 	EXP 	window1: mouseVisible = True
+9.1761 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.35]), rgb=UNKNOWN, text='¡Bienvenido a un experimento de Open Brains!', units='height', win=Window(...), wrapWidth=1)
+9.1762 	EXP 	window1: mouseVisible = True
+9.1922 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.035, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.1923 	EXP 	window1: mouseVisible = True
+9.1933 	EXP 	Created text_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_7', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.1935 	EXP 	window1: mouseVisible = True
+9.2011 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+9.3022 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/video_mar_luis.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+10.4798 	WARNING 	1.1776113000232726: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03333333333333333
+10.4799 	WARNING 	1.1776457000523806: Video catchup needed, advancing self._nextFrameT from 0.03333333333333333 to 0.06666666666666667
+10.4799 	WARNING 	1.177657900028862: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+10.4799 	WARNING 	1.1776674999855459: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+10.4799 	WARNING 	1.177676200051792: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+10.4799 	WARNING 	1.1776847000000998: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+10.4799 	WARNING 	1.1776931999484077: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+10.4799 	WARNING 	1.177701500011608: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+10.4799 	WARNING 	1.1777103999629617: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+10.4799 	WARNING 	1.1777191000292078: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+10.4799 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+10.7507 	EXP 	window1: mouseVisible = True
+10.7609 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+10.7611 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/song_titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+11.5174 	WARNING 	0.7562271000351757: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.041666666666666664
+11.5174 	WARNING 	0.7562557000201195: Video catchup needed, advancing self._nextFrameT from 0.041666666666666664 to 0.08333333333333333
+11.5174 	WARNING 	0.7562685000011697: Video catchup needed, advancing self._nextFrameT from 0.08333333333333333 to 0.125
+11.5174 	WARNING 	0.7562767999479547: Video catchup needed, advancing self._nextFrameT from 0.125 to 0.16666666666666666
+11.5174 	WARNING 	0.756285100011155: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.20833333333333331
+11.5174 	WARNING 	0.7562929999548942: Video catchup needed, advancing self._nextFrameT from 0.20833333333333331 to 0.24999999999999997
+11.5174 	WARNING 	0.7563008000142872: Video catchup needed, advancing self._nextFrameT from 0.24999999999999997 to 0.29166666666666663
+11.5174 	WARNING 	0.7563084999565035: Video catchup needed, advancing self._nextFrameT from 0.29166666666666663 to 0.3333333333333333
+11.5175 	WARNING 	0.7563162000151351: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.375
+11.5175 	WARNING 	0.7563240999588743: Video catchup needed, advancing self._nextFrameT from 0.375 to 0.4166666666666667
+11.5175 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+11.5315 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+12.7370 	WARNING 	1.205453500035219: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+12.7370 	WARNING 	1.2054876999463886: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+12.7371 	WARNING 	1.2054974000202492: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+12.7371 	WARNING 	1.2055056999670342: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+12.7371 	WARNING 	1.2055135000264272: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+12.7371 	WARNING 	1.2055211999686435: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+12.7371 	WARNING 	1.20553029992152: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+12.7371 	WARNING 	1.205538099980913: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+12.7371 	WARNING 	1.205545699922368: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+12.7371 	WARNING 	1.2055529999779537: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+12.7371 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+12.7676 	EXP 	window1: mouseVisible = True
+12.7765 	EXP 	Created image_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+12.7767 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+13.9576 	WARNING 	1.180795600055717: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+13.9576 	WARNING 	1.1808287999592721: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+13.9576 	WARNING 	1.1808397000422701: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+13.9576 	WARNING 	1.1808495000004768: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+13.9576 	WARNING 	1.1808586999541149: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+13.9576 	WARNING 	1.1808679000241682: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+13.9576 	WARNING 	1.1808801000006497: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+13.9576 	WARNING 	1.180888899951242: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+13.9576 	WARNING 	1.1808977000182495: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+13.9577 	WARNING 	1.1809062999673188: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+13.9577 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+13.9858 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([   0., -350.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+15.0632 	WARNING 	1.0773657000390813: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03336666666666667
+15.0632 	WARNING 	1.0774547000182793: Video catchup needed, advancing self._nextFrameT from 0.03336666666666667 to 0.06673333333333334
+15.0633 	WARNING 	1.0774659001035616: Video catchup needed, advancing self._nextFrameT from 0.06673333333333334 to 0.10010000000000001
+15.0633 	WARNING 	1.0774767000693828: Video catchup needed, advancing self._nextFrameT from 0.10010000000000001 to 0.13346666666666668
+15.0633 	WARNING 	1.0774863000260666: Video catchup needed, advancing self._nextFrameT from 0.13346666666666668 to 0.16683333333333333
+15.0633 	WARNING 	1.077495300094597: Video catchup needed, advancing self._nextFrameT from 0.16683333333333333 to 0.2002
+15.0633 	WARNING 	1.0775041000451893: Video catchup needed, advancing self._nextFrameT from 0.2002 to 0.23356666666666664
+15.0633 	WARNING 	1.07751279999502: Video catchup needed, advancing self._nextFrameT from 0.23356666666666664 to 0.2669333333333333
+15.0633 	WARNING 	1.0775216000620276: Video catchup needed, advancing self._nextFrameT from 0.2669333333333333 to 0.30029999999999996
+15.0633 	WARNING 	1.0775305000133812: Video catchup needed, advancing self._nextFrameT from 0.30029999999999996 to 0.3336666666666666
+15.0633 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+15.1011 	EXP 	window1: mouseVisible = True
+15.1101 	EXP 	Created image_4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+15.1102 	EXP 	window1: mouseVisible = True
+15.1110 	EXP 	Created text_8 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_8', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.1110 	EXP 	window1: mouseVisible = True
+15.1189 	EXP 	Created image_6 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_6', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+15.1191 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/video_mar_luis.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+15.6492 	WARNING 	0.5300035999389365: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03333333333333333
+15.6492 	WARNING 	0.5300640999339521: Video catchup needed, advancing self._nextFrameT from 0.03333333333333333 to 0.06666666666666667
+15.6492 	WARNING 	0.5300754000199959: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+15.6492 	WARNING 	0.5300839999690652: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+15.6493 	WARNING 	0.5300918999128044: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+15.6493 	WARNING 	0.5300998999737203: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+15.6493 	WARNING 	0.5301080999197438: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+15.6493 	WARNING 	0.5301160999806598: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+15.6493 	WARNING 	0.5301238999236375: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+15.6493 	WARNING 	0.5301312999799848: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+15.6493 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+15.7608 	EXP 	window1: mouseVisible = True
+15.7695 	EXP 	Created image_7 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_7', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+15.7697 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/song_titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+16.5470 	WARNING 	0.7772834999486804: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.041666666666666664
+16.5470 	WARNING 	0.7773140999488533: Video catchup needed, advancing self._nextFrameT from 0.041666666666666664 to 0.08333333333333333
+16.5470 	WARNING 	0.7773246999131516: Video catchup needed, advancing self._nextFrameT from 0.08333333333333333 to 0.125
+16.5470 	WARNING 	0.7773329999763519: Video catchup needed, advancing self._nextFrameT from 0.125 to 0.16666666666666666
+16.5470 	WARNING 	0.7773411999223754: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.20833333333333331
+16.5471 	WARNING 	0.7773489999817684: Video catchup needed, advancing self._nextFrameT from 0.20833333333333331 to 0.24999999999999997
+16.5471 	WARNING 	0.7773566999239847: Video catchup needed, advancing self._nextFrameT from 0.24999999999999997 to 0.29166666666666663
+16.5471 	WARNING 	0.7773646999849007: Video catchup needed, advancing self._nextFrameT from 0.29166666666666663 to 0.3333333333333333
+16.5471 	WARNING 	0.7773727999301627: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.375
+16.5471 	WARNING 	0.7773807999910787: Video catchup needed, advancing self._nextFrameT from 0.375 to 0.4166666666666667
+16.5471 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+16.5605 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+17.7358 	WARNING 	1.1753296999959275: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+17.7358 	WARNING 	1.1753603999968618: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+17.7358 	WARNING 	1.1753701999550685: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+17.7359 	WARNING 	1.1753782000159845: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+17.7359 	WARNING 	1.1753888999810442: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+17.7359 	WARNING 	1.1753968000411987: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+17.7359 	WARNING 	1.1754047999856994: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+17.7359 	WARNING 	1.1754124000435695: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+17.7359 	WARNING 	1.1754198999842629: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+17.7359 	WARNING 	1.1754274000413716: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+17.7359 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+17.7646 	EXP 	window1: mouseVisible = True
+17.7731 	EXP 	Created image_8 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_8', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+17.7734 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+18.9186 	WARNING 	1.145139200030826: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+18.9186 	WARNING 	1.1452269000001252: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+18.9186 	WARNING 	1.1452387999743223: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+18.9186 	WARNING 	1.1452497999416664: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+18.9186 	WARNING 	1.1452587000094354: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+18.9186 	WARNING 	1.1452667999546975: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+18.9186 	WARNING 	1.1452754000201821: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+18.9187 	WARNING 	1.1452842999715358: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+18.9187 	WARNING 	1.1452936999266967: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+18.9187 	WARNING 	1.1453020999906585: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+18.9187 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+18.9572 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([   0., -350.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+20.0065 	WARNING 	1.0493230000138283: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03336666666666667
+20.0066 	WARNING 	1.0493597999447957: Video catchup needed, advancing self._nextFrameT from 0.03336666666666667 to 0.06673333333333334
+20.0066 	WARNING 	1.049370800028555: Video catchup needed, advancing self._nextFrameT from 0.06673333333333334 to 0.10010000000000001
+20.0066 	WARNING 	1.0493805999867618: Video catchup needed, advancing self._nextFrameT from 0.10010000000000001 to 0.13346666666666668
+20.0066 	WARNING 	1.0493898999411613: Video catchup needed, advancing self._nextFrameT from 0.13346666666666668 to 0.16683333333333333
+20.0066 	WARNING 	1.0493984000058845: Video catchup needed, advancing self._nextFrameT from 0.16683333333333333 to 0.2002
+20.0066 	WARNING 	1.049406799953431: Video catchup needed, advancing self._nextFrameT from 0.2002 to 0.23356666666666664
+20.0066 	WARNING 	1.0494154000189155: Video catchup needed, advancing self._nextFrameT from 0.23356666666666664 to 0.2669333333333333
+20.0066 	WARNING 	1.0494241999695078: Video catchup needed, advancing self._nextFrameT from 0.2669333333333333 to 0.30029999999999996
+20.0066 	WARNING 	1.0494329999201: Video catchup needed, advancing self._nextFrameT from 0.30029999999999996 to 0.3336666666666666
+20.0066 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+20.0312 	EXP 	window1: mouseVisible = True
+20.0394 	EXP 	Created image_9 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_9', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+20.0395 	EXP 	window1: mouseVisible = True
+20.0404 	EXP 	Created text_9 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_9', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.0404 	EXP 	window1: mouseVisible = True
+20.0481 	EXP 	Created image_10 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_10', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+20.0483 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/video_mar_luis.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+20.5782 	WARNING 	0.5298391999676824: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03333333333333333
+20.5782 	WARNING 	0.5298796000424773: Video catchup needed, advancing self._nextFrameT from 0.03333333333333333 to 0.06666666666666667
+20.5782 	WARNING 	0.5298906000098214: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+20.5782 	WARNING 	0.5298998999642208: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+20.5782 	WARNING 	0.5299092000350356: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+20.5782 	WARNING 	0.5299180999863893: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+20.5782 	WARNING 	0.5299273000564426: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+20.5783 	WARNING 	0.529938800027594: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+20.5783 	WARNING 	0.5299475999781862: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+20.5783 	WARNING 	0.5299562000436708: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+20.5783 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+20.7109 	EXP 	window1: mouseVisible = True
+20.7200 	EXP 	Created image_11 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_11', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+20.7202 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/song_titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+21.4609 	WARNING 	0.74075510003604: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.041666666666666664
+21.4610 	WARNING 	0.7407856000354514: Video catchup needed, advancing self._nextFrameT from 0.041666666666666664 to 0.08333333333333333
+21.4610 	WARNING 	0.7407952999928966: Video catchup needed, advancing self._nextFrameT from 0.08333333333333333 to 0.125
+21.4610 	WARNING 	0.7408038999419659: Video catchup needed, advancing self._nextFrameT from 0.125 to 0.16666666666666666
+21.4610 	WARNING 	0.7408122000051662: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.20833333333333331
+21.4610 	WARNING 	0.7408203999511898: Video catchup needed, advancing self._nextFrameT from 0.20833333333333331 to 0.24999999999999997
+21.4610 	WARNING 	0.7408285000128672: Video catchup needed, advancing self._nextFrameT from 0.24999999999999997 to 0.29166666666666663
+21.4610 	WARNING 	0.7408363999566063: Video catchup needed, advancing self._nextFrameT from 0.29166666666666663 to 0.3333333333333333
+21.4610 	WARNING 	0.7408445000182837: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.375
+21.4610 	WARNING 	0.7408522999612615: Video catchup needed, advancing self._nextFrameT from 0.375 to 0.4166666666666667
+21.4610 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+21.4739 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+22.6783 	WARNING 	1.2042596000246704: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+22.6783 	WARNING 	1.2043919999850914: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+22.6783 	WARNING 	1.2044044999638572: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+22.6783 	WARNING 	1.2044145000400022: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+22.6783 	WARNING 	1.2044234999921173: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+22.6784 	WARNING 	1.2044322000583634: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+22.6784 	WARNING 	1.2044408000074327: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+22.6784 	WARNING 	1.2044496999587864: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+22.6784 	WARNING 	1.2044579000212252: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+22.6784 	WARNING 	1.204478400060907: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+22.6784 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+22.7108 	EXP 	window1: mouseVisible = True
+22.7198 	EXP 	Created image_12 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_12', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+22.7200 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+23.8956 	WARNING 	1.1754707000218332: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+23.8956 	WARNING 	1.1755620000185445: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+23.8956 	WARNING 	1.1755807000445202: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+23.8957 	WARNING 	1.1755986000644043: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+23.8957 	WARNING 	1.1756151000736281: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+23.8957 	WARNING 	1.1756322999717668: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+23.8957 	WARNING 	1.175646899966523: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+23.8957 	WARNING 	1.1756564000388607: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+23.8957 	WARNING 	1.175665899994783: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+23.8957 	WARNING 	1.1756745000602677: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+23.8957 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+23.9262 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([   0., -350.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+24.9598 	WARNING 	1.0335253999801353: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03336666666666667
+24.9598 	WARNING 	1.0335666999453679: Video catchup needed, advancing self._nextFrameT from 0.03336666666666667 to 0.06673333333333334
+24.9598 	WARNING 	1.03358169994317: Video catchup needed, advancing self._nextFrameT from 0.06673333333333334 to 0.10010000000000001
+24.9598 	WARNING 	1.033594899927266: Video catchup needed, advancing self._nextFrameT from 0.10010000000000001 to 0.13346666666666668
+24.9598 	WARNING 	1.03360760002397: Video catchup needed, advancing self._nextFrameT from 0.13346666666666668 to 0.16683333333333333
+24.9599 	WARNING 	1.0336201000027359: Video catchup needed, advancing self._nextFrameT from 0.16683333333333333 to 0.2002
+24.9599 	WARNING 	1.0336326999822631: Video catchup needed, advancing self._nextFrameT from 0.2002 to 0.23356666666666664
+24.9599 	WARNING 	1.0336456999648362: Video catchup needed, advancing self._nextFrameT from 0.23356666666666664 to 0.2669333333333333
+24.9599 	WARNING 	1.0336584999458864: Video catchup needed, advancing self._nextFrameT from 0.2669333333333333 to 0.30029999999999996
+24.9599 	WARNING 	1.0336708999238908: Video catchup needed, advancing self._nextFrameT from 0.30029999999999996 to 0.3336666666666666
+24.9599 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+24.9891 	EXP 	window1: mouseVisible = True
+24.9981 	EXP 	Created image_13 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_13', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+24.9983 	EXP 	window1: mouseVisible = True
+24.9991 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+24.9992 	EXP 	window1: mouseVisible = True
+25.0076 	EXP 	Created image_14 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_14', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+25.0078 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/video_mar_luis.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+25.5468 	WARNING 	0.5389818000840023: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03333333333333333
+25.5469 	WARNING 	0.5390233000507578: Video catchup needed, advancing self._nextFrameT from 0.03333333333333333 to 0.06666666666666667
+25.5469 	WARNING 	0.5390383000485599: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+25.5469 	WARNING 	0.5390514000318944: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+25.5469 	WARNING 	0.5390636000083759: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+25.5469 	WARNING 	0.5390757999848574: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+25.5469 	WARNING 	0.5390880000777543: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+25.5469 	WARNING 	0.5391005000565201: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+25.5470 	WARNING 	0.5391127000330016: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+25.5470 	WARNING 	0.5391246000071988: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+25.5470 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+25.6764 	EXP 	window1: mouseVisible = True
+25.6853 	EXP 	Created image_15 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_15', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+25.6855 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/song_titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+26.3939 	WARNING 	0.7082730999682099: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.041666666666666664
+26.3939 	WARNING 	0.7083584000356495: Video catchup needed, advancing self._nextFrameT from 0.041666666666666664 to 0.08333333333333333
+26.3939 	WARNING 	0.7083724000258371: Video catchup needed, advancing self._nextFrameT from 0.08333333333333333 to 0.125
+26.3939 	WARNING 	0.7083829999901354: Video catchup needed, advancing self._nextFrameT from 0.125 to 0.16666666666666666
+26.3939 	WARNING 	0.7083953999681398: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.20833333333333331
+26.3939 	WARNING 	0.7084052000427619: Video catchup needed, advancing self._nextFrameT from 0.20833333333333331 to 0.24999999999999997
+26.3939 	WARNING 	0.7084142999956384: Video catchup needed, advancing self._nextFrameT from 0.24999999999999997 to 0.29166666666666663
+26.3940 	WARNING 	0.7084234000649303: Video catchup needed, advancing self._nextFrameT from 0.29166666666666663 to 0.3333333333333333
+26.3940 	WARNING 	0.7084333000238985: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.375
+26.3940 	WARNING 	0.7084424999775365: Video catchup needed, advancing self._nextFrameT from 0.375 to 0.4166666666666667
+26.3940 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+26.4129 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+27.5866 	WARNING 	1.1736721999477595: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+27.5866 	WARNING 	1.1737036999547854: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+27.5867 	WARNING 	1.1737127000233158: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+27.5867 	WARNING 	1.173720599967055: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+27.5867 	WARNING 	1.1737282000249252: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+27.5867 	WARNING 	1.1737356999656186: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+27.5867 	WARNING 	1.1737433000234887: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+27.5867 	WARNING 	1.1737554999999702: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+27.5867 	WARNING 	1.173764199949801: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+27.5867 	WARNING 	1.1737717000069097: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+27.5867 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+27.6199 	EXP 	window1: mouseVisible = True
+27.6280 	EXP 	Created image_16 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_16', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+27.6282 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic_spanish.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+28.8041 	WARNING 	1.1758747999556363: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.04
+28.8041 	WARNING 	1.1759234999772161: Video catchup needed, advancing self._nextFrameT from 0.04 to 0.08
+28.8042 	WARNING 	1.1759371999651194: Video catchup needed, advancing self._nextFrameT from 0.08 to 0.12
+28.8042 	WARNING 	1.1759496999438852: Video catchup needed, advancing self._nextFrameT from 0.12 to 0.16
+28.8042 	WARNING 	1.1759616000344977: Video catchup needed, advancing self._nextFrameT from 0.16 to 0.2
+28.8042 	WARNING 	1.175973300007172: Video catchup needed, advancing self._nextFrameT from 0.2 to 0.24000000000000002
+28.8042 	WARNING 	1.1759857999859378: Video catchup needed, advancing self._nextFrameT from 0.24000000000000002 to 0.28
+28.8042 	WARNING 	1.1759980999631807: Video catchup needed, advancing self._nextFrameT from 0.28 to 0.32
+28.8042 	WARNING 	1.1760100999381393: Video catchup needed, advancing self._nextFrameT from 0.32 to 0.36
+28.8042 	WARNING 	1.1760220000287518: Video catchup needed, advancing self._nextFrameT from 0.36 to 0.39999999999999997
+28.8043 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+28.8385 	EXP 	Created unnamed MovieStim3 = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, anchor=('center', 'center'), autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='imgs/titanic.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=False, name='unnamed MovieStim3', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([   0., -350.]), size=None, units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+29.8786 	WARNING 	1.040006999974139: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03336666666666667
+29.8786 	WARNING 	1.0400361999636516: Video catchup needed, advancing self._nextFrameT from 0.03336666666666667 to 0.06673333333333334
+29.8786 	WARNING 	1.0400462999241427: Video catchup needed, advancing self._nextFrameT from 0.06673333333333334 to 0.10010000000000001
+29.8786 	WARNING 	1.0400563000002876: Video catchup needed, advancing self._nextFrameT from 0.10010000000000001 to 0.13346666666666668
+29.8786 	WARNING 	1.0400649999501184: Video catchup needed, advancing self._nextFrameT from 0.13346666666666668 to 0.16683333333333333
+29.8786 	WARNING 	1.0400729000102729: Video catchup needed, advancing self._nextFrameT from 0.16683333333333333 to 0.2002
+29.8786 	WARNING 	1.0400805999524891: Video catchup needed, advancing self._nextFrameT from 0.2002 to 0.23356666666666664
+29.8786 	WARNING 	1.0400884000118822: Video catchup needed, advancing self._nextFrameT from 0.23356666666666664 to 0.2669333333333333
+29.8786 	WARNING 	1.0400962999556214: Video catchup needed, advancing self._nextFrameT from 0.2669333333333333 to 0.30029999999999996
+29.8787 	WARNING 	1.0401039000134915: Video catchup needed, advancing self._nextFrameT from 0.30029999999999996 to 0.3336666666666666
+29.8787 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+29.9046 	EXP 	window1: mouseVisible = True
+29.9131 	EXP 	Created image_17 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_17', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.35, 0.35]), texRes=128.0, units='height', win=Window(...))
+29.9132 	EXP 	window1: mouseVisible = True
+29.9272 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='¡Muchas gracias por participar!', units='height', win=Window(...), wrapWidth=1)
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/video_mar_luis.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/song_titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/video_mar_luis.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/song_titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/video_mar_luis.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/song_titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/video_mar_luis.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/song_titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic_spanish.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0063 	EXP 	unnamed MovieStim3: autoLog = True
+0.0063 	EXP 	unnamed MovieStim3: movie = 'imgs/titanic.mp4'
+0.0063 	EXP 	unnamed MovieStim3: ori = 0.0
+0.0286 	EXP 	image_5: autoDraw = True
+0.0286 	EXP 	text_6: autoDraw = True
+3.0332 	EXP 	image_5: autoDraw = False
+3.0332 	EXP 	text_6: autoDraw = False
+3.0332 	EXP 	text_5: autoDraw = True
+6.1223 	DATA 	Keypress: space
+6.1527 	EXP 	text_5: autoDraw = False
+6.1527 	EXP 	text_7: height = 0.05
+6.1527 	EXP 	text_7: height = 0.05
+6.1527 	EXP 	text_7: height = 0.05
+6.1527 	EXP 	text_7: text = 'Ronda 1/4'
+6.1527 	EXP 	text_7: autoDraw = True
+8.1902 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+8.1906 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+8.1908 	EXP 	New trial (rep=0, index=0): {'timepresentation': 14, 'posx': -0.1, 'posy': 0.05}
+8.1966 	EXP 	Sound  started
+8.2055 	EXP 	text_7: autoDraw = False
+8.2055 	EXP 	image: image = 'imgs/iceberg.png'
+8.2055 	EXP 	Set unnamed MovieStim3 playing
+22.1517 	EXP 	image: autoDraw = True
+22.5597 	EXP 	New trial (rep=0, index=1): {'timepresentation': 14, 'posx': -0.6, 'posy': 0.05}
+22.5662 	DATA 	Keypress: space
+22.5752 	EXP 	image: autoDraw = False
+22.5752 	EXP 	image: image = 'imgs/iceberg.png'
+36.5663 	EXP 	image: autoDraw = True
+37.0029 	EXP 	New trial (rep=0, index=2): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+37.0185 	DATA 	Keypress: space
+37.0268 	EXP 	image: autoDraw = False
+37.0268 	EXP 	image: image = 'imgs/iceberg.png'
+51.0139 	EXP 	image: autoDraw = True
+51.4001 	EXP 	New trial (rep=0, index=3): {'timepresentation': 5, 'posx': -0.2, 'posy': 0.05}
+51.4130 	DATA 	Keypress: space
+51.4302 	EXP 	image: autoDraw = False
+51.4302 	EXP 	image: image = 'imgs/iceberg.png'
+56.4029 	EXP 	image: autoDraw = True
+56.8623 	EXP 	New trial (rep=0, index=4): {'timepresentation': 15, 'posx': -0.6, 'posy': 0.05}
+56.8694 	DATA 	Keypress: space
+56.8784 	EXP 	image: autoDraw = False
+56.8784 	EXP 	image: image = 'imgs/iceberg.png'
+71.8693 	EXP 	image: autoDraw = True
+72.2709 	EXP 	New trial (rep=0, index=5): {'timepresentation': 13, 'posx': -0.2, 'posy': 0.05}
+72.2860 	DATA 	Keypress: space
+72.2943 	EXP 	image: autoDraw = False
+72.2943 	EXP 	image: image = 'imgs/iceberg.png'
+82.2435 	EXP 	Sound  stopped
+82.5596 	EXP 	Sound  started
+82.5598 	WARNING 	0.33083029999397695: Video catchup needed, advancing self._nextFrameT from 0.0 to 0.03333333333333333
+82.5598 	WARNING 	0.33087199996225536: Video catchup needed, advancing self._nextFrameT from 0.03333333333333333 to 0.06666666666666667
+82.5598 	WARNING 	0.3308858999516815: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+82.5598 	WARNING 	0.33089759992435575: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+82.5598 	WARNING 	0.3309084998909384: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+82.5598 	WARNING 	0.3309198999777436: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+82.5598 	WARNING 	0.3309289999306202: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+82.5598 	WARNING 	0.33093860000371933: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+82.6952 	EXP 	Set unnamed MovieStim3 finished
+82.6954 	WARNING 	0.46648599999025464: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+82.6954 	WARNING 	0.4665082999272272: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.36666666666666664
+82.6954 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+85.2812 	EXP 	image: autoDraw = True
+85.7233 	EXP 	New trial (rep=0, index=6): {'timepresentation': 4, 'posx': 0.1, 'posy': 0.05}
+85.7312 	DATA 	Keypress: space
+85.7396 	EXP 	image: autoDraw = False
+85.7396 	EXP 	image: image = 'imgs/iceberg.png'
+89.7371 	EXP 	image: autoDraw = True
+90.1950 	DATA 	Keypress: space
+90.2044 	EXP 	New trial (rep=0, index=7): {'timepresentation': 4, 'posx': -0.7, 'posy': 0.05}
+90.2270 	EXP 	image: autoDraw = False
+90.2270 	EXP 	image: image = 'imgs/iceberg.png'
+94.2071 	EXP 	image: autoDraw = True
+94.6404 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+94.6407 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+94.6409 	EXP 	New trial (rep=0, index=0): {'timepresentation': 4, 'posx': -0.7, 'posy': 0.05}
+94.6457 	EXP 	Sound  started
+94.6460 	EXP 	New trial (rep=0, index=1): {'timepresentation': 5, 'posx': -0.2, 'posy': 0.05}
+94.6502 	EXP 	New trial (rep=0, index=2): {'timepresentation': 4, 'posx': 0.1, 'posy': 0.05}
+94.6544 	EXP 	New trial (rep=0, index=3): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+94.6587 	EXP 	New trial (rep=0, index=4): {'timepresentation': 13, 'posx': -0.2, 'posy': 0.05}
+94.6627 	EXP 	New trial (rep=0, index=5): {'timepresentation': 15, 'posx': -0.6, 'posy': 0.05}
+94.6669 	EXP 	New trial (rep=0, index=6): {'timepresentation': 14, 'posx': -0.1, 'posy': 0.05}
+94.6712 	EXP 	New trial (rep=0, index=7): {'timepresentation': 14, 'posx': -0.6, 'posy': 0.05}
+94.6928 	EXP 	Sound  stopped
+94.7047 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+94.7051 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+94.7052 	EXP 	New trial (rep=0, index=0): {'timepresentation': 5, 'posx': -0.2, 'posy': 0.05}
+94.7053 	EXP 	Sound  started
+94.7103 	EXP 	New trial (rep=0, index=1): {'timepresentation': 4, 'posx': -0.7, 'posy': 0.05}
+94.7145 	EXP 	New trial (rep=0, index=2): {'timepresentation': 15, 'posx': -0.6, 'posy': 0.05}
+94.7197 	EXP 	New trial (rep=0, index=3): {'timepresentation': 14, 'posx': -0.1, 'posy': 0.05}
+94.7244 	EXP 	New trial (rep=0, index=4): {'timepresentation': 13, 'posx': -0.2, 'posy': 0.05}
+94.7293 	EXP 	New trial (rep=0, index=5): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+94.7338 	EXP 	New trial (rep=0, index=6): {'timepresentation': 14, 'posx': -0.6, 'posy': 0.05}
+94.7384 	EXP 	New trial (rep=0, index=7): {'timepresentation': 4, 'posx': 0.1, 'posy': 0.05}
+94.7641 	EXP 	Sound  stopped
+94.7773 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+94.7776 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+94.7778 	EXP 	New trial (rep=0, index=0): {'timepresentation': 5, 'posx': -0.2, 'posy': 0.05}
+94.7778 	EXP 	Sound  started
+94.7780 	EXP 	Sound  started
+94.7835 	EXP 	New trial (rep=0, index=1): {'timepresentation': 4, 'posx': -0.7, 'posy': 0.05}
+94.7879 	EXP 	New trial (rep=0, index=2): {'timepresentation': 4, 'posx': 0.1, 'posy': 0.05}
+94.7922 	EXP 	New trial (rep=0, index=3): {'timepresentation': 15, 'posx': -0.6, 'posy': 0.05}
+94.7964 	EXP 	New trial (rep=0, index=4): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+94.8005 	EXP 	New trial (rep=0, index=5): {'timepresentation': 13, 'posx': -0.2, 'posy': 0.05}
+94.8049 	EXP 	New trial (rep=0, index=6): {'timepresentation': 14, 'posx': -0.6, 'posy': 0.05}
+94.8091 	EXP 	New trial (rep=0, index=7): {'timepresentation': 14, 'posx': -0.1, 'posy': 0.05}
+94.8336 	EXP 	Sound  stopped
+94.8542 	EXP 	Sound  stopped
+94.8604 	DATA 	Keypress: space
+94.8654 	EXP 	image: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	Set unnamed MovieStim3 playing
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	image_2: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_2: autoDraw = False
+94.8654 	EXP 	Set unnamed MovieStim3 stopped
+94.8654 	EXP 	Set unnamed MovieStim3 playing
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	image_3: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_3: autoDraw = False
+94.8654 	EXP 	Set unnamed MovieStim3 stopped
+94.8654 	EXP 	Set unnamed MovieStim3 playing
+94.8654 	EXP 	Set unnamed MovieStim3 playing
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	image_4: image = 'imgs/iceberg.png'
+94.8654 	EXP 	image_4: autoDraw = False
+94.8654 	EXP 	Set unnamed MovieStim3 stopped
+94.8654 	EXP 	Set unnamed MovieStim3 stopped
+94.8654 	EXP 	text_8: height = 0.05
+94.8654 	EXP 	text_8: height = 0.05
+94.8654 	EXP 	text_8: height = 0.05
+94.8654 	EXP 	text_8: text = 'Ronda 2/4'
+94.8654 	EXP 	text_8: autoDraw = True
+96.8723 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+96.8727 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+96.8729 	EXP 	New trial (rep=0, index=0): {'timepresentation': 8, 'posx': -0.1, 'posy': 0.05}
+96.8782 	EXP 	New trial (rep=0, index=1): {'timepresentation': 3, 'posx': -0.2, 'posy': 0.05}
+96.8822 	EXP 	New trial (rep=0, index=2): {'timepresentation': 10, 'posx': -0.6, 'posy': 0.05}
+96.8860 	EXP 	New trial (rep=0, index=3): {'timepresentation': 8, 'posx': 0, 'posy': 0.05}
+96.8898 	EXP 	New trial (rep=0, index=4): {'timepresentation': 13, 'posx': -0.5, 'posy': 0.05}
+96.8937 	EXP 	New trial (rep=0, index=5): {'timepresentation': 5, 'posx': -0.7, 'posy': 0.05}
+96.8974 	EXP 	New trial (rep=0, index=6): {'timepresentation': 7, 'posx': -0.4, 'posy': 0.05}
+96.9011 	EXP 	New trial (rep=0, index=7): {'timepresentation': 9, 'posx': -0.4, 'posy': 0.05}
+96.9174 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+96.9177 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+96.9178 	EXP 	New trial (rep=0, index=0): {'timepresentation': 5, 'posx': -0.7, 'posy': 0.05}
+96.9220 	EXP 	Sound  started
+97.4958 	EXP 	text_8: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_6: image = 'imgs/iceberg.png'
+97.4958 	EXP 	image_6: autoDraw = False
+97.4958 	EXP 	image_7: image = 'imgs/iceberg.png'
+97.4958 	EXP 	Set unnamed MovieStim3 playing
+97.4960 	WARNING 	1.2406648666365072: Video catchup needed, advancing self._nextFrameT from 0.7083333333333331 to 0.7499999999999998
+97.4960 	WARNING 	1.240687566692941: Video catchup needed, advancing self._nextFrameT from 0.7499999999999998 to 0.7916666666666664
+97.4960 	WARNING 	1.240697466651909: Video catchup needed, advancing self._nextFrameT from 0.7916666666666664 to 0.833333333333333
+97.4960 	WARNING 	1.240706666605547: Video catchup needed, advancing self._nextFrameT from 0.833333333333333 to 0.8749999999999997
+97.4961 	WARNING 	1.2407154666725546: Video catchup needed, advancing self._nextFrameT from 0.8749999999999997 to 0.9166666666666663
+97.4961 	WARNING 	1.2407242666231468: Video catchup needed, advancing self._nextFrameT from 0.9166666666666663 to 0.9583333333333329
+97.4961 	WARNING 	1.2407331666909158: Video catchup needed, advancing self._nextFrameT from 0.9583333333333329 to 0.9999999999999996
+97.4961 	WARNING 	1.240742166643031: Video catchup needed, advancing self._nextFrameT from 0.9999999999999996 to 1.0416666666666663
+97.4961 	WARNING 	1.2407510667108: Video catchup needed, advancing self._nextFrameT from 1.0416666666666663 to 1.083333333333333
+97.4961 	WARNING 	1.240760266664438: Video catchup needed, advancing self._nextFrameT from 1.083333333333333 to 1.1249999999999998
+97.4961 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+101.9146 	EXP 	image_7: autoDraw = True
+102.4242 	DATA 	Keypress: space
+102.4349 	EXP 	New trial (rep=0, index=1): {'timepresentation': 3, 'posx': -0.2, 'posy': 0.05}
+102.4562 	EXP 	image_7: autoDraw = False
+102.4562 	EXP 	image_7: image = 'imgs/iceberg.png'
+105.4370 	EXP 	image_7: autoDraw = True
+105.8931 	EXP 	New trial (rep=0, index=2): {'timepresentation': 8, 'posx': -0.1, 'posy': 0.05}
+105.9013 	DATA 	Keypress: space
+105.9098 	EXP 	image_7: autoDraw = False
+105.9098 	EXP 	image_7: image = 'imgs/iceberg.png'
+113.8931 	EXP 	image_7: autoDraw = True
+114.3524 	EXP 	New trial (rep=0, index=3): {'timepresentation': 7, 'posx': -0.4, 'posy': 0.05}
+114.3602 	DATA 	Keypress: space
+114.3691 	EXP 	image_7: autoDraw = False
+114.3691 	EXP 	image_7: image = 'imgs/iceberg.png'
+121.3687 	EXP 	image_7: autoDraw = True
+121.8291 	EXP 	New trial (rep=0, index=4): {'timepresentation': 13, 'posx': -0.5, 'posy': 0.05}
+121.8356 	DATA 	Keypress: space
+121.8442 	EXP 	image_7: autoDraw = False
+121.8442 	EXP 	image_7: image = 'imgs/iceberg.png'
+134.8318 	EXP 	image_7: autoDraw = True
+135.2918 	DATA 	Keypress: space
+135.3015 	EXP 	New trial (rep=0, index=5): {'timepresentation': 9, 'posx': -0.4, 'posy': 0.05}
+135.3246 	EXP 	image_7: autoDraw = False
+135.3246 	EXP 	image_7: image = 'imgs/iceberg.png'
+144.3068 	EXP 	image_7: autoDraw = True
+144.8174 	DATA 	Keypress: space
+144.8269 	EXP 	New trial (rep=0, index=6): {'timepresentation': 8, 'posx': 0, 'posy': 0.05}
+144.8420 	EXP 	image_7: autoDraw = False
+144.8420 	EXP 	image_7: image = 'imgs/iceberg.png'
+152.8330 	EXP 	image_7: autoDraw = True
+153.2245 	EXP 	New trial (rep=0, index=7): {'timepresentation': 10, 'posx': -0.6, 'posy': 0.05}
+153.2319 	DATA 	Keypress: space
+153.2400 	EXP 	image_7: autoDraw = False
+153.2400 	EXP 	image_7: image = 'imgs/iceberg.png'
+156.7533 	EXP 	Sound  stopped
+157.0718 	EXP 	Sound  started
+157.2069 	EXP 	Set unnamed MovieStim3 finished
+163.2255 	EXP 	image_7: autoDraw = True
+163.6359 	DATA 	Keypress: space
+163.6732 	EXP 	Sound  stopped
+163.6865 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+163.6868 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+163.6869 	EXP 	New trial (rep=0, index=0): {'timepresentation': 3, 'posx': -0.2, 'posy': 0.05}
+163.6870 	EXP 	Sound  started
+163.6927 	EXP 	New trial (rep=0, index=1): {'timepresentation': 7, 'posx': -0.4, 'posy': 0.05}
+163.6972 	EXP 	New trial (rep=0, index=2): {'timepresentation': 10, 'posx': -0.6, 'posy': 0.05}
+163.7013 	EXP 	New trial (rep=0, index=3): {'timepresentation': 5, 'posx': -0.7, 'posy': 0.05}
+163.7054 	EXP 	New trial (rep=0, index=4): {'timepresentation': 8, 'posx': 0, 'posy': 0.05}
+163.7098 	EXP 	New trial (rep=0, index=5): {'timepresentation': 8, 'posx': -0.1, 'posy': 0.05}
+163.7139 	EXP 	New trial (rep=0, index=6): {'timepresentation': 13, 'posx': -0.5, 'posy': 0.05}
+163.7181 	EXP 	New trial (rep=0, index=7): {'timepresentation': 9, 'posx': -0.4, 'posy': 0.05}
+163.7530 	EXP 	Sound  stopped
+163.7658 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+163.7662 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+163.7663 	EXP 	New trial (rep=0, index=0): {'timepresentation': 8, 'posx': 0, 'posy': 0.05}
+163.7663 	EXP 	Sound  started
+163.7665 	EXP 	Sound  started
+163.7718 	EXP 	New trial (rep=0, index=1): {'timepresentation': 8, 'posx': -0.1, 'posy': 0.05}
+163.7768 	EXP 	New trial (rep=0, index=2): {'timepresentation': 10, 'posx': -0.6, 'posy': 0.05}
+163.7822 	EXP 	New trial (rep=0, index=3): {'timepresentation': 13, 'posx': -0.5, 'posy': 0.05}
+163.7865 	EXP 	New trial (rep=0, index=4): {'timepresentation': 7, 'posx': -0.4, 'posy': 0.05}
+163.7911 	EXP 	New trial (rep=0, index=5): {'timepresentation': 9, 'posx': -0.4, 'posy': 0.05}
+163.7956 	EXP 	New trial (rep=0, index=6): {'timepresentation': 5, 'posx': -0.7, 'posy': 0.05}
+163.7997 	EXP 	New trial (rep=0, index=7): {'timepresentation': 3, 'posx': -0.2, 'posy': 0.05}
+163.8246 	EXP 	Sound  stopped
+163.8434 	EXP 	Sound  stopped
+163.8552 	EXP 	image_7: autoDraw = False
+163.8552 	EXP 	Set unnamed MovieStim3 stopped
+163.8552 	EXP 	Set unnamed MovieStim3 playing
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	image_8: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_8: autoDraw = False
+163.8552 	EXP 	Set unnamed MovieStim3 stopped
+163.8552 	EXP 	Set unnamed MovieStim3 playing
+163.8552 	EXP 	Set unnamed MovieStim3 playing
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	image_9: image = 'imgs/iceberg.png'
+163.8552 	EXP 	image_9: autoDraw = False
+163.8552 	EXP 	Set unnamed MovieStim3 stopped
+163.8552 	EXP 	Set unnamed MovieStim3 stopped
+163.8552 	EXP 	text_9: height = 0.05
+163.8552 	EXP 	text_9: height = 0.05
+163.8552 	EXP 	text_9: height = 0.05
+163.8552 	EXP 	text_9: text = 'Ronda 3/4'
+163.8552 	EXP 	text_9: autoDraw = True
+165.8587 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+165.8591 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+165.8592 	EXP 	New trial (rep=0, index=0): {'timepresentation': 6, 'posx': 0, 'posy': 0.05}
+165.8649 	EXP 	New trial (rep=0, index=1): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+165.8688 	EXP 	New trial (rep=0, index=2): {'timepresentation': 13, 'posx': -0.1, 'posy': 0.05}
+165.8726 	EXP 	New trial (rep=0, index=3): {'timepresentation': 5, 'posx': -0.4, 'posy': 0.05}
+165.8766 	EXP 	New trial (rep=0, index=4): {'timepresentation': 8, 'posx': -0.3, 'posy': 0.05}
+165.8804 	EXP 	New trial (rep=0, index=5): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+165.8841 	EXP 	New trial (rep=0, index=6): {'timepresentation': 3, 'posx': -0.7, 'posy': 0.05}
+165.8877 	EXP 	New trial (rep=0, index=7): {'timepresentation': 7, 'posx': -0.5, 'posy': 0.05}
+165.9038 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+165.9041 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+165.9042 	EXP 	New trial (rep=0, index=0): {'timepresentation': 13, 'posx': -0.1, 'posy': 0.05}
+165.9086 	EXP 	Sound  started
+165.9089 	EXP 	New trial (rep=0, index=1): {'timepresentation': 8, 'posx': -0.3, 'posy': 0.05}
+165.9127 	EXP 	New trial (rep=0, index=2): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+165.9164 	EXP 	New trial (rep=0, index=3): {'timepresentation': 6, 'posx': 0, 'posy': 0.05}
+165.9201 	EXP 	New trial (rep=0, index=4): {'timepresentation': 5, 'posx': -0.4, 'posy': 0.05}
+165.9237 	EXP 	New trial (rep=0, index=5): {'timepresentation': 7, 'posx': -0.5, 'posy': 0.05}
+165.9277 	EXP 	New trial (rep=0, index=6): {'timepresentation': 3, 'posx': -0.7, 'posy': 0.05}
+165.9316 	EXP 	New trial (rep=0, index=7): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+165.9631 	EXP 	Sound  stopped
+165.9755 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+165.9758 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+165.9760 	EXP 	New trial (rep=0, index=0): {'timepresentation': 6, 'posx': 0, 'posy': 0.05}
+165.9760 	EXP 	Sound  started
+166.5668 	EXP 	text_9: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_10: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_10: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	Set unnamed MovieStim3 playing
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	image_11: image = 'imgs/iceberg.png'
+166.5668 	EXP 	image_11: autoDraw = False
+166.5668 	EXP 	Set unnamed MovieStim3 stopped
+166.5668 	EXP 	Set unnamed MovieStim3 playing
+166.5668 	EXP 	image_12: image = 'imgs/iceberg.png'
+166.5671 	WARNING 	1.7110157000133768: Video catchup needed, advancing self._nextFrameT from 1.1600000000000004 to 1.2000000000000004
+166.5671 	WARNING 	1.7110361000522971: Video catchup needed, advancing self._nextFrameT from 1.2000000000000004 to 1.2400000000000004
+166.5671 	WARNING 	1.7110462000127882: Video catchup needed, advancing self._nextFrameT from 1.2400000000000004 to 1.2800000000000005
+166.5671 	WARNING 	1.7110552999656647: Video catchup needed, advancing self._nextFrameT from 1.2800000000000005 to 1.3200000000000005
+166.5671 	WARNING 	1.7110642000334337: Video catchup needed, advancing self._nextFrameT from 1.3200000000000005 to 1.3600000000000005
+166.5671 	WARNING 	1.7110732999863103: Video catchup needed, advancing self._nextFrameT from 1.3600000000000005 to 1.4000000000000006
+166.5671 	WARNING 	1.7110823000548407: Video catchup needed, advancing self._nextFrameT from 1.4000000000000006 to 1.4400000000000006
+166.5671 	WARNING 	1.71109090000391: Video catchup needed, advancing self._nextFrameT from 1.4400000000000006 to 1.4800000000000006
+166.5671 	WARNING 	1.7110995999537408: Video catchup needed, advancing self._nextFrameT from 1.4800000000000006 to 1.5200000000000007
+166.5671 	WARNING 	1.711108300019987: Video catchup needed, advancing self._nextFrameT from 1.5200000000000007 to 1.5600000000000007
+166.5672 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+171.9731 	EXP 	image_12: autoDraw = True
+172.4365 	EXP 	New trial (rep=0, index=1): {'timepresentation': 5, 'posx': -0.4, 'posy': 0.05}
+172.4417 	DATA 	Keypress: space
+172.4521 	EXP 	image_12: autoDraw = False
+172.4521 	EXP 	image_12: image = 'imgs/iceberg.png'
+177.4400 	EXP 	image_12: autoDraw = True
+177.8428 	EXP 	New trial (rep=0, index=2): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+177.8557 	DATA 	Keypress: space
+177.8647 	EXP 	image_12: autoDraw = False
+177.8647 	EXP 	image_12: image = 'imgs/iceberg.png'
+191.8536 	EXP 	image_12: autoDraw = True
+192.3976 	EXP 	New trial (rep=0, index=3): {'timepresentation': 8, 'posx': -0.3, 'posy': 0.05}
+192.4044 	DATA 	Keypress: space
+192.4129 	EXP 	image_12: autoDraw = False
+192.4129 	EXP 	image_12: image = 'imgs/iceberg.png'
+200.4141 	EXP 	image_12: autoDraw = True
+201.0391 	EXP 	New trial (rep=0, index=4): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+201.0457 	DATA 	Keypress: space
+201.0542 	EXP 	image_12: autoDraw = False
+201.0542 	EXP 	image_12: image = 'imgs/iceberg.png'
+208.0394 	EXP 	image_12: autoDraw = True
+208.9075 	EXP 	New trial (rep=0, index=5): {'timepresentation': 7, 'posx': -0.5, 'posy': 0.05}
+208.9133 	DATA 	Keypress: space
+208.9227 	EXP 	image_12: autoDraw = False
+208.9227 	EXP 	image_12: image = 'imgs/iceberg.png'
+215.9119 	EXP 	image_12: autoDraw = True
+216.9214 	EXP 	New trial (rep=0, index=6): {'timepresentation': 13, 'posx': -0.1, 'posy': 0.05}
+216.9283 	DATA 	Keypress: space
+216.9367 	EXP 	image_12: autoDraw = False
+216.9367 	EXP 	image_12: image = 'imgs/iceberg.png'
+229.9252 	EXP 	image_12: autoDraw = True
+230.5793 	EXP 	New trial (rep=0, index=7): {'timepresentation': 3, 'posx': -0.7, 'posy': 0.05}
+230.5918 	DATA 	Keypress: space
+230.6081 	EXP 	image_12: autoDraw = False
+230.6081 	EXP 	image_12: image = 'imgs/iceberg.png'
+231.2630 	EXP 	Sound  stopped
+231.5825 	EXP 	Sound  started
+231.7187 	EXP 	Set unnamed MovieStim3 finished
+233.5787 	EXP 	image_12: autoDraw = True
+234.2404 	DATA 	Keypress: space
+234.2721 	EXP 	Sound  stopped
+234.2844 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+234.2848 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+234.2849 	EXP 	New trial (rep=0, index=0): {'timepresentation': 8, 'posx': -0.3, 'posy': 0.05}
+234.2849 	EXP 	Sound  started
+234.2851 	EXP 	Sound  started
+234.2905 	EXP 	New trial (rep=0, index=1): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+234.2952 	EXP 	New trial (rep=0, index=2): {'timepresentation': 6, 'posx': 0, 'posy': 0.05}
+234.2997 	EXP 	New trial (rep=0, index=3): {'timepresentation': 7, 'posx': -0.5, 'posy': 0.05}
+234.3039 	EXP 	New trial (rep=0, index=4): {'timepresentation': 3, 'posx': -0.7, 'posy': 0.05}
+234.3081 	EXP 	New trial (rep=0, index=5): {'timepresentation': 14, 'posx': -0.7, 'posy': 0.05}
+234.3123 	EXP 	New trial (rep=0, index=6): {'timepresentation': 13, 'posx': -0.1, 'posy': 0.05}
+234.3165 	EXP 	New trial (rep=0, index=7): {'timepresentation': 5, 'posx': -0.4, 'posy': 0.05}
+234.3534 	EXP 	Sound  stopped
+234.3739 	EXP 	Sound  stopped
+234.3856 	EXP 	image_12: autoDraw = False
+234.3856 	EXP 	Set unnamed MovieStim3 stopped
+234.3856 	EXP 	Set unnamed MovieStim3 playing
+234.3856 	EXP 	Set unnamed MovieStim3 playing
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	image_13: image = 'imgs/iceberg.png'
+234.3856 	EXP 	image_13: autoDraw = False
+234.3856 	EXP 	Set unnamed MovieStim3 stopped
+234.3856 	EXP 	Set unnamed MovieStim3 stopped
+234.3856 	EXP 	text_10: height = 0.05
+234.3856 	EXP 	text_10: height = 0.05
+234.3856 	EXP 	text_10: height = 0.05
+234.3856 	EXP 	text_10: text = 'Ronda 4/4'
+234.3856 	EXP 	text_10: autoDraw = True
+236.3944 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+236.3948 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+236.3949 	EXP 	New trial (rep=0, index=0): {'timepresentation': 5, 'posx': -0.5, 'posy': 0.05}
+236.4004 	EXP 	New trial (rep=0, index=1): {'timepresentation': 3, 'posx': -0.4, 'posy': 0.05}
+236.4043 	EXP 	New trial (rep=0, index=2): {'timepresentation': 13, 'posx': -0.6, 'posy': 0.05}
+236.4080 	EXP 	New trial (rep=0, index=3): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+236.4119 	EXP 	New trial (rep=0, index=4): {'timepresentation': 5, 'posx': 0, 'posy': 0.05}
+236.4158 	EXP 	New trial (rep=0, index=5): {'timepresentation': 3, 'posx': -0.6, 'posy': 0.05}
+236.4195 	EXP 	New trial (rep=0, index=6): {'timepresentation': 12, 'posx': -0.5, 'posy': 0.05}
+236.4231 	EXP 	New trial (rep=0, index=7): {'timepresentation': 6, 'posx': -0.2, 'posy': 0.05}
+236.4388 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+236.4391 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+236.4392 	EXP 	New trial (rep=0, index=0): {'timepresentation': 12, 'posx': -0.5, 'posy': 0.05}
+236.4437 	EXP 	Sound  started
+236.4440 	EXP 	New trial (rep=0, index=1): {'timepresentation': 5, 'posx': 0, 'posy': 0.05}
+236.4487 	EXP 	New trial (rep=0, index=2): {'timepresentation': 3, 'posx': -0.4, 'posy': 0.05}
+236.4530 	EXP 	New trial (rep=0, index=3): {'timepresentation': 13, 'posx': -0.6, 'posy': 0.05}
+236.4571 	EXP 	New trial (rep=0, index=4): {'timepresentation': 3, 'posx': -0.6, 'posy': 0.05}
+236.4613 	EXP 	New trial (rep=0, index=5): {'timepresentation': 6, 'posx': -0.2, 'posy': 0.05}
+236.4656 	EXP 	New trial (rep=0, index=6): {'timepresentation': 5, 'posx': -0.5, 'posy': 0.05}
+236.4698 	EXP 	New trial (rep=0, index=7): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+236.5023 	EXP 	Sound  stopped
+236.5147 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+236.5150 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+236.5151 	EXP 	New trial (rep=0, index=0): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+236.5152 	EXP 	Sound  started
+236.5201 	EXP 	New trial (rep=0, index=1): {'timepresentation': 13, 'posx': -0.6, 'posy': 0.05}
+236.5245 	EXP 	New trial (rep=0, index=2): {'timepresentation': 5, 'posx': 0, 'posy': 0.05}
+236.5290 	EXP 	New trial (rep=0, index=3): {'timepresentation': 5, 'posx': -0.5, 'posy': 0.05}
+236.5335 	EXP 	New trial (rep=0, index=4): {'timepresentation': 3, 'posx': -0.6, 'posy': 0.05}
+236.5378 	EXP 	New trial (rep=0, index=5): {'timepresentation': 6, 'posx': -0.2, 'posy': 0.05}
+236.5422 	EXP 	New trial (rep=0, index=6): {'timepresentation': 3, 'posx': -0.4, 'posy': 0.05}
+236.5470 	EXP 	New trial (rep=0, index=7): {'timepresentation': 12, 'posx': -0.5, 'posy': 0.05}
+236.5718 	EXP 	Sound  stopped
+236.5841 	EXP 	Imported imgs/iceberg_times.xlsx as conditions, 8 conditions, 3 params
+236.5845 	EXP 	Created sequence: random, trialTypes=8, nReps=1, seed=None
+236.5846 	EXP 	New trial (rep=0, index=0): {'timepresentation': 12, 'posx': -0.5, 'posy': 0.05}
+236.5847 	EXP 	Sound  started
+236.5849 	EXP 	Sound  started
+237.1574 	WARNING 	1.540106033324264: Video catchup needed, advancing self._nextFrameT from 1.001 to 1.0343666666666667
+237.1574 	WARNING 	1.5401659333147109: Video catchup needed, advancing self._nextFrameT from 1.0343666666666667 to 1.0677333333333334
+237.1574 	WARNING 	1.540187933249399: Video catchup needed, advancing self._nextFrameT from 1.0677333333333334 to 1.1011000000000002
+237.1575 	WARNING 	1.5402087332913652: Video catchup needed, advancing self._nextFrameT from 1.1011000000000002 to 1.134466666666667
+237.1575 	WARNING 	1.540227433317341: Video catchup needed, advancing self._nextFrameT from 1.134466666666667 to 1.1678333333333337
+237.1575 	WARNING 	1.5402456333395094: Video catchup needed, advancing self._nextFrameT from 1.1678333333333337 to 1.2012000000000005
+237.1575 	WARNING 	1.5402644332498312: Video catchup needed, advancing self._nextFrameT from 1.2012000000000005 to 1.2345666666666673
+237.1575 	WARNING 	1.5402825332712382: Video catchup needed, advancing self._nextFrameT from 1.2345666666666673 to 1.267933333333334
+237.1576 	WARNING 	1.5403007332934067: Video catchup needed, advancing self._nextFrameT from 1.267933333333334 to 1.3013000000000008
+237.1576 	WARNING 	1.5403199333231896: Video catchup needed, advancing self._nextFrameT from 1.3013000000000008 to 1.3346666666666676
+237.1576 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+237.1793 	EXP 	text_10: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_14: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_14: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	Set unnamed MovieStim3 playing
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	image_15: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_15: autoDraw = False
+237.1793 	EXP 	Set unnamed MovieStim3 stopped
+237.1793 	EXP 	Set unnamed MovieStim3 playing
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	image_16: image = 'imgs/iceberg.png'
+237.1793 	EXP 	image_16: autoDraw = False
+237.1793 	EXP 	Set unnamed MovieStim3 stopped
+237.1793 	EXP 	Set unnamed MovieStim3 playing
+237.1793 	EXP 	Set unnamed MovieStim3 playing
+237.1793 	EXP 	image_17: image = 'imgs/iceberg.png'
+237.1797 	WARNING 	1.674942099954933: Video catchup needed, advancing self._nextFrameT from 1.1200000000000003 to 1.1600000000000004
+237.1797 	WARNING 	1.6749655000166968: Video catchup needed, advancing self._nextFrameT from 1.1600000000000004 to 1.2000000000000004
+237.1797 	WARNING 	1.674975199974142: Video catchup needed, advancing self._nextFrameT from 1.2000000000000004 to 1.2400000000000004
+237.1797 	WARNING 	1.6749840999254957: Video catchup needed, advancing self._nextFrameT from 1.2400000000000004 to 1.2800000000000005
+237.1797 	WARNING 	1.6749927999917418: Video catchup needed, advancing self._nextFrameT from 1.2800000000000005 to 1.3200000000000005
+237.1797 	WARNING 	1.675001599942334: Video catchup needed, advancing self._nextFrameT from 1.3200000000000005 to 1.3600000000000005
+237.1797 	WARNING 	1.6750108000123873: Video catchup needed, advancing self._nextFrameT from 1.3600000000000005 to 1.4000000000000006
+237.1797 	WARNING 	1.675019499962218: Video catchup needed, advancing self._nextFrameT from 1.4000000000000006 to 1.4400000000000006
+237.1797 	WARNING 	1.6750281999120489: Video catchup needed, advancing self._nextFrameT from 1.4400000000000006 to 1.4800000000000006
+237.1797 	WARNING 	1.675036899978295: Video catchup needed, advancing self._nextFrameT from 1.4800000000000006 to 1.5200000000000007
+237.1797 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+248.5782 	EXP 	image_17: autoDraw = True
+251.9843 	DATA 	Keypress: space
+252.0055 	EXP 	New trial (rep=0, index=1): {'timepresentation': 13, 'posx': -0.6, 'posy': 0.05}
+252.0223 	EXP 	image_17: autoDraw = False
+252.0223 	EXP 	image_17: image = 'imgs/iceberg.png'
+265.0121 	EXP 	image_17: autoDraw = True
+267.4722 	EXP 	New trial (rep=0, index=2): {'timepresentation': 3, 'posx': -0.6, 'posy': 0.05}
+267.4802 	DATA 	Keypress: space
+267.4887 	EXP 	image_17: autoDraw = False
+267.4887 	EXP 	image_17: image = 'imgs/iceberg.png'
+270.4872 	EXP 	image_17: autoDraw = True
+273.0713 	EXP 	New trial (rep=0, index=3): {'timepresentation': 6, 'posx': -0.2, 'posy': 0.05}
+273.0777 	DATA 	Keypress: space
+273.0872 	EXP 	image_17: autoDraw = False
+273.0872 	EXP 	image_17: image = 'imgs/iceberg.png'
+279.0740 	EXP 	image_17: autoDraw = True
+280.4681 	EXP 	New trial (rep=0, index=4): {'timepresentation': 5, 'posx': -0.5, 'posy': 0.05}
+280.4769 	DATA 	Keypress: space
+280.4857 	EXP 	image_17: autoDraw = False
+280.4857 	EXP 	image_17: image = 'imgs/iceberg.png'
+285.4814 	EXP 	image_17: autoDraw = True
+286.5741 	EXP 	New trial (rep=0, index=5): {'timepresentation': 5, 'posx': 0, 'posy': 0.05}
+286.5814 	DATA 	Keypress: space
+286.5904 	EXP 	image_17: autoDraw = False
+286.5904 	EXP 	image_17: image = 'imgs/iceberg.png'
+291.5862 	EXP 	image_17: autoDraw = True
+292.0988 	EXP 	New trial (rep=0, index=6): {'timepresentation': 3, 'posx': -0.4, 'posy': 0.05}
+292.1047 	DATA 	Keypress: space
+292.1133 	EXP 	image_17: autoDraw = False
+292.1133 	EXP 	image_17: image = 'imgs/iceberg.png'
+295.1084 	EXP 	image_17: autoDraw = True
+295.5353 	DATA 	Keypress: space
+295.5436 	EXP 	New trial (rep=0, index=7): {'timepresentation': 7, 'posx': -0.2, 'posy': 0.05}
+295.5581 	EXP 	image_17: autoDraw = False
+295.5581 	EXP 	image_17: image = 'imgs/iceberg.png'
+302.5521 	EXP 	image_17: autoDraw = True
+303.0033 	EXP 	Sound  stopped
+303.0238 	EXP 	Sound  stopped
+303.0257 	DATA 	Keypress: space
+303.0322 	EXP 	image_17: autoDraw = False
+303.0322 	EXP 	Set unnamed MovieStim3 stopped
+303.0322 	EXP 	Set unnamed MovieStim3 stopped
+303.0322 	EXP 	text_4: autoDraw = True
+305.0342 	EXP 	text_4: autoDraw = False
+305.0342 	EXP 	text_4: autoDraw = False
+305.0343 	EXP 	tarea_iceberg: status = STOPPED
+305.0906 	EXP 	window1: mouseVisible = True

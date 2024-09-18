@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 14:21
+    on September 18, 2024, at 14:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,13 +33,13 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
-# Run 'Before Experiment' code from code_5
+# Run 'Before Experiment' code from codigos_generales
 path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.mp4'
 path_musicafondo = 'imgs/song_titanic.mp4'
 path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
 
-nRows = 3
+nRows = 8
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -357,7 +357,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    # Run 'Begin Experiment' code from code_5
+    # Run 'Begin Experiment' code from codigos_generales
     import random 
     # Lista de nombres de rutinas
     rutinas = ["control", "music", "music_words", "music_video"]
@@ -371,7 +371,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ronda3=rutinas[2]
     ronda4=rutinas[3]
     
-    ronda1="music_video"
+    #ronda1="music_video"
     
     
     # --- Initialize components for Routine "control" ---
@@ -566,8 +566,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     displayed_movie_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_pelicula, # Ruta al archivo de video
-        size=(500,400),               # Tamaño del video (opcional)
-        pos=(0,100),
+        size=(500,350),               # Tamaño del video (opcional)
+        pos=(0,-350),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
         loop=False                      # Si el video debe repetirse
@@ -675,8 +675,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     displayed_movie_r3 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_pelicula, # Ruta al archivo de video
-        size=(500,400),               # Tamaño del video (opcional)
-        pos=(0,100),
+        size=(500,350),               # Tamaño del video (opcional)
+        pos=(0,-350),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
         loop=False                      # Si el video debe repetirse
@@ -784,8 +784,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     displayed_movie_r4 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
         filename=path_pelicula, # Ruta al archivo de video
-        size=(500,400),               # Tamaño del video (opcional)
-        pos=(0,100),
+        size=(500,350),               # Tamaño del video (opcional)
+        pos=(0,-350),
         flipVert=False,                 # Si se debe voltear verticalmente
         flipHoriz=False,                # Si se debe voltear horizontalmente
         loop=False                      # Si el video debe repetirse
@@ -1068,7 +1068,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('Ronda_1.started', globalClock.getTime())
     text_7.setText('Ronda 1/4')
-    # Run 'Begin Routine' code from code_5
+    # Run 'Begin Routine' code from codigos_generales
     totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
     selectedRowsStr = [i for i in selectedRows]
