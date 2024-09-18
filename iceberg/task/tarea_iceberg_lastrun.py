@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 17:21
+    on September 18, 2024, at 17:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ path_musicafondo = 'imgs/song_titanic.mp4'
 path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
 
-nRows = 2
+nRows = 8
 totalRows = 195  # Replace with the total number of rows in your Excel file
 
 # --- Setup global variables (available in all functions) ---
@@ -490,7 +490,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_6', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -512,7 +512,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_7', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -546,7 +546,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_8', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
@@ -579,7 +579,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_9', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
@@ -599,7 +599,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_10', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -621,7 +621,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_11', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -655,7 +655,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_12', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
@@ -688,7 +688,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_13', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
@@ -708,7 +708,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_14', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -730,7 +730,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_15', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -764,7 +764,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_16', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
@@ -797,7 +797,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_17', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
