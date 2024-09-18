@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 17:07
+    on September 18, 2024, at 17:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ path_musicafondo = 'imgs/song_titanic.mp4'
 path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
 
-nRows = 8
+nRows = 2
 totalRows = 195  # Replace with the total number of rows in your Excel file
 
 # --- Setup global variables (available in all functions) ---
@@ -381,7 +381,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -403,7 +403,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_2', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -437,7 +437,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_3', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
@@ -470,7 +470,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image_4', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(0.35, 0.35),
+        ori=0.0, pos=[0,0], size=(0.3, 0.3),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
@@ -1163,7 +1163,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.addTime(-2.000000)
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=1.0, method='random', 
+    trials = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials')
@@ -1353,7 +1353,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_2 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_2 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_2')
@@ -1551,7 +1551,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_3 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_3 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_3')
@@ -1750,7 +1750,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_4 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_4 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
         seed=None, name='trials_4')
@@ -2056,7 +2056,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.addTime(-2.000000)
     
     # set up handler to look after randomisation of conditions etc
-    trials_5 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_5 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_5')
@@ -2246,7 +2246,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_6 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_6 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_6')
@@ -2444,7 +2444,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_7 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_7 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_7')
@@ -2643,7 +2643,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_8 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_8 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_8')
@@ -2949,7 +2949,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.addTime(-2.000000)
     
     # set up handler to look after randomisation of conditions etc
-    trials_9 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_9 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_9')
@@ -3139,7 +3139,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_10 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_10 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_10')
@@ -3337,7 +3337,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_11 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_11 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_11')
@@ -3536,7 +3536,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_12 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_12 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_12')
@@ -3842,7 +3842,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.addTime(-2.000000)
     
     # set up handler to look after randomisation of conditions etc
-    trials_13 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_13 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_13')
@@ -4032,7 +4032,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_14 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_14 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_14')
@@ -4230,7 +4230,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_15 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_15 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_15')
@@ -4429,7 +4429,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     
     # set up handler to look after randomisation of conditions etc
-    trials_16 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_16 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_16')

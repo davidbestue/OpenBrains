@@ -123,7 +123,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -220,7 +220,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -368,7 +368,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -636,7 +636,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -956,8 +956,8 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="codigos_generales" plugin="None">
-        <Param val="path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.mp4'&amp;#10;path_musicafondo = 'imgs/song_titanic.mp4'&amp;#10;path_musicaletra = 'imgs/titanic_spanish.mp4'&amp;#10;path_pelicula = 'imgs/titanic.mp4'&amp;#10;&amp;#10;nRows = 2&amp;#10;totalRows = 195  # Replace with the total number of rows in your Excel file&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="path_videomar = &quot;imgs/video_mar_luis.mp4&quot;;&amp;#10;path_musicafondo = &quot;imgs/song_titanic.mp4&quot;;&amp;#10;path_musicaletra = &quot;imgs/titanic_spanish.mp4&quot;;&amp;#10;path_pelicula = &quot;imgs/titanic.mp4&quot;;&amp;#10;nRows = 2;&amp;#10;totalRows = 195;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="path_videomar = 'imgs/video_mar_luis.mp4' #'imgs/marluis.mp4' #'imgs/video_mar.mp4'&amp;#10;path_musicafondo = 'imgs/song_titanic.mp4'&amp;#10;path_musicaletra = 'imgs/titanic_spanish.mp4'&amp;#10;path_pelicula = 'imgs/titanic.mp4'&amp;#10;&amp;#10;nRows = 8&amp;#10;totalRows = 195  # Replace with the total number of rows in your Excel file&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="path_videomar = &quot;imgs/video_mar_luis.mp4&quot;;&amp;#10;path_musicafondo = &quot;imgs/song_titanic.mp4&quot;;&amp;#10;path_musicaletra = &quot;imgs/titanic_spanish.mp4&quot;;&amp;#10;path_pelicula = &quot;imgs/titanic.mp4&quot;;&amp;#10;nRows = 8;&amp;#10;totalRows = 195;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="import random &amp;#10;# Lista de nombres de rutinas&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;]&amp;#10;# Barajar el orden de las rutinas&amp;#10;random.shuffle(rutinas)&amp;#10;print(rutinas)&amp;#10;&amp;#10;# Un índice para seguir qué rutina ejecutar&amp;#10;ronda1=rutinas[0]&amp;#10;ronda2=rutinas[1]&amp;#10;ronda3=rutinas[2]&amp;#10;ronda4=rutinas[3]&amp;#10;&amp;#10;#ronda1=&quot;music_video&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="import * as random from 'random';&amp;#10;rutinas = [&quot;control&quot;, &quot;music&quot;, &quot;music_words&quot;, &quot;music_video&quot;];&amp;#10;Math.random.shuffle(rutinas);&amp;#10;console.log(rutinas);&amp;#10;ronda1 = rutinas[0];&amp;#10;ronda2 = rutinas[1];&amp;#10;ronda3 = rutinas[2];&amp;#10;ronda4 = rutinas[3];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="selectedRows = Math.random.sample(util.range(totalRows), nRows);&amp;#10;selectedRowsStr = function () {&amp;#10;    var _pj_a = [], _pj_b = selectedRows;&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(i);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
@@ -1082,7 +1082,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1179,7 +1179,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1327,7 +1327,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1458,7 +1458,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1597,7 +1597,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1694,7 +1694,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1842,7 +1842,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -1973,7 +1973,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -2112,7 +2112,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -2209,7 +2209,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -2357,7 +2357,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
@@ -2488,7 +2488,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="$[posx, posy]" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.35, 0.35)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.3, 0.3)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="$timepresentation" valType="code" updates="None" name="startVal"/>
