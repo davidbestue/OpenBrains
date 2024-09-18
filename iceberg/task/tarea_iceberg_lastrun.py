@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 17:33
+    on September 18, 2024, at 17:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ path_musicafondo = 'imgs/song_titanic.mp4'
 path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
 
-nRows = 8
+nRows = 3
 totalRows = 195  # Replace with the total number of rows in your Excel file
 
 # --- Setup global variables (available in all functions) ---
@@ -373,6 +373,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ronda3=rutinas[2]
     ronda4=rutinas[3]
     
+    thisExp.addData('ronda1', ronda1)
+    thisExp.addData('ronda2', ronda2)
+    thisExp.addData('ronda3', ronda3)
+    thisExp.addData('ronda4', ronda4)
+    
     #ronda1="music_video"
     
     
@@ -385,7 +390,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp = keyboard.Keyboard()
+    resp_control_r1 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar1
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -407,7 +412,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_2 = keyboard.Keyboard()
+    resp_music_r1 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
     background_sound = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -441,7 +446,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    key_resp_3 = keyboard.Keyboard()
+    resp_musicw_r1 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "music_video" ---
     # Run 'Begin Experiment' code from code_2_2
@@ -474,7 +479,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
-    Key_resp_4 = keyboard.Keyboard()
+    resp_musicv_r1 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "Ronda_2" ---
     text_8 = visual.TextStim(win=win, name='text_8',
@@ -494,7 +499,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_6 = keyboard.Keyboard()
+    resp_control_r2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_2
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -516,7 +521,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_7 = keyboard.Keyboard()
+    resp_music_r2 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_6
     background_sound_r2 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -550,7 +555,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    key_resp_8 = keyboard.Keyboard()
+    resp_musicw_r2 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "music_video2" ---
     # Run 'Begin Experiment' code from code_2_3
@@ -583,7 +588,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
-    Key_resp = keyboard.Keyboard()
+    resp_musicv_r2 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "Ronda_3" ---
     text_9 = visual.TextStim(win=win, name='text_9',
@@ -603,7 +608,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_9 = keyboard.Keyboard()
+    resp_control_r3 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_3
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -625,7 +630,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_10 = keyboard.Keyboard()
+    resp_music_r3 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_9
     background_sound_r3 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -659,7 +664,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    key_resp_11 = keyboard.Keyboard()
+    resp_musicw_r3 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "music_video3" ---
     # Run 'Begin Experiment' code from code_2_4
@@ -692,7 +697,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
-    Key_resp_2 = keyboard.Keyboard()
+    resp_musicv_r3 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "Ronda_4" ---
     text_10 = visual.TextStim(win=win, name='text_10',
@@ -712,7 +717,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_12 = keyboard.Keyboard()
+    resp_control_r4 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from mar_1_4
     mar_movie = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -734,7 +739,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    key_resp_13 = keyboard.Keyboard()
+    resp_music_r4 = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_12
     background_sound_r4 = visual.MovieStim3(
         win=win,                        # Ventana en la que se va a mostrar el video
@@ -768,7 +773,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    key_resp_14 = keyboard.Keyboard()
+    resp_musicw_r4 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "music_video4" ---
     # Run 'Begin Experiment' code from code_2_5
@@ -801,7 +806,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
-    Key_resp_3 = keyboard.Keyboard()
+    resp_musicv_r4 = keyboard.Keyboard()
     
     # --- Initialize components for Routine "final" ---
     text_4 = visual.TextStim(win=win, name='text_4',
@@ -1202,14 +1207,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image.setPos([posx, posy])
         image.setImage('imgs/iceberg.png')
-        key_resp.keys = []
-        key_resp.rt = []
-        _key_resp_allKeys = []
+        resp_control_r1.keys = []
+        resp_control_r1.rt = []
+        _resp_control_r1_allKeys = []
         # Run 'Begin Routine' code from mar1
         mar_movie.play()  
         
         # keep track of which components have finished
-        controlComponents = [image, key_resp]
+        controlComponents = [image, resp_control_r1]
         for thisComponent in controlComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1265,44 +1270,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image.status = FINISHED
                     image.setAutoDraw(False)
             
-            # *key_resp* updates
+            # *resp_control_r1* updates
             waitOnFlip = False
             
-            # if key_resp is starting this frame...
-            if key_resp.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_control_r1 is starting this frame...
+            if resp_control_r1.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp.frameNStart = frameN  # exact frame index
-                key_resp.tStart = t  # local t and not account for scr refresh
-                key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
+                resp_control_r1.frameNStart = frameN  # exact frame index
+                resp_control_r1.tStart = t  # local t and not account for scr refresh
+                resp_control_r1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_control_r1, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp.started')
+                thisExp.timestampOnFlip(win, 'resp_control_r1.started')
                 # update status
-                key_resp.status = STARTED
+                resp_control_r1.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_control_r1.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_control_r1.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp is stopping this frame...
-            if key_resp.status == STARTED:
+            # if resp_control_r1 is stopping this frame...
+            if resp_control_r1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_control_r1.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp.tStop = t  # not accounting for scr refresh
-                    key_resp.frameNStop = frameN  # exact frame index
+                    resp_control_r1.tStop = t  # not accounting for scr refresh
+                    resp_control_r1.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_control_r1.stopped')
                     # update status
-                    key_resp.status = FINISHED
-                    key_resp.status = FINISHED
-            if key_resp.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_allKeys.extend(theseKeys)
-                if len(_key_resp_allKeys):
-                    key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
-                    key_resp.rt = _key_resp_allKeys[-1].rt
-                    key_resp.duration = _key_resp_allKeys[-1].duration
+                    resp_control_r1.status = FINISHED
+                    resp_control_r1.status = FINISHED
+            if resp_control_r1.status == STARTED and not waitOnFlip:
+                theseKeys = resp_control_r1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_control_r1_allKeys.extend(theseKeys)
+                if len(_resp_control_r1_allKeys):
+                    resp_control_r1.keys = _resp_control_r1_allKeys[-1].name  # just the last key pressed
+                    resp_control_r1.rt = _resp_control_r1_allKeys[-1].rt
+                    resp_control_r1.duration = _resp_control_r1_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from mar1
@@ -1336,12 +1341,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('control.stopped', globalClock.getTime())
         # check responses
-        if key_resp.keys in ['', [], None]:  # No response was made
-            key_resp.keys = None
-        trials.addData('key_resp.keys',key_resp.keys)
-        if key_resp.keys != None:  # we had a response
-            trials.addData('key_resp.rt', key_resp.rt)
-            trials.addData('key_resp.duration', key_resp.duration)
+        if resp_control_r1.keys in ['', [], None]:  # No response was made
+            resp_control_r1.keys = None
+        trials.addData('resp_control_r1.keys',resp_control_r1.keys)
+        if resp_control_r1.keys != None:  # we had a response
+            trials.addData('resp_control_r1.rt', resp_control_r1.rt)
+            trials.addData('resp_control_r1.duration', resp_control_r1.duration)
         # the Routine "control" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -1392,9 +1397,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_2.setPos([posx, posy])
         image_2.setImage('imgs/iceberg.png')
-        key_resp_2.keys = []
-        key_resp_2.rt = []
-        _key_resp_2_allKeys = []
+        resp_music_r1.keys = []
+        resp_music_r1.rt = []
+        _resp_music_r1_allKeys = []
         # Run 'Begin Routine' code from code
         if trials_2.thisN == 0:
             background_sound.play()        
@@ -1402,7 +1407,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # keep track of which components have finished
-        musicComponents = [image_2, key_resp_2]
+        musicComponents = [image_2, resp_music_r1]
         for thisComponent in musicComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1458,44 +1463,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_2.status = FINISHED
                     image_2.setAutoDraw(False)
             
-            # *key_resp_2* updates
+            # *resp_music_r1* updates
             waitOnFlip = False
             
-            # if key_resp_2 is starting this frame...
-            if key_resp_2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_music_r1 is starting this frame...
+            if resp_music_r1.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_2.frameNStart = frameN  # exact frame index
-                key_resp_2.tStart = t  # local t and not account for scr refresh
-                key_resp_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_2, 'tStartRefresh')  # time at next scr refresh
+                resp_music_r1.frameNStart = frameN  # exact frame index
+                resp_music_r1.tStart = t  # local t and not account for scr refresh
+                resp_music_r1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_music_r1, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_2.started')
+                thisExp.timestampOnFlip(win, 'resp_music_r1.started')
                 # update status
-                key_resp_2.status = STARTED
+                resp_music_r1.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_2.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_music_r1.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_music_r1.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_2 is stopping this frame...
-            if key_resp_2.status == STARTED:
+            # if resp_music_r1 is stopping this frame...
+            if resp_music_r1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_2.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_music_r1.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_2.tStop = t  # not accounting for scr refresh
-                    key_resp_2.frameNStop = frameN  # exact frame index
+                    resp_music_r1.tStop = t  # not accounting for scr refresh
+                    resp_music_r1.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_2.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_music_r1.stopped')
                     # update status
-                    key_resp_2.status = FINISHED
-                    key_resp_2.status = FINISHED
-            if key_resp_2.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_2_allKeys.extend(theseKeys)
-                if len(_key_resp_2_allKeys):
-                    key_resp_2.keys = _key_resp_2_allKeys[-1].name  # just the last key pressed
-                    key_resp_2.rt = _key_resp_2_allKeys[-1].rt
-                    key_resp_2.duration = _key_resp_2_allKeys[-1].duration
+                    resp_music_r1.status = FINISHED
+                    resp_music_r1.status = FINISHED
+            if resp_music_r1.status == STARTED and not waitOnFlip:
+                theseKeys = resp_music_r1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_music_r1_allKeys.extend(theseKeys)
+                if len(_resp_music_r1_allKeys):
+                    resp_music_r1.keys = _resp_music_r1_allKeys[-1].name  # just the last key pressed
+                    resp_music_r1.rt = _resp_music_r1_allKeys[-1].rt
+                    resp_music_r1.duration = _resp_music_r1_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from code
@@ -1531,12 +1536,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music.stopped', globalClock.getTime())
         # check responses
-        if key_resp_2.keys in ['', [], None]:  # No response was made
-            key_resp_2.keys = None
-        trials_2.addData('key_resp_2.keys',key_resp_2.keys)
-        if key_resp_2.keys != None:  # we had a response
-            trials_2.addData('key_resp_2.rt', key_resp_2.rt)
-            trials_2.addData('key_resp_2.duration', key_resp_2.duration)
+        if resp_music_r1.keys in ['', [], None]:  # No response was made
+            resp_music_r1.keys = None
+        trials_2.addData('resp_music_r1.keys',resp_music_r1.keys)
+        if resp_music_r1.keys != None:  # we had a response
+            trials_2.addData('resp_music_r1.rt', resp_music_r1.rt)
+            trials_2.addData('resp_music_r1.duration', resp_music_r1.duration)
         # Run 'End Routine' code from code
         if trials_2.thisN == nRows-1:
             background_sound.stop()
@@ -1597,11 +1602,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         image_3.setPos([posx, posy])
         image_3.setImage('imgs/iceberg.png')
-        key_resp_3.keys = []
-        key_resp_3.rt = []
-        _key_resp_3_allKeys = []
+        resp_musicw_r1.keys = []
+        resp_musicw_r1.rt = []
+        _resp_musicw_r1_allKeys = []
         # keep track of which components have finished
-        music_wordsComponents = [image_3, key_resp_3]
+        music_wordsComponents = [image_3, resp_musicw_r1]
         for thisComponent in music_wordsComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1662,44 +1667,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_3.status = FINISHED
                     image_3.setAutoDraw(False)
             
-            # *key_resp_3* updates
+            # *resp_musicw_r1* updates
             waitOnFlip = False
             
-            # if key_resp_3 is starting this frame...
-            if key_resp_3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicw_r1 is starting this frame...
+            if resp_musicw_r1.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_3.frameNStart = frameN  # exact frame index
-                key_resp_3.tStart = t  # local t and not account for scr refresh
-                key_resp_3.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_3, 'tStartRefresh')  # time at next scr refresh
+                resp_musicw_r1.frameNStart = frameN  # exact frame index
+                resp_musicw_r1.tStart = t  # local t and not account for scr refresh
+                resp_musicw_r1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicw_r1, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_3.started')
+                thisExp.timestampOnFlip(win, 'resp_musicw_r1.started')
                 # update status
-                key_resp_3.status = STARTED
+                resp_musicw_r1.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_3.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_3.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicw_r1.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicw_r1.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_3 is stopping this frame...
-            if key_resp_3.status == STARTED:
+            # if resp_musicw_r1 is stopping this frame...
+            if resp_musicw_r1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_3.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicw_r1.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_3.tStop = t  # not accounting for scr refresh
-                    key_resp_3.frameNStop = frameN  # exact frame index
+                    resp_musicw_r1.tStop = t  # not accounting for scr refresh
+                    resp_musicw_r1.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_3.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicw_r1.stopped')
                     # update status
-                    key_resp_3.status = FINISHED
-                    key_resp_3.status = FINISHED
-            if key_resp_3.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_3_allKeys.extend(theseKeys)
-                if len(_key_resp_3_allKeys):
-                    key_resp_3.keys = _key_resp_3_allKeys[-1].name  # just the last key pressed
-                    key_resp_3.rt = _key_resp_3_allKeys[-1].rt
-                    key_resp_3.duration = _key_resp_3_allKeys[-1].duration
+                    resp_musicw_r1.status = FINISHED
+                    resp_musicw_r1.status = FINISHED
+            if resp_musicw_r1.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicw_r1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicw_r1_allKeys.extend(theseKeys)
+                if len(_resp_musicw_r1_allKeys):
+                    resp_musicw_r1.keys = _resp_musicw_r1_allKeys[-1].name  # just the last key pressed
+                    resp_musicw_r1.rt = _resp_musicw_r1_allKeys[-1].rt
+                    resp_musicw_r1.duration = _resp_musicw_r1_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -1733,12 +1738,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_3.thisN == nRows-1:
             background_movie.stop()
         # check responses
-        if key_resp_3.keys in ['', [], None]:  # No response was made
-            key_resp_3.keys = None
-        trials_3.addData('key_resp_3.keys',key_resp_3.keys)
-        if key_resp_3.keys != None:  # we had a response
-            trials_3.addData('key_resp_3.rt', key_resp_3.rt)
-            trials_3.addData('key_resp_3.duration', key_resp_3.duration)
+        if resp_musicw_r1.keys in ['', [], None]:  # No response was made
+            resp_musicw_r1.keys = None
+        trials_3.addData('resp_musicw_r1.keys',resp_musicw_r1.keys)
+        if resp_musicw_r1.keys != None:  # we had a response
+            trials_3.addData('resp_musicw_r1.rt', resp_musicw_r1.rt)
+            trials_3.addData('resp_musicw_r1.duration', resp_musicw_r1.duration)
         # the Routine "music_words" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -1800,11 +1805,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             displayed_movie.draw()    
         image_4.setPos([posx, posy])
         image_4.setImage('imgs/iceberg.png')
-        Key_resp_4.keys = []
-        Key_resp_4.rt = []
-        _Key_resp_4_allKeys = []
+        resp_musicv_r1.keys = []
+        resp_musicv_r1.rt = []
+        _resp_musicv_r1_allKeys = []
         # keep track of which components have finished
-        music_videoComponents = [image_4, Key_resp_4]
+        music_videoComponents = [image_4, resp_musicv_r1]
         for thisComponent in music_videoComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1868,44 +1873,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_4.status = FINISHED
                     image_4.setAutoDraw(False)
             
-            # *Key_resp_4* updates
+            # *resp_musicv_r1* updates
             waitOnFlip = False
             
-            # if Key_resp_4 is starting this frame...
-            if Key_resp_4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicv_r1 is starting this frame...
+            if resp_musicv_r1.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                Key_resp_4.frameNStart = frameN  # exact frame index
-                Key_resp_4.tStart = t  # local t and not account for scr refresh
-                Key_resp_4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Key_resp_4, 'tStartRefresh')  # time at next scr refresh
+                resp_musicv_r1.frameNStart = frameN  # exact frame index
+                resp_musicv_r1.tStart = t  # local t and not account for scr refresh
+                resp_musicv_r1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicv_r1, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Key_resp_4.started')
+                thisExp.timestampOnFlip(win, 'resp_musicv_r1.started')
                 # update status
-                Key_resp_4.status = STARTED
+                resp_musicv_r1.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(Key_resp_4.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(Key_resp_4.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicv_r1.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicv_r1.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if Key_resp_4 is stopping this frame...
-            if Key_resp_4.status == STARTED:
+            # if resp_musicv_r1 is stopping this frame...
+            if resp_musicv_r1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Key_resp_4.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicv_r1.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    Key_resp_4.tStop = t  # not accounting for scr refresh
-                    Key_resp_4.frameNStop = frameN  # exact frame index
+                    resp_musicv_r1.tStop = t  # not accounting for scr refresh
+                    resp_musicv_r1.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'Key_resp_4.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicv_r1.stopped')
                     # update status
-                    Key_resp_4.status = FINISHED
-                    Key_resp_4.status = FINISHED
-            if Key_resp_4.status == STARTED and not waitOnFlip:
-                theseKeys = Key_resp_4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _Key_resp_4_allKeys.extend(theseKeys)
-                if len(_Key_resp_4_allKeys):
-                    Key_resp_4.keys = _Key_resp_4_allKeys[-1].name  # just the last key pressed
-                    Key_resp_4.rt = _Key_resp_4_allKeys[-1].rt
-                    Key_resp_4.duration = _Key_resp_4_allKeys[-1].duration
+                    resp_musicv_r1.status = FINISHED
+                    resp_musicv_r1.status = FINISHED
+            if resp_musicv_r1.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicv_r1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicv_r1_allKeys.extend(theseKeys)
+                if len(_resp_musicv_r1_allKeys):
+                    resp_musicv_r1.keys = _resp_musicv_r1_allKeys[-1].name  # just the last key pressed
+                    resp_musicv_r1.rt = _resp_musicv_r1_allKeys[-1].rt
+                    resp_musicv_r1.duration = _resp_musicv_r1_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -1942,12 +1947,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_4.thisN == nRows-1:
             displayed_movie.stop()
         # check responses
-        if Key_resp_4.keys in ['', [], None]:  # No response was made
-            Key_resp_4.keys = None
-        trials_4.addData('Key_resp_4.keys',Key_resp_4.keys)
-        if Key_resp_4.keys != None:  # we had a response
-            trials_4.addData('Key_resp_4.rt', Key_resp_4.rt)
-            trials_4.addData('Key_resp_4.duration', Key_resp_4.duration)
+        if resp_musicv_r1.keys in ['', [], None]:  # No response was made
+            resp_musicv_r1.keys = None
+        trials_4.addData('resp_musicv_r1.keys',resp_musicv_r1.keys)
+        if resp_musicv_r1.keys != None:  # we had a response
+            trials_4.addData('resp_musicv_r1.rt', resp_musicv_r1.rt)
+            trials_4.addData('resp_musicv_r1.duration', resp_musicv_r1.duration)
         # the Routine "music_video" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -2095,14 +2100,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_6.setPos([posx, posy])
         image_6.setImage('imgs/iceberg.png')
-        key_resp_6.keys = []
-        key_resp_6.rt = []
-        _key_resp_6_allKeys = []
+        resp_control_r2.keys = []
+        resp_control_r2.rt = []
+        _resp_control_r2_allKeys = []
         # Run 'Begin Routine' code from mar_1_2
         mar_movie.play()  
         
         # keep track of which components have finished
-        control2Components = [image_6, key_resp_6]
+        control2Components = [image_6, resp_control_r2]
         for thisComponent in control2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2158,44 +2163,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_6.status = FINISHED
                     image_6.setAutoDraw(False)
             
-            # *key_resp_6* updates
+            # *resp_control_r2* updates
             waitOnFlip = False
             
-            # if key_resp_6 is starting this frame...
-            if key_resp_6.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_control_r2 is starting this frame...
+            if resp_control_r2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_6.frameNStart = frameN  # exact frame index
-                key_resp_6.tStart = t  # local t and not account for scr refresh
-                key_resp_6.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_6, 'tStartRefresh')  # time at next scr refresh
+                resp_control_r2.frameNStart = frameN  # exact frame index
+                resp_control_r2.tStart = t  # local t and not account for scr refresh
+                resp_control_r2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_control_r2, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_6.started')
+                thisExp.timestampOnFlip(win, 'resp_control_r2.started')
                 # update status
-                key_resp_6.status = STARTED
+                resp_control_r2.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_6.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_6.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_control_r2.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_control_r2.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_6 is stopping this frame...
-            if key_resp_6.status == STARTED:
+            # if resp_control_r2 is stopping this frame...
+            if resp_control_r2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_6.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_control_r2.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_6.tStop = t  # not accounting for scr refresh
-                    key_resp_6.frameNStop = frameN  # exact frame index
+                    resp_control_r2.tStop = t  # not accounting for scr refresh
+                    resp_control_r2.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_6.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_control_r2.stopped')
                     # update status
-                    key_resp_6.status = FINISHED
-                    key_resp_6.status = FINISHED
-            if key_resp_6.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_6.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_6_allKeys.extend(theseKeys)
-                if len(_key_resp_6_allKeys):
-                    key_resp_6.keys = _key_resp_6_allKeys[-1].name  # just the last key pressed
-                    key_resp_6.rt = _key_resp_6_allKeys[-1].rt
-                    key_resp_6.duration = _key_resp_6_allKeys[-1].duration
+                    resp_control_r2.status = FINISHED
+                    resp_control_r2.status = FINISHED
+            if resp_control_r2.status == STARTED and not waitOnFlip:
+                theseKeys = resp_control_r2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_control_r2_allKeys.extend(theseKeys)
+                if len(_resp_control_r2_allKeys):
+                    resp_control_r2.keys = _resp_control_r2_allKeys[-1].name  # just the last key pressed
+                    resp_control_r2.rt = _resp_control_r2_allKeys[-1].rt
+                    resp_control_r2.duration = _resp_control_r2_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from mar_1_2
@@ -2229,12 +2234,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('control2.stopped', globalClock.getTime())
         # check responses
-        if key_resp_6.keys in ['', [], None]:  # No response was made
-            key_resp_6.keys = None
-        trials_5.addData('key_resp_6.keys',key_resp_6.keys)
-        if key_resp_6.keys != None:  # we had a response
-            trials_5.addData('key_resp_6.rt', key_resp_6.rt)
-            trials_5.addData('key_resp_6.duration', key_resp_6.duration)
+        if resp_control_r2.keys in ['', [], None]:  # No response was made
+            resp_control_r2.keys = None
+        trials_5.addData('resp_control_r2.keys',resp_control_r2.keys)
+        if resp_control_r2.keys != None:  # we had a response
+            trials_5.addData('resp_control_r2.rt', resp_control_r2.rt)
+            trials_5.addData('resp_control_r2.duration', resp_control_r2.duration)
         # the Routine "control2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -2285,9 +2290,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_7.setPos([posx, posy])
         image_7.setImage('imgs/iceberg.png')
-        key_resp_7.keys = []
-        key_resp_7.rt = []
-        _key_resp_7_allKeys = []
+        resp_music_r2.keys = []
+        resp_music_r2.rt = []
+        _resp_music_r2_allKeys = []
         # Run 'Begin Routine' code from code_6
         if trials_6.thisN == 0:
             background_sound_r2.play()        
@@ -2295,7 +2300,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # keep track of which components have finished
-        music2Components = [image_7, key_resp_7]
+        music2Components = [image_7, resp_music_r2]
         for thisComponent in music2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2351,44 +2356,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_7.status = FINISHED
                     image_7.setAutoDraw(False)
             
-            # *key_resp_7* updates
+            # *resp_music_r2* updates
             waitOnFlip = False
             
-            # if key_resp_7 is starting this frame...
-            if key_resp_7.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_music_r2 is starting this frame...
+            if resp_music_r2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_7.frameNStart = frameN  # exact frame index
-                key_resp_7.tStart = t  # local t and not account for scr refresh
-                key_resp_7.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_7, 'tStartRefresh')  # time at next scr refresh
+                resp_music_r2.frameNStart = frameN  # exact frame index
+                resp_music_r2.tStart = t  # local t and not account for scr refresh
+                resp_music_r2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_music_r2, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_7.started')
+                thisExp.timestampOnFlip(win, 'resp_music_r2.started')
                 # update status
-                key_resp_7.status = STARTED
+                resp_music_r2.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_7.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_7.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_music_r2.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_music_r2.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_7 is stopping this frame...
-            if key_resp_7.status == STARTED:
+            # if resp_music_r2 is stopping this frame...
+            if resp_music_r2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_7.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_music_r2.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_7.tStop = t  # not accounting for scr refresh
-                    key_resp_7.frameNStop = frameN  # exact frame index
+                    resp_music_r2.tStop = t  # not accounting for scr refresh
+                    resp_music_r2.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_7.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_music_r2.stopped')
                     # update status
-                    key_resp_7.status = FINISHED
-                    key_resp_7.status = FINISHED
-            if key_resp_7.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_7.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_7_allKeys.extend(theseKeys)
-                if len(_key_resp_7_allKeys):
-                    key_resp_7.keys = _key_resp_7_allKeys[-1].name  # just the last key pressed
-                    key_resp_7.rt = _key_resp_7_allKeys[-1].rt
-                    key_resp_7.duration = _key_resp_7_allKeys[-1].duration
+                    resp_music_r2.status = FINISHED
+                    resp_music_r2.status = FINISHED
+            if resp_music_r2.status == STARTED and not waitOnFlip:
+                theseKeys = resp_music_r2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_music_r2_allKeys.extend(theseKeys)
+                if len(_resp_music_r2_allKeys):
+                    resp_music_r2.keys = _resp_music_r2_allKeys[-1].name  # just the last key pressed
+                    resp_music_r2.rt = _resp_music_r2_allKeys[-1].rt
+                    resp_music_r2.duration = _resp_music_r2_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from code_6
@@ -2424,12 +2429,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music2.stopped', globalClock.getTime())
         # check responses
-        if key_resp_7.keys in ['', [], None]:  # No response was made
-            key_resp_7.keys = None
-        trials_6.addData('key_resp_7.keys',key_resp_7.keys)
-        if key_resp_7.keys != None:  # we had a response
-            trials_6.addData('key_resp_7.rt', key_resp_7.rt)
-            trials_6.addData('key_resp_7.duration', key_resp_7.duration)
+        if resp_music_r2.keys in ['', [], None]:  # No response was made
+            resp_music_r2.keys = None
+        trials_6.addData('resp_music_r2.keys',resp_music_r2.keys)
+        if resp_music_r2.keys != None:  # we had a response
+            trials_6.addData('resp_music_r2.rt', resp_music_r2.rt)
+            trials_6.addData('resp_music_r2.duration', resp_music_r2.duration)
         # Run 'End Routine' code from code_6
         if trials_6.thisN == nRows-1:
             background_sound_r2.stop()
@@ -2490,11 +2495,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         image_8.setPos([posx, posy])
         image_8.setImage('imgs/iceberg.png')
-        key_resp_8.keys = []
-        key_resp_8.rt = []
-        _key_resp_8_allKeys = []
+        resp_musicw_r2.keys = []
+        resp_musicw_r2.rt = []
+        _resp_musicw_r2_allKeys = []
         # keep track of which components have finished
-        music_words2Components = [image_8, key_resp_8]
+        music_words2Components = [image_8, resp_musicw_r2]
         for thisComponent in music_words2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2555,44 +2560,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_8.status = FINISHED
                     image_8.setAutoDraw(False)
             
-            # *key_resp_8* updates
+            # *resp_musicw_r2* updates
             waitOnFlip = False
             
-            # if key_resp_8 is starting this frame...
-            if key_resp_8.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicw_r2 is starting this frame...
+            if resp_musicw_r2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_8.frameNStart = frameN  # exact frame index
-                key_resp_8.tStart = t  # local t and not account for scr refresh
-                key_resp_8.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_8, 'tStartRefresh')  # time at next scr refresh
+                resp_musicw_r2.frameNStart = frameN  # exact frame index
+                resp_musicw_r2.tStart = t  # local t and not account for scr refresh
+                resp_musicw_r2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicw_r2, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_8.started')
+                thisExp.timestampOnFlip(win, 'resp_musicw_r2.started')
                 # update status
-                key_resp_8.status = STARTED
+                resp_musicw_r2.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_8.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_8.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicw_r2.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicw_r2.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_8 is stopping this frame...
-            if key_resp_8.status == STARTED:
+            # if resp_musicw_r2 is stopping this frame...
+            if resp_musicw_r2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_8.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicw_r2.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_8.tStop = t  # not accounting for scr refresh
-                    key_resp_8.frameNStop = frameN  # exact frame index
+                    resp_musicw_r2.tStop = t  # not accounting for scr refresh
+                    resp_musicw_r2.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_8.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicw_r2.stopped')
                     # update status
-                    key_resp_8.status = FINISHED
-                    key_resp_8.status = FINISHED
-            if key_resp_8.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_8.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_8_allKeys.extend(theseKeys)
-                if len(_key_resp_8_allKeys):
-                    key_resp_8.keys = _key_resp_8_allKeys[-1].name  # just the last key pressed
-                    key_resp_8.rt = _key_resp_8_allKeys[-1].rt
-                    key_resp_8.duration = _key_resp_8_allKeys[-1].duration
+                    resp_musicw_r2.status = FINISHED
+                    resp_musicw_r2.status = FINISHED
+            if resp_musicw_r2.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicw_r2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicw_r2_allKeys.extend(theseKeys)
+                if len(_resp_musicw_r2_allKeys):
+                    resp_musicw_r2.keys = _resp_musicw_r2_allKeys[-1].name  # just the last key pressed
+                    resp_musicw_r2.rt = _resp_musicw_r2_allKeys[-1].rt
+                    resp_musicw_r2.duration = _resp_musicw_r2_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -2626,12 +2631,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_7.thisN == nRows-1:
             background_movie_r2.stop()
         # check responses
-        if key_resp_8.keys in ['', [], None]:  # No response was made
-            key_resp_8.keys = None
-        trials_7.addData('key_resp_8.keys',key_resp_8.keys)
-        if key_resp_8.keys != None:  # we had a response
-            trials_7.addData('key_resp_8.rt', key_resp_8.rt)
-            trials_7.addData('key_resp_8.duration', key_resp_8.duration)
+        if resp_musicw_r2.keys in ['', [], None]:  # No response was made
+            resp_musicw_r2.keys = None
+        trials_7.addData('resp_musicw_r2.keys',resp_musicw_r2.keys)
+        if resp_musicw_r2.keys != None:  # we had a response
+            trials_7.addData('resp_musicw_r2.rt', resp_musicw_r2.rt)
+            trials_7.addData('resp_musicw_r2.duration', resp_musicw_r2.duration)
         # the Routine "music_words2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -2693,11 +2698,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             displayed_movie_r2.draw()    
         image_9.setPos([posx, posy])
         image_9.setImage('imgs/iceberg.png')
-        Key_resp.keys = []
-        Key_resp.rt = []
-        _Key_resp_allKeys = []
+        resp_musicv_r2.keys = []
+        resp_musicv_r2.rt = []
+        _resp_musicv_r2_allKeys = []
         # keep track of which components have finished
-        music_video2Components = [image_9, Key_resp]
+        music_video2Components = [image_9, resp_musicv_r2]
         for thisComponent in music_video2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2761,44 +2766,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_9.status = FINISHED
                     image_9.setAutoDraw(False)
             
-            # *Key_resp* updates
+            # *resp_musicv_r2* updates
             waitOnFlip = False
             
-            # if Key_resp is starting this frame...
-            if Key_resp.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicv_r2 is starting this frame...
+            if resp_musicv_r2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                Key_resp.frameNStart = frameN  # exact frame index
-                Key_resp.tStart = t  # local t and not account for scr refresh
-                Key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Key_resp, 'tStartRefresh')  # time at next scr refresh
+                resp_musicv_r2.frameNStart = frameN  # exact frame index
+                resp_musicv_r2.tStart = t  # local t and not account for scr refresh
+                resp_musicv_r2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicv_r2, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Key_resp.started')
+                thisExp.timestampOnFlip(win, 'resp_musicv_r2.started')
                 # update status
-                Key_resp.status = STARTED
+                resp_musicv_r2.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(Key_resp.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(Key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicv_r2.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicv_r2.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if Key_resp is stopping this frame...
-            if Key_resp.status == STARTED:
+            # if resp_musicv_r2 is stopping this frame...
+            if resp_musicv_r2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Key_resp.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicv_r2.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    Key_resp.tStop = t  # not accounting for scr refresh
-                    Key_resp.frameNStop = frameN  # exact frame index
+                    resp_musicv_r2.tStop = t  # not accounting for scr refresh
+                    resp_musicv_r2.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'Key_resp.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicv_r2.stopped')
                     # update status
-                    Key_resp.status = FINISHED
-                    Key_resp.status = FINISHED
-            if Key_resp.status == STARTED and not waitOnFlip:
-                theseKeys = Key_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _Key_resp_allKeys.extend(theseKeys)
-                if len(_Key_resp_allKeys):
-                    Key_resp.keys = _Key_resp_allKeys[-1].name  # just the last key pressed
-                    Key_resp.rt = _Key_resp_allKeys[-1].rt
-                    Key_resp.duration = _Key_resp_allKeys[-1].duration
+                    resp_musicv_r2.status = FINISHED
+                    resp_musicv_r2.status = FINISHED
+            if resp_musicv_r2.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicv_r2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicv_r2_allKeys.extend(theseKeys)
+                if len(_resp_musicv_r2_allKeys):
+                    resp_musicv_r2.keys = _resp_musicv_r2_allKeys[-1].name  # just the last key pressed
+                    resp_musicv_r2.rt = _resp_musicv_r2_allKeys[-1].rt
+                    resp_musicv_r2.duration = _resp_musicv_r2_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -2835,12 +2840,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_8.thisN == nRows-1:
             displayed_movie_r2.stop()
         # check responses
-        if Key_resp.keys in ['', [], None]:  # No response was made
-            Key_resp.keys = None
-        trials_8.addData('Key_resp.keys',Key_resp.keys)
-        if Key_resp.keys != None:  # we had a response
-            trials_8.addData('Key_resp.rt', Key_resp.rt)
-            trials_8.addData('Key_resp.duration', Key_resp.duration)
+        if resp_musicv_r2.keys in ['', [], None]:  # No response was made
+            resp_musicv_r2.keys = None
+        trials_8.addData('resp_musicv_r2.keys',resp_musicv_r2.keys)
+        if resp_musicv_r2.keys != None:  # we had a response
+            trials_8.addData('resp_musicv_r2.rt', resp_musicv_r2.rt)
+            trials_8.addData('resp_musicv_r2.duration', resp_musicv_r2.duration)
         # the Routine "music_video2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -2988,14 +2993,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_10.setPos([posx, posy])
         image_10.setImage('imgs/iceberg.png')
-        key_resp_9.keys = []
-        key_resp_9.rt = []
-        _key_resp_9_allKeys = []
+        resp_control_r3.keys = []
+        resp_control_r3.rt = []
+        _resp_control_r3_allKeys = []
         # Run 'Begin Routine' code from mar_1_3
         mar_movie.play()  
         
         # keep track of which components have finished
-        control3Components = [image_10, key_resp_9]
+        control3Components = [image_10, resp_control_r3]
         for thisComponent in control3Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3051,44 +3056,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_10.status = FINISHED
                     image_10.setAutoDraw(False)
             
-            # *key_resp_9* updates
+            # *resp_control_r3* updates
             waitOnFlip = False
             
-            # if key_resp_9 is starting this frame...
-            if key_resp_9.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_control_r3 is starting this frame...
+            if resp_control_r3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_9.frameNStart = frameN  # exact frame index
-                key_resp_9.tStart = t  # local t and not account for scr refresh
-                key_resp_9.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_9, 'tStartRefresh')  # time at next scr refresh
+                resp_control_r3.frameNStart = frameN  # exact frame index
+                resp_control_r3.tStart = t  # local t and not account for scr refresh
+                resp_control_r3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_control_r3, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_9.started')
+                thisExp.timestampOnFlip(win, 'resp_control_r3.started')
                 # update status
-                key_resp_9.status = STARTED
+                resp_control_r3.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_9.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_control_r3.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_control_r3.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_9 is stopping this frame...
-            if key_resp_9.status == STARTED:
+            # if resp_control_r3 is stopping this frame...
+            if resp_control_r3.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_9.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_control_r3.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_9.tStop = t  # not accounting for scr refresh
-                    key_resp_9.frameNStop = frameN  # exact frame index
+                    resp_control_r3.tStop = t  # not accounting for scr refresh
+                    resp_control_r3.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_9.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_control_r3.stopped')
                     # update status
-                    key_resp_9.status = FINISHED
-                    key_resp_9.status = FINISHED
-            if key_resp_9.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_9.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_9_allKeys.extend(theseKeys)
-                if len(_key_resp_9_allKeys):
-                    key_resp_9.keys = _key_resp_9_allKeys[-1].name  # just the last key pressed
-                    key_resp_9.rt = _key_resp_9_allKeys[-1].rt
-                    key_resp_9.duration = _key_resp_9_allKeys[-1].duration
+                    resp_control_r3.status = FINISHED
+                    resp_control_r3.status = FINISHED
+            if resp_control_r3.status == STARTED and not waitOnFlip:
+                theseKeys = resp_control_r3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_control_r3_allKeys.extend(theseKeys)
+                if len(_resp_control_r3_allKeys):
+                    resp_control_r3.keys = _resp_control_r3_allKeys[-1].name  # just the last key pressed
+                    resp_control_r3.rt = _resp_control_r3_allKeys[-1].rt
+                    resp_control_r3.duration = _resp_control_r3_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from mar_1_3
@@ -3122,12 +3127,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('control3.stopped', globalClock.getTime())
         # check responses
-        if key_resp_9.keys in ['', [], None]:  # No response was made
-            key_resp_9.keys = None
-        trials_9.addData('key_resp_9.keys',key_resp_9.keys)
-        if key_resp_9.keys != None:  # we had a response
-            trials_9.addData('key_resp_9.rt', key_resp_9.rt)
-            trials_9.addData('key_resp_9.duration', key_resp_9.duration)
+        if resp_control_r3.keys in ['', [], None]:  # No response was made
+            resp_control_r3.keys = None
+        trials_9.addData('resp_control_r3.keys',resp_control_r3.keys)
+        if resp_control_r3.keys != None:  # we had a response
+            trials_9.addData('resp_control_r3.rt', resp_control_r3.rt)
+            trials_9.addData('resp_control_r3.duration', resp_control_r3.duration)
         # the Routine "control3" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -3178,9 +3183,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_11.setPos([posx, posy])
         image_11.setImage('imgs/iceberg.png')
-        key_resp_10.keys = []
-        key_resp_10.rt = []
-        _key_resp_10_allKeys = []
+        resp_music_r3.keys = []
+        resp_music_r3.rt = []
+        _resp_music_r3_allKeys = []
         # Run 'Begin Routine' code from code_9
         if trials_10.thisN == 0:
             background_sound_r3.play()        
@@ -3188,7 +3193,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # keep track of which components have finished
-        music3Components = [image_11, key_resp_10]
+        music3Components = [image_11, resp_music_r3]
         for thisComponent in music3Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3244,44 +3249,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_11.status = FINISHED
                     image_11.setAutoDraw(False)
             
-            # *key_resp_10* updates
+            # *resp_music_r3* updates
             waitOnFlip = False
             
-            # if key_resp_10 is starting this frame...
-            if key_resp_10.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_music_r3 is starting this frame...
+            if resp_music_r3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_10.frameNStart = frameN  # exact frame index
-                key_resp_10.tStart = t  # local t and not account for scr refresh
-                key_resp_10.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_10, 'tStartRefresh')  # time at next scr refresh
+                resp_music_r3.frameNStart = frameN  # exact frame index
+                resp_music_r3.tStart = t  # local t and not account for scr refresh
+                resp_music_r3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_music_r3, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_10.started')
+                thisExp.timestampOnFlip(win, 'resp_music_r3.started')
                 # update status
-                key_resp_10.status = STARTED
+                resp_music_r3.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_10.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_10.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_music_r3.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_music_r3.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_10 is stopping this frame...
-            if key_resp_10.status == STARTED:
+            # if resp_music_r3 is stopping this frame...
+            if resp_music_r3.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_10.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_music_r3.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_10.tStop = t  # not accounting for scr refresh
-                    key_resp_10.frameNStop = frameN  # exact frame index
+                    resp_music_r3.tStop = t  # not accounting for scr refresh
+                    resp_music_r3.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_10.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_music_r3.stopped')
                     # update status
-                    key_resp_10.status = FINISHED
-                    key_resp_10.status = FINISHED
-            if key_resp_10.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_10.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_10_allKeys.extend(theseKeys)
-                if len(_key_resp_10_allKeys):
-                    key_resp_10.keys = _key_resp_10_allKeys[-1].name  # just the last key pressed
-                    key_resp_10.rt = _key_resp_10_allKeys[-1].rt
-                    key_resp_10.duration = _key_resp_10_allKeys[-1].duration
+                    resp_music_r3.status = FINISHED
+                    resp_music_r3.status = FINISHED
+            if resp_music_r3.status == STARTED and not waitOnFlip:
+                theseKeys = resp_music_r3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_music_r3_allKeys.extend(theseKeys)
+                if len(_resp_music_r3_allKeys):
+                    resp_music_r3.keys = _resp_music_r3_allKeys[-1].name  # just the last key pressed
+                    resp_music_r3.rt = _resp_music_r3_allKeys[-1].rt
+                    resp_music_r3.duration = _resp_music_r3_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from code_9
@@ -3317,12 +3322,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music3.stopped', globalClock.getTime())
         # check responses
-        if key_resp_10.keys in ['', [], None]:  # No response was made
-            key_resp_10.keys = None
-        trials_10.addData('key_resp_10.keys',key_resp_10.keys)
-        if key_resp_10.keys != None:  # we had a response
-            trials_10.addData('key_resp_10.rt', key_resp_10.rt)
-            trials_10.addData('key_resp_10.duration', key_resp_10.duration)
+        if resp_music_r3.keys in ['', [], None]:  # No response was made
+            resp_music_r3.keys = None
+        trials_10.addData('resp_music_r3.keys',resp_music_r3.keys)
+        if resp_music_r3.keys != None:  # we had a response
+            trials_10.addData('resp_music_r3.rt', resp_music_r3.rt)
+            trials_10.addData('resp_music_r3.duration', resp_music_r3.duration)
         # Run 'End Routine' code from code_9
         if trials_10.thisN == nRows-1:
             background_sound_r3.stop()
@@ -3383,11 +3388,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         image_12.setPos([posx, posy])
         image_12.setImage('imgs/iceberg.png')
-        key_resp_11.keys = []
-        key_resp_11.rt = []
-        _key_resp_11_allKeys = []
+        resp_musicw_r3.keys = []
+        resp_musicw_r3.rt = []
+        _resp_musicw_r3_allKeys = []
         # keep track of which components have finished
-        music_words3Components = [image_12, key_resp_11]
+        music_words3Components = [image_12, resp_musicw_r3]
         for thisComponent in music_words3Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3448,44 +3453,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_12.status = FINISHED
                     image_12.setAutoDraw(False)
             
-            # *key_resp_11* updates
+            # *resp_musicw_r3* updates
             waitOnFlip = False
             
-            # if key_resp_11 is starting this frame...
-            if key_resp_11.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicw_r3 is starting this frame...
+            if resp_musicw_r3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_11.frameNStart = frameN  # exact frame index
-                key_resp_11.tStart = t  # local t and not account for scr refresh
-                key_resp_11.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_11, 'tStartRefresh')  # time at next scr refresh
+                resp_musicw_r3.frameNStart = frameN  # exact frame index
+                resp_musicw_r3.tStart = t  # local t and not account for scr refresh
+                resp_musicw_r3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicw_r3, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_11.started')
+                thisExp.timestampOnFlip(win, 'resp_musicw_r3.started')
                 # update status
-                key_resp_11.status = STARTED
+                resp_musicw_r3.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_11.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_11.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicw_r3.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicw_r3.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_11 is stopping this frame...
-            if key_resp_11.status == STARTED:
+            # if resp_musicw_r3 is stopping this frame...
+            if resp_musicw_r3.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_11.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicw_r3.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_11.tStop = t  # not accounting for scr refresh
-                    key_resp_11.frameNStop = frameN  # exact frame index
+                    resp_musicw_r3.tStop = t  # not accounting for scr refresh
+                    resp_musicw_r3.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_11.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicw_r3.stopped')
                     # update status
-                    key_resp_11.status = FINISHED
-                    key_resp_11.status = FINISHED
-            if key_resp_11.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_11.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_11_allKeys.extend(theseKeys)
-                if len(_key_resp_11_allKeys):
-                    key_resp_11.keys = _key_resp_11_allKeys[-1].name  # just the last key pressed
-                    key_resp_11.rt = _key_resp_11_allKeys[-1].rt
-                    key_resp_11.duration = _key_resp_11_allKeys[-1].duration
+                    resp_musicw_r3.status = FINISHED
+                    resp_musicw_r3.status = FINISHED
+            if resp_musicw_r3.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicw_r3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicw_r3_allKeys.extend(theseKeys)
+                if len(_resp_musicw_r3_allKeys):
+                    resp_musicw_r3.keys = _resp_musicw_r3_allKeys[-1].name  # just the last key pressed
+                    resp_musicw_r3.rt = _resp_musicw_r3_allKeys[-1].rt
+                    resp_musicw_r3.duration = _resp_musicw_r3_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -3519,12 +3524,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_11.thisN == nRows-1:
             background_movie_r3.stop()
         # check responses
-        if key_resp_11.keys in ['', [], None]:  # No response was made
-            key_resp_11.keys = None
-        trials_11.addData('key_resp_11.keys',key_resp_11.keys)
-        if key_resp_11.keys != None:  # we had a response
-            trials_11.addData('key_resp_11.rt', key_resp_11.rt)
-            trials_11.addData('key_resp_11.duration', key_resp_11.duration)
+        if resp_musicw_r3.keys in ['', [], None]:  # No response was made
+            resp_musicw_r3.keys = None
+        trials_11.addData('resp_musicw_r3.keys',resp_musicw_r3.keys)
+        if resp_musicw_r3.keys != None:  # we had a response
+            trials_11.addData('resp_musicw_r3.rt', resp_musicw_r3.rt)
+            trials_11.addData('resp_musicw_r3.duration', resp_musicw_r3.duration)
         # the Routine "music_words3" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -3586,11 +3591,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             displayed_movie_r3.draw()    
         image_13.setPos([posx, posy])
         image_13.setImage('imgs/iceberg.png')
-        Key_resp_2.keys = []
-        Key_resp_2.rt = []
-        _Key_resp_2_allKeys = []
+        resp_musicv_r3.keys = []
+        resp_musicv_r3.rt = []
+        _resp_musicv_r3_allKeys = []
         # keep track of which components have finished
-        music_video3Components = [image_13, Key_resp_2]
+        music_video3Components = [image_13, resp_musicv_r3]
         for thisComponent in music_video3Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3654,44 +3659,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_13.status = FINISHED
                     image_13.setAutoDraw(False)
             
-            # *Key_resp_2* updates
+            # *resp_musicv_r3* updates
             waitOnFlip = False
             
-            # if Key_resp_2 is starting this frame...
-            if Key_resp_2.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicv_r3 is starting this frame...
+            if resp_musicv_r3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                Key_resp_2.frameNStart = frameN  # exact frame index
-                Key_resp_2.tStart = t  # local t and not account for scr refresh
-                Key_resp_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Key_resp_2, 'tStartRefresh')  # time at next scr refresh
+                resp_musicv_r3.frameNStart = frameN  # exact frame index
+                resp_musicv_r3.tStart = t  # local t and not account for scr refresh
+                resp_musicv_r3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicv_r3, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Key_resp_2.started')
+                thisExp.timestampOnFlip(win, 'resp_musicv_r3.started')
                 # update status
-                Key_resp_2.status = STARTED
+                resp_musicv_r3.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(Key_resp_2.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(Key_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicv_r3.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicv_r3.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if Key_resp_2 is stopping this frame...
-            if Key_resp_2.status == STARTED:
+            # if resp_musicv_r3 is stopping this frame...
+            if resp_musicv_r3.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Key_resp_2.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicv_r3.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    Key_resp_2.tStop = t  # not accounting for scr refresh
-                    Key_resp_2.frameNStop = frameN  # exact frame index
+                    resp_musicv_r3.tStop = t  # not accounting for scr refresh
+                    resp_musicv_r3.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'Key_resp_2.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicv_r3.stopped')
                     # update status
-                    Key_resp_2.status = FINISHED
-                    Key_resp_2.status = FINISHED
-            if Key_resp_2.status == STARTED and not waitOnFlip:
-                theseKeys = Key_resp_2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _Key_resp_2_allKeys.extend(theseKeys)
-                if len(_Key_resp_2_allKeys):
-                    Key_resp_2.keys = _Key_resp_2_allKeys[-1].name  # just the last key pressed
-                    Key_resp_2.rt = _Key_resp_2_allKeys[-1].rt
-                    Key_resp_2.duration = _Key_resp_2_allKeys[-1].duration
+                    resp_musicv_r3.status = FINISHED
+                    resp_musicv_r3.status = FINISHED
+            if resp_musicv_r3.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicv_r3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicv_r3_allKeys.extend(theseKeys)
+                if len(_resp_musicv_r3_allKeys):
+                    resp_musicv_r3.keys = _resp_musicv_r3_allKeys[-1].name  # just the last key pressed
+                    resp_musicv_r3.rt = _resp_musicv_r3_allKeys[-1].rt
+                    resp_musicv_r3.duration = _resp_musicv_r3_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -3728,12 +3733,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_12.thisN == nRows-1:
             displayed_movie_r3.stop()
         # check responses
-        if Key_resp_2.keys in ['', [], None]:  # No response was made
-            Key_resp_2.keys = None
-        trials_12.addData('Key_resp_2.keys',Key_resp_2.keys)
-        if Key_resp_2.keys != None:  # we had a response
-            trials_12.addData('Key_resp_2.rt', Key_resp_2.rt)
-            trials_12.addData('Key_resp_2.duration', Key_resp_2.duration)
+        if resp_musicv_r3.keys in ['', [], None]:  # No response was made
+            resp_musicv_r3.keys = None
+        trials_12.addData('resp_musicv_r3.keys',resp_musicv_r3.keys)
+        if resp_musicv_r3.keys != None:  # we had a response
+            trials_12.addData('resp_musicv_r3.rt', resp_musicv_r3.rt)
+            trials_12.addData('resp_musicv_r3.duration', resp_musicv_r3.duration)
         # the Routine "music_video3" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -3881,14 +3886,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_14.setPos([posx, posy])
         image_14.setImage('imgs/iceberg.png')
-        key_resp_12.keys = []
-        key_resp_12.rt = []
-        _key_resp_12_allKeys = []
+        resp_control_r4.keys = []
+        resp_control_r4.rt = []
+        _resp_control_r4_allKeys = []
         # Run 'Begin Routine' code from mar_1_4
         mar_movie.play()  
         
         # keep track of which components have finished
-        control4Components = [image_14, key_resp_12]
+        control4Components = [image_14, resp_control_r4]
         for thisComponent in control4Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3944,44 +3949,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_14.status = FINISHED
                     image_14.setAutoDraw(False)
             
-            # *key_resp_12* updates
+            # *resp_control_r4* updates
             waitOnFlip = False
             
-            # if key_resp_12 is starting this frame...
-            if key_resp_12.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_control_r4 is starting this frame...
+            if resp_control_r4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_12.frameNStart = frameN  # exact frame index
-                key_resp_12.tStart = t  # local t and not account for scr refresh
-                key_resp_12.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_12, 'tStartRefresh')  # time at next scr refresh
+                resp_control_r4.frameNStart = frameN  # exact frame index
+                resp_control_r4.tStart = t  # local t and not account for scr refresh
+                resp_control_r4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_control_r4, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_12.started')
+                thisExp.timestampOnFlip(win, 'resp_control_r4.started')
                 # update status
-                key_resp_12.status = STARTED
+                resp_control_r4.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_12.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_12.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_control_r4.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_control_r4.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_12 is stopping this frame...
-            if key_resp_12.status == STARTED:
+            # if resp_control_r4 is stopping this frame...
+            if resp_control_r4.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_12.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_control_r4.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_12.tStop = t  # not accounting for scr refresh
-                    key_resp_12.frameNStop = frameN  # exact frame index
+                    resp_control_r4.tStop = t  # not accounting for scr refresh
+                    resp_control_r4.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_12.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_control_r4.stopped')
                     # update status
-                    key_resp_12.status = FINISHED
-                    key_resp_12.status = FINISHED
-            if key_resp_12.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_12.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_12_allKeys.extend(theseKeys)
-                if len(_key_resp_12_allKeys):
-                    key_resp_12.keys = _key_resp_12_allKeys[-1].name  # just the last key pressed
-                    key_resp_12.rt = _key_resp_12_allKeys[-1].rt
-                    key_resp_12.duration = _key_resp_12_allKeys[-1].duration
+                    resp_control_r4.status = FINISHED
+                    resp_control_r4.status = FINISHED
+            if resp_control_r4.status == STARTED and not waitOnFlip:
+                theseKeys = resp_control_r4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_control_r4_allKeys.extend(theseKeys)
+                if len(_resp_control_r4_allKeys):
+                    resp_control_r4.keys = _resp_control_r4_allKeys[-1].name  # just the last key pressed
+                    resp_control_r4.rt = _resp_control_r4_allKeys[-1].rt
+                    resp_control_r4.duration = _resp_control_r4_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from mar_1_4
@@ -4015,12 +4020,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('control4.stopped', globalClock.getTime())
         # check responses
-        if key_resp_12.keys in ['', [], None]:  # No response was made
-            key_resp_12.keys = None
-        trials_13.addData('key_resp_12.keys',key_resp_12.keys)
-        if key_resp_12.keys != None:  # we had a response
-            trials_13.addData('key_resp_12.rt', key_resp_12.rt)
-            trials_13.addData('key_resp_12.duration', key_resp_12.duration)
+        if resp_control_r4.keys in ['', [], None]:  # No response was made
+            resp_control_r4.keys = None
+        trials_13.addData('resp_control_r4.keys',resp_control_r4.keys)
+        if resp_control_r4.keys != None:  # we had a response
+            trials_13.addData('resp_control_r4.rt', resp_control_r4.rt)
+            trials_13.addData('resp_control_r4.duration', resp_control_r4.duration)
         # the Routine "control4" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -4071,9 +4076,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             continueRoutine = False
         image_15.setPos([posx, posy])
         image_15.setImage('imgs/iceberg.png')
-        key_resp_13.keys = []
-        key_resp_13.rt = []
-        _key_resp_13_allKeys = []
+        resp_music_r4.keys = []
+        resp_music_r4.rt = []
+        _resp_music_r4_allKeys = []
         # Run 'Begin Routine' code from code_12
         if trials_14.thisN == 0:
             background_sound_r4.play()        
@@ -4081,7 +4086,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         mar_movie.play()  
         
         # keep track of which components have finished
-        music4Components = [image_15, key_resp_13]
+        music4Components = [image_15, resp_music_r4]
         for thisComponent in music4Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4137,44 +4142,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_15.status = FINISHED
                     image_15.setAutoDraw(False)
             
-            # *key_resp_13* updates
+            # *resp_music_r4* updates
             waitOnFlip = False
             
-            # if key_resp_13 is starting this frame...
-            if key_resp_13.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_music_r4 is starting this frame...
+            if resp_music_r4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_13.frameNStart = frameN  # exact frame index
-                key_resp_13.tStart = t  # local t and not account for scr refresh
-                key_resp_13.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_13, 'tStartRefresh')  # time at next scr refresh
+                resp_music_r4.frameNStart = frameN  # exact frame index
+                resp_music_r4.tStart = t  # local t and not account for scr refresh
+                resp_music_r4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_music_r4, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_13.started')
+                thisExp.timestampOnFlip(win, 'resp_music_r4.started')
                 # update status
-                key_resp_13.status = STARTED
+                resp_music_r4.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_13.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_13.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_music_r4.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_music_r4.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_13 is stopping this frame...
-            if key_resp_13.status == STARTED:
+            # if resp_music_r4 is stopping this frame...
+            if resp_music_r4.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_13.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_music_r4.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_13.tStop = t  # not accounting for scr refresh
-                    key_resp_13.frameNStop = frameN  # exact frame index
+                    resp_music_r4.tStop = t  # not accounting for scr refresh
+                    resp_music_r4.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_13.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_music_r4.stopped')
                     # update status
-                    key_resp_13.status = FINISHED
-                    key_resp_13.status = FINISHED
-            if key_resp_13.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_13.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_13_allKeys.extend(theseKeys)
-                if len(_key_resp_13_allKeys):
-                    key_resp_13.keys = _key_resp_13_allKeys[-1].name  # just the last key pressed
-                    key_resp_13.rt = _key_resp_13_allKeys[-1].rt
-                    key_resp_13.duration = _key_resp_13_allKeys[-1].duration
+                    resp_music_r4.status = FINISHED
+                    resp_music_r4.status = FINISHED
+            if resp_music_r4.status == STARTED and not waitOnFlip:
+                theseKeys = resp_music_r4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_music_r4_allKeys.extend(theseKeys)
+                if len(_resp_music_r4_allKeys):
+                    resp_music_r4.keys = _resp_music_r4_allKeys[-1].name  # just the last key pressed
+                    resp_music_r4.rt = _resp_music_r4_allKeys[-1].rt
+                    resp_music_r4.duration = _resp_music_r4_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             # Run 'Each Frame' code from code_12
@@ -4210,12 +4215,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('music4.stopped', globalClock.getTime())
         # check responses
-        if key_resp_13.keys in ['', [], None]:  # No response was made
-            key_resp_13.keys = None
-        trials_14.addData('key_resp_13.keys',key_resp_13.keys)
-        if key_resp_13.keys != None:  # we had a response
-            trials_14.addData('key_resp_13.rt', key_resp_13.rt)
-            trials_14.addData('key_resp_13.duration', key_resp_13.duration)
+        if resp_music_r4.keys in ['', [], None]:  # No response was made
+            resp_music_r4.keys = None
+        trials_14.addData('resp_music_r4.keys',resp_music_r4.keys)
+        if resp_music_r4.keys != None:  # we had a response
+            trials_14.addData('resp_music_r4.rt', resp_music_r4.rt)
+            trials_14.addData('resp_music_r4.duration', resp_music_r4.duration)
         # Run 'End Routine' code from code_12
         if trials_14.thisN == nRows-1:
             background_sound_r4.stop()
@@ -4276,11 +4281,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         image_16.setPos([posx, posy])
         image_16.setImage('imgs/iceberg.png')
-        key_resp_14.keys = []
-        key_resp_14.rt = []
-        _key_resp_14_allKeys = []
+        resp_musicw_r4.keys = []
+        resp_musicw_r4.rt = []
+        _resp_musicw_r4_allKeys = []
         # keep track of which components have finished
-        music_words4Components = [image_16, key_resp_14]
+        music_words4Components = [image_16, resp_musicw_r4]
         for thisComponent in music_words4Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4341,44 +4346,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_16.status = FINISHED
                     image_16.setAutoDraw(False)
             
-            # *key_resp_14* updates
+            # *resp_musicw_r4* updates
             waitOnFlip = False
             
-            # if key_resp_14 is starting this frame...
-            if key_resp_14.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicw_r4 is starting this frame...
+            if resp_musicw_r4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                key_resp_14.frameNStart = frameN  # exact frame index
-                key_resp_14.tStart = t  # local t and not account for scr refresh
-                key_resp_14.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(key_resp_14, 'tStartRefresh')  # time at next scr refresh
+                resp_musicw_r4.frameNStart = frameN  # exact frame index
+                resp_musicw_r4.tStart = t  # local t and not account for scr refresh
+                resp_musicw_r4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicw_r4, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_14.started')
+                thisExp.timestampOnFlip(win, 'resp_musicw_r4.started')
                 # update status
-                key_resp_14.status = STARTED
+                resp_musicw_r4.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(key_resp_14.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(key_resp_14.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicw_r4.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicw_r4.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if key_resp_14 is stopping this frame...
-            if key_resp_14.status == STARTED:
+            # if resp_musicw_r4 is stopping this frame...
+            if resp_musicw_r4.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > key_resp_14.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicw_r4.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    key_resp_14.tStop = t  # not accounting for scr refresh
-                    key_resp_14.frameNStop = frameN  # exact frame index
+                    resp_musicw_r4.tStop = t  # not accounting for scr refresh
+                    resp_musicw_r4.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_14.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicw_r4.stopped')
                     # update status
-                    key_resp_14.status = FINISHED
-                    key_resp_14.status = FINISHED
-            if key_resp_14.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_14.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _key_resp_14_allKeys.extend(theseKeys)
-                if len(_key_resp_14_allKeys):
-                    key_resp_14.keys = _key_resp_14_allKeys[-1].name  # just the last key pressed
-                    key_resp_14.rt = _key_resp_14_allKeys[-1].rt
-                    key_resp_14.duration = _key_resp_14_allKeys[-1].duration
+                    resp_musicw_r4.status = FINISHED
+                    resp_musicw_r4.status = FINISHED
+            if resp_musicw_r4.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicw_r4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicw_r4_allKeys.extend(theseKeys)
+                if len(_resp_musicw_r4_allKeys):
+                    resp_musicw_r4.keys = _resp_musicw_r4_allKeys[-1].name  # just the last key pressed
+                    resp_musicw_r4.rt = _resp_musicw_r4_allKeys[-1].rt
+                    resp_musicw_r4.duration = _resp_musicw_r4_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -4412,12 +4417,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_15.thisN == nRows-1:
             background_movie_r4.stop()
         # check responses
-        if key_resp_14.keys in ['', [], None]:  # No response was made
-            key_resp_14.keys = None
-        trials_15.addData('key_resp_14.keys',key_resp_14.keys)
-        if key_resp_14.keys != None:  # we had a response
-            trials_15.addData('key_resp_14.rt', key_resp_14.rt)
-            trials_15.addData('key_resp_14.duration', key_resp_14.duration)
+        if resp_musicw_r4.keys in ['', [], None]:  # No response was made
+            resp_musicw_r4.keys = None
+        trials_15.addData('resp_musicw_r4.keys',resp_musicw_r4.keys)
+        if resp_musicw_r4.keys != None:  # we had a response
+            trials_15.addData('resp_musicw_r4.rt', resp_musicw_r4.rt)
+            trials_15.addData('resp_musicw_r4.duration', resp_musicw_r4.duration)
         # the Routine "music_words4" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -4479,11 +4484,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             displayed_movie_r4.draw()    
         image_17.setPos([posx, posy])
         image_17.setImage('imgs/iceberg.png')
-        Key_resp_3.keys = []
-        Key_resp_3.rt = []
-        _Key_resp_3_allKeys = []
+        resp_musicv_r4.keys = []
+        resp_musicv_r4.rt = []
+        _resp_musicv_r4_allKeys = []
         # keep track of which components have finished
-        music_video4Components = [image_17, Key_resp_3]
+        music_video4Components = [image_17, resp_musicv_r4]
         for thisComponent in music_video4Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4547,44 +4552,44 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     image_17.status = FINISHED
                     image_17.setAutoDraw(False)
             
-            # *Key_resp_3* updates
+            # *resp_musicv_r4* updates
             waitOnFlip = False
             
-            # if Key_resp_3 is starting this frame...
-            if Key_resp_3.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
+            # if resp_musicv_r4 is starting this frame...
+            if resp_musicv_r4.status == NOT_STARTED and tThisFlip >= timepresentation-frameTolerance:
                 # keep track of start time/frame for later
-                Key_resp_3.frameNStart = frameN  # exact frame index
-                Key_resp_3.tStart = t  # local t and not account for scr refresh
-                Key_resp_3.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Key_resp_3, 'tStartRefresh')  # time at next scr refresh
+                resp_musicv_r4.frameNStart = frameN  # exact frame index
+                resp_musicv_r4.tStart = t  # local t and not account for scr refresh
+                resp_musicv_r4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(resp_musicv_r4, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Key_resp_3.started')
+                thisExp.timestampOnFlip(win, 'resp_musicv_r4.started')
                 # update status
-                Key_resp_3.status = STARTED
+                resp_musicv_r4.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(Key_resp_3.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(Key_resp_3.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                win.callOnFlip(resp_musicv_r4.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(resp_musicv_r4.clearEvents, eventType='keyboard')  # clear events on next screen flip
             
-            # if Key_resp_3 is stopping this frame...
-            if Key_resp_3.status == STARTED:
+            # if resp_musicv_r4 is stopping this frame...
+            if resp_musicv_r4.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Key_resp_3.tStartRefresh + 15-frameTolerance:
+                if tThisFlipGlobal > resp_musicv_r4.tStartRefresh + 15-frameTolerance:
                     # keep track of stop time/frame for later
-                    Key_resp_3.tStop = t  # not accounting for scr refresh
-                    Key_resp_3.frameNStop = frameN  # exact frame index
+                    resp_musicv_r4.tStop = t  # not accounting for scr refresh
+                    resp_musicv_r4.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'Key_resp_3.stopped')
+                    thisExp.timestampOnFlip(win, 'resp_musicv_r4.stopped')
                     # update status
-                    Key_resp_3.status = FINISHED
-                    Key_resp_3.status = FINISHED
-            if Key_resp_3.status == STARTED and not waitOnFlip:
-                theseKeys = Key_resp_3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _Key_resp_3_allKeys.extend(theseKeys)
-                if len(_Key_resp_3_allKeys):
-                    Key_resp_3.keys = _Key_resp_3_allKeys[-1].name  # just the last key pressed
-                    Key_resp_3.rt = _Key_resp_3_allKeys[-1].rt
-                    Key_resp_3.duration = _Key_resp_3_allKeys[-1].duration
+                    resp_musicv_r4.status = FINISHED
+                    resp_musicv_r4.status = FINISHED
+            if resp_musicv_r4.status == STARTED and not waitOnFlip:
+                theseKeys = resp_musicv_r4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _resp_musicv_r4_allKeys.extend(theseKeys)
+                if len(_resp_musicv_r4_allKeys):
+                    resp_musicv_r4.keys = _resp_musicv_r4_allKeys[-1].name  # just the last key pressed
+                    resp_musicv_r4.rt = _resp_musicv_r4_allKeys[-1].rt
+                    resp_musicv_r4.duration = _resp_musicv_r4_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
             
@@ -4621,12 +4626,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if trials_16.thisN == nRows-1:
             displayed_movie_r4.stop()
         # check responses
-        if Key_resp_3.keys in ['', [], None]:  # No response was made
-            Key_resp_3.keys = None
-        trials_16.addData('Key_resp_3.keys',Key_resp_3.keys)
-        if Key_resp_3.keys != None:  # we had a response
-            trials_16.addData('Key_resp_3.rt', Key_resp_3.rt)
-            trials_16.addData('Key_resp_3.duration', Key_resp_3.duration)
+        if resp_musicv_r4.keys in ['', [], None]:  # No response was made
+            resp_musicv_r4.keys = None
+        trials_16.addData('resp_musicv_r4.keys',resp_musicv_r4.keys)
+        if resp_musicv_r4.keys != None:  # we had a response
+            trials_16.addData('resp_musicv_r4.rt', resp_musicv_r4.rt)
+            trials_16.addData('resp_musicv_r4.duration', resp_musicv_r4.duration)
         # the Routine "music_video4" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
