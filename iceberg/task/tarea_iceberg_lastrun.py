@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on September 18, 2024, at 14:27
+    on September 18, 2024, at 17:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,6 +40,8 @@ path_musicaletra = 'imgs/titanic_spanish.mp4'
 path_pelicula = 'imgs/titanic.mp4'
 
 nRows = 8
+totalRows = 195  # Replace with the total number of rows in your Excel file
+
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -1069,7 +1071,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     thisExp.addData('Ronda_1.started', globalClock.getTime())
     text_7.setText('Ronda 1/4')
     # Run 'Begin Routine' code from codigos_generales
-    totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
     selectedRowsStr = [i for i in selectedRows]
     # keep track of which components have finished
@@ -1963,9 +1964,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     thisExp.addData('Ronda_2.started', globalClock.getTime())
     text_8.setText('Ronda 2/4')
     # Run 'Begin Routine' code from code_15
-    totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
+    selectedRowsStr_r2 = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_2Components = [text_8]
     for thisComponent in Ronda_2Components:
@@ -2058,7 +2058,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_5 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_5')
     thisExp.addLoop(trials_5)  # add the loop to the experiment
     thisTrial_5 = trials_5.trialList[0]  # so we can initialise stimuli with some values
@@ -2248,7 +2248,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_6 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_6')
     thisExp.addLoop(trials_6)  # add the loop to the experiment
     thisTrial_6 = trials_6.trialList[0]  # so we can initialise stimuli with some values
@@ -2446,7 +2446,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_7 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_7')
     thisExp.addLoop(trials_7)  # add the loop to the experiment
     thisTrial_7 = trials_7.trialList[0]  # so we can initialise stimuli with some values
@@ -2645,7 +2645,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_8 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r2),
         seed=None, name='trials_8')
     thisExp.addLoop(trials_8)  # add the loop to the experiment
     thisTrial_8 = trials_8.trialList[0]  # so we can initialise stimuli with some values
@@ -2857,9 +2857,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     thisExp.addData('Ronda_3.started', globalClock.getTime())
     text_9.setText('Ronda 3/4')
     # Run 'Begin Routine' code from code_16
-    totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
+    selectedRowsStr_r3 = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_3Components = [text_9]
     for thisComponent in Ronda_3Components:
@@ -2952,7 +2951,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_9 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_9')
     thisExp.addLoop(trials_9)  # add the loop to the experiment
     thisTrial_9 = trials_9.trialList[0]  # so we can initialise stimuli with some values
@@ -3142,7 +3141,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_10 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_10')
     thisExp.addLoop(trials_10)  # add the loop to the experiment
     thisTrial_10 = trials_10.trialList[0]  # so we can initialise stimuli with some values
@@ -3340,7 +3339,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_11 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_11')
     thisExp.addLoop(trials_11)  # add the loop to the experiment
     thisTrial_11 = trials_11.trialList[0]  # so we can initialise stimuli with some values
@@ -3539,7 +3538,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_12 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r3),
         seed=None, name='trials_12')
     thisExp.addLoop(trials_12)  # add the loop to the experiment
     thisTrial_12 = trials_12.trialList[0]  # so we can initialise stimuli with some values
@@ -3751,9 +3750,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     thisExp.addData('Ronda_4.started', globalClock.getTime())
     text_10.setText('Ronda 4/4')
     # Run 'Begin Routine' code from code_17
-    totalRows = 118  # Replace with the total number of rows in your Excel file
     selectedRows = random.sample(range(totalRows), nRows)
-    selectedRowsStr = [i for i in selectedRows]
+    selectedRowsStr_r4 = [i for i in selectedRows]
     # keep track of which components have finished
     Ronda_4Components = [text_10]
     for thisComponent in Ronda_4Components:
@@ -3846,7 +3844,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_13 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_13')
     thisExp.addLoop(trials_13)  # add the loop to the experiment
     thisTrial_13 = trials_13.trialList[0]  # so we can initialise stimuli with some values
@@ -4036,7 +4034,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_14 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_14')
     thisExp.addLoop(trials_14)  # add the loop to the experiment
     thisTrial_14 = trials_14.trialList[0]  # so we can initialise stimuli with some values
@@ -4234,7 +4232,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_15 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_15')
     thisExp.addLoop(trials_15)  # add the loop to the experiment
     thisTrial_15 = trials_15.trialList[0]  # so we can initialise stimuli with some values
@@ -4433,7 +4431,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_16 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr),
+        trialList=data.importConditions('imgs/iceberg_times.xlsx', selection=selectedRowsStr_r4),
         seed=None, name='trials_16')
     thisExp.addLoop(trials_16)  # add the loop to the experiment
     thisTrial_16 = trials_16.trialList[0]  # so we can initialise stimuli with some values
