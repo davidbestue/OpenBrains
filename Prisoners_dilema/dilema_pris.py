@@ -33,13 +33,13 @@ class Pacifista:
         else:
             return "C"
 
-# Cooperador con traición periódica: coopera pero traiciona cada 10 rondas.
+# Cooperador con traición periódica: coopera pero traiciona cada 5 rondas.
 class CooperadorConTraicionPeriodica:
     def __init__(self):
         self.name = "Cooperador con Traicion Periodica"
     
     def play(self, opponent_history, round_count):
-        if (round_count + 1) % 10 == 0:
+        if (round_count + 1) % 5 == 0:
             return "T"
         else:
             return "C"
@@ -56,6 +56,25 @@ class Sneaky:
             return "C"
         else:
             return opponent_history[-1] if opponent_history else "C"
+
+
+
+# Sneaky_5: como Tit for Tat, pero traiciona cada 5 rondas.
+class Sneaky_5:
+    def __init__(self):
+        self.name = "Sneaky_5"
+    
+    def play(self, opponent_history, round_count):
+        if (round_count + 1) % 5 == 0:
+            return "T"
+        elif round_count == 0:
+            return "C"
+        else:
+            return opponent_history[-1] if opponent_history else "C"
+
+
+
+
 
 # Estrategia Always Defect: siempre traiciona, independientemente del oponente.
 class AlwaysDefect:
@@ -130,6 +149,50 @@ class GenerousTitForTat:
         return "C"
 
 
+
+# Estrategia Alternada que empieza traicionando
+class AlternadaTraicion:
+    def __init__(self):
+        self.name = "AlternadaTraicion"
+        self.history = []
+
+    def play(self, opponent_history, round_count):
+        """ Alterna entre Traicionar y Colaborar, empezando con una traición """
+        if round_count % 2 == 0:
+            return 'C'  # Colabora en rondas pares
+        else:
+            return 'T'  # Traiciona en rondas impares
+
+# Estrategia Alternada que empieza colaborando
+class AlternadaColabora:
+    def __init__(self):
+        self.name = "AlternadaColabora"
+        self.history = []
+
+    def play(self, opponent_history, round_count):
+        """ Alterna entre Colaborar y Traicionar, empezando con una colaboración """
+        if round_count % 2 == 0:
+            return 'T'  # Traiciona en rondas pares
+        else:
+            return 'C'  # Colabora en rondas impares
+
+
+
+
+# Estrategia Tit for Tat que empieza traicionando
+class TitForTatTraicion:
+    def __init__(self):
+        self.name = "Tit for Tat Traiciona Primero"
+        self.history = []
+
+    def play(self, opponent_history, round_count):
+        """ Traiciona en la primera ronda, después copia la última jugada del oponente """
+        if round_count == 0:
+            return 'T'  # Traiciona en la primera ronda
+        elif round_count > 0 and len(opponent_history) > 0:
+            return opponent_history[-1]  # Copia la última acción del oponente
+        else:
+            return 'C'  # Colabora si no hay historial del oponente
 
 
 # Estrategia Aleatoria: decide aleatoriamente entre cooperar o traicionar.
@@ -251,6 +314,24 @@ def plot_heatmap(score_matrix_hm, strategy_names, average_rounds):
 
 
 
+def plot_heatmap_points(score_matrix, strategy_names, average_rounds):
+    # Crear un colormap personalizado: Rojo para negativos, blanco para cero, y verde para positivos
+    score_matrix_norm = (score_matrix - score_matrix.mean())/score_matrix.std()
+    #
+    plt.figure(figsize=(10, 10))
+    heatmap = sns.heatmap(score_matrix_norm, annot=True, fmt=".2f", cmap='viridis', annot_kws={"size": 8},
+                          xticklabels=strategy_names,  linewidths=0.5, yticklabels=strategy_names, center=0)
+
+    #
+    plt.title(f'Heatmap of normalized total Scores in Prisoner\'s Dilemma: {average_rounds:.2f}')
+    #plt.xlabel('Strategies')
+    #plt.ylabel('Strategies')
+    plt.xticks(rotation=60, ha='right', fontsize=8)  # Rotar los ticks en el eje x
+    plt.yticks(rotation=0, fontsize=8)
+    plt.tight_layout()
+    plt.show(block=False)
+
+
 # Función para graficar las puntuaciones totales de las estrategias, diferenciando entre "nice" y "nasty"
 def plot_strategy_scores(score_matrix, strategy_names, average_rounds):
     # Calcular la suma de las puntuaciones de cada estrategia y normalizar
@@ -287,21 +368,40 @@ strategies = {
     "Pacifista": Pacifista,
     "Cooperador con Traicion Periodica": CooperadorConTraicionPeriodica,
     "Sneaky": Sneaky,
+    "Sneaky_5": Sneaky_5,
     "Always Defect": AlwaysDefect,
     "Always Cooperate": AlwaysCooperate,
     "Desconfiado": Desconfiado,
     "Random": RandomStrategy,
     "Tit for Two Tats": TitForTwoTats,  # Estrategia corregida
-    "Generous Tit for Tat": GenerousTitForTat  # Nueva estrategia añadida
+    "Generous Tit for Tat": GenerousTitForTat,  # Nueva estrategia añadida,
+    "AlternadaTraicion": AlternadaTraicion,
+    "AlternadaColabora": AlternadaColabora,
+    "Tit for Tat Traiciona Primero": TitForTatTraicion
+}
+
+
+
+strategies_use = {
+    "Tit for Tat": TitForTat,
+    "Pacifista": Pacifista,
+    "Always Defect": AlwaysDefect,
+    "Always Cooperate": AlwaysCooperate,
+    "AlternadaTraicion": AlternadaTraicion,
+    "Tit for Tat Traiciona Primero": TitForTatTraicion
+
+    
+    
 }
 
 
 
 # Simular el torneo
-score_matrix, score_matrix_hm, strategy_names, average_rounds = run_tournament(strategies=strategies, num_iterations=10000, min_rounds=280, max_rounds=320)
+score_matrix, score_matrix_hm, strategy_names, average_rounds = run_tournament(strategies=strategies_use, num_iterations=100000, min_rounds=10, max_rounds=10)
 
 # Graficar el heatmap
 plot_heatmap(score_matrix_hm, strategy_names, average_rounds)
+plot_heatmap_points(score_matrix, strategy_names, average_rounds)
 
 # Graficar las puntuaciones totales
 plot_strategy_scores(score_matrix, strategy_names, average_rounds)
