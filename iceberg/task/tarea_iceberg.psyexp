@@ -11,7 +11,7 @@
     <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'Edad': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'Sexo': &quot;['Hombre', 'Mujer', 'Otro']&quot;}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
-    <Param val="html" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
     <Param val="" valType="str" updates="None" name="Incomplete URL"/>
     <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
     <Param val="[]" valType="list" updates="None" name="Resources"/>
