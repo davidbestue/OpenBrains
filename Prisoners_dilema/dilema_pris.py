@@ -5,6 +5,7 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os 
 
 
 # Estrategia Tit for Tat: coopera en la primera ronda y luego repite lo que el oponente hizo en la ronda anterior.
@@ -258,6 +259,7 @@ def play_game(strategy1, strategy2, num_rounds):
 
 
 # Función que simula un torneo con selección aleatoria de estrategias
+
 def run_tournament(strategies, num_iterations=1000, min_rounds=180, max_rounds=220):
     num_strategies = len(strategies)
     score_matrix = np.zeros((num_strategies, num_strategies))
@@ -304,7 +306,8 @@ def plot_heatmap(score_matrix_hm, strategy_names, average_rounds):
                           xticklabels=strategy_names,  linewidths=0.5, yticklabels=strategy_names, center=0)
 
     #
-    plt.title(f'Heatmap of Average Scores in Prisoner\'s Dilemma: {average_rounds:.2f}')
+    #plt.title(f'Heatmap of Average Scores in Prisoner\'s Dilemma: {average_rounds:.2f}')
+    plt.title('Heatmap of Average Scores in Prisoner\'s Dilemma ' + str(average_rounds))
     #plt.xlabel('Strategies')
     #plt.ylabel('Strategies')
     plt.xticks(rotation=60, ha='right', fontsize=8)  # Rotar los ticks en el eje x
@@ -323,7 +326,8 @@ def plot_heatmap_points(score_matrix, strategy_names, average_rounds):
                           xticklabels=strategy_names,  linewidths=0.5, yticklabels=strategy_names, center=0)
 
     #
-    plt.title(f'Heatmap of normalized total Scores in Prisoner\'s Dilemma: {average_rounds:.2f}')
+    #plt.title(f'Heatmap of normalized total Scores in Prisoner\'s Dilemma: {average_rounds:.2f}')
+    plt.title('Heatmap of normalized total Scores in Prisoner\'s Dilemma ' + str(average_rounds))
     #plt.xlabel('Strategies')
     #plt.ylabel('Strategies')
     plt.xticks(rotation=60, ha='right', fontsize=8)  # Rotar los ticks en el eje x
@@ -354,11 +358,61 @@ def plot_strategy_scores(score_matrix, strategy_names, average_rounds):
     plt.figure(figsize=(8, 10))
     plt.barh(sorted_names, sorted_scores, color=colors)  # Gráfico de barras horizontal con colores diferenciados
     plt.gca().invert_yaxis()  # Invertir el eje Y para que la estrategia con más puntos esté arriba
-    plt.title(f'Normalized Total Points Scored by Strategies\nAverage Rounds: {average_rounds:.2f}')
+    plt.title('Total Points Scored by Strategies (average rounds: ' + str(average_rounds))
+    #plt.title(f'Normalized Total Points Scored by Strategies\nAverage Rounds: {average_rounds:.2f}')
     plt.xlabel('Normalized Total Points')
     plt.ylabel('Strategies')
     plt.tight_layout()
     plt.show(block=False)
+
+
+
+
+
+def plot_strategy_scores_total(score_matrix, strategy_names, average_rounds, filename='puntos_totales.png'):
+    # Calcular la suma de las puntuaciones de cada estrategia y normalizar
+    total_scores = np.sum(score_matrix, axis=1)
+    normalized_scores = total_scores #Normalizar puntuaciones
+
+    # Definir qué estrategias son "nice" y cuáles son "nasty"
+    nice_strategies = ['Tit for Tat', 'Tit for Two Tats', 'Pacifista', 'Generous Tit for Tat', 'Always Cooperate']
+    nasty_strategies = [ 'Cooperador con Traicion Periodica', 'Sneaky', 'Always Defect', 'Desconfiado', 'Random']
+
+    # Ordenar las puntuaciones de mayor a menor
+    sorted_indices = np.argsort(normalized_scores)[::-1]
+    sorted_names = np.array(strategy_names)[sorted_indices]
+    sorted_scores = normalized_scores[sorted_indices]
+
+    # Asignar colores: verde para "nice" y rojo para "nasty"
+    #colors = ['green' if strategy in nice_strategies else 'red' for strategy in sorted_names]
+    soft_green = (0.45, 0.75, 0.45)
+    soft_red = (0.85, 0.4, 0.4)
+    colors = [soft_green if name in nice_strategies else soft_red for name in sorted_names]
+
+    # Graficar el resultado con un gráfico de barras vertical (barras horizontales)
+    # Crear figura amb fons transparent
+    fig, ax = plt.subplots(figsize=(8, 10), facecolor='none')
+    ax.barh(sorted_names, sorted_scores, color=colors)
+    ax.invert_yaxis()
+    # Títol i eixos
+    ax.set_title(f'Puntos totales por estrategia (rondas: ' + str(average_rounds) + ')', fontsize=12)
+    ax.set_xlabel('Puntos')
+    ax.set_ylabel('Estrategias')
+    # Eliminar eixos superior i dret
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    # Opcional: estil de grid suau
+    #ax.xaxis.grid(True, linestyle='--', alpha=0.3)
+    # Ajustar marges
+    plt.tight_layout()
+    # Mostrar amb fons transparent
+    plt.show(block=False)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    save_path = os.path.join(script_dir, filename)
+    # Guardar con fondo transparente
+    plt.savefig(save_path, transparent=True)
+
+
 
 
 
@@ -399,9 +453,12 @@ strategies_use = {
 # Simular el torneo
 score_matrix, score_matrix_hm, strategy_names, average_rounds = run_tournament(strategies=strategies_use, num_iterations=100000, min_rounds=10, max_rounds=10)
 
-# Graficar el heatmap
-plot_heatmap(score_matrix_hm, strategy_names, average_rounds)
-plot_heatmap_points(score_matrix, strategy_names, average_rounds)
-
 # Graficar las puntuaciones totales
-plot_strategy_scores(score_matrix, strategy_names, average_rounds)
+#plot_strategy_scores(score_matrix, strategy_names, average_rounds)
+plot_strategy_scores_total(score_matrix, strategy_names, average_rounds)
+
+# Graficar el heatmap
+#plot_heatmap_points(score_matrix, strategy_names, average_rounds)
+plot_heatmap(score_matrix_hm, strategy_names, average_rounds)
+
+
