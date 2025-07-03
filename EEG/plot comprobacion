@@ -1,0 +1,21 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+filename = 'datos.dat'
+data = np.loadtxt('datos4.dat', dtype=int)
+len(data)
+
+
+
+data2=data
+
+t = np.linspace(0, 30, len(data2), endpoint=False)
+
+plt.figure(figsize=(10, 4))
+plt.plot(t, data2)
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Amplitud')
+plt.title('Onda – mapeada a 30 s')
+plt.xlim(0, t[-1])
+plt.tight_layout()
+plt.show()
