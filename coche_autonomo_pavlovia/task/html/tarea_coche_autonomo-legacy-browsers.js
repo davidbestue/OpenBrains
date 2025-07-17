@@ -1,10 +1,10 @@
-﻿/***************** 
- * Untitled *
- *****************/
+﻿/***************************** 
+ * Tarea_Coche_Autonomo *
+ *****************************/
 
 
 // store info about the experiment session:
-let expName = 'untitled';  // from the Builder filename that created this script
+let expName = 'tarea_coche_autonomo';  // from the Builder filename that created this script
 let expInfo = {
     'participant': `${util.pad(Number.parseFloat(util.randint(0, 999999)).toFixed(0), 6)}`,
     'session': '001',
@@ -175,10 +175,10 @@ async function experimentInit() {
   image_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_11', units : undefined, 
-    image : 'pngs/pexels-riciardus-228094.jpg', mask : undefined,
+    image : 'pngs/portada.jpg', mask : undefined,
     anchor : 'center',
     ori : 0.0, pos : [0, 0], size : [2, 1],
-    color : new util.Color([1,1,1]), opacity : 0.6,
+    color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0 
   });

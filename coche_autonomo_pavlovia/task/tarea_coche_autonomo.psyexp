@@ -14,7 +14,7 @@
     <Param val="html" valType="str" updates="None" name="HTML path"/>
     <Param val="" valType="str" updates="None" name="Incomplete URL"/>
     <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
-    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="['pngs/1.png', 'pngs/2.png', 'pngs/3.png', 'pngs/4.png', 'pngs/5.png', 'pngs/6.png', 'pngs/7.png', 'pngs/8.png', 'pngs/9.png', 'pngs/10.png', 'pngs/11.png', 'pngs/12.png', 'pngs/13.png', 'pngs/14.png', 'pngs/15.png', 'pngs/16.png', 'pngs/17.png', 'pngs/18.png', 'pngs/19.png', 'pngs/20.png', 'pngs/21.png', 'pngs/22.png', 'pngs/23.png', 'pngs/24.png', 'pngs/25.png', 'pngs/26.png', 'pngs/27.png', 'pngs/28.png', 'pngs/29.png', 'pngs/30.png', 'pngs/31.png', 'pngs/32.png', 'pngs/33.png', 'pngs/34.png', 'pngs/35.png', 'pngs/36.png', 'pngs/37.png', 'pngs/38.png', 'pngs/39.png', 'pngs/40.png', 'pngs/41.png', 'pngs/42.png', 'pngs/43.png', 'pngs/44.png', 'pngs/45.png', 'pngs/46.png', 'pngs/47.png', 'pngs/48.png', 'pngs/49.png', 'pngs/50.png', 'pngs/51.png', 'pngs/52.png', 'pngs/53.png', 'pngs/54.png', 'pngs/55.png', 'pngs/56.png', 'pngs/57.png', 'pngs/58.png', 'pngs/59.png', 'pngs/60.png', 'pngs/61.png', 'pngs/62.png', 'pngs/63.png', 'pngs/64.png', 'pngs/65.png', 'pngs/66.png', 'pngs/67.png', 'pngs/68.png', 'pngs/69.png', 'pngs/70.png', 'pngs/71.png', 'pngs/72.png', 'pngs/73.png', 'pngs/74.png', 'pngs/75.png', 'pngs/76.png', 'pngs/77.png', 'pngs/78.png', 'pngs/79.png', 'pngs/80.png', 'pngs/animal.png', 'pngs/delincuente.png', 'pngs/hombre.png', 'pngs/mujer.png', 'pngs/peaton_rojo.png', 'pngs/peaton_verde.png', 'pngs/portada.jpg']" valType="list" updates="None" name="Resources"/>
     <Param val="False" valType="bool" updates="None" name="Save csv file"/>
     <Param val="False" valType="bool" updates="None" name="Save excel file"/>
     <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
@@ -43,7 +43,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="untitled" valType="str" updates="None" name="expName"/>
+    <Param val="tarea_coche_autonomo" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
@@ -1015,15 +1015,15 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="pngs/pexels-riciardus-228094.jpg" valType="file" updates="constant" name="image"/>
+        <Param val="pngs/portada.jpg" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="image_11" valType="code" updates="None" name="name"/>
-        <Param val="0.6" valType="num" updates="constant" name="opacity"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(2, 1)" valType="list" updates="constant" name="size"/>
+        <Param val="(2,1)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on July 16, 2024, at 13:01
+    on July 07, 2025, at 14:20
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -38,7 +38,7 @@ from psychopy.hardware import keyboard
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # Store info about the experiment session
 psychopyVersion = '2023.2.3'
-expName = 'untitled'  # from the Builder filename that created this script
+expName = 'tarea_coche_autonomo'  # from the Builder filename that created this script
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'session': '001',
@@ -318,9 +318,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     image_11 = visual.ImageStim(
         win=win,
         name='image_11', 
-        image='pngs/pexels-riciardus-228094.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(2, 1),
-        color=[1,1,1], colorSpace='rgb', opacity=0.6,
+        image='pngs/portada.jpg', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), size=(2,1),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     text_19 = visual.TextStim(win=win, name='text_19',
