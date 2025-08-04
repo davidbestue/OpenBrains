@@ -1,0 +1,4 @@
+participant,age,gender,real_angle,real_time,angle_click,estimated_time,difference_sec
+dani,40,Home,279.04,14.7843,269.55,14.7168,-0.0675
+dani,40,Home,49.11,54.1092,27.19,53.9533,-0.1559
+dani,40,Home,154.99,65.1022,140.64,65.0001,-0.102

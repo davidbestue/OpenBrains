@@ -1,0 +1,4 @@
+participant,age,gender,real_angle,real_time,angle_click,estimated_time,difference_sec
+david,31,No binari,113.57,0.8076,91.24,0.6488,-0.1588
+david,31,No binari,75.24,5.6551,59.18,5.5409,-0.1142
+david,31,No binari,95.45,10.9187,90.21,10.8815,-0.0372

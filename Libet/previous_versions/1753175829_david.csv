@@ -1,0 +1,6 @@
+participant,age,gender,real_angle,real_time,angle_click,estimated_time,difference_sec
+david,23,Home,108.87,0.7742,91.03,0.6474,-0.1268
+david,23,Home,320.48,4.839,358.71,5.1108,0.2719
+david,23,Home,123.46,11.1179,123.16,11.1158,-0.0021
+david,23,Home,295.82,17.4636,269.11,17.2737,-0.1899
+david,23,Home,297.93,25.1586,309.89,25.2437,0.0851

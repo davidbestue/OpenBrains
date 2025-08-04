@@ -1,0 +1,9 @@
+participant,age,gender,real_angle,real_time,angle_click,estimated_time,difference_sec
+dd,33,No binari,183.67,1.3061,149.48,1.063,-0.2432
+dd,33,No binari,10.24,7.7528,27.5,7.8755,0.1227
+dd,33,No binari,27.94,12.9987,40.51,13.088,0.0893
+dd,33,No binari,319.33,17.6308,94.86,18.5946,0.9638
+dd,33,No binari,0.33,23.0423,331.81,22.8396,-0.2027
+dd,33,No binari,186.43,26.9257,174.85,26.8434,-0.0823
+dd,33,No binari,241.36,32.4363,231.67,32.3674,-0.0689
+dd,33,No binari,299.28,37.9682,269.77,37.7583,-0.2099
