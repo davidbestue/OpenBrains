@@ -225,6 +225,16 @@ if export_epochs:
 
 
 # --- GRAFICACIÓ POTENCIAL EVOCAT AMB SEM ---
+
+#Calcula el W-time (temps de consciència subjectiva de la decisió), en segons
+csv_files = [f for f in os.listdir(folder_path) if f.endswith("_resultats.csv")]
+result_path = os.path.join(folder_path, csv_files[0])
+df = pd.read_csv(result_path)
+w_times = df['difference_sec'].dropna().tolist()
+mean_w_time = np.mean(w_times)
+print(f"✅ W-time mitjà (difference_sec): {mean_w_time:.3f} segons")
+
+
 time_axis = np.linspace(-pre_trigger_sec, post_trigger_sec, samples_total)
 mean_potential = np.mean(epochs, axis=0)
 sem = np.std(epochs, axis=0) / np.sqrt(epochs.shape[0])
@@ -236,6 +246,7 @@ plt.axhline(0, color='black', linestyle='--', linewidth=1)  # línia horitzontal
 plt.fill_between(time_axis, (mean_potential - ci95) * 1e6, (mean_potential + ci95) * 1e6,
                  color='blue', alpha=0.3, label="IC 95%")
 plt.axvline(0, color='r', linestyle='--', label='Pulsació')
+plt.axvline(mean_w_time, color='orange', linestyle='--', label='W-time (decisió conscient)')
 plt.title("Potencial evocat mitjà (3s abans de la decisó)")
 plt.xlabel("Temps (s)")
 plt.ylabel("Amplitud (µV)")
