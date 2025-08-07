@@ -81,7 +81,7 @@ def carregar_epochs_des_de_carpeta(folder_path, fs=256, pre_trigger_sec=3, expor
     epochs = np.array(epochs)
 
     # --- BASELINE CORRECTION ---
-    baseline_window = int(0.2 * fs)  # primers 200 ms
+    baseline_window = int(0.2 * fs)  # primers 200 ms de cada eopch
     baseline = np.mean(epochs[:, :baseline_window], axis=1, keepdims=True)
     epochs = epochs - baseline
 

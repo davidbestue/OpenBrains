@@ -14,7 +14,9 @@ import yasa
 
 folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-04_10-35-13_dani" 
 fs=256
-pre_trigger_sec=3, 
+pre_trigger_sec=3 
+post_trigger_sec = 1
+baseline_relax_sec = 0.2 #200ms
 export_epochs=True
 
 
@@ -121,6 +123,104 @@ plt.ylabel("Amplitud (a.u.)")
 plt.title("Senyal EEG després del Band pass filter")
 plt.tight_layout()
 plt.show(block=False)
+
+
+# --- CARREGA EVENTS ---
+events = pd.read_csv(os.path.join(folder_path, events_file))
+keypress_times = events[events["event"].str.contains("keypress")]["time"].values
+end_relax_times = events[events["event"].str.contains("start_trial")]["time"].values
+
+
+# --- EPOCHING ---
+#Dividir la senyal contínua (longa i ininterrompuda) en segments més curts (anomenats epochs), 
+#que estan alineats temporalment a un esdeveniment d’interès (com ara un estímul, una decisió o una resposta motora).
+samples_before = int(pre_trigger_sec * fs)
+samples_after = int(post_trigger_sec * fs)  
+samples_total = samples_before + samples_after
+samples_relax = int(baseline_relax_sec * fs)  
+
+epochs_list = []
+
+# Per associar cada keypress amb el seu relax anterior
+def buscar_baseline(t_event):
+    idx = np.searchsorted(end_relax_times, t_event) - 1 #obtenim l'índex del final relaxament anterior:
+    if idx < 0:
+        return None
+    return end_relax_times[idx]
+#
+
+for t_event in keypress_times:
+        # --- EPOCH EVENT ---
+        if t_event - pre_trigger_sec < uniform_times[0] or t_event > uniform_times[-1]:
+            print(f"⚠️ Error de registre dels temps per a l'esdeveniment a {t_event:.3f}s")
+            continue
+        idx_event = np.searchsorted(uniform_times, t_event)
+        idx_end = idx_event + samples_after
+        idx_start = idx_event - samples_before
+        if idx_start < 0:
+            print(f"⚠️ No hi ha suficient temps previa per a l'esdeveniment a {t_event:.3f}s")
+            continue
+        if idx_end > eeg_bandpassed.shape[0] - 1:
+            print(f"⚠️ No hi ha suficient temps posterior per a l'esdeveniment a {t_event:.3f}s")
+            continue
+        epoch = eeg_bandpassed[idx_start:idx_end]
+        ###
+        # --- BASELINE DE RELAXACIÓ ---
+        t_relax_end = buscar_baseline(t_event)
+        if t_relax_end is None:
+            print(f"⚠️ No s'ha trobat relaxació prèvia a l'esdeveniment a {t_event:.3f}s")
+            continue
+        # Convertim temps a índexs
+        idx_relax_end = np.searchsorted(uniform_times, t_relax_end)
+        if idx_relax_end > eeg_bandpassed.shape[0]:
+            print(f"⚠️ Relaxació posterior fora del rang per a {t_event:.3f}s")
+            continue
+        #
+        idx_relax_start = idx_relax_end - samples_relax
+        baseline_segment = eeg_bandpassed[idx_relax_start:idx_relax_end]  # Ultims 200ms abans de començar el trial
+        if len(baseline_segment) < int(0.2 * fs):  
+            print(f"⚠️ Segment de baseline massa curt per a {t_event:.3f}s")
+            continue
+        ##
+        # --- BASELINE CORRECTION ---
+        # Calculem la mitjana només dels últims 200 ms de la relaxació per a cada epoch individualment.
+        # Això permet centrar cada senyal al voltant de 0 µV de manera personalitzada,
+        # evitant que un únic valor de baseline afecti tots els epochs.
+        # Mirar la importància d'aquest pas a como_funciona_el_baseline_correction.py
+        baseline = np.mean(baseline_segment)
+        epoch_corrected = epoch - baseline
+        if len(epoch_corrected) == samples_total:
+            epochs_list.append(epoch_corrected)
+        else:
+            print(f"⚠️ Epoch descartat: longitud {len(epoch_corrected)} ≠ {samples_total}")
+        #
+
+
+#
+if len(epochs_list) == 0:
+    print("\n⚠️ No s'han trobat epochs vàlids.")
+else:
+    print(f"Número d'epochs: {len(epochs_list)}")
+
+epochs_list = np.array(epochs_list)
+
+
+# --- FILTRAT D'OUTLIERS ---
+threshold_uV = 999* 1e15 # µV (100µV)## INCORRECTO, PARA JUGAR!
+#threshold_uV = 100  # µV
+epochs_uV = epochs_list * 1e6
+mask = np.max(np.abs(epochs_uV), axis=1) < threshold_uV
+epochs = epochs_list[mask]
+
+print(f"Percentatge d'outliers: {len(epochs)/len(epochs_list)*100}%")
+print(f"Número d'epochs vàlids: {len(epochs)}")
+
+
+# if export_epochs:
+#     np.save(os.path.join(folder_path, "epochs.npy"), epochs)
+
+
+
 
 
 
