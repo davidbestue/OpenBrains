@@ -7,8 +7,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import signal
+from scipy.signal import spectrogram
 import os
 import yasa
+import pywt
+
 
 
 
@@ -216,11 +219,71 @@ print(f"Percentatge d'outliers: {len(epochs)/len(epochs_list)*100}%")
 print(f"Número d'epochs vàlids: {len(epochs)}")
 
 
-# if export_epochs:
-#     np.save(os.path.join(folder_path, "epochs.npy"), epochs)
+if export_epochs:
+    np.save(os.path.join(folder_path, "epochs.npy"), epochs)
 
 
 
+# --- GRAFICACIÓ POTENCIAL EVOCAT AMB SEM ---
+time_axis = np.linspace(-pre_trigger_sec, post_trigger_sec, samples_total)
+mean_potential = np.mean(epochs, axis=0)
+sem = np.std(epochs, axis=0) / np.sqrt(epochs.shape[0])
+ci95 = sem * 1.96
+
+plt.figure(figsize=(10, 4))
+plt.plot(time_axis, mean_potential * 1e6, label="Mitjana")
+plt.axhline(0, color='black', linestyle='--', linewidth=1)  # línia horitzontal de base
+plt.fill_between(time_axis, (mean_potential - ci95) * 1e6, (mean_potential + ci95) * 1e6,
+                 color='blue', alpha=0.3, label="IC 95%")
+plt.axvline(0, color='r', linestyle='--', label='Pulsació')
+plt.title("Potencial evocat mitjà (3s abans de la decisó)")
+plt.xlabel("Temps (s)")
+plt.ylabel("Amplitud (µV)")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show(block=False)
 
 
+# --- ESPECTROGRAMES: STFT y CWT ---
+# Ver las diferencias de resolucion en como_funciona_el_STFT_vs_el_CWT.py
+# Mejor el CWT
 
+# STFT (Short-Time Fourier Transform) 
+#Espectrograma (STFT): mostra com les freqüències canvien al llarg del temps dividint la senyal en finestres 
+#(sacrificant resolució temporal o freqüencial segons la mida de la finestra).
+
+f, t_spec, Sxx = spectrogram(mean_potential, fs=fs, nperseg=fs, noverlap=int(fs * 0.5))  # finestra de 1s, 50% solapament
+plt.figure(figsize=(10, 4))
+plt.pcolormesh(t_spec - pre_trigger_sec, f, 10 * np.log10(Sxx), shading='gouraud', cmap='viridis')
+plt.colorbar(label='Potència (dB)')
+plt.ylabel('Freqüència (Hz)')
+plt.xlabel('Temps (s)')
+plt.title('Espectrograma (STFT)')
+plt.ylim(0, 60)
+plt.axvline(0, color='black', linestyle='--', label='Esdeveniment')
+plt.legend()
+plt.tight_layout()
+plt.show(block=False)
+
+# CWT (Transformada Wavelet Contínua) ---
+# És una transformada que analitza una senyal comparant-la amb una funció anomenada ona mare (wavelet), 
+#comprimint-la o estirant-la per capturar informació en diferents escales (freqüències) i moments temporals.
+#És com un STFT pero enlloc de tenir una finestra fixa, va variant
+
+# Suposem que mean_potential i fs estan definits
+scales = np.arange(1, 128)
+coefficients, frequencies = pywt.cwt(mean_potential, scales, 'morl', sampling_period=1/fs)
+
+plt.figure(figsize=(10, 4))
+plt.imshow(np.abs(coefficients), extent=[-pre_trigger_sec, post_trigger_sec, frequencies[-1], frequencies[0]],
+           cmap='viridis', aspect='auto')
+plt.colorbar(label='Amplitud')
+plt.ylabel('Freqüència (Hz)')
+plt.xlabel('Temps (s)')
+plt.title('Transformada Wavelet Contínua (CWT)')
+plt.ylim(0, 60)
+plt.axvline(0, color='white', linestyle='--', label='Esdeveniment')
+plt.legend()
+plt.tight_layout()
+plt.show(block=False)
