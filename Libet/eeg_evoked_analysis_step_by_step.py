@@ -15,7 +15,9 @@ import pywt
 
 
 
-folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-04_10-35-13_dani" 
+#folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-04_10-35-13_dani" 
+folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-13_12-10-55_david" 
+
 fs=256
 pre_trigger_sec=3 
 post_trigger_sec = 1
@@ -49,24 +51,16 @@ with open(eeg_path, 'r') as f:
         parts = line.strip().split(',')
         if len(parts) == 2:
             try:
-                timestamps.append(float(parts[0]))
-                eeg_signal.append(float(parts[1]))
+                t = float(parts[0])
+                s = float(parts[1])
+                timestamps.append(t)
+                eeg_signal.append(s)                
             except ValueError:
                 continue
 
 #
 timestamps = np.array(timestamps)
 eeg_signal = np.array(eeg_signal, dtype=np.float32)
-
-
-
-# FS correcto?
-diffs = np.diff(timestamps)
-fs_real = 1 / np.median(diffs)
-print(f"Freqüència de mostreig real estimada: {fs_real:.2f} Hz")
-
-
-
 
 
 
@@ -80,6 +74,7 @@ end_time = timestamps[-1]
 uniform_times = np.arange(start_time, end_time, 1/fs)
 eeg_interpolated = np.interp(uniform_times, timestamps, eeg_signal)
 
+
 plt.figure(figsize=(12, 5))
 plt.plot(timestamps, eeg_signal, color='darkblue', label='no interpolada', alpha=1, linewidth=2)
 plt.plot(uniform_times, eeg_interpolated, color='darkorange', label= 'interpolada', alpha=1, linewidth=2)
@@ -91,14 +86,78 @@ plt.tight_layout()
 plt.show(block=False)
 
 
+############
+############ Recortar las fluctuaciones iniciales
+############
+
+
+def trobar_inici_estable_robust(timestamps, eeg_signal, fs, finestra_s=1, n_consecutius=3, multiplicador=1.0):
+    """
+    Detecta el primer segment estable i sostingut en una senyal EEG segons la pendent mitjana.
+    Retorna l'índex del tall, el temps, el llindar utilitzat i totes les pendents calculades.
+    """
+    num_mostres = len(eeg_signal)
+    mostres_per_finestra = int(fs * finestra_s)
+    num_segments = num_mostres // mostres_per_finestra
+    slopes = []
+    for i in range(num_segments):
+        start = i * mostres_per_finestra
+        end = start + mostres_per_finestra
+        segment = eeg_signal[start:end]
+        if len(segment) < mostres_per_finestra:
+            continue
+        x = np.arange(len(segment)) / fs
+        m, _ = np.polyfit(x, segment, 1)
+        slopes.append(abs(m))
+    #
+    mean_slope = np.mean(slopes)
+    q1 = np.percentile(slopes, 25)
+    q3 = np.percentile(slopes, 75)
+    iqr = q3 - q1
+    slope_threshold = q3 + 1.5 * iqr
+    for i in range(len(slopes) - n_consecutius + 1):
+        if all(s < slope_threshold for s in slopes[i:i + n_consecutius]):
+            cut_sample_idx = i * mostres_per_finestra
+            cut_time = timestamps[cut_sample_idx]
+            return cut_sample_idx, cut_time, slope_threshold, slopes
+    #
+    return None, None, slope_threshold, slopes
+
+
+cut_idx, cut_time, llindar, slopes = trobar_inici_estable_robust(uniform_times, 
+    eeg_interpolated, fs, finestra_s=1, n_consecutius=10)
+print(cut_idx, cut_time)
+
+
+# Recortar la señal y el tiempo
+eeg_signal_cut = eeg_interpolated[cut_idx:]
+timestamps_ = uniform_times[cut_idx:]
+plt.figure(figsize=(14, 5))
+plt.plot(uniform_times, eeg_interpolated, color='gray', alpha=0.5, label='Original')
+plt.plot(timestamps_, eeg_signal_cut, color='orange', label='Neta (tallada)')
+# Línea vertical en el punt de tall
+plt.axvline(x=uniform_times[cut_idx], color='red', linestyle='--', linewidth=2, label='Inici estable')
+plt.title("Comparació: senyal original vs senyal neta (tallada)")
+plt.xlabel("Temps (s)")
+plt.ylabel("Amplitud (a.u.)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show(block=False)
+
+
+
+############
+############
+############
 
  # --- FILTRAT (Notch + Bandpass) ---
 b_notch, a_notch = signal.iirnotch(50, 10, fs)
-eeg_notched = signal.filtfilt(b_notch, a_notch, eeg_interpolated)
+eeg_notched = signal.filtfilt(b_notch, a_notch, eeg_signal_cut)
 
 plt.figure(figsize=(12, 5))
-plt.plot(uniform_times, eeg_interpolated, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
-plt.plot(uniform_times, eeg_notched, label='Senyal filtrada (notch 50 Hz)', color='orange', alpha=1, linewidth=2)
+plt.plot(timestamps_, eeg_signal_cut, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
+plt.plot(timestamps_, eeg_notched, label='Senyal filtrada (notch 50 Hz)', color='orange', alpha=1, linewidth=2)
 plt.xlabel("Temps (s)")
 plt.ylabel("Amplitud")
 plt.title("Efecte del filtre Notch a 50 Hz")
@@ -120,7 +179,7 @@ b_band, a_band = signal.butter(2, [1/(fs/2), 38/(fs/2)], btype='band')
 
 eeg_bandpassed = signal.filtfilt(b_band, a_band, eeg_notched)
 plt.figure(figsize=(12, 5))
-plt.plot(uniform_times, eeg_bandpassed, color='darkblue', alpha=1, linewidth=2)
+plt.plot(timestamps_, eeg_bandpassed, color='darkblue', alpha=1, linewidth=2)
 plt.xlabel("Temps (s)")
 plt.ylabel("Amplitud (a.u.)")
 plt.title("Senyal EEG després del Band pass filter")
@@ -154,10 +213,10 @@ def buscar_baseline(t_event):
 
 for t_event in keypress_times:
         # --- EPOCH EVENT ---
-        if t_event - pre_trigger_sec < uniform_times[0] or t_event > uniform_times[-1]:
+        if t_event - pre_trigger_sec < timestamps_[0] or t_event > timestamps_[-1]:
             print(f"⚠️ Error de registre dels temps per a l'esdeveniment a {t_event:.3f}s")
             continue
-        idx_event = np.searchsorted(uniform_times, t_event)
+        idx_event = np.searchsorted(timestamps_, t_event)
         idx_end = idx_event + samples_after
         idx_start = idx_event - samples_before
         if idx_start < 0:
@@ -174,7 +233,7 @@ for t_event in keypress_times:
             print(f"⚠️ No s'ha trobat relaxació prèvia a l'esdeveniment a {t_event:.3f}s")
             continue
         # Convertim temps a índexs
-        idx_relax_end = np.searchsorted(uniform_times, t_relax_end)
+        idx_relax_end = np.searchsorted(timestamps_, t_relax_end)
         if idx_relax_end > eeg_bandpassed.shape[0]:
             print(f"⚠️ Relaxació posterior fora del rang per a {t_event:.3f}s")
             continue
@@ -209,15 +268,18 @@ epochs_list = np.array(epochs_list)
 
 
 # --- FILTRAT D'OUTLIERS ---
-threshold_uV = 999* 1e15 # µV (100µV)## INCORRECTO, PARA JUGAR!
-#threshold_uV = 100  # µV
+# #threshold_uV = 999* 1e15 # µV (100µV)## INCORRECTO, PARA JUGAR!
+# threshold_uV = 100  # µV
+# epochs_uV = epochs_list * 1e6
+# mask = np.max(np.abs(epochs_uV), axis=1) < threshold_uV
+# epochs = epochs_list[mask]
+
+# print(f"Percentatge d'outliers: {sum(mask==False)/len(mask)*100}%")
+# print(f"Número d'epochs vàlids: {len(epochs)}")
+
+
 epochs_uV = epochs_list * 1e6
-mask = np.max(np.abs(epochs_uV), axis=1) < threshold_uV
-epochs = epochs_list[mask]
-
-print(f"Percentatge d'outliers: {len(epochs)/len(epochs_list)*100}%")
-print(f"Número d'epochs vàlids: {len(epochs)}")
-
+epochs = epochs_uV
 
 if export_epochs:
     np.save(os.path.join(folder_path, "epochs.npy"), epochs)
@@ -273,6 +335,7 @@ plt.xlabel('Temps (s)')
 plt.title('Espectrograma (STFT)')
 plt.ylim(0, 60)
 plt.axvline(0, color='black', linestyle='--', label='Esdeveniment')
+plt.axvline(mean_w_time, color='orange', linestyle='--', label='W-time (decisió conscient)')
 plt.legend()
 plt.tight_layout()
 plt.show(block=False)
@@ -295,6 +358,7 @@ plt.xlabel('Temps (s)')
 plt.title('Transformada Wavelet Contínua (CWT)')
 plt.ylim(0, 60)
 plt.axvline(0, color='white', linestyle='--', label='Esdeveniment')
+plt.axvline(mean_w_time, color='orange', linestyle='--', label='W-time (decisió conscient)')
 plt.legend()
 plt.tight_layout()
 plt.show(block=False)
