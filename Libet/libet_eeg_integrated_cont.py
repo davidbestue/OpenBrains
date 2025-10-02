@@ -160,6 +160,7 @@ event.waitKeys()
 experiment_clock.reset()
 running_loop = True
 while running_loop:
+    win.setMouseVisible(False)
     start_relax = experiment_clock.getTime()
     markers.append((start_relax, f"start_relax{len(results)+1}"))
     pause_message = visual.TextStim(win, text="Estigues relaxat/da i no et moguis durant uns segons...", color='white', height=30, wrapWidth=1000)
@@ -172,6 +173,7 @@ while running_loop:
     markers.append((start_trial, f"start_trial{len(results)+1}"))
 
     while True:
+        win.setMouseVisible(False)
         t = experiment_clock.getTime()
         angle_deg = (t % rotation_duration) / rotation_duration * 360
         angle_rad = np.deg2rad(angle_deg)
@@ -196,6 +198,8 @@ while running_loop:
         break
 
     instruccio = visual.TextStim(win, text="Fes clic al punt del cercle on creus que estava l’agulla\nquan vas decidir prémer.", color='white', height=24, wrapWidth=700, pos=(0, -300))
+    mouse.setPos([0,0])
+    win.setMouseVisible(True)
     circle.draw()
     for mark in marks:
         mark.draw()
@@ -243,6 +247,8 @@ while running_loop:
         'estimated_time': round(estimated_real_time, 4),
         'difference_sec': round(time_diff, 4)
     })
+
+    event.clearEvents(eventType='keyboard')  # limpiar antes del siguiente trial
 
 # --- ATURAR EEG I GUARDAR ---
 running = False

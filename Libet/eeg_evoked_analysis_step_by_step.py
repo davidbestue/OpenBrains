@@ -16,7 +16,12 @@ import pywt
 
 
 #folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-04_10-35-13_dani" 
-folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-13_12-10-55_david" 
+#folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-13_12-10-55_david" 
+folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-08-16_19-59-26_faxaxo"
+folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-10-02_12-45-59_davids"
+folder_path = "C:/Users/david/OneDrive/Documentos/GitHub/OpenBrains/Libet/2025-10-02_12-57-46_david"
+
+
 
 fs=256
 pre_trigger_sec=3 
