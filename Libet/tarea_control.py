@@ -387,6 +387,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
+from scipy import signal
+
 
 # ----- Parámetros del análisis -----
 F_TARGET = 12.0      # Hz del flicker
@@ -467,6 +469,26 @@ plt.legend()
 plt.grid(alpha=0.3)
 plt.tight_layout()
 plt.show(block=False)
+
+
+
+plt.figure(figsize=(12,5))
+plt.plot(t, x, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
+
+ # --- FILTRAT (Notch + Bandpass) ---
+b_notch, a_notch = signal.iirnotch(50, 10, fs)
+x = signal.filtfilt(b_notch, a_notch, x)
+
+plt.plot(t, x, label='Senyal filtrada (notch 50 Hz)', color='orange', alpha=1, linewidth=2)
+plt.xlabel("Temps (s)")
+plt.ylabel("Amplitud")
+plt.title("Efecte del filtre Notch a 50 Hz")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show(block=False)
+
+
 
 
 
