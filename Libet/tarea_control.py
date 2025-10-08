@@ -28,7 +28,7 @@ baudrate = 230400
 ports = serial.tools.list_ports.comports()
 for port in ports:
     print(port.device, port.description)
-    if 'USB Serial Device' in port.description:
+    if 'Arduino' in port.description:     #if 'USB Serial Device' in port.description:
         puerto = port.device
         print(f"Port trobat: {port.device}")
 
@@ -472,6 +472,96 @@ plt.show(block=False)
 
 
 
+########
+
+
+# ===== ESPECTROGRAMA (STFT) para flicker =====
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import spectrogram
+from matplotlib.patches import Patch
+
+# Parámetros
+F_TARGET = 12.0        # Hz del flicker
+SHOW_HARMONIC = True   # dibujar también 24 Hz
+NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
+OVERLAP = 0.5          # 50% de solapamiento
+FMAX = 130.0            # límite superior del eje Y
+
+# STFT
+nperseg = max(16, int(round(NPERSEG_SEC * fs)))
+noverlap = int(round(nperseg * OVERLAP))
+
+# x debe ser 1D (usa la versión limpia si hiciste tratamiento de outliers)
+x_stft = x.copy()  # o x_org si quieres ver bruto
+
+# Espectrograma (potencia densa)
+f, t_rel, Sxx = spectrogram(
+    x_stft - np.mean(x_stft), fs=fs,
+    nperseg=nperseg, noverlap=noverlap,
+    detrend='constant', scaling='density', mode='psd'
+)
+# tiempo absoluto para alinear con tus estados (time_s)
+t_abs = t[0] + t_rel
+
+# Escala en dB con recorte robusto para evitar “quemados”
+Sxx_db = 10.0 * np.log10(Sxx + 1e-18)
+vmin = np.percentile(Sxx_db, 5)
+vmax = np.percentile(Sxx_db, 95)
+
+# Colores por estado (igual que en tus otros plots)
+color_fill = {
+    'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
+    'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
+    'none':    (0.60, 0.60, 0.60, 0.25)   # gris
+}
+
+# Segmentos de estado (en el mismo tiempo absoluto)
+change_idx = np.where(s[1:] != s[:-1])[0] + 1
+segments = np.r_[0, change_idx, len(s)]
+
+plt.figure(figsize=(11, 4.8))
+# mapa tiempo-frecuencia
+plt.pcolormesh(t_abs, f, Sxx_db, shading='gouraud', cmap='viridis', vmin=vmin, vmax=vmax)
+cbar = plt.colorbar()
+cbar.set_label('Potencia (dB re: densidad)')
+
+# sombreado de estados
+for i in range(len(segments) - 1):
+    st = s[segments[i]]
+    t0, t1 = t[segments[i]], t[segments[i+1]-1]
+    plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+
+# líneas guía en 12 Hz (y 24 Hz opcional)
+plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
+if SHOW_HARMONIC:
+    plt.axhline(2*F_TARGET, color='k', linestyle=':', linewidth=1, alpha=0.6, label=f'{2*F_TARGET:.0f} Hz')
+
+# estética
+plt.ylim(0, FMAX)
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Frecuencia (Hz)')
+plt.title('Espectrograma (STFT) con bloques de estado')
+# leyenda de estados
+present_states = [st for st in ['none','rest','flicker'] if np.any(s == st)]
+patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present_states]
+plt.legend(handles=[*patches], loc='upper right', framealpha=0.9)
+plt.tight_layout()
+plt.show(block=False)
+# ===== FIN ESPECTROGRAMA =====
+
+
+
+
+
+
+########
+
+
+
+
+
+
 plt.figure(figsize=(12,5))
 plt.plot(t, x, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
 
@@ -662,3 +752,84 @@ if do_psd:
 
 plt.show(block=False)
 # ====== FIN ANÁLISIS 12 Hz ======
+
+
+
+
+
+# ===== ESPECTROGRAMA (STFT) para flicker =====
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import spectrogram
+from matplotlib.patches import Patch
+
+# Parámetros
+F_TARGET = 12.0        # Hz del flicker
+SHOW_HARMONIC = True   # dibujar también 24 Hz
+NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
+OVERLAP = 0.5          # 50% de solapamiento
+FMAX = 40.0            # límite superior del eje Y
+
+# STFT
+nperseg = max(16, int(round(NPERSEG_SEC * fs)))
+noverlap = int(round(nperseg * OVERLAP))
+
+# x debe ser 1D (usa la versión limpia si hiciste tratamiento de outliers)
+x_stft = x.copy()  # o x_org si quieres ver bruto
+
+# Espectrograma (potencia densa)
+f, t_rel, Sxx = spectrogram(
+    x_stft - np.mean(x_stft), fs=fs,
+    nperseg=nperseg, noverlap=noverlap,
+    detrend='constant', scaling='density', mode='psd'
+)
+# tiempo absoluto para alinear con tus estados (time_s)
+t_abs = t[0] + t_rel
+
+# Escala en dB con recorte robusto para evitar “quemados”
+Sxx_db = 10.0 * np.log10(Sxx + 1e-18)
+vmin = np.percentile(Sxx_db, 5)
+vmax = np.percentile(Sxx_db, 95)
+
+# Colores por estado (igual que en tus otros plots)
+color_fill = {
+    'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
+    'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
+    'none':    (0.60, 0.60, 0.60, 0.25)   # gris
+}
+
+# Segmentos de estado (en el mismo tiempo absoluto)
+change_idx = np.where(s[1:] != s[:-1])[0] + 1
+segments = np.r_[0, change_idx, len(s)]
+
+plt.figure(figsize=(11, 4.8))
+# mapa tiempo-frecuencia
+plt.pcolormesh(t_abs, f, Sxx_db, shading='gouraud', cmap='viridis', vmin=vmin, vmax=vmax)
+cbar = plt.colorbar()
+cbar.set_label('Potencia (dB re: densidad)')
+
+# sombreado de estados
+for i in range(len(segments) - 1):
+    st = s[segments[i]]
+    t0, t1 = t[segments[i]], t[segments[i+1]-1]
+    plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+
+# líneas guía en 12 Hz (y 24 Hz opcional)
+plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
+if SHOW_HARMONIC:
+    plt.axhline(2*F_TARGET, color='k', linestyle=':', linewidth=1, alpha=0.6, label=f'{2*F_TARGET:.0f} Hz')
+
+# estética
+plt.ylim(0, FMAX)
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Frecuencia (Hz)')
+plt.title('Espectrograma (STFT) con bloques de estado')
+# leyenda de estados
+present_states = [st for st in ['none','rest','flicker'] if np.any(s == st)]
+patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present_states]
+plt.legend(handles=[*patches], loc='upper right', framealpha=0.9)
+plt.tight_layout()
+plt.show(block=False)
+# ===== FIN ESPECTROGRAMA =====
+
+
