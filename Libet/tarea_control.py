@@ -20,6 +20,9 @@ import serial, serial.tools.list_ports
 from datetime import datetime
 import os
 import threading
+from psychopy.visual import ShapeStim
+
+
 
 
 # --- DETECCIÓ DEL PORT USB SERIAL ---
@@ -62,10 +65,23 @@ win = visual.Window(size=[1200, 800], color='black', units='pix', fullscr=FULLSC
 txt = visual.TextStim(win, text='', color='white', pos=(0, 320), height=32, wrapWidth=1000)
 
 # Estímulo: tablero/cuadro central que invierte polaridad
+win.mouseVisible = False
 size = 500
 stim = visual.Rect(win, width=size, height=size, fillColor='white', lineColor=None)
 bg   = visual.Rect(win, width=size, height=size, fillColor='black', lineColor=None)  # para invertir
 grey = visual.Rect(win, width=size, height=size, fillColor=[0,0,0], lineColor=None)  # gris (0 en rgb255)
+
+# Crear cruz simple en el centro
+fix_cross = visual.ShapeStim(
+    win=win,
+    vertices='cross',
+    size=(0.05, 0.05),  # Tamaño pequeño (≈4px)
+    lineColor='black',
+    fillColor='black',
+    lineWidth=2,
+    pos=(0, 0)
+)
+
 
 # Gráfica rápida: barra de potencia 12 Hz
 bar_bg = visual.Rect(win, width=300, height=30, pos=(0, -330), fillColor=[-0.5,-0.5,-0.5], lineColor=None)
@@ -178,8 +194,10 @@ def run_block(flicker_on=True, dur=10.0):
                 next_flip_t += flip_int
             # dibuja polaridad
             if phase_on:
+                fix_cross.draw()
                 bg.draw(); stim.draw()
             else:
+                
                 stim.draw(); bg.draw()
             txt.text = f"Bloque FLICKER 12 Hz  |  FS≈ {fs_est:5.1f} Hz"
         else:
@@ -189,6 +207,7 @@ def run_block(flicker_on=True, dur=10.0):
         # Espectro y barra de potencia
         txt.draw()
         bar_bg.draw()
+        fix_cross.draw()
         p12 = 0.0
         if len(raw_buf) >= int(max(0.5, WIN_SEC)*fs_est):
             N = int(min(len(raw_buf), WIN_SEC*fs_est))
