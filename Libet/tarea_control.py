@@ -49,7 +49,7 @@ if puerto:
 
 
 # ======== PARÁMETROS EEG ========
-FS_HINT = 256                 # Hz esperados (si no conoces exacto, estimaremos online)
+FS_HINT = 90                 # Hz esperados (si no conoces exacto, estimaremos online)
 WIN_SEC = 2.0                 # ventana para FFT (s)
 F_TARGET = 12.0               # Hz de flicker
 F_SHOW_MIN, F_SHOW_MAX = 6.0, 30.0
@@ -205,8 +205,8 @@ def run_block(flicker_on=True, dur=10.0):
             txt.text = f"Bloque REPOSO (gris)  |  FS≈ {fs_est:5.1f} Hz"
 
         # Espectro y barra de potencia
-        txt.draw()
-        bar_bg.draw()
+        #txt.draw()
+        #bar_bg.draw()
         fix_cross.draw()
         p12 = 0.0
         if len(raw_buf) >= int(max(0.5, WIN_SEC)*fs_est):
@@ -221,7 +221,7 @@ def run_block(flicker_on=True, dur=10.0):
             bar_ok.pos = (-150, -330)
             bar_ok.draw()
         label12.text = f"Potencia @12 Hz (relativa): {p12:.2e}"
-        label12.draw()
+        #label12.draw()
 
         # teclas
         if 'escape' in event.getKeys():
@@ -298,7 +298,7 @@ print(f">> Guardado EEG continuo en {out_file}")
 
 
 
-# ========= ANÁLISIS RÁPIDO INTEGRADO SEÑAL RAW =========
+# # ========= ANÁLISIS RÁPIDO INTEGRADO SEÑAL RAW =========
 
 import numpy as np
 import pandas as pd
@@ -310,18 +310,49 @@ WIN_SEC = 1.0  # ventana RMS en segundos (ajusta a gusto)
 
 # --- Carga robusta del CSV ---
 df = pd.read_csv(out_file)  # usa la ruta que acabas de guardar
-# normaliza nombres
+
 df.columns = [c.strip().lower() for c in df.columns]
 
-# verifica columnas
-required = {'time_s','value','state'}
-if not required.issubset(set(df.columns)):
-    raise ValueError(f"Faltan columnas. Se esperaban: {required}, y hay: {set(df.columns)}")
+# 1) value a numérico (mata '-' y basura)
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
 
-# fuerza numéricos y elimina filas inválidas
+# 2) elimina filas sin tiempo/valor
 df['time_s'] = pd.to_numeric(df['time_s'], errors='coerce')
-df['value']  = pd.to_numeric(df['value'],  errors='coerce')
 df = df.dropna(subset=['time_s','value']).reset_index(drop=True)
+
+# 3) detecta "muestras rotas" típicas (muy pequeñas respecto al nivel normal)
+med = df['value'].median()
+mad = (df['value'] - med).abs().median() + 1e-12
+rob_scale = 1.4826 * mad
+
+# criterio: valores absurdamente cerca de 0 cuando el nivel típico está lejos
+# (ajusta el 1000 si tu escala típica cambia)
+bad = (df['value'].abs() < 1000)
+
+# márcalos como NaN e interpola temporalmente (o drop si prefieres)
+df.loc[bad, 'value'] = np.nan
+df['value'] = df['value'].interpolate(method='linear', limit_direction='both')
+
+
+# ###SON NUMEROS EN BINARIOS Y NO ESTÁ SIGNED
+# #
+# #[i if (i&(1<<23)) == 0 else i-2*(1<<23) for i in out_file] (!!!!!!!!)
+
+
+# df['value_signed'] = df['value'].apply(adc24_unsigned_to_signed)
+
+# # normaliza nombres
+# df.columns = [c.strip().lower() for c in df.columns]
+
+# # verifica columnas
+# required = {'time_s','value','state'}
+# if not required.issubset(set(df.columns)):
+#     raise ValueError(f"Faltan columnas. Se esperaban: {required}, y hay: {set(df.columns)}")
+
+# # fuerza numéricos y elimina filas inválidas
+# df['time_s'] = pd.to_numeric(df['time_s'], errors='coerce')
+# df['value']  = pd.to_numeric(df['value'],  errors='coerce')
+# df = df.dropna(subset=['time_s','value']).reset_index(drop=True)
 
 # limpia 'state': a minúsculas, sin espacios, mapeo a {flicker, rest, none}
 state_raw = df['state'].astype(str).str.strip().str.lower()
@@ -386,22 +417,22 @@ plt.grid(alpha=0.3)
 plt.tight_layout()
 plt.show(block=False)
 
-# --- Barras comparando estados (mismos colores) ---
-plt.figure(figsize=(6, 4))
-bars = [by_state[st] for st in present_states]
-bar_colors = [color_fill[st][:3] for st in present_states]  # sin alpha para barras
-plt.bar(present_states, bars, color=bar_colors)
-plt.ylabel("RMS medio")
-plt.title("RMS medio por estado")
-plt.grid(axis='y', alpha=0.3)
-plt.tight_layout()
+# # --- Barras comparando estados (mismos colores) ---
+# plt.figure(figsize=(6, 4))
+# bars = [by_state[st] for st in present_states]
+# bar_colors = [color_fill[st][:3] for st in present_states]  # sin alpha para barras
+# plt.bar(present_states, bars, color=bar_colors)
+# plt.ylabel("RMS medio")
+# plt.title("RMS medio por estado")
+# plt.grid(axis='y', alpha=0.3)
+# plt.tight_layout()
 
-plt.show(block=False)
-
-
+# plt.show(block=False)
 
 
-# ====== ANÁLISIS ESPECÍFICO 12 Hz (sin funciones) ======
+
+
+# # ====== ANÁLISIS ESPECÍFICO 12 Hz (sin funciones) ======
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -418,27 +449,9 @@ BANDWIDTH = 0.3      # ±Hz alrededor de F_TARGET para integrar potencia
 NOISE_SPAN = 3.0     # Hz a cada lado para ruido local (excluyendo la banda central)
 GUARD = 0.5          # Hz de guarda alrededor de la banda central para el ruido
 
-# ----- Carga robusta del CSV -----
-df = pd.read_csv(out_file)  # usa la ruta que acabas de guardar
-df.columns = [c.strip().lower() for c in df.columns]
-req = {'time_s','value','state'}
-if not req.issubset(df.columns):
-    raise ValueError(f"El CSV debe tener columnas: {req}")
 
-df['time_s'] = pd.to_numeric(df['time_s'], errors='coerce')
-df['value']  = pd.to_numeric(df['value'],  errors='coerce')
-df = df.dropna(subset=['time_s','value']).reset_index(drop=True)
-
-# normalizar estados
-state_raw = df['state'].astype(str).str.strip().str.lower()
-df['state'] = state_raw.where(state_raw.isin(['flicker','rest','none']), 'none')
-
-t = df['time_s'].to_numpy(float)
-x = df['value'].to_numpy(float)
-s = df['state'].to_numpy(str)
-
-x_org = x.copy()
-x     = x.copy()
+x_org = v.copy()
+x     = v.copy()
 
 # Calcular mediana y MAD (Median Absolute Deviation)
 med = np.median(x)
@@ -478,20 +491,20 @@ print(f"[Limpieza] Interpolados picos aislados: {len(idx_iso)} | "
       f"Winsorized fuera de ±{k_clip}·MAD: {np.sum(np.abs(zrob) > k_clip)}")
 
 
-plt.figure(figsize=(12,5))
-plt.plot(t, x_org, color='gray', alpha=0.6, label='Original (con outliers)')
-plt.plot(t, x, color='blue', linewidth=1.2, label='Limpia (post outlier handling)')
-plt.xlabel("Tiempo (s)")
-plt.ylabel("Amplitud (uV aprox.)")
-plt.title("Comparación de señal original vs limpia")
-plt.legend()
-plt.grid(alpha=0.3)
-plt.tight_layout()
-plt.show(block=False)
+# plt.figure(figsize=(12,5))
+# plt.plot(t, x_org, color='gray', alpha=0.6, label='Original (con outliers)')
+# plt.plot(t, x, color='blue', linewidth=1.2, label='Limpia (post outlier handling)')
+# plt.xlabel("Tiempo (s)")
+# plt.ylabel("Amplitud (uV aprox.)")
+# plt.title("Comparación de señal original vs limpia")
+# plt.legend()
+# plt.grid(alpha=0.3)
+# plt.tight_layout()
+# plt.show(block=False)
 
 
 
-########
+# ########
 
 
 # ===== ESPECTROGRAMA (STFT) para flicker =====
@@ -502,10 +515,8 @@ from matplotlib.patches import Patch
 
 # Parámetros
 F_TARGET = 12.0        # Hz del flicker
-SHOW_HARMONIC = True   # dibujar también 24 Hz
 NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
 OVERLAP = 0.5          # 50% de solapamiento
-FMAX = 130.0            # límite superior del eje Y
 
 # STFT
 nperseg = max(16, int(round(NPERSEG_SEC * fs)))
@@ -551,13 +562,12 @@ for i in range(len(segments) - 1):
     t0, t1 = t[segments[i]], t[segments[i+1]-1]
     plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
 
-# líneas guía en 12 Hz (y 24 Hz opcional)
+# líneas guía en 12 Hz
 plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
-if SHOW_HARMONIC:
-    plt.axhline(2*F_TARGET, color='k', linestyle=':', linewidth=1, alpha=0.6, label=f'{2*F_TARGET:.0f} Hz')
+
 
 # estética
-plt.ylim(0, FMAX)
+plt.ylim(0, f[-1])
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Frecuencia (Hz)')
 plt.title('Espectrograma (STFT) con bloques de estado')
@@ -574,281 +584,281 @@ plt.show(block=False)
 
 
 
-########
+# ########
 
 
 
 
 
 
-plt.figure(figsize=(12,5))
-plt.plot(t, x, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
+# plt.figure(figsize=(12,5))
+# plt.plot(t, x, label='Senyal original', color='darkblue', alpha=1, linewidth=1)
 
- # --- FILTRAT (Notch + Bandpass) ---
-b_notch, a_notch = signal.iirnotch(50, 10, fs)
-x = signal.filtfilt(b_notch, a_notch, x)
+#  # --- FILTRAT (Notch + Bandpass) ---
+# b_notch, a_notch = signal.iirnotch(50, 10, fs)
+# x = signal.filtfilt(b_notch, a_notch, x)
 
-plt.plot(t, x, label='Senyal filtrada (notch 50 Hz)', color='orange', alpha=1, linewidth=2)
-plt.xlabel("Temps (s)")
-plt.ylabel("Amplitud")
-plt.title("Efecte del filtre Notch a 50 Hz")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show(block=False)
-
-
-
-
-
-
-# ----- Estimar Fs -----
-dt = np.diff(t)
-dt = dt[dt > 0]
-fs = 1.0/np.median(dt) if len(dt) else 250.0
-print(f"Fs estimada: {fs:.2f} Hz")
-
-# ----- Preparar Welch y recorrido por ventanas deslizantes -----
-nperseg = max(16, int(round(SEG_SEC*fs)))
-noverlap = int(round(nperseg*OVERLAP))
-step = max(1, nperseg - noverlap)
-
-# ventana de Hann y escala (sin SciPy)
-if nperseg <= 1:
-    w = np.ones(1)
-else:
-    idx = np.arange(nperseg)
-    w = 0.5 - 0.5*np.cos(2*np.pi*idx/(nperseg-1))
-
-
-w_power = np.sum(w**2)
-
-# ejes de frecuencia para rFFT
-freqs = np.fft.rfftfreq(nperseg, d=1.0/fs)
-mask_vis = (freqs >= F_MIN) & (freqs <= F_MAX)
-
-# contenedores
-times_win = []
-p12_win   = []
-snr_win   = []
-state_win = []
-
-# barridos de ventanas
-N = len(x)
-for start in range(0, N - nperseg + 1, step):
-    seg = x[start:start+nperseg]
-    seg_t = t[start:start+nperseg]
-    seg_s = s[start:start+nperseg]
-    # quitar media, aplicar Hann
-    seg = seg - np.mean(seg)
-    X = np.fft.rfft(seg * w)
-    Pxx = (np.abs(X)**2) / w_power
-    # potencia @ 12 Hz (promedio en ±BANDWIDTH)
-    band = (freqs >= (F_TARGET - BANDWIDTH)) & (freqs <= (F_TARGET + BANDWIDTH))
-    p_sig = float(np.mean(Pxx[band])) if np.any(band) else np.nan
-    # ruido local (anillos excluyendo banda central + guarda)
-    left_ring  = (freqs >= max(0.0, F_TARGET - NOISE_SPAN)) & (freqs <= (F_TARGET - BANDWIDTH - GUARD))
-    right_ring = (freqs >= (F_TARGET + BANDWIDTH + GUARD)) & (freqs <= (F_TARGET + NOISE_SPAN))
-    ring = left_ring | right_ring
-    noise = float(np.median(Pxx[ring])) if np.any(ring) else np.nan
-    snr = p_sig/noise if (noise is not None and noise > 0) else np.nan
-    # timestamp representativo y estado mayoritario de la ventana
-    times_win.append(float(np.mean(seg_t)))
-    vals, counts = np.unique(seg_s, return_counts=True)
-    state_win.append(str(vals[np.argmax(counts)]))
-    p12_win.append(p_sig)
-    snr_win.append(snr)
-
-times_win = np.array(times_win, dtype=float)
-p12_win   = np.array(p12_win,   dtype=float)
-snr_win   = np.array(snr_win,   dtype=float)
-state_win = np.array(state_win, dtype=str)
-
-# ----- Resumen por estado (medianas) -----
-order_states = ['none','rest','flicker']
-present = [st for st in order_states if np.any(state_win==st)]
-
-med_p12 = {st: float(np.nanmedian(p12_win[state_win==st])) for st in present}
-med_snr = {st: float(np.nanmedian(snr_win[state_win==st])) for st in present}
-
-print("Medianas por estado:")
-for st in present:
-    n = np.sum(state_win==st)
-    print(f"  {st:>7s} | p12={med_p12[st]:.3e} | snr={med_snr[st]:.2f} | n_win={n}")
-
-# ----- Gráfico 1: Potencia @12 Hz vs tiempo con estados claros -----
-color_fill = {
-    'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
-    'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
-    'none':    (0.60, 0.60, 0.60, 0.25)   # gris
-}
-
-
-plt.figure(figsize=(12,5))
-plt.plot(times_win, p12_win, label='Potencia @12 Hz (Welch)', linewidth=1.8)
-# sombrear por estado detectando cambios
-chg = np.where(state_win[1:] != state_win[:-1])[0] + 1
-segs = np.r_[0, chg, len(state_win)]
-for i in range(len(segs)-1):
-    st = state_win[segs[i]]
-    t0, t1 = times_win[segs[i]], times_win[segs[i+1]-1]
-    plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
-    if i>0:
-        plt.axvline(t0, color='k', linestyle='--', alpha=0.25, linewidth=1)
-
-# líneas de referencia: medianas por estado
-for st in present:
-    plt.hlines(med_p12[st], xmin=times_win.min(), xmax=times_win.max(),
-               colors=color_fill[st][:3], linestyles='--', alpha=0.8, label=f"Mediana {st}")
-
-
-plt.xlabel("Tiempo (s)")
-plt.ylabel("Potencia @12 Hz (a.u.)")
-plt.title("Evolución de potencia @12 Hz con bloques")
-patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present]
-plt.legend(handles=patches, loc='upper left', framealpha=0.9)
-plt.grid(alpha=0.3)
-plt.tight_layout()
-plt.show(block=False)
-
-
-# ----- Gráfico 2: SNR @12 Hz por tiempo (opcional, muy ilustrativo) -----
-plt.figure(figsize=(12,4))
-plt.plot(times_win, snr_win, linewidth=1.6)
-for i in range(len(segs)-1):
-    st = state_win[segs[i]]
-    t0, t1 = times_win[segs[i]], times_win[segs[i+1]-1]
-    plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
-    if i>0: plt.axvline(t0, color='k', ls='--', alpha=0.25, lw=1)
-plt.xlabel("Tiempo (s)")
-plt.ylabel("SNR @12 Hz")
-plt.title("Relación señal/ruido @12 Hz por ventanas")
-plt.grid(alpha=0.3)
-plt.tight_layout()
-plt.show(block=False)
-
-
-# ----- Gráfico 3: Barras (medianas) por estado -----
-plt.figure(figsize=(6,4))
-vals = [med_p12[st] for st in present]
-cols = [color_fill[st][:3] for st in present]
-plt.bar(present, vals, color=cols)
-plt.ylabel("Mediana potencia @12 Hz")
-plt.title("Potencia @12 Hz por estado (mediana)")
-plt.grid(axis='y', alpha=0.3)
-plt.tight_layout()
-plt.show(block=False)
-
-
-# ----- (Opcional) PSD medio por estado en 6–30 Hz -----
-# Construimos una PSD agregando todas las ventanas por estado
-do_psd = True
-if do_psd:
-    psd_acc = {st: [] for st in present}
-    for start in range(0, N - nperseg + 1, step):
-        seg = x[start:start+nperseg]
-        seg_s = s[start:start+nperseg]
-        vals, counts = np.unique(seg_s, return_counts=True)
-        st = str(vals[np.argmax(counts)])
-        if st not in present:
-            continue
-        seg = seg - np.mean(seg)
-        X = np.fft.rfft(seg * w)
-        Pxx = (np.abs(X)**2) / w_power
-        psd_acc[st].append(Pxx[mask_vis])
-    plt.figure(figsize=(9,5))
-    f_vis = freqs[mask_vis]
-    for st in present:
-        if psd_acc[st]:
-            P = np.vstack(psd_acc[st]).mean(axis=0)
-            plt.plot(f_vis, P, label=st, color=color_fill[st][:3], linewidth=1.8)
-    plt.axvline(F_TARGET, ls='--', color='k', alpha=0.5)
-    plt.xlim([F_MIN, F_MAX])
-    plt.xlabel("Frecuencia (Hz)"); plt.ylabel("Potencia (a.u.)")
-    plt.title("PSD media por estado (6–30 Hz)")
-    plt.legend(); plt.grid(alpha=0.3)
-    plt.tight_layout()
-
-plt.show(block=False)
-# ====== FIN ANÁLISIS 12 Hz ======
+# plt.plot(t, x, label='Senyal filtrada (notch 50 Hz)', color='orange', alpha=1, linewidth=2)
+# plt.xlabel("Temps (s)")
+# plt.ylabel("Amplitud")
+# plt.title("Efecte del filtre Notch a 50 Hz")
+# plt.legend()
+# plt.grid(True)
+# plt.tight_layout()
+# plt.show(block=False)
 
 
 
 
 
-# ===== ESPECTROGRAMA (STFT) para flicker =====
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.signal import spectrogram
-from matplotlib.patches import Patch
 
-# Parámetros
-F_TARGET = 12.0        # Hz del flicker
-SHOW_HARMONIC = True   # dibujar también 24 Hz
-NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
-OVERLAP = 0.5          # 50% de solapamiento
-FMAX = 40.0            # límite superior del eje Y
+# # ----- Estimar Fs -----
+# dt = np.diff(t)
+# dt = dt[dt > 0]
+# fs = 1.0/np.median(dt) if len(dt) else 250.0
+# print(f"Fs estimada: {fs:.2f} Hz")
 
-# STFT
-nperseg = max(16, int(round(NPERSEG_SEC * fs)))
-noverlap = int(round(nperseg * OVERLAP))
+# # ----- Preparar Welch y recorrido por ventanas deslizantes -----
+# nperseg = max(16, int(round(SEG_SEC*fs)))
+# noverlap = int(round(nperseg*OVERLAP))
+# step = max(1, nperseg - noverlap)
 
-# x debe ser 1D (usa la versión limpia si hiciste tratamiento de outliers)
-x_stft = x.copy()  # o x_org si quieres ver bruto
+# # ventana de Hann y escala (sin SciPy)
+# if nperseg <= 1:
+#     w = np.ones(1)
+# else:
+#     idx = np.arange(nperseg)
+#     w = 0.5 - 0.5*np.cos(2*np.pi*idx/(nperseg-1))
 
-# Espectrograma (potencia densa)
-f, t_rel, Sxx = spectrogram(
-    x_stft - np.mean(x_stft), fs=fs,
-    nperseg=nperseg, noverlap=noverlap,
-    detrend='constant', scaling='density', mode='psd'
-)
-# tiempo absoluto para alinear con tus estados (time_s)
-t_abs = t[0] + t_rel
 
-# Escala en dB con recorte robusto para evitar “quemados”
-Sxx_db = 10.0 * np.log10(Sxx + 1e-18)
-vmin = np.percentile(Sxx_db, 5)
-vmax = np.percentile(Sxx_db, 95)
+# w_power = np.sum(w**2)
 
-# Colores por estado (igual que en tus otros plots)
-color_fill = {
-    'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
-    'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
-    'none':    (0.60, 0.60, 0.60, 0.25)   # gris
-}
+# # ejes de frecuencia para rFFT
+# freqs = np.fft.rfftfreq(nperseg, d=1.0/fs)
+# mask_vis = (freqs >= F_MIN) & (freqs <= F_MAX)
 
-# Segmentos de estado (en el mismo tiempo absoluto)
-change_idx = np.where(s[1:] != s[:-1])[0] + 1
-segments = np.r_[0, change_idx, len(s)]
+# # contenedores
+# times_win = []
+# p12_win   = []
+# snr_win   = []
+# state_win = []
 
-plt.figure(figsize=(11, 4.8))
-# mapa tiempo-frecuencia
-plt.pcolormesh(t_abs, f, Sxx_db, shading='gouraud', cmap='viridis', vmin=vmin, vmax=vmax)
-cbar = plt.colorbar()
-cbar.set_label('Potencia (dB re: densidad)')
+# # barridos de ventanas
+# N = len(x)
+# for start in range(0, N - nperseg + 1, step):
+#     seg = x[start:start+nperseg]
+#     seg_t = t[start:start+nperseg]
+#     seg_s = s[start:start+nperseg]
+#     # quitar media, aplicar Hann
+#     seg = seg - np.mean(seg)
+#     X = np.fft.rfft(seg * w)
+#     Pxx = (np.abs(X)**2) / w_power
+#     # potencia @ 12 Hz (promedio en ±BANDWIDTH)
+#     band = (freqs >= (F_TARGET - BANDWIDTH)) & (freqs <= (F_TARGET + BANDWIDTH))
+#     p_sig = float(np.mean(Pxx[band])) if np.any(band) else np.nan
+#     # ruido local (anillos excluyendo banda central + guarda)
+#     left_ring  = (freqs >= max(0.0, F_TARGET - NOISE_SPAN)) & (freqs <= (F_TARGET - BANDWIDTH - GUARD))
+#     right_ring = (freqs >= (F_TARGET + BANDWIDTH + GUARD)) & (freqs <= (F_TARGET + NOISE_SPAN))
+#     ring = left_ring | right_ring
+#     noise = float(np.median(Pxx[ring])) if np.any(ring) else np.nan
+#     snr = p_sig/noise if (noise is not None and noise > 0) else np.nan
+#     # timestamp representativo y estado mayoritario de la ventana
+#     times_win.append(float(np.mean(seg_t)))
+#     vals, counts = np.unique(seg_s, return_counts=True)
+#     state_win.append(str(vals[np.argmax(counts)]))
+#     p12_win.append(p_sig)
+#     snr_win.append(snr)
 
-# sombreado de estados
-for i in range(len(segments) - 1):
-    st = s[segments[i]]
-    t0, t1 = t[segments[i]], t[segments[i+1]-1]
-    plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+# times_win = np.array(times_win, dtype=float)
+# p12_win   = np.array(p12_win,   dtype=float)
+# snr_win   = np.array(snr_win,   dtype=float)
+# state_win = np.array(state_win, dtype=str)
 
-# líneas guía en 12 Hz (y 24 Hz opcional)
-plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
-if SHOW_HARMONIC:
-    plt.axhline(2*F_TARGET, color='k', linestyle=':', linewidth=1, alpha=0.6, label=f'{2*F_TARGET:.0f} Hz')
+# # ----- Resumen por estado (medianas) -----
+# order_states = ['none','rest','flicker']
+# present = [st for st in order_states if np.any(state_win==st)]
 
-# estética
-plt.ylim(0, FMAX)
-plt.xlabel('Tiempo (s)')
-plt.ylabel('Frecuencia (Hz)')
-plt.title('Espectrograma (STFT) con bloques de estado')
-# leyenda de estados
-present_states = [st for st in ['none','rest','flicker'] if np.any(s == st)]
-patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present_states]
-plt.legend(handles=[*patches], loc='upper right', framealpha=0.9)
-plt.tight_layout()
-plt.show(block=False)
-# ===== FIN ESPECTROGRAMA =====
+# med_p12 = {st: float(np.nanmedian(p12_win[state_win==st])) for st in present}
+# med_snr = {st: float(np.nanmedian(snr_win[state_win==st])) for st in present}
+
+# print("Medianas por estado:")
+# for st in present:
+#     n = np.sum(state_win==st)
+#     print(f"  {st:>7s} | p12={med_p12[st]:.3e} | snr={med_snr[st]:.2f} | n_win={n}")
+
+# # ----- Gráfico 1: Potencia @12 Hz vs tiempo con estados claros -----
+# color_fill = {
+#     'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
+#     'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
+#     'none':    (0.60, 0.60, 0.60, 0.25)   # gris
+# }
+
+
+# plt.figure(figsize=(12,5))
+# plt.plot(times_win, p12_win, label='Potencia @12 Hz (Welch)', linewidth=1.8)
+# # sombrear por estado detectando cambios
+# chg = np.where(state_win[1:] != state_win[:-1])[0] + 1
+# segs = np.r_[0, chg, len(state_win)]
+# for i in range(len(segs)-1):
+#     st = state_win[segs[i]]
+#     t0, t1 = times_win[segs[i]], times_win[segs[i+1]-1]
+#     plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+#     if i>0:
+#         plt.axvline(t0, color='k', linestyle='--', alpha=0.25, linewidth=1)
+
+# # líneas de referencia: medianas por estado
+# for st in present:
+#     plt.hlines(med_p12[st], xmin=times_win.min(), xmax=times_win.max(),
+#                colors=color_fill[st][:3], linestyles='--', alpha=0.8, label=f"Mediana {st}")
+
+
+# plt.xlabel("Tiempo (s)")
+# plt.ylabel("Potencia @12 Hz (a.u.)")
+# plt.title("Evolución de potencia @12 Hz con bloques")
+# patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present]
+# plt.legend(handles=patches, loc='upper left', framealpha=0.9)
+# plt.grid(alpha=0.3)
+# plt.tight_layout()
+# plt.show(block=False)
+
+
+# # ----- Gráfico 2: SNR @12 Hz por tiempo (opcional, muy ilustrativo) -----
+# plt.figure(figsize=(12,4))
+# plt.plot(times_win, snr_win, linewidth=1.6)
+# for i in range(len(segs)-1):
+#     st = state_win[segs[i]]
+#     t0, t1 = times_win[segs[i]], times_win[segs[i+1]-1]
+#     plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+#     if i>0: plt.axvline(t0, color='k', ls='--', alpha=0.25, lw=1)
+# plt.xlabel("Tiempo (s)")
+# plt.ylabel("SNR @12 Hz")
+# plt.title("Relación señal/ruido @12 Hz por ventanas")
+# plt.grid(alpha=0.3)
+# plt.tight_layout()
+# plt.show(block=False)
+
+
+# # ----- Gráfico 3: Barras (medianas) por estado -----
+# plt.figure(figsize=(6,4))
+# vals = [med_p12[st] for st in present]
+# cols = [color_fill[st][:3] for st in present]
+# plt.bar(present, vals, color=cols)
+# plt.ylabel("Mediana potencia @12 Hz")
+# plt.title("Potencia @12 Hz por estado (mediana)")
+# plt.grid(axis='y', alpha=0.3)
+# plt.tight_layout()
+# plt.show(block=False)
+
+
+# # ----- (Opcional) PSD medio por estado en 6–30 Hz -----
+# # Construimos una PSD agregando todas las ventanas por estado
+# do_psd = True
+# if do_psd:
+#     psd_acc = {st: [] for st in present}
+#     for start in range(0, N - nperseg + 1, step):
+#         seg = x[start:start+nperseg]
+#         seg_s = s[start:start+nperseg]
+#         vals, counts = np.unique(seg_s, return_counts=True)
+#         st = str(vals[np.argmax(counts)])
+#         if st not in present:
+#             continue
+#         seg = seg - np.mean(seg)
+#         X = np.fft.rfft(seg * w)
+#         Pxx = (np.abs(X)**2) / w_power
+#         psd_acc[st].append(Pxx[mask_vis])
+#     plt.figure(figsize=(9,5))
+#     f_vis = freqs[mask_vis]
+#     for st in present:
+#         if psd_acc[st]:
+#             P = np.vstack(psd_acc[st]).mean(axis=0)
+#             plt.plot(f_vis, P, label=st, color=color_fill[st][:3], linewidth=1.8)
+#     plt.axvline(F_TARGET, ls='--', color='k', alpha=0.5)
+#     plt.xlim([F_MIN, F_MAX])
+#     plt.xlabel("Frecuencia (Hz)"); plt.ylabel("Potencia (a.u.)")
+#     plt.title("PSD media por estado (6–30 Hz)")
+#     plt.legend(); plt.grid(alpha=0.3)
+#     plt.tight_layout()
+
+# plt.show(block=False)
+# # ====== FIN ANÁLISIS 12 Hz ======
+
+
+
+
+
+# # ===== ESPECTROGRAMA (STFT) para flicker =====
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from scipy.signal import spectrogram
+# from matplotlib.patches import Patch
+
+# # Parámetros
+# F_TARGET = 12.0        # Hz del flicker
+# SHOW_HARMONIC = True   # dibujar también 24 Hz
+# NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
+# OVERLAP = 0.5          # 50% de solapamiento
+# FMAX = 40.0            # límite superior del eje Y
+
+# # STFT
+# nperseg = max(16, int(round(NPERSEG_SEC * fs)))
+# noverlap = int(round(nperseg * OVERLAP))
+
+# # x debe ser 1D (usa la versión limpia si hiciste tratamiento de outliers)
+# x_stft = x.copy()  # o x_org si quieres ver bruto
+
+# # Espectrograma (potencia densa)
+# f, t_rel, Sxx = spectrogram(
+#     x_stft - np.mean(x_stft), fs=fs,
+#     nperseg=nperseg, noverlap=noverlap,
+#     detrend='constant', scaling='density', mode='psd'
+# )
+# # tiempo absoluto para alinear con tus estados (time_s)
+# t_abs = t[0] + t_rel
+
+# # Escala en dB con recorte robusto para evitar “quemados”
+# Sxx_db = 10.0 * np.log10(Sxx + 1e-18)
+# vmin = np.percentile(Sxx_db, 5)
+# vmax = np.percentile(Sxx_db, 95)
+
+# # Colores por estado (igual que en tus otros plots)
+# color_fill = {
+#     'flicker': (0.15, 0.35, 0.95, 0.35),  # azul
+#     'rest':    (0.95, 0.25, 0.25, 0.30),  # rojo
+#     'none':    (0.60, 0.60, 0.60, 0.25)   # gris
+# }
+
+# # Segmentos de estado (en el mismo tiempo absoluto)
+# change_idx = np.where(s[1:] != s[:-1])[0] + 1
+# segments = np.r_[0, change_idx, len(s)]
+
+# plt.figure(figsize=(11, 4.8))
+# # mapa tiempo-frecuencia
+# plt.pcolormesh(t_abs, f, Sxx_db, shading='gouraud', cmap='viridis', vmin=vmin, vmax=vmax)
+# cbar = plt.colorbar()
+# cbar.set_label('Potencia (dB re: densidad)')
+
+# # sombreado de estados
+# for i in range(len(segments) - 1):
+#     st = s[segments[i]]
+#     t0, t1 = t[segments[i]], t[segments[i+1]-1]
+#     plt.axvspan(t0, t1, color=color_fill.get(st, color_fill['none']), linewidth=0)
+
+# # líneas guía en 12 Hz (y 24 Hz opcional)
+# plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
+# if SHOW_HARMONIC:
+#     plt.axhline(2*F_TARGET, color='k', linestyle=':', linewidth=1, alpha=0.6, label=f'{2*F_TARGET:.0f} Hz')
+
+# # estética
+# plt.ylim(0, FMAX)
+# plt.xlabel('Tiempo (s)')
+# plt.ylabel('Frecuencia (Hz)')
+# plt.title('Espectrograma (STFT) con bloques de estado')
+# # leyenda de estados
+# present_states = [st for st in ['none','rest','flicker'] if np.any(s == st)]
+# patches = [Patch(facecolor=color_fill[st], edgecolor='none', label=st) for st in present_states]
+# plt.legend(handles=[*patches], loc='upper right', framealpha=0.9)
+# plt.tight_layout()
+# plt.show(block=False)
+# # ===== FIN ESPECTROGRAMA =====
 
 

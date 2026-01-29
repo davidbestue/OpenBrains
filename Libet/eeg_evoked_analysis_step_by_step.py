@@ -367,3 +367,108 @@ plt.axvline(mean_w_time, color='orange', linestyle='--', label='W-time (decisió
 plt.legend()
 plt.tight_layout()
 plt.show(block=False)
+
+
+#### Potencial evocado de la señal de EEG flicker vs rest dos lineas con CI cada una durante 10s. 
+#### ¿Coger toda la señal del EEG o de la transformada de fourier alrededor d elos 12Hz?¿Qué es más correcto?
+
+# ... (Tu código anterior llega hasta plt.show() del espectrograma) ...
+
+# =============================================================================
+# ANÁLISIS DE POTENCIAL EVOCADO (SSVEP AMPLITUDE TIME-COURSE)
+# =============================================================================
+
+import seaborn as sns
+
+# 1. Definir parámetros de la ventana de análisis
+EPOCH_SEC = 10.0
+n_samples_epoch = int(EPOCH_SEC * fs)
+t_epoch = np.linspace(0, EPOCH_SEC, n_samples_epoch)
+
+# 2. Crear una señal específica para el análisis de amplitud (Banda Estrecha)
+#    Queremos ver la energía EXCLUSIVAMENTE en 12 Hz (+- 1 Hz de margen)
+F_TARGET=12
+f_narrow_min = F_TARGET - 2.5
+f_narrow_max = F_TARGET + 2.5
+
+b_narrow, a_narrow = signal.butter(2, [f_narrow_min/(fs/2), f_narrow_max/(fs/2)], btype='band')
+eeg_narrow = signal.filtfilt(b_narrow, a_narrow, eeg_signal)
+
+# 3. Calcular la ENVOLVENTE (Amplitud instantánea) usando Hilbert
+#    Esto soluciona el problema de la cancelación de fase.
+analytic_signal = signal.hilbert(eeg_narrow)
+amplitude_envelope = np.abs(analytic_signal)
+
+# 4. Función para extraer épocas
+def get_epochs(start_times, signal_data, n_samples):
+    epochs_list = []
+    valid_starts = []
+    
+    for start_t in start_times:
+        # Buscar índice más cercano al tiempo de inicio
+        idx_start = np.searchsorted(timestamps, start_t)
+        idx_end = idx_start + n_samples
+        
+        # Verificar que no nos salimos del array
+        if idx_end <= len(signal_data):
+            epoch = signal_data[idx_start:idx_end]
+            epochs_list.append(epoch)
+            valid_starts.append(start_t)
+            
+    if not epochs_list:
+        return np.array([]), 0
+        
+    return np.array(epochs_list), len(epochs_list)
+
+# 5. Extraer tiempos de inicio de cada condición
+#    (Reusamos la lógica de detección de cambios que ya tenías)
+#    flicker_start_times ya lo calculaste arriba
+#    Calculamos rest_start_times similarmente:
+rest_start_times = change_times[new_states == 'rest']
+
+# Extraer matrices de épocas (N_trials x N_timepoints)
+flicker_epochs, n_flicker = get_epochs(flicker_start_times, amplitude_envelope, n_samples_epoch)
+rest_epochs, n_rest = get_epochs(rest_start_times, amplitude_envelope, n_samples_epoch)
+
+print(f"Épocas extraídas - Flicker: {n_flicker}, Rest: {n_rest}")
+
+# =============================================================================
+# GRAFICAR: 12Hz Amplitude Time-Course
+# =============================================================================
+
+plt.figure(figsize=(10, 6))
+
+# Usamos Seaborn para pintar línea + intervalo de confianza (CI) automáticamente
+# Necesitamos convertir a DataFrame 'long format' para seaborn, o hacerlo manual.
+# Lo haremos manual para mantenerlo ligero sin depender mucho de pandas melting.
+
+def plot_with_ci(time_vec, data_matrix, color, label):
+    if data_matrix.size == 0:
+        print(f"No hay datos para {label}")
+        return
+    
+    # Media y Desviación Estándar / Error Estándar
+    mean_sig = np.mean(data_matrix, axis=0)
+    std_sig = np.std(data_matrix, axis=0)
+    n_trials = data_matrix.shape[0]
+    
+    # Intervalo de confianza 95% (1.96 * error estándar)
+    ci = 1.96 * (std_sig / np.sqrt(n_trials))
+    
+    plt.plot(time_vec, mean_sig, color=color, linewidth=2, label=f"{label} (n={n_trials})")
+    plt.fill_between(time_vec, mean_sig - ci, mean_sig + ci, color=color, alpha=0.2)
+
+# Plot Flicker
+plot_with_ci(t_epoch, flicker_epochs, color='red', label='Flicker (12Hz)')
+
+# Plot Rest
+plot_with_ci(t_epoch, rest_epochs, color='gray', label='Rest')
+
+plt.title(f"Evolución de la Amplitud en {F_TARGET} Hz (Hilbert Envelope)")
+plt.xlabel("Tiempo desde inicio del bloque (s)")
+plt.ylabel("Amplitud (µV)")
+plt.legend(loc='upper left')
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+plt.show()
