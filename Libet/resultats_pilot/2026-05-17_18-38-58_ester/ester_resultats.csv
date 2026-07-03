@@ -1,0 +1,6 @@
+participant,age,gender,real_angle,real_time,angle_click,estimated_time,difference_sec
+ester,33,Dona,189.82,3.9098,177.0,3.8187,-0.0912
+ester,33,Dona,301.93,12.387,292.25,12.3182,-0.0688
+ester,33,Dona,220.39,22.0472,208.93,21.9657,-0.0815
+ester,33,Dona,290.49,30.2257,274.88,30.1147,-0.111
+ester,33,Dona,209.71,42.4513,199.33,42.3775,-0.0738

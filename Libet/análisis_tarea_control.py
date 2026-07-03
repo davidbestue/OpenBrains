@@ -14,7 +14,27 @@ from scipy.signal import spectrogram
 
 
 
-out_file = 'ssvep_raw_20260114_113936.csv'
+##### CASOS DE ÉXITO:
+#parpadeo: 
+#out_file = 'ssvep_raw_20260130_095132.csv'
+#vmin_val=20, vmax_val=80, F_TARGET = 4.0,
+
+#mover los ojos:
+#out_file = 'ssvep_raw_20260130_101048.csv'
+#vmin_val=20, vmax_val=80, F_TARGET = 3.0,
+
+##mover el dedo: --> NO LO VEMOS EN FRONTAL
+#out_file='ssvep_raw_20260130_103128.csv'
+
+
+
+out_file = 'ssvep_raw_20260130_105607.csv'
+
+out_file = 'ssvep_raw_20260130_112745.csv'
+
+
+out_file = 'ssvep_raw_20260130_113242.csv'
+
 
 # --- Carga robusta del CSV ---
 df = pd.read_csv(out_file)  # usa la ruta que acabas de guardar
@@ -82,7 +102,7 @@ states = np.array(df['state'] )
 #Mirar arxivo de como_el_samping_rate_define_la_maxima_frecuencia_detectable.py
 
 freq_min = 0.01
-freq_max = 30
+freq_max = 40
 
 b_band, a_band = signal.butter(2, [freq_min/(fs/2), freq_max/(fs/2)], btype='band')  
 # normalitzem les freqüències fent que fs/2 (la freqüència de Nyquist) sigui el valor màxim, equivalent a 1.
@@ -109,7 +129,7 @@ x          = np.asarray(eeg_bandpassed, dtype=float)
 
 # --- parámetros STFT ---
 # (usa los tuyos si ya los tienes definidos)
-F_TARGET = 12.0        # Hz del flicker
+F_TARGET = 8.0        # Hz del flicker
 NPERSEG_SEC = 2.0      # ventana de 2 s => resolución ~0.5 Hz
 OVERLAP = 0.5          # 50% de solapamiento
 nperseg = int(round(NPERSEG_SEC * fs))
@@ -142,13 +162,17 @@ t_spec = timestamps[center_idx]
 
 # --- plot espectrograma ---
 plt.figure(figsize=(12, 5))
-plt.pcolormesh(t_spec, f, Sxx_db, shading='gouraud', cmap='viridis')
+# vmin_val=20
+# vmax_val=80
+# plt.pcolormesh(t_spec, f, Sxx_db, shading='gouraud', cmap='jet', vmin=vmin_val, vmax=vmax_val)
+plt.pcolormesh(t_spec, f, Sxx_db, shading='gouraud', cmap='jet')
+
 plt.colorbar(label='Potencia (dB)')
 plt.xlabel('Tiempo real (s)')
 plt.ylabel('Frecuencia (Hz)')
 
 # líneas guía en 12 Hz
-plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
+#plt.axhline(F_TARGET, color='k', linestyle='--', linewidth=1, alpha=0.8, label=f'{F_TARGET:.0f} Hz')
 
 
 # bloques
@@ -209,7 +233,6 @@ t_epoch = np.linspace(0, EPOCH_SEC, n_samples_epoch)
 
 # 2. Crear una señal específica para el análisis de amplitud (Banda Estrecha)
 #    Queremos ver la energía EXCLUSIVAMENTE en 12 Hz (+- 1 Hz de margen)
-F_TARGET=12
 f_narrow_min = F_TARGET - 1.5
 f_narrow_max = F_TARGET + 1.5
 

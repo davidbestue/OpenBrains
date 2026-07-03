@@ -54,9 +54,9 @@ F_TARGET = 12.0               # Hz de flicker
 F_SHOW_MIN, F_SHOW_MAX = 6.0, 30.0
 
 # ======== PARÁMETROS EXPERIMENTO ========
-BLOCK_FLICKER = 10.0          # s ON
-BLOCK_REST    = 10.0          # s OFF
-N_CYCLES      = 2
+BLOCK_FLICKER = 20.0          # s ON
+BLOCK_REST    = 20.0          # s OFF
+N_CYCLES      = 3
 FULLSCR       = True
 
 # ======== INICIALIZACIÓN ========
